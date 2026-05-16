@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0">
     <title>Karki Associates Pvt. Ltd. – Home</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
@@ -42,15 +42,17 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 1rem;
+            position: relative;
         }
 
         /* Logo styling adjusted for 600x200 banner */
         .logo img {
-            max-height: 100px;    /* increased from 80px to show banner better */
+            max-height: 100px;
             width: auto;
             display: block;
         }
 
+        /* Desktop navigation */
         nav ul {
             display: flex;
             list-style: none;
@@ -69,6 +71,49 @@
             color: #ffd966;
         }
 
+        /* Hamburger button (hidden on desktop) */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: white;
+            padding: 0;
+            line-height: 1;
+        }
+
+        /* Mobile dropdown menu */
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #1a3e6f;
+            flex-direction: column;
+            padding: 1rem;
+            border-top: 1px solid #ffd966;
+            z-index: 200;
+        }
+
+        .mobile-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            font-weight: 500;
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav a:hover {
+            color: #ffd966;
+        }
+
+        /* Language toggle */
         #langToggle {
             background: #ffd966;
             border: none;
@@ -156,17 +201,19 @@
             margin: 0 0.5rem;
         }
 
-        /* Responsive */
+        /* Responsive: Show hamburger, hide desktop nav, adjust logo size */
         @media (max-width: 768px) {
-            .header-flex {
-                flex-direction: column;
-                text-align: center;
+            .desktop-nav {
+                display: none;
+            }
+            .hamburger {
+                display: block;
             }
             .logo img {
-                max-height: 70px;   /* slightly larger on mobile for 600x200 banner */
+                max-height: 70px;
             }
-            nav ul {
-                justify-content: center;
+            .header-flex {
+                justify-content: space-between;
             }
             main {
                 padding: 1.5rem;
@@ -178,9 +225,20 @@
 
 <header>
     <div class="container header-flex">
+        <!-- Hamburger button (left side) -->
+        <button class="hamburger" id="hamburgerBtn">☰</button>
+
+        <!-- Logo (centered via flex auto margins or simply block) -->
         <div class="logo">
             <img src="logo.png" alt="Karki Associates Logo">
         </div>
+
+        <!-- Language toggle (right side) -->
+        <button id="langToggle">नेपाली</button>
+    </div>
+
+    <!-- Desktop navigation -->
+    <div class="container desktop-nav">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -191,7 +249,16 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <button id="langToggle">नेपाली</button>
+    </div>
+
+    <!-- Mobile dropdown navigation (hidden by default) -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="advocate.html">Advocate</a>
+        <a href="service.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
     </div>
 </header>
 
@@ -266,6 +333,7 @@
 </footer>
 
 <script>
+    // Language toggle functionality
     const toggleBtn = document.getElementById('langToggle');
     const enContent = document.getElementById('en-content');
     const npContent = document.getElementById('np-content');
@@ -284,6 +352,34 @@
             toggleBtn.textContent = 'नेपाली';
             currentLang = 'en';
             document.documentElement.lang = 'en';
+        }
+    });
+
+    // Hamburger menu toggle (mobile)
+    const hamburger = document.getElementById('hamburgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', () => {
+        // Toggle dropdown visibility
+        if (mobileNav.style.display === 'flex') {
+            mobileNav.style.display = 'none';
+        } else {
+            mobileNav.style.display = 'flex';
+        }
+    });
+
+    // Optional: close dropdown when a link is clicked
+    const mobileLinks = mobileNav.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.style.display = 'none';
+        });
+    });
+
+    // Close dropdown if window resized above mobile breakpoint (optional)
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            mobileNav.style.display = 'none';
         }
     });
 </script>
