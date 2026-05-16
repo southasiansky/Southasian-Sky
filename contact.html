@@ -6,330 +6,103 @@
     <title>Karki Associates - Contact</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: white;
-            color: #1a3e6f;
-            padding: 0.8rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .desktop-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .logo img {
-            max-height: 95px;
-            width: auto;
-            display: block;
-        }
-
-        .desktop-nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.8rem;
-            align-items: center;
-        }
-
-        .desktop-nav a {
-            color: #1a3e6f;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-
-        .desktop-nav a:hover {
-            color: #ffc107;
-        }
-
-        .lang-switch {
-            background: white;
-            color: black;
-            border: 1.5px solid #1a3e6f;
-            padding: 0.3rem 0.7rem;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-            margin-left: 0.5rem;
-        }
-
-        .lang-switch:hover {
-            background: #1a3e6f;
-            color: white;
-        }
-
-        .mobile-header {
-            display: none;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .hamburger {
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #1a3e6f;
-            padding: 0;
-            line-height: 1;
-        }
-
-        .mobile-nav {
-            display: none;
-            flex-direction: column;
-            background: white;
-            padding: 1rem;
-            border-top: 1px solid #eee;
-            margin-top: 0.8rem;
-        }
-
-        .mobile-nav a {
-            color: #1a3e6f;
-            text-decoration: none;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #eee;
-            font-weight: 500;
-            text-align: center;
-        }
-
-        .mobile-nav a:last-child {
-            border-bottom: none;
-        }
-
-        .mobile-nav a:hover {
-            color: #ffc107;
-        }
-
-        main {
-            background: white;
-            padding: 2rem;
-            margin: 2rem auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        h2 {
-            color: #1a3e6f;
-            margin-bottom: 1.5rem;
-            border-left: 5px solid #ffd966;
-            padding-left: 15px;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .contact-info {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 12px;
-        }
-
-        .contact-info p {
-            margin-bottom: 1rem;
-        }
-
-        .contact-info strong {
-            color: #1a3e6f;
-        }
-
-        .map-placeholder {
-            background: #e9ecef;
-            height: 250px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            margin-top: 1rem;
-        }
-
-        .contact-form {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 12px;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.3rem;
-            font-weight: 500;
-            color: #1a3e6f;
-        }
-
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 0.7rem;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-        }
-
-        .btn-submit {
-            background: #1a3e6f;
-            color: white;
-            border: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: background 0.3s;
-        }
-
-        .btn-submit:hover {
-            background: #0f2c4f;
-        }
-
-        footer {
-            background: #1a3e6f;
-            color: white;
-            text-align: center;
-            padding: 1.5rem 0;
-            margin-top: 2rem;
-        }
-
-        footer a {
-            color: #ffd966;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-links {
-            margin: 0.5rem 0;
-        }
-
-        .footer-links a {
-            margin: 0 0.5rem;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #111; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; color: #000; padding: 0.8rem 0; border-bottom: 1px solid #ccc; position: sticky; top: 0; z-index: 100; }
+        .desktop-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo a { display: block; }
+        .logo img { max-height: 95px; width: auto; display: block; }
+        .desktop-nav ul { display: flex; list-style: none; gap: 1.8rem; align-items: center; }
+        .desktop-nav a { color: #000; text-decoration: none; font-weight: 500; font-size: 1rem; }
+        .desktop-nav a:hover { text-decoration: underline; }
+        .lang-switch { background: #fff; color: #000; border: 1px solid #000; padding: 0.3rem 0.7rem; border-radius: 30px; cursor: pointer; font-weight: bold; font-size: 0.9rem; margin-left: 0.5rem; }
+        .lang-switch:hover { background: #000; color: #fff; }
+        .mobile-header { display: none; align-items: center; justify-content: space-between; width: 100%; }
+        .hamburger { background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #000; padding: 0 0.2rem; }
+        .mobile-right { display: flex; align-items: center; gap: 0.8rem; }
+        .mobile-nav { display: none; flex-direction: column; background: #fff; padding: 1rem; border-top: 1px solid #ccc; margin-top: 0.8rem; }
+        .mobile-nav a { color: #000; text-decoration: none; padding: 0.8rem 0; border-bottom: 1px solid #eee; font-weight: 500; text-align: center; }
+        .mobile-nav a:last-child { border-bottom: none; }
+        main { background: #fff; padding: 2rem; margin: 2rem auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        h2 { color: #000; margin-bottom: 1rem; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .contact-info, .contact-form { background: #f8f8f8; padding: 1.5rem; border-radius: 8px; }
+        .contact-info p { margin-bottom: 1rem; }
+        .contact-info strong { color: #000; }
+        .map-placeholder { background: #e9e9e9; height: 200px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #555; margin-top: 1rem; }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; margin-bottom: 0.3rem; font-weight: 500; color: #000; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.7rem; border: 1px solid #ccc; border-radius: 8px; font-family: inherit; font-size: 1rem; }
+        .btn-submit { background: #000; color: #fff; border: none; padding: 0.7rem 1.5rem; border-radius: 30px; cursor: pointer; font-weight: bold; font-size: 1rem; transition: background 0.3s; }
+        .btn-submit:hover { background: #333; }
+        footer { background: #fff; color: #000; text-align: center; padding: 0.8rem 0; border-top: 1px solid #ccc; }
+        footer a { color: #000; text-decoration: none; margin: 0 0.5rem; font-weight: 500; }
+        footer a:hover { text-decoration: underline; }
+        .footer-policy { margin-bottom: 0.3rem; word-spacing: 0.5rem; }
+        .footer-copyright { margin: 0.2rem 0; font-size: 0.9rem; font-weight: bold; }
         @media (max-width: 768px) {
-            .desktop-header {
-                display: none;
-            }
-            .mobile-header {
-                display: flex;
-            }
-            .logo img {
-                max-height: 65px;
-            }
-            .mobile-header .logo {
-                flex-grow: 1;
-                text-align: center;
-            }
-            main {
-                padding: 1.5rem;
-            }
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
+            .desktop-header { display: none; }
+            .mobile-header { display: flex; }
+            .logo img { max-height: 65px; }
+            .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            main { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
-
 <header>
     <div class="container">
-        <!-- Desktop header -->
         <div class="desktop-header">
-            <div class="logo">
-                <img src="images/logo.png" alt="Karki Associates Logo">
-            </div>
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
             <div class="desktop-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="advocate.html">Advocate</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><button id="langToggleDesktop" class="lang-switch">N</button></li>
+                <ul id="navMenuDesktop">
+                    <li><a href="index.html" data-key="home">Home</a></li>
+                    <li><a href="about.html" data-key="about">About</a></li>
+                    <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
+                    <li><a href="service.html" data-key="services">Services</a></li>
+                    <li><a href="blog.html" data-key="blog">Blog</a></li>
+                    <li><a href="contact.html" data-key="contact">Contact</a></li>
+                    <li><button id="langToggleDesktop" class="lang-switch">ने</button></li>
                 </ul>
             </div>
         </div>
-
-        <!-- Mobile header -->
         <div class="mobile-header">
-            <button class="hamburger" id="hamburgerBtn">☰</button>
-            <div class="logo">
-                <img src="images/logo.png" alt="Karki Associates Logo">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
+            <div class="mobile-right">
+                <button id="langToggleMobile" class="lang-switch">ने</button>
+                <button class="hamburger" id="hamburgerBtn">☰</button>
             </div>
-            <button id="langToggleMobile" class="lang-switch">N</button>
         </div>
-
         <div class="mobile-nav" id="mobileNav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="advocate.html">Advocate</a>
-            <a href="service.html">Services</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" data-key="home">Home</a>
+            <a href="about.html" data-key="about">About</a>
+            <a href="advocate.html" data-key="advocate">Advocate</a>
+            <a href="service.html" data-key="services">Services</a>
+            <a href="blog.html" data-key="blog">Blog</a>
+            <a href="contact.html" data-key="contact">Contact</a>
         </div>
     </div>
 </header>
-
 <main class="container">
-    <!-- English content -->
     <div id="en-content">
         <h2>Contact Us</h2>
         <div class="contact-grid">
             <div class="contact-info">
-                <p><strong>📍 Registered Office</strong><br>
+                <p><strong>Registered Office</strong><br>
                 Karki Associates Private Limited<br>
                 Pokhara Metropolitan City, Ward No. 7<br>
                 Kaski District, Gandaki Province<br>
                 Nepal</p>
-                <p><strong>📞 Phone</strong><br>
+                <p><strong>Phone</strong><br>
                 +977‑9851068714</p>
-                <p><strong>✉️ Email</strong><br>
+                <p><strong>Email</strong><br>
                 info@karkiassociates.com</p>
-                <p><strong>🕒 Office Hours</strong><br>
+                <p><strong>Office Hours</strong><br>
                 Sunday – Friday: 10:00 AM – 5:00 PM (Nepal Time)<br>
                 Closed on Saturdays and public holidays</p>
                 <div class="map-placeholder">
-                    📍 Map: Pokhara Metropolitan City, Ward No. 7, Kaski
+                    Map: Pokhara Metropolitan City, Ward No. 7, Kaski
                 </div>
             </div>
             <div class="contact-form">
@@ -362,31 +135,29 @@
                         <textarea id="messageEn" name="message" rows="4" required></textarea>
                     </div>
                     <button type="submit" class="btn-submit">Send Message</button>
-                    <p style="font-size:0.8rem; margin-top:1rem; color:#666;">We will respond within 1‑2 business days. Do not share confidential information.</p>
+                    <p style="font-size:0.8rem; margin-top:1rem; color:#555;">We will respond within 1‑2 business days. Do not share confidential information.</p>
                 </form>
             </div>
         </div>
     </div>
-
-    <!-- Nepali content (same structure, translated labels) -->
     <div id="np-content" style="display:none;">
         <h2>सम्पर्क गर्नुहोस्</h2>
         <div class="contact-grid">
             <div class="contact-info">
-                <p><strong>📍 रजिस्टर्ड कार्यालय</strong><br>
+                <p><strong>रजिस्टर्ड कार्यालय</strong><br>
                 कार्की एसोसिएट्स प्राइभेट लिमिटेड<br>
                 पोखरा महानगरपालिका, वडा नं. ७<br>
                 कास्की जिल्ला, गण्डकी प्रदेश<br>
                 नेपाल</p>
-                <p><strong>📞 फोन</strong><br>
+                <p><strong>फोन</strong><br>
                 +977‑9851068714</p>
-                <p><strong>✉️ इमेल</strong><br>
+                <p><strong>इमेल</strong><br>
                 info@karkiassociates.com</p>
-                <p><strong>🕒 कार्यालय समय</strong><br>
+                <p><strong>कार्यालय समय</strong><br>
                 आइतबार – शुक्रबार: १०:०० बजे – १७:०० बजे (नेपाल समय)<br>
                 शनिबार र सार्वजनिक बिदामा बन्द</p>
                 <div class="map-placeholder">
-                    📍 नक्सा: पोखरा महानगरपालिका, वडा नं. ७, कास्की
+                    नक्सा: पोखरा महानगरपालिका, वडा नं. ७, कास्की
                 </div>
             </div>
             <div class="contact-form">
@@ -419,93 +190,82 @@
                         <textarea id="messageNp" name="message" rows="4" required></textarea>
                     </div>
                     <button type="submit" class="btn-submit">सन्देश पठाउनुहोस्</button>
-                    <p style="font-size:0.8rem; margin-top:1rem; color:#666;">हामी १-२ व्यावसायिक दिनभित्र जवाफ दिनेछौं। कृपया गोप्य जानकारी नपठाउनुहोस्।</p>
+                    <p style="font-size:0.8rem; margin-top:1rem; color:#555;">हामी १-२ व्यावसायिक दिनभित्र जवाफ दिनेछौं। गोप्य जानकारी नपठाउनुहोस्।</p>
                 </form>
             </div>
         </div>
     </div>
 </main>
-
 <footer>
     <div class="container">
-        <p>&copy; 2025 Karki Associates Private Limited. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="terms.html">Terms of Use</a> | 
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="cookie.html">Cookie Policy</a>
+        <div class="footer-policy" id="footerPolicyLinks">
+            <a href="terms.html" data-key="terms">Terms of Use</a>
+            <a href="privacy.html" data-key="privacy">Privacy Policy</a>
+            <a href="cookie.html" data-key="cookie">Cookie Policy</a>
         </div>
-        <p>Registered Office: Pokhara Metropolitan City, Ward No. 7, Kaski, Nepal</p>
+        <div class="footer-copyright" id="footerCopyright">© 2026 Karki Associates Private Limited</div>
     </div>
 </footer>
-
 <script>
-    // Language toggle logic (E/N) with dynamic button text
-    function updateToggleButtons() {
-        const enVisible = document.getElementById('en-content').style.display !== 'none';
-        const desktopBtn = document.getElementById('langToggleDesktop');
-        const mobileBtn = document.getElementById('langToggleMobile');
-        const newText = enVisible ? 'N' : 'E';
-        if (desktopBtn) desktopBtn.textContent = newText;
-        if (mobileBtn) mobileBtn.textContent = newText;
-    }
-
-    function toggleLanguage() {
-        const enContent = document.getElementById('en-content');
-        const npContent = document.getElementById('np-content');
-        const isEnglish = enContent.style.display !== 'none';
-        if (isEnglish) {
-            enContent.style.display = 'none';
-            npContent.style.display = 'block';
-            document.documentElement.lang = 'ne';
+    const navTranslations = {
+        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", contact: "Contact" },
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", contact: "सम्पर्क" }
+    };
+    const footerTranslations = {
+        en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
+        ne: { terms: "प्रयोगका सर्तहरू", privacy: "गोपनीयता नीति", cookie: "कुकी नीति" }
+    };
+    function updateUILanguage(lang) {
+        document.querySelectorAll('[data-key]').forEach(el => {
+            const key = el.getAttribute('data-key');
+            if (navTranslations[lang] && navTranslations[lang][key]) el.textContent = navTranslations[lang][key];
+            else if (footerTranslations[lang] && footerTranslations[lang][key]) el.textContent = footerTranslations[lang][key];
+        });
+        const copyrightEl = document.getElementById('footerCopyright');
+        if (lang === 'ne') {
+            copyrightEl.textContent = '© २०२६ कार्की एसोसिएट्स प्राइभेट लिमिटेड';
         } else {
-            npContent.style.display = 'none';
-            enContent.style.display = 'block';
-            document.documentElement.lang = 'en';
+            copyrightEl.textContent = '© 2026 Karki Associates Private Limited';
         }
-        updateToggleButtons();
     }
-
-    const desktopBtn = document.getElementById('langToggleDesktop');
-    const mobileBtn = document.getElementById('langToggleMobile');
-    if (desktopBtn) desktopBtn.addEventListener('click', toggleLanguage);
-    if (mobileBtn) mobileBtn.addEventListener('click', toggleLanguage);
-    updateToggleButtons();
-
-    // Hamburger menu
+    function toggleLanguage() {
+        const en = document.getElementById('en-content');
+        const np = document.getElementById('np-content');
+        const isEn = en.style.display !== 'none';
+        if (isEn) {
+            en.style.display = 'none';
+            np.style.display = 'block';
+            document.documentElement.lang = 'ne';
+            updateUILanguage('ne');
+            document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = 'E');
+        } else {
+            np.style.display = 'none';
+            en.style.display = 'block';
+            document.documentElement.lang = 'en';
+            updateUILanguage('en');
+            document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = 'ने');
+        }
+    }
+    document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
+    updateUILanguage('en');
     const hamburger = document.getElementById('hamburgerBtn');
     const mobileNav = document.getElementById('mobileNav');
     if (hamburger) {
         hamburger.addEventListener('click', () => {
-            if (mobileNav.style.display === 'flex') {
-                mobileNav.style.display = 'none';
-            } else {
-                mobileNav.style.display = 'flex';
-            }
+            mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
         });
     }
-
-    const mobileLinks = document.querySelectorAll('.mobile-nav a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (mobileNav) mobileNav.style.display = 'none';
-        });
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+        link.addEventListener('click', () => { if (mobileNav) mobileNav.style.display = 'none'; });
     });
-
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && mobileNav) {
-            mobileNav.style.display = 'none';
-        }
-    });
-
-    // Prevent actual form submission for demo (you can later integrate backend)
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
+    window.addEventListener('resize', () => { if (window.innerWidth > 768 && mobileNav) mobileNav.style.display = 'none'; });
+    // Simple form submission alert
+    document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
             alert('This is a demo. In a real website, this form would send an email. Thank you for reaching out!');
         });
     });
 </script>
-
 </body>
 </html>
