@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karki Associates - Blog</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: white;
+            color: #1a3e6f;
+            padding: 0.8rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .desktop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo img {
+            max-height: 95px;
+            width: auto;
+            display: block;
+        }
+
+        .desktop-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+            align-items: center;
+        }
+
+        .desktop-nav a {
+            color: #1a3e6f;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .desktop-nav a:hover {
+            color: #ffc107;
+        }
+
+        .lang-switch {
+            background: white;
+            color: black;
+            border: 1.5px solid #1a3e6f;
+            padding: 0.3rem 0.7rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            margin-left: 0.5rem;
+        }
+
+        .lang-switch:hover {
+            background: #1a3e6f;
+            color: white;
+        }
+
+        .mobile-header {
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hamburger {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #1a3e6f;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            background: white;
+            padding: 1rem;
+            border-top: 1px solid #eee;
+            margin-top: 0.8rem;
+        }
+
+        .mobile-nav a {
+            color: #1a3e6f;
+            text-decoration: none;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav a:hover {
+            color: #ffc107;
+        }
+
+        main {
+            background: white;
+            padding: 2rem;
+            margin: 2rem auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #1a3e6f;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #ffd966;
+            padding-left: 15px;
+        }
+
+        /* Blog post card */
+        .blog-post {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            transition: box-shadow 0.3s;
+        }
+        .blog-post:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .post-title {
+            color: #1a3e6f;
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+        }
+        .post-meta {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        .post-meta span {
+            margin-right: 1rem;
+        }
+        .post-excerpt {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: #1a3e6f;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 0;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .read-more-btn:hover {
+            color: #ffc107;
+            text-decoration: underline;
+        }
+        .full-content {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed #ccc;
+        }
+        .full-content p {
+            margin-bottom: 0.8rem;
+        }
+
+        footer {
+            background: #1a3e6f;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #ffd966;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-links {
+            margin: 0.5rem 0;
+        }
+        .footer-links a {
+            margin: 0 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-header {
+                display: none;
+            }
+            .mobile-header {
+                display: flex;
+            }
+            .logo img {
+                max-height: 65px;
+            }
+            .mobile-header .logo {
+                flex-grow: 1;
+                text-align: center;
+            }
+            main {
+                padding: 1.5rem;
+            }
+            .post-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <!-- Desktop header -->
+        <div class="desktop-header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Karki Associates Logo">
+            </div>
+            <div class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="advocate.html">Advocate</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button id="langToggleDesktop" class="lang-switch">N</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile header -->
+        <div class="mobile-header">
+            <button class="hamburger" id="hamburgerBtn">☰</button>
+            <div class="logo">
+                <img src="images/logo.png" alt="Karki Associates Logo">
+            </div>
+            <button id="langToggleMobile" class="lang-switch">N</button>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="advocate.html">Advocate</a>
+            <a href="service.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <!-- English blog content (dynamic) -->
+    <div id="en-content">
+        <h2 id="blog-heading-en">Latest Insights</h2>
+        <div id="blog-posts-en"></div>
+    </div>
+
+    <!-- Nepali blog content (static translation of headings only, posts remain English for simplicity) -->
+    <div id="np-content" style="display:none;">
+        <h2 id="blog-heading-np">नवीनतम लेखहरू</h2>
+        <div id="blog-posts-np"></div>
+        <p style="margin-top:1rem; color:#666;">* ब्लग पोस्टहरू अङ्ग्रेजीमा छन्।</p>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Karki Associates Private Limited. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="terms.html">Terms of Use</a> | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="cookie.html">Cookie Policy</a>
+        </div>
+        <p>Registered Office: Pokhara Metropolitan City, Ward No. 7, Kaski, Nepal</p>
+    </div>
+</footer>
+
+<script>
+    // ---------- BLOG POSTS DATABASE (easily add or edit posts here) ----------
+    const blogPosts = [
+        {
+            id: 1,
+            title: "New Companies Act Amendments: What Businesses Need to Know",
+            date: "April 15, 2025",
+            author: "Adv. Anil Karki",
+            category: "Legal Update",
+            excerpt: "The Government of Nepal has introduced significant amendments to the Companies Act, 2063. These changes affect share transfer procedures, board meeting requirements, and annual compliance filings. Learn how your business can stay compliant...",
+            fullContent: "<p>The recently passed amendment bill introduces several key provisions: simplified share transfer for private companies, mandatory e‑filing of annual returns, and reduced penalties for late filing within 30 days. Additionally, single‑shareholder companies now have more flexibility in holding general meetings.</p><p>We recommend all registered companies review their internal bylaws and update their Articles of Association accordingly. For a full analysis or assistance with compliance, contact our office.</p>"
+        },
+        {
+            id: 2,
+            title: "Tax Deadlines for Fiscal Year 2081/82",
+            date: "April 5, 2025",
+            author: "Tax Team",
+            category: "Tax Advisory",
+            excerpt: "Stay ahead of the upcoming tax deadlines. Inland Revenue Department has published the calendar for VAT, TDS, and income tax returns. Missing deadlines could result in penalties up to 15%...",
+            fullContent: "<p>Key deadlines: VAT and TDS returns for the end of the fiscal year must be filed by Kartik 15. Advance tax payments are due on Ashwin 15 and Falgun 15. Newly registered businesses must also submit their first annual audit report within six months of the fiscal year end.</p><p>Our tax consultants can help you prepare and file on time. Contact us for a consultation.</p>"
+        },
+        {
+            id: 3,
+            title: "Digital Service Records: Legal Requirements for Employers",
+            date: "March 20, 2025",
+            author: "Adv. Anil Karki",
+            category: "Labour Law",
+            excerpt: "With the digitisation of government services, employers must now maintain digital records of employee service contracts, leave, and salary details. Failure to comply may lead to inspections...",
+            fullContent: "<p>The Labour Act, 2074 requires every establishment to keep electronic attendance records, annual leave ledgers, and settlement statements. The new online portal 'Shram Suvidha' allows employers to register and update employee information directly.</p><p>We provide end‑to‑end setup of digital HR systems and ensure full labour law compliance.</p>"
+        },
+        {
+            id: 4,
+            title: "Intellectual Property Protection for Small Businesses",
+            date: "March 10, 2025",
+            author: "Legal Desk",
+            category: "IPR",
+            excerpt: "Trademark registration in Nepal has become faster with the new online filing system. Small businesses can now protect their brand identity at a lower cost...",
+            fullContent: "<p>The Department of Industry has streamlined the trademark registration process, reducing the average processing time to 8‑10 months. We assist clients from trademark search to registration and renewal.</p><p>Don't let others misuse your brand – secure your intellectual property rights today.</p>"
+        }
+    ];
+
+    // Function to render blog posts in a given container (English)
+    function renderPosts(containerId) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        container.innerHTML = '';
+        blogPosts.forEach(post => {
+            const postDiv = document.createElement('div');
+            postDiv.className = 'blog-post';
+            postDiv.setAttribute('data-id', post.id);
+            postDiv.innerHTML = `
+                <h3 class="post-title">${escapeHtml(post.title)}</h3>
+                <div class="post-meta">
+                    <span><strong>📅 ${escapeHtml(post.date)}</strong></span>
+                    <span><strong>✍️ ${escapeHtml(post.author)}</strong></span>
+                    <span><strong>📂 ${escapeHtml(post.category)}</strong></span>
+                </div>
+                <div class="post-excerpt">${escapeHtml(post.excerpt)}</div>
+                <button class="read-more-btn" data-id="${post.id}">Read more ▼</button>
+                <div class="full-content" id="full-${post.id}" style="display:none;">${post.fullContent}</div>
+            `;
+            container.appendChild(postDiv);
+        });
+
+        // Attach event listeners to all "Read more" buttons
+        document.querySelectorAll('.read-more-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const id = this.getAttribute('data-id');
+                const fullDiv = document.getElementById(`full-${id}`);
+                if (fullDiv.style.display === 'none' || fullDiv.style.display === '') {
+                    fullDiv.style.display = 'block';
+                    this.innerHTML = 'Read less ▲';
+                } else {
+                    fullDiv.style.display = 'none';
+                    this.innerHTML = 'Read more ▼';
+                }
+            });
+        });
+    }
+
+    // Helper to escape HTML
+    function escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
+            return c;
+        });
+    }
+
+    // Render posts in English container initially (both languages will show same posts because Nepali container will copy English posts)
+    renderPosts('blog-posts-en');
+
+    // For Nepali view, we also render posts but keep content English; we can copy the same rendered HTML.
+    function renderNepaliPosts() {
+        const npContainer = document.getElementById('blog-posts-np');
+        if (!npContainer) return;
+        // Clone the English posts (already rendered) and adjust any text that needs translation? But we keep content English.
+        const enContainer = document.getElementById('blog-posts-en');
+        if (enContainer) {
+            npContainer.innerHTML = enContainer.innerHTML;
+            // Re-attach read-more events for Nepali container buttons
+            document.querySelectorAll('#blog-posts-np .read-more-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    const id = this.getAttribute('data-id');
+                    const fullDiv = document.getElementById(`full-${id}`);
+                    if (fullDiv) {
+                        if (fullDiv.style.display === 'none' || fullDiv.style.display === '') {
+                            fullDiv.style.display = 'block';
+                            this.innerHTML = 'Read less ▲';
+                        } else {
+                            fullDiv.style.display = 'none';
+                            this.innerHTML = 'Read more ▼';
+                        }
+                    }
+                });
+            });
+        }
+    }
+    renderNepaliPosts();
+
+    // Language toggle logic (E/N) with dynamic button text and toggling English/Nepali UI
+    function updateToggleButtons() {
+        const enVisible = document.getElementById('en-content').style.display !== 'none';
+        const desktopBtn = document.getElementById('langToggleDesktop');
+        const mobileBtn = document.getElementById('langToggleMobile');
+        const newText = enVisible ? 'N' : 'E';
+        if (desktopBtn) desktopBtn.textContent = newText;
+        if (mobileBtn) mobileBtn.textContent = newText;
+    }
+
+    function toggleLanguage() {
+        const enContent = document.getElementById('en-content');
+        const npContent = document.getElementById('np-content');
+        const isEnglish = enContent.style.display !== 'none';
+        if (isEnglish) {
+            enContent.style.display = 'none';
+            npContent.style.display = 'block';
+            document.documentElement.lang = 'ne';
+        } else {
+            npContent.style.display = 'none';
+            enContent.style.display = 'block';
+            document.documentElement.lang = 'en';
+        }
+        updateToggleButtons();
+    }
+
+    const desktopBtn = document.getElementById('langToggleDesktop');
+    const mobileBtn = document.getElementById('langToggleMobile');
+    if (desktopBtn) desktopBtn.addEventListener('click', toggleLanguage);
+    if (mobileBtn) mobileBtn.addEventListener('click', toggleLanguage);
+    updateToggleButtons();
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            if (mobileNav.style.display === 'flex') {
+                mobileNav.style.display = 'none';
+            } else {
+                mobileNav.style.display = 'flex';
+            }
+        });
+    }
+
+    const mobileLinks = document.querySelectorAll('.mobile-nav a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (mobileNav) mobileNav.style.display = 'none';
+        });
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && mobileNav) {
+            mobileNav.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
