@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karki Associates Pvt. Ltd. – Home</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         * {
             margin: 0;
@@ -28,7 +30,7 @@
         header {
             background: #1a3e6f;
             color: white;
-            padding: 1rem 0;
+            padding: 0.8rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -43,16 +45,11 @@
             gap: 1rem;
         }
 
+        /* Logo styling – fits 800x300 original but scales down nicely */
         .logo img {
-            max-height: 60px;
+            max-height: 80px;    /* limits height on desktop */
             width: auto;
             display: block;
-        }
-
-        .tagline {
-            font-size: 0.8rem;
-            opacity: 0.9;
-            margin-top: 5px;
         }
 
         nav ul {
@@ -82,6 +79,7 @@
             font-weight: bold;
             color: #1a3e6f;
             transition: background 0.3s;
+            white-space: nowrap;
         }
 
         #langToggle:hover {
@@ -165,6 +163,9 @@
                 flex-direction: column;
                 text-align: center;
             }
+            .logo img {
+                max-height: 60px;   /* slightly smaller on mobile */
+            }
             nav ul {
                 justify-content: center;
             }
@@ -179,10 +180,7 @@
 <header>
     <div class="container header-flex">
         <div class="logo">
-            <!-- Logo image only – no brand name text -->
             <img src="logo.png" alt="Karki Associates Logo">
-            <div class="tagline" id="tagline-en">Professional Services – Legal, Accounting, Management, Research</div>
-            <div class="tagline" id="tagline-np" style="display:none;">व्यावसायिक सेवाहरू – कानूनी, लेखा, व्यवस्थापन, अनुसन्धान</div>
         </div>
         <nav>
             <ul>
@@ -273,8 +271,6 @@
     const toggleBtn = document.getElementById('langToggle');
     const enContent = document.getElementById('en-content');
     const npContent = document.getElementById('np-content');
-    const taglineEn = document.getElementById('tagline-en');
-    const taglineNp = document.getElementById('tagline-np');
     
     let currentLang = 'en';
 
@@ -282,16 +278,12 @@
         if (currentLang === 'en') {
             enContent.style.display = 'none';
             npContent.style.display = 'block';
-            taglineEn.style.display = 'none';
-            taglineNp.style.display = 'block';
             toggleBtn.textContent = 'English';
             currentLang = 'np';
             document.documentElement.lang = 'ne';
         } else {
             npContent.style.display = 'none';
             enContent.style.display = 'block';
-            taglineNp.style.display = 'none';
-            taglineEn.style.display = 'block';
             toggleBtn.textContent = 'नेपाली';
             currentLang = 'en';
             document.documentElement.lang = 'en';
