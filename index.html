@@ -6,192 +6,46 @@
     <title>Karki Associates</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #111;
-            background: #f5f5f5;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        header {
-            background: #fff;
-            color: #000;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #ccc;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        /* Desktop header */
-        .desktop-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo a {
-            display: block;
-        }
-        .logo img {
-            max-height: 95px;
-            width: auto;
-            display: block;
-        }
-        .desktop-nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.8rem;
-            align-items: center;
-        }
-        .desktop-nav a {
-            color: #000;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-        }
-        .desktop-nav a:hover {
-            text-decoration: underline;
-        }
-        .lang-switch {
-            background: #fff;
-            color: #000;
-            border: 1px solid #000;
-            padding: 0.3rem 0.7rem;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.9rem;
-            margin-left: 0.5rem;
-        }
-        .lang-switch:hover {
-            background: #000;
-            color: #fff;
-        }
-        /* Mobile header */
-        .mobile-header {
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-        }
-        .hamburger {
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #000;
-            padding: 0 0.2rem;
-        }
-        .mobile-right {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-        .mobile-nav {
-            display: none;
-            flex-direction: column;
-            background: #fff;
-            padding: 1rem;
-            border-top: 1px solid #ccc;
-            margin-top: 0.8rem;
-        }
-        .mobile-nav a {
-            color: #000;
-            text-decoration: none;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #eee;
-            font-weight: 500;
-            text-align: center;
-        }
-        .mobile-nav a:last-child {
-            border-bottom: none;
-        }
-        main {
-            background: #fff;
-            padding: 2rem;
-            margin: 2rem auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        h2 {
-            color: #000;
-            margin-bottom: 1rem;
-        }
-        h3 {
-            color: #000;
-            margin: 1.5rem 0 0.8rem 0;
-        }
-        ul {
-            margin-left: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        .btn {
-            display: inline-block;
-            background: #000;
-            color: #fff;
-            padding: 0.7rem 1.5rem;
-            text-decoration: none;
-            border-radius: 30px;
-            margin-top: 1rem;
-        }
-        .btn:hover {
-            background: #333;
-        }
-        footer {
-            background: #fff;
-            color: #000;
-            text-align: center;
-            padding: 0.8rem 0;
-            border-top: 1px solid #ccc;
-        }
-        footer a {
-            color: #000;
-            text-decoration: none;
-            margin: 0 0.5rem;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        .footer-policy {
-            margin-bottom: 0.3rem;
-        }
-        .footer-copyright {
-            margin: 0.2rem 0;
-            font-size: 0.9rem;
-        }
-        .footer-rights {
-            font-size: 0.8rem;
-            color: #555;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #111; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; color: #000; padding: 0.8rem 0; border-bottom: 1px solid #ccc; position: sticky; top: 0; z-index: 100; }
+        .desktop-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo a { display: block; }
+        .logo img { max-height: 95px; width: auto; display: block; }
+        .desktop-nav ul { display: flex; list-style: none; gap: 1.8rem; align-items: center; }
+        .desktop-nav a { color: #000; text-decoration: none; font-weight: 500; font-size: 1rem; }
+        .desktop-nav a:hover { text-decoration: underline; }
+        .lang-switch { background: #fff; color: #000; border: 1px solid #000; padding: 0.3rem 0.7rem; border-radius: 30px; cursor: pointer; font-weight: bold; font-size: 0.9rem; margin-left: 0.5rem; }
+        .lang-switch:hover { background: #000; color: #fff; }
+        .mobile-header { display: none; align-items: center; justify-content: space-between; width: 100%; }
+        .hamburger { background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #000; padding: 0 0.2rem; }
+        .mobile-right { display: flex; align-items: center; gap: 0.8rem; }
+        .mobile-nav { display: none; flex-direction: column; background: #fff; padding: 1rem; border-top: 1px solid #ccc; margin-top: 0.8rem; }
+        .mobile-nav a { color: #000; text-decoration: none; padding: 0.8rem 0; border-bottom: 1px solid #eee; font-weight: 500; text-align: center; }
+        .mobile-nav a:last-child { border-bottom: none; }
+        main { background: #fff; padding: 2rem; margin: 2rem auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        h2 { color: #000; margin-bottom: 1rem; }
+        h3 { color: #000; margin: 1.5rem 0 0.8rem 0; }
+        ul { margin-left: 1.8rem; margin-bottom: 1rem; }
+        .btn { display: inline-block; background: #000; color: #fff; padding: 0.7rem 1.5rem; text-decoration: none; border-radius: 30px; margin-top: 1rem; }
+        .btn:hover { background: #333; }
+        footer { background: #fff; color: #000; text-align: center; padding: 0.8rem 0; border-top: 1px solid #ccc; }
+        footer a { color: #000; text-decoration: none; margin: 0 0.5rem; }
+        footer a:hover { text-decoration: underline; }
+        .footer-policy { margin-bottom: 0.3rem; word-spacing: 0.5rem; }
+        .footer-copyright { margin: 0.2rem 0; font-size: 0.9rem; }
         @media (max-width: 768px) {
-            .desktop-header {
-                display: none;
-            }
-            .mobile-header {
-                display: flex;
-            }
-            .logo img {
-                max-height: 65px;
-            }
-            main {
-                padding: 1.5rem;
-            }
+            .desktop-header { display: none; }
+            .mobile-header { display: flex; }
+            .logo img { max-height: 65px; }
+            main { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
 <header>
     <div class="container">
-        <!-- Desktop header -->
         <div class="desktop-header">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
             <div class="desktop-nav">
@@ -202,15 +56,14 @@
                     <li><a href="service.html" data-key="services">Services</a></li>
                     <li><a href="blog.html" data-key="blog">Blog</a></li>
                     <li><a href="contact.html" data-key="contact">Contact</a></li>
-                    <li><button id="langToggleDesktop" class="lang-switch">N</button></li>
+                    <li><button id="langToggleDesktop" class="lang-switch">ने</button></li>
                 </ul>
             </div>
         </div>
-        <!-- Mobile header: logo left, hamburger + lang toggle right -->
         <div class="mobile-header">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
             <div class="mobile-right">
-                <button id="langToggleMobile" class="lang-switch">N</button>
+                <button id="langToggleMobile" class="lang-switch">ने</button>
                 <button class="hamburger" id="hamburgerBtn">☰</button>
             </div>
         </div>
@@ -251,16 +104,14 @@
 <footer>
     <div class="container">
         <div class="footer-policy" id="footerPolicyLinks">
-            <a href="terms.html" data-key="terms">Terms of Use</a> |
-            <a href="privacy.html" data-key="privacy">Privacy Policy</a> |
+            <a href="terms.html" data-key="terms">Terms of Use</a>
+            <a href="privacy.html" data-key="privacy">Privacy Policy</a>
             <a href="cookie.html" data-key="cookie">Cookie Policy</a>
         </div>
-        <div class="footer-copyright" id="footerCopyright">(c) 2026 Karki Associates Private Limited</div>
-        <div class="footer-rights" id="footerRights">All rights reserved</div>
+        <div class="footer-copyright" id="footerCopyright">© 2026 Karki Associates Private Limited</div>
     </div>
 </footer>
 <script>
-    // Translation dictionaries
     const navTranslations = {
         en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", contact: "Contact" },
         ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", contact: "सम्पर्क" }
@@ -272,20 +123,14 @@
     function updateUILanguage(lang) {
         document.querySelectorAll('[data-key]').forEach(el => {
             const key = el.getAttribute('data-key');
-            if (navTranslations[lang] && navTranslations[lang][key]) {
-                el.textContent = navTranslations[lang][key];
-            } else if (footerTranslations[lang] && footerTranslations[lang][key]) {
-                el.textContent = footerTranslations[lang][key];
-            }
+            if (navTranslations[lang] && navTranslations[lang][key]) el.textContent = navTranslations[lang][key];
+            else if (footerTranslations[lang] && footerTranslations[lang][key]) el.textContent = footerTranslations[lang][key];
         });
         const copyrightEl = document.getElementById('footerCopyright');
-        const rightsEl = document.getElementById('footerRights');
         if (lang === 'ne') {
-            copyrightEl.textContent = '(c) २०२६ कार्की एसोसिएट्स प्राइभेट लिमिटेड';
-            rightsEl.textContent = 'सबै अधिकार सुरक्षित';
+            copyrightEl.textContent = '© २०२६ कार्की एसोसिएट्स प्राइभेट लिमिटेड';
         } else {
-            copyrightEl.textContent = '(c) 2026 Karki Associates Private Limited';
-            rightsEl.textContent = 'All rights reserved';
+            copyrightEl.textContent = '© 2026 Karki Associates Private Limited';
         }
     }
     function toggleLanguage() {
@@ -303,31 +148,22 @@
             en.style.display = 'block';
             document.documentElement.lang = 'en';
             updateUILanguage('en');
-            document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = 'N');
+            document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = 'ने');
         }
     }
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
     updateUILanguage('en');
-    // Hamburger menu for mobile
     const hamburger = document.getElementById('hamburgerBtn');
     const mobileNav = document.getElementById('mobileNav');
     if (hamburger) {
         hamburger.addEventListener('click', () => {
-            if (mobileNav.style.display === 'flex') {
-                mobileNav.style.display = 'none';
-            } else {
-                mobileNav.style.display = 'flex';
-            }
+            mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
         });
     }
     document.querySelectorAll('.mobile-nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (mobileNav) mobileNav.style.display = 'none';
-        });
+        link.addEventListener('click', () => { if (mobileNav) mobileNav.style.display = 'none'; });
     });
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && mobileNav) mobileNav.style.display = 'none';
-    });
+    window.addEventListener('resize', () => { if (window.innerWidth > 768 && mobileNav) mobileNav.style.display = 'none'; });
 </script>
 </body>
 </html>
