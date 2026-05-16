@@ -8,89 +8,162 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Arial', sans-serif;  /* Arial for both English and Nepali */
+            font-family: 'Arial', sans-serif;
             font-size: 1.125rem;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #111;
-            background: #f5f5f5;
+            background: #f8f8f8;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background: #fff; color: #000; padding: 0.8rem 0; border-bottom: 1px solid #ccc; position: sticky; top: 0; z-index: 100; }
-        .desktop-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .logo a { display: block; }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        header {
+            background: #fff;
+            color: #000;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+        }
+        .desktop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo a { display: block; transition: opacity 0.2s; }
+        .logo a:hover { opacity: 0.85; }
         .logo img { max-height: 95px; width: auto; display: block; }
-        .desktop-nav ul { display: flex; list-style: none; gap: 1.8rem; align-items: center; }
+        .desktop-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
         .desktop-nav a {
             color: #000;
             text-decoration: none;
             font-weight: 500;
             font-size: 1.125rem;
+            transition: color 0.2s;
         }
-        .desktop-nav a:hover { text-decoration: underline; }
+        .desktop-nav a:hover { color: #444; text-decoration: underline; }
         .lang-switch {
             background: #fff;
             color: #000;
-            border: 1px solid #000;
-            padding: 0.3rem 0.7rem;
+            border: 1px solid #333;
+            padding: 0.3rem 0.8rem;
             border-radius: 30px;
             cursor: pointer;
             font-weight: bold;
             font-size: 0.9rem;
             margin-left: 0.5rem;
             font-family: 'Arial', sans-serif;
+            transition: all 0.2s;
         }
-        .lang-switch:hover { background: #000; color: #fff; }
-        .mobile-header { display: none; align-items: center; justify-content: space-between; width: 100%; }
-        .hamburger { background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #000; padding: 0 0.2rem; }
-        .mobile-right { display: flex; align-items: center; gap: 0.8rem; }
-        .mobile-nav { display: none; flex-direction: column; background: #fff; padding: 1rem; border-top: 1px solid #ccc; margin-top: 0.8rem; }
-        .mobile-nav a { color: #000; text-decoration: none; padding: 0.8rem 0; border-bottom: 1px solid #eee; font-weight: 500; text-align: center; }
+        .lang-switch:hover { background: #000; color: #fff; border-color: #000; }
+        .mobile-header {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .hamburger {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #000;
+            padding: 0;
+            transition: opacity 0.2s;
+        }
+        .hamburger:hover { opacity: 0.7; }
+        .mobile-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            background: #fff;
+            padding: 1rem;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 0.8rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .mobile-nav a {
+            color: #000;
+            text-decoration: none;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            font-weight: 500;
+            text-align: center;
+            transition: background 0.2s;
+        }
         .mobile-nav a:last-child { border-bottom: none; }
+        .mobile-nav a:hover { background: #f5f5f5; }
         main {
             background: #fff;
-            padding: 2rem;
+            padding: 2.5rem;
             margin: 3rem auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s;
         }
-        h2 { color: #000; margin-bottom: 1rem; font-size: 1.8rem; }
-        h3 { color: #000; margin: 1.5rem 0 0.8rem 0; font-size: 1.4rem; }
-        p, ul, li { margin-bottom: 0.5rem; }
+        h2 {
+            color: #000;
+            margin-bottom: 1.2rem;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        h3 {
+            color: #000;
+            margin: 2rem 0 0.8rem 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        p, ul, li { margin-bottom: 0.75rem; }
         ul { margin-left: 1.8rem; }
-        .btn {
-            display: inline-block;
-            background: #000;
-            color: #fff;
-            padding: 0.7rem 1.5rem;
-            text-decoration: none;
-            border-radius: 30px;
-            margin-top: 1rem;
-            font-size: 1rem;
+        li { margin-bottom: 0.4rem; }
+        footer {
+            background: #fff;
+            color: #000;
+            text-align: center;
+            padding: 1.2rem 0;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 2rem;
         }
-        .btn:hover { background: #333; }
-        footer { background: #fff; color: #000; text-align: center; padding: 0.8rem 0; border-top: 1px solid #ccc; }
         footer a {
             color: #000;
             text-decoration: none;
-            margin: 0 0.3rem;
+            margin: 0 0.4rem;
             font-weight: 500;
-            font-size: 1.125rem;
+            font-size: 1rem;
+            transition: opacity 0.2s;
         }
-        footer a:hover { text-decoration: underline; }
-        .footer-policy { margin-bottom: 0.3rem; word-spacing: normal; }
+        footer a:hover { text-decoration: underline; opacity: 0.8; }
+        .footer-policy { margin-bottom: 0.5rem; word-spacing: normal; }
         .footer-copyright {
-            margin: 0.2rem 0;
-            font-size: 1.125rem;
-            font-weight: bold;
+            margin: 0.3rem 0;
+            font-size: 0.95rem;
+            font-weight: normal;
+            letter-spacing: 0.3px;
         }
         @media (max-width: 768px) {
             .desktop-header { display: none; }
             .mobile-header { display: flex; }
-            .logo img { max-height: 65px; }
-            main { padding: 1.5rem; margin-top: 1.5rem; }
-            body { font-size: 1rem; }
-            .desktop-nav a, footer a { font-size: 1rem; }
-            .footer-copyright { font-size: 1rem; }
+            .logo img { max-height: 60px; }
+            main { padding: 1.5rem; margin: 1.5rem auto; border-radius: 12px; }
+            h2 { font-size: 1.6rem; }
+            h3 { font-size: 1.3rem; }
+            body { font-size: 1rem; line-height: 1.6; }
+            .container { padding: 0 16px; }
         }
     </style>
 </head>
@@ -104,8 +177,8 @@
                     <li><a href="index.html" data-key="home">Home</a></li>
                     <li><a href="about.html" data-key="about">About</a></li>
                     <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
-                    <li><a href="service.html" data-key="services">Services</a></li>
                     <li><a href="blog.html" data-key="blog">Blog</a></li>
+                    <li><a href="opinion.html" data-key="opinion">Opinion</a></li>
                     <li><a href="contact.html" data-key="contact">Contact</a></li>
                     <li><button id="langToggleDesktop" class="lang-switch">ने</button></li>
                 </ul>
@@ -122,34 +195,28 @@
             <a href="index.html" data-key="home">Home</a>
             <a href="about.html" data-key="about">About</a>
             <a href="advocate.html" data-key="advocate">Advocate</a>
-            <a href="service.html" data-key="services">Services</a>
             <a href="blog.html" data-key="blog">Blog</a>
+            <a href="opinion.html" data-key="opinion">Opinion</a>
             <a href="contact.html" data-key="contact">Contact</a>
         </div>
     </div>
 </header>
 <main class="container">
+    <!-- English content -->
     <div id="en-content">
-        <h2>Welcome to Karki Associates Private Limited</h2>
-        <p><strong>Professional Services – Legal, Accounting, Management, Research & Administration</strong></p>
-        <p>Karki Associates Private Limited is a registered private company under the Companies Act, 2063 (2006) of Nepal. Our registered office is located in Pokhara Metropolitan City, Ward No. 7, Kaski District, Nepal.</p>
-        <p>We are a service‑oriented firm dedicated to delivering high‑quality professional solutions to individuals, businesses, and public organisations. Our team combines legal expertise, accounting knowledge, management consulting experience, and research capabilities – all under one roof.</p>
-        <h3>Our Core Services</h3>
-        <ul><li>Legal activities – advisory, documentation, representation</li><li>Accounting, audit & tax consulting – bookkeeping, financial statements, tax planning</li><li>Management consulting – business strategy, process improvement</li><li>Social sciences & humanities research & development – studies, surveys, experimental projects</li><li>Office administrative & support services – document preparation, photocopying, data entry</li><li>Other professional, scientific & technical activities – as permitted by law</li></ul>
-        <h3>Why Choose Us?</h3>
-        <ul><li>Legally compliant – following Companies Act, 2063</li><li>Experienced professionals – led by founder Anil Karki</li><li>Located in Pokhara – easy access</li><li>Integrated solutions – legal, financial, management from one firm</li></ul>
-        <a href="contact.html" class="btn">Contact Us</a>
+        <h2>Welcome to Karki Associates</h2>
+        <p>We are a professional service company focused on legal practice, management consulting, and research and development. We are a registered private company under the Companies Act, 2006 of Nepal. Our registered office is located at Rastra Bank Chowk, Pokhara Metropolitan City, Ward No. 7, Kaski District, Nepal. We also maintain an office at Bagbazar, Kathmandu Metropolitan City, Ward No. 28, Kathmandu District, Nepal.</p>
+        <p>We are a service‑oriented firm dedicated to delivering high‑quality professional solutions to individuals, businesses, and public organisations. Our work combines legal expertise, management consulting, and research capabilities under one roof.</p>
+        <p>Our legal services include advisory, documentation, and representation in various courts and tribunals. In management consulting, we offer business strategy formulation, process improvement, organisational restructuring, and human resource advisory. Our research and development services involve the design and execution of social studies, surveys, feasibility studies, policy analysis, and experimental development projects in social sciences and humanities.</p>
+        <p>We are fully compliant with the Companies Act, 2006, and all applicable laws of Nepal. With offices in Pokhara and Kathmandu, we are easily accessible to clients across the country. We offer integrated solutions that cover legal, financial, and management needs, all from a single firm. Our client‑centric and ethical approach ensures that every solution is tailored to specific requirements while maintaining the highest professional standards.</p>
     </div>
+    <!-- Nepali content -->
     <div id="np-content" style="display:none;">
-        <h2>कार्की एसोसिएट्स प्राइभेट लिमिटेडमा स्वागत छ</h2>
-        <p><strong>व्यावसायिक सेवाहरू – कानूनी, लेखा, व्यवस्थापन, अनुसन्धान तथा प्रशासन</strong></p>
-        <p>कार्की एसोसिएट्स प्राइभेट लिमिटेड नेपालको कम्पनी ऐन, २०६३ अन्तर्गत दर्ता भएको निजी कम्पनी हो। हाम्रो रजिस्टर्ड कार्यालय कास्की जिल्ला, पोखरा महानगरपालिका वडा नं. ७ मा अवस्थित छ।</p>
-        <p>हामी सेवामूलक कम्पनी हौं जसले व्यक्ति, व्यवसाय तथा सार्वजनिक संस्थाहरूलाई उच्च गुणस्तरीय व्यावसायिक समाधानहरू प्रदान गर्दछ।</p>
-        <h3>हाम्रा मुख्य सेवाहरू</h3>
-        <ul><li>कानूनी क्रियाकलाप – सल्लाह, कागजात, मुद्दा प्रतिनिधित्व</li><li>लेखा, लेखापरीक्षण र कर परामर्श – हिसाबकिताब, वित्तीय विवरण, कर योजना</li><li>व्यवस्थापन परामर्श – व्यवसाय रणनीति, प्रक्रिया सुधार</li><li>सामाजिक विज्ञान तथा मानविकी अनुसन्धान – अध्ययन, सर्वेक्षण, प्रयोगात्मक परियोजनाहरू</li><li>कार्यालय प्रशासनिक सहयोग – कागजात तयारी, फोटोकपी, डाटा इन्ट्री</li><li>अन्य पेशागत, वैज्ञानिक तथा प्राविधिक सेवाहरू – कानूनले अनुमति दिए बमोजिम</li></ul>
-        <h3>किन हामी रोज्नुहोस्?</h3>
-        <ul><li>कानूनसम्मत – कम्पनी ऐन, २०६३ को पालना</li><li>अनुभवी पेशेवर – संस्थापक अनिल कार्कीको नेतृत्व</li><li>पोखरामा अवस्थित – सहज पहुँच</li><li>एकीकृत समाधान – कानूनी, वित्तीय, व्यवस्थापन एउटै फर्ममा</li></ul>
-        <a href="contact.html" class="btn">सम्पर्क गर्नुहोस्</a>
+        <h2>कार्की एसोसिएट्समा तपाईंलाई स्वागत छ</h2>
+        <p>हामी कानूनी सेवा, व्यवस्थापन परामर्श, तथा अनुसन्धान र विकासमा केन्द्रित एक व्यावसायिक कम्पनी हौं। हामी नेपालको कम्पनी ऐन, २०६३ अन्तर्गत दर्ता भएको निजी कम्पनी हौं। हाम्रो रजिस्टर्ड कार्यालय राष्ट्र बैंक चोक, पोखरा महानगरपालिका वडा नं. ७, कास्की जिल्ला, नेपालमा अवस्थित छ। साथै, हाम्रो बागबजार, काठमाडौं महानगरपालिका वडा नं. २८, काठमाडौं जिल्ला, नेपालमा समेत कार्यालय रहेको छ।</p>
+        <p>हामी सेवामूलक कम्पनी हौं जसले व्यक्ति, व्यवसाय तथा सार्वजनिक संस्थाहरूलाई उच्च गुणस्तरीय व्यावसायिक समाधानहरू प्रदान गर्दछ। हाम्रो सेवाले कानूनी विज्ञता, व्यवस्थापन परामर्श, र अनुसन्धान क्षमतालाई एकै स्थानमा समेटेको छ।</p>
+        <p>हाम्रा कानूनी सेवाहरूमा विभिन्न अदालत तथा न्यायाधिकरणमा सल्लाह, कागजात तयारी, र मुद्दा प्रतिनिधित्व समावेश छन्। व्यवस्थापन परामर्श अन्तर्गत हामी व्यवसाय रणनीति निर्माण, प्रक्रिया सुधार, संगठनात्मक पुनर्संरचना, र मानव संसाधन सल्लाह प्रदान गर्दछौं। हाम्रो अनुसन्धान तथा विकास सेवामा सामाजिक अध्ययन, सर्वेक्षण, सम्भाव्यता अध्ययन, नीति विश्लेषण, तथा सामाजिक विज्ञान र मानविकीमा प्रयोगात्मक विकास परियोजनाहरूको डिजाइन र कार्यान्वयन गरिन्छ।</p>
+        <p>हामी कम्पनी ऐन, २०६३ र नेपालका सबै लागू कानूनको पूर्ण पालना गर्दछौं। पोखरा र काठमाडौंमा कार्यालय भएकाले हामी देशभरका ग्राहकहरूको लागि सहज पहुँचयोग्य छौं। हामी कानूनी, वित्तीय र व्यवस्थापनसम्बन्धी सबै आवश्यकता एउटै फर्मबाट एकीकृत समाधानको रूपमा प्रदान गर्दछौं। हाम्रो ग्राहक‑केन्द्रित तथा नैतिक दृष्टिकोणले प्रत्येक समाधान विशिष्ट आवश्यकता अनुसार तयार गर्दै उच्चतम व्यावसायिक मापदण्ड कायम राख्दछ।</p>
     </div>
 </main>
 <footer>
@@ -163,9 +230,10 @@
     </div>
 </footer>
 <script>
+    let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
-        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", contact: "Contact" },
-        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", contact: "सम्पर्क" }
+        en: { home: "Home", about: "About", advocate: "Advocate", blog: "Blog", opinion: "Opinion", contact: "Contact" },
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", blog: "ब्लग", opinion: "राय", contact: "सम्पर्क" }
     };
     const footerTranslations = {
         en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
@@ -178,42 +246,24 @@
             else if (footerTranslations[lang] && footerTranslations[lang][key]) el.textContent = footerTranslations[lang][key];
         });
         const copyrightEl = document.getElementById('footerCopyright');
-        if (lang === 'ne') {
-            copyrightEl.textContent = '© २०२६ कार्की एसोसिएट्स प्राइभेट लिमिटेड';
-        } else {
-            copyrightEl.textContent = '© 2026 Karki Associates Private Limited';
-        }
+        copyrightEl.textContent = (lang === 'ne') ? '© २०२६ कार्की एसोसिएट्स प्राइभेट लिमिटेड' : '© 2026 Karki Associates Private Limited';
     }
-    function toggleLanguage() {
-        const en = document.getElementById('en-content');
-        const np = document.getElementById('np-content');
-        const isEn = en.style.display !== 'none';
-        if (isEn) {
-            en.style.display = 'none';
-            np.style.display = 'block';
-            document.documentElement.lang = 'ne';
-            updateUILanguage('ne');
-            document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = 'E');
-        } else {
-            np.style.display = 'none';
-            en.style.display = 'block';
-            document.documentElement.lang = 'en';
-            updateUILanguage('en');
-            document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = 'ने');
-        }
+    function setLanguage(lang) {
+        currentLanguage = lang;
+        localStorage.setItem('selectedLanguage', lang);
+        const en = document.getElementById('en-content'), np = document.getElementById('np-content');
+        if (lang === 'ne') { en.style.display = 'none'; np.style.display = 'block'; document.documentElement.lang = 'ne'; }
+        else { np.style.display = 'none'; en.style.display = 'block'; document.documentElement.lang = 'en'; }
+        updateUILanguage(lang);
+        document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = (lang === 'en') ? 'ने' : 'E');
     }
+    function toggleLanguage() { setLanguage(currentLanguage === 'en' ? 'ne' : 'en'); }
+    setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
-    updateUILanguage('en');
     const hamburger = document.getElementById('hamburgerBtn');
     const mobileNav = document.getElementById('mobileNav');
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
-        });
-    }
-    document.querySelectorAll('.mobile-nav a').forEach(link => {
-        link.addEventListener('click', () => { if (mobileNav) mobileNav.style.display = 'none'; });
-    });
+    if (hamburger) hamburger.addEventListener('click', () => { mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex'; });
+    document.querySelectorAll('.mobile-nav a').forEach(link => link.addEventListener('click', () => { if (mobileNav) mobileNav.style.display = 'none'; }));
     window.addEventListener('resize', () => { if (window.innerWidth > 768 && mobileNav) mobileNav.style.display = 'none'; });
 </script>
 </body>
