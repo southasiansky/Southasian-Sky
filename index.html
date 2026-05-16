@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karki Associates Pvt. Ltd. – Home</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
         * {
             margin: 0;
@@ -25,7 +25,6 @@
             padding: 0 20px;
         }
 
-        /* Header */
         header {
             background: #1a3e6f;
             color: white;
@@ -45,33 +44,30 @@
             position: relative;
         }
 
-        /* Logo styling adjusted for 600x200 banner */
         .logo img {
             max-height: 100px;
             width: auto;
             display: block;
         }
 
-        /* Desktop navigation */
-        nav ul {
+        .desktop-nav ul {
             display: flex;
             list-style: none;
             gap: 1.5rem;
             flex-wrap: wrap;
         }
 
-        nav a {
+        .desktop-nav a {
             color: white;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
         }
 
-        nav a:hover {
+        .desktop-nav a:hover {
             color: #ffd966;
         }
 
-        /* Hamburger button (hidden on desktop) */
         .hamburger {
             display: none;
             background: none;
@@ -83,7 +79,6 @@
             line-height: 1;
         }
 
-        /* Mobile dropdown menu */
         .mobile-nav {
             display: none;
             position: absolute;
@@ -113,7 +108,6 @@
             color: #ffd966;
         }
 
-        /* Language toggle */
         #langToggle {
             background: #ffd966;
             border: none;
@@ -130,7 +124,6 @@
             background: #ffc107;
         }
 
-        /* Main */
         main {
             background: white;
             padding: 2rem;
@@ -175,7 +168,6 @@
             background: #0f2c4f;
         }
 
-        /* Footer */
         footer {
             background: #1a3e6f;
             color: white;
@@ -201,7 +193,6 @@
             margin: 0 0.5rem;
         }
 
-        /* Responsive: Show hamburger, hide desktop nav, adjust logo size */
         @media (max-width: 768px) {
             .desktop-nav {
                 display: none;
@@ -225,19 +216,13 @@
 
 <header>
     <div class="container header-flex">
-        <!-- Hamburger button (left side) -->
         <button class="hamburger" id="hamburgerBtn">☰</button>
-
-        <!-- Logo (centered via flex auto margins or simply block) -->
         <div class="logo">
-            <img src="logo.png" alt="Karki Associates Logo">
+            <img src="images/logo.png" alt="Karki Associates Logo">
         </div>
-
-        <!-- Language toggle (right side) -->
         <button id="langToggle">नेपाली</button>
     </div>
 
-    <!-- Desktop navigation -->
     <div class="container desktop-nav">
         <nav>
             <ul>
@@ -251,7 +236,6 @@
         </nav>
     </div>
 
-    <!-- Mobile dropdown navigation (hidden by default) -->
     <div class="mobile-nav" id="mobileNav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -263,13 +247,11 @@
 </header>
 
 <main class="container">
-    <!-- English content -->
     <div id="en-content">
         <h2>Welcome to Karki Associates Private Limited</h2>
         <p><strong>Professional Services – Legal, Accounting, Management, Research & Administration</strong></p>
         <p>Karki Associates Private Limited is a registered private company under the <strong>Companies Act, 2063 (2006) of Nepal</strong>. Our registered office is located in <strong>Pokhara Metropolitan City, Ward No. 7, Kaski District, Nepal</strong>.</p>
         <p>We are a <strong>service‑oriented</strong> firm dedicated to delivering high‑quality professional solutions to individuals, businesses, and public organisations. Our team combines legal expertise, accounting knowledge, management consulting experience, and research capabilities – all under one roof.</p>
-        
         <h3>Our Core Services</h3>
         <ul>
             <li><strong>Legal activities</strong> – advisory, documentation, representation</li>
@@ -279,7 +261,6 @@
             <li><strong>Office administrative & support services</strong> – document preparation, photocopying, data entry</li>
             <li><strong>Other professional, scientific & technical activities</strong> – as permitted by law</li>
         </ul>
-        
         <h3>Why Choose Us?</h3>
         <ul>
             <li>Legally compliant – following Companies Act, 2063</li>
@@ -287,17 +268,14 @@
             <li>Located in Pokhara – easy access</li>
             <li>Integrated solutions – legal, financial, management from one firm</li>
         </ul>
-        
         <a href="contact.html" class="btn">Contact Us</a>
     </div>
 
-    <!-- Nepali content -->
     <div id="np-content" style="display:none;">
         <h2>कार्की एसोसिएट्स प्राइभेट लिमिटेडमा स्वागत छ</h2>
         <p><strong>व्यावसायिक सेवाहरू – कानूनी, लेखा, व्यवस्थापन, अनुसन्धान तथा प्रशासन</strong></p>
         <p>कार्की एसोसिएट्स प्राइभेट लिमिटेड नेपालको <strong>कम्पनी ऐन, २०६३</strong> अन्तर्गत दर्ता भएको निजी कम्पनी हो। हाम्रो रजिस्टर्ड कार्यालय <strong>कास्की जिल्ला, पोखरा महानगरपालिका वडा नं. ७</strong> मा अवस्थित छ।</p>
         <p>हामी एउटा <strong>सेवामूलक</strong> कम्पनी हौं जसले व्यक्ति, व्यवसाय तथा सार्वजनिक संस्थाहरूलाई उच्च गुणस्तरीय व्यावसायिक समाधानहरू प्रदान गर्दछ। हाम्रो टोलीले कानूनी विज्ञता, लेखा ज्ञान, व्यवस्थापन परामर्श अनुभव र अनुसन्धान क्षमतालाई एकै स्थानमा समेटेको छ।</p>
-        
         <h3>हाम्रा मुख्य सेवाहरू</h3>
         <ul>
             <li><strong>कानूनी क्रियाकलाप</strong> – सल्लाह, कागजात तयारी, मुद्दा प्रतिनिधित्व</li>
@@ -307,7 +285,6 @@
             <li><strong>कार्यालय प्रशासनिक तथा सहयोगी सेवाहरू</strong> – कागजपत्र तयारी, फोटोकपी, डाटा इन्ट्री</li>
             <li><strong>अन्य पेशागत, वैज्ञानिक तथा प्राविधिक सेवाहरू</strong> – प्रचलित कानूनले अनुमति दिए बमोजिम</li>
         </ul>
-        
         <h3>किन हामी रोज्नुहोस्?</h3>
         <ul>
             <li>कानूनसम्मत – कम्पनी ऐन, २०६३ को पूर्ण पालना</li>
@@ -315,7 +292,6 @@
             <li>पोखरामा अवस्थित – सहज पहुँच</li>
             <li>एकीकृत समाधान – कानूनी, वित्तीय र व्यवस्थापन सेवाहरू एउटै फर्ममा</li>
         </ul>
-        
         <a href="contact.html" class="btn">सम्पर्क गर्नुहोस्</a>
     </div>
 </main>
@@ -333,7 +309,6 @@
 </footer>
 
 <script>
-    // Language toggle functionality
     const toggleBtn = document.getElementById('langToggle');
     const enContent = document.getElementById('en-content');
     const npContent = document.getElementById('np-content');
@@ -355,12 +330,10 @@
         }
     });
 
-    // Hamburger menu toggle (mobile)
     const hamburger = document.getElementById('hamburgerBtn');
     const mobileNav = document.getElementById('mobileNav');
 
     hamburger.addEventListener('click', () => {
-        // Toggle dropdown visibility
         if (mobileNav.style.display === 'flex') {
             mobileNav.style.display = 'none';
         } else {
@@ -368,7 +341,6 @@
         }
     });
 
-    // Optional: close dropdown when a link is clicked
     const mobileLinks = mobileNav.querySelectorAll('a');
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -376,7 +348,6 @@
         });
     });
 
-    // Close dropdown if window resized above mobile breakpoint (optional)
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768) {
             mobileNav.style.display = 'none';
