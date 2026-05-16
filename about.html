@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karki Associates – About</title>
+    <title>Karki Associates - About</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
         * {
@@ -26,8 +26,8 @@
         }
 
         header {
-            background: #1a3e6f;
-            color: white;
+            background: white;
+            color: #1a3e6f;
             padding: 0.8rem 0;
             position: sticky;
             top: 0;
@@ -35,17 +35,15 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .header-flex {
+        .desktop-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1rem;
-            position: relative;
         }
 
         .logo img {
-            max-height: 100px;
+            max-height: 70px;
             width: auto;
             display: block;
         }
@@ -53,51 +51,73 @@
         .desktop-nav ul {
             display: flex;
             list-style: none;
-            gap: 1.5rem;
-            flex-wrap: wrap;
+            gap: 1.8rem;
+            align-items: center;
         }
 
         .desktop-nav a {
-            color: white;
+            color: #1a3e6f;
             text-decoration: none;
             font-weight: 500;
+            font-size: 1rem;
             transition: color 0.3s;
         }
 
         .desktop-nav a:hover {
-            color: #ffd966;
+            color: #ffc107;
+        }
+
+        .lang-switch {
+            background: #1a3e6f;
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            margin-left: 0.5rem;
+        }
+
+        .lang-switch:hover {
+            background: #ffc107;
+            color: #1a3e6f;
+        }
+
+        .mobile-header {
+            display: none;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .hamburger {
-            display: none;
             background: none;
             border: none;
             font-size: 1.8rem;
             cursor: pointer;
-            color: white;
+            color: #1a3e6f;
             padding: 0;
             line-height: 1;
         }
 
         .mobile-nav {
             display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: #1a3e6f;
             flex-direction: column;
+            background: white;
             padding: 1rem;
-            border-top: 1px solid #ffd966;
-            z-index: 200;
+            border-top: 1px solid #eee;
+            margin-top: 0.8rem;
         }
 
         .mobile-nav a {
-            color: white;
+            color: #1a3e6f;
             text-decoration: none;
             padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid #eee;
             font-weight: 500;
+            text-align: center;
         }
 
         .mobile-nav a:last-child {
@@ -105,23 +125,7 @@
         }
 
         .mobile-nav a:hover {
-            color: #ffd966;
-        }
-
-        #langToggle {
-            background: #ffd966;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            color: #1a3e6f;
-            transition: background 0.3s;
-            white-space: nowrap;
-        }
-
-        #langToggle:hover {
-            background: #ffc107;
+            color: #ffc107;
         }
 
         main {
@@ -183,17 +187,22 @@
         }
 
         @media (max-width: 768px) {
-            .desktop-nav {
+            .desktop-header {
                 display: none;
             }
-            .hamburger {
-                display: block;
+            .mobile-header {
+                display: flex;
             }
             .logo img {
-                max-height: 70px;
+                max-height: 50px;
             }
-            .header-flex {
-                justify-content: space-between;
+            .mobile-header .logo {
+                flex-grow: 1;
+                text-align: center;
+            }
+            .lang-switch {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.6rem;
             }
             main {
                 padding: 1.5rem;
@@ -204,34 +213,42 @@
 <body>
 
 <header>
-    <div class="container header-flex">
-        <button class="hamburger" id="hamburgerBtn">☰</button>
-        <div class="logo">
-            <img src="images/logo.png" alt="Karki Associates Logo">
+    <div class="container">
+        <!-- Desktop header -->
+        <div class="desktop-header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Karki Associates Logo">
+            </div>
+            <div class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="advocate.html">Advocate</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button id="langToggleDesktop" class="lang-switch">E/N</button></li>
+                </ul>
+            </div>
         </div>
-        <button id="langToggle">नेपाली</button>
-    </div>
 
-    <div class="container desktop-nav">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="advocate.html">Advocate</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+        <!-- Mobile header -->
+        <div class="mobile-header">
+            <button class="hamburger" id="hamburgerBtn">☰</button>
+            <div class="logo">
+                <img src="images/logo.png" alt="Karki Associates Logo">
+            </div>
+            <button id="langToggleMobile" class="lang-switch">E/N</button>
+        </div>
 
-    <div class="mobile-nav" id="mobileNav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="advocate.html">Advocate</a>
-        <a href="service.html">Services</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="advocate.html">Advocate</a>
+            <a href="service.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </div>
 </header>
 
@@ -324,47 +341,48 @@
 </footer>
 
 <script>
-    const toggleBtn = document.getElementById('langToggle');
-    const enContent = document.getElementById('en-content');
-    const npContent = document.getElementById('np-content');
-    let currentLang = 'en';
-
-    toggleBtn.addEventListener('click', () => {
-        if (currentLang === 'en') {
+    function toggleLanguage() {
+        const enContent = document.getElementById('en-content');
+        const npContent = document.getElementById('np-content');
+        const isEnglish = enContent.style.display !== 'none';
+        
+        if (isEnglish) {
             enContent.style.display = 'none';
             npContent.style.display = 'block';
-            toggleBtn.textContent = 'English';
-            currentLang = 'np';
             document.documentElement.lang = 'ne';
         } else {
             npContent.style.display = 'none';
             enContent.style.display = 'block';
-            toggleBtn.textContent = 'नेपाली';
-            currentLang = 'en';
             document.documentElement.lang = 'en';
         }
-    });
+    }
+
+    const desktopBtn = document.getElementById('langToggleDesktop');
+    const mobileBtn = document.getElementById('langToggleMobile');
+    if (desktopBtn) desktopBtn.addEventListener('click', toggleLanguage);
+    if (mobileBtn) mobileBtn.addEventListener('click', toggleLanguage);
 
     const hamburger = document.getElementById('hamburgerBtn');
     const mobileNav = document.getElementById('mobileNav');
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            if (mobileNav.style.display === 'flex') {
+                mobileNav.style.display = 'none';
+            } else {
+                mobileNav.style.display = 'flex';
+            }
+        });
+    }
 
-    hamburger.addEventListener('click', () => {
-        if (mobileNav.style.display === 'flex') {
-            mobileNav.style.display = 'none';
-        } else {
-            mobileNav.style.display = 'flex';
-        }
-    });
-
-    const mobileLinks = mobileNav.querySelectorAll('a');
+    const mobileLinks = document.querySelectorAll('.mobile-nav a');
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
-            mobileNav.style.display = 'none';
+            if (mobileNav) mobileNav.style.display = 'none';
         });
     });
 
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 768 && mobileNav) {
             mobileNav.style.display = 'none';
         }
     });
