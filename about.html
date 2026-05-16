@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karki Associates – About</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #1a3e6f;
+            color: white;
+            padding: 0.8rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .logo img {
+            max-height: 100px;
+            width: auto;
+            display: block;
+        }
+
+        .desktop-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .desktop-nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .desktop-nav a:hover {
+            color: #ffd966;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: white;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #1a3e6f;
+            flex-direction: column;
+            padding: 1rem;
+            border-top: 1px solid #ffd966;
+            z-index: 200;
+        }
+
+        .mobile-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            font-weight: 500;
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav a:hover {
+            color: #ffd966;
+        }
+
+        #langToggle {
+            background: #ffd966;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #1a3e6f;
+            transition: background 0.3s;
+            white-space: nowrap;
+        }
+
+        #langToggle:hover {
+            background: #ffc107;
+        }
+
+        main {
+            background: white;
+            padding: 2rem;
+            margin: 2rem auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #1a3e6f;
+            margin-bottom: 1rem;
+            border-left: 5px solid #ffd966;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #2c5a8c;
+            margin: 1.5rem 0 0.8rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-left: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        footer {
+            background: #1a3e6f;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #ffd966;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin: 0.5rem 0;
+        }
+
+        .footer-links a {
+            margin: 0 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .logo img {
+                max-height: 70px;
+            }
+            .header-flex {
+                justify-content: space-between;
+            }
+            main {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-flex">
+        <button class="hamburger" id="hamburgerBtn">☰</button>
+        <div class="logo">
+            <img src="images/logo.png" alt="Karki Associates Logo">
+        </div>
+        <button id="langToggle">नेपाली</button>
+    </div>
+
+    <div class="container desktop-nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="advocate.html">Advocate</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="advocate.html">Advocate</a>
+        <a href="service.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</header>
+
+<main class="container">
+    <!-- English content -->
+    <div id="en-content">
+        <h2>About Karki Associates Private Limited</h2>
+        
+        <h3>Company Overview</h3>
+        <p>Karki Associates Private Limited is a private company incorporated under the <strong>Companies Act, 2063 (2006) of Nepal</strong>. Our registered office is situated at <strong>Pokhara Metropolitan City, Ward No. 7, Kaski District, Nepal</strong>.</p>
+        <p>We are a <strong>service‑oriented</strong> firm (as stated in our Memorandum of Association) offering a wide range of professional services, including legal assistance, accounting and tax consulting, management advisory, research and development in social sciences and humanities, office administration, and other technical support services.</p>
+        
+        <h3>Our Legal Foundation</h3>
+        <p>The company has been established in full compliance with the Companies Act, 2063, and all other applicable laws of Nepal. Our Memorandum of Association (MOA) and Articles of Association (AOA) govern our operations. Key features of our legal structure include:</p>
+        <ul>
+            <li><strong>Limited liability</strong> – The liability of our shareholder(s) is limited to the face value of shares subscribed (MOA Clause 9).</li>
+            <li><strong>Private company status</strong> – We operate as a private limited company, dedicated to serving our clients with professionalism and integrity.</li>
+            <li><strong>Regulatory compliance</strong> – Where any service requires a separate license or permit (e.g., legal practice, auditing, research activities), we obtain such approval from the relevant authority before commencing that activity (MOA Clause 4(2) & (3)).</li>
+        </ul>
+        
+        <h3>Our Founder</h3>
+        <p>The company was founded by <strong>Mr. Anil Karki</strong>, son of Mr. Totra Bahadur Karki. Mr. Karki is a resident of <strong>Dolakha district (Melung Gaupalika, Ward No. 2)</strong> and currently operates from Pokhara. He is committed to building a firm that provides high‑quality, ethical, and affordable professional services to individuals, businesses, and public bodies in Nepal.</p>
+        <p><em>Founder’s Citizenship Certificate No.: 22-01-71-00762, issued from Dolakha on 2071/2/6 (Nepali calendar).</em></p>
+        
+        <h3>Governance & Management</h3>
+        <p>Under our Articles of Association (AOA Clauses 12 & 13), the company does not have a Board of Directors or hold general meetings. Instead, the shareholder (founder) takes all decisions through written resolutions. This streamlined governance structure allows us to respond quickly to client needs while maintaining full legal compliance.</p>
+        
+        <h3>Why Karki Associates?</h3>
+        <ul>
+            <li><strong>Integrated services</strong> – Legal, accounting, management, and research support under one roof.</li>
+            <li><strong>Location advantage</strong> – Based in Pokhara, we serve clients in Gandaki Province and beyond.</li>
+            <li><strong>Client‑centric approach</strong> – Every solution is tailored to the specific needs of the client.</li>
+            <li><strong>Commitment to ethics</strong> – We follow professional codes of conduct and applicable laws strictly.</li>
+        </ul>
+        
+        <h3>Our Future Direction</h3>
+        <p>We aim to become a trusted partner for businesses, non‑profit organisations, government agencies, and individuals seeking reliable professional advice and support. As we grow, we will continue to invest in staff training, technology, and research capabilities – all while adhering to the highest standards of professional service.</p>
+        
+        <p><strong>Get to Know Us</strong> – Whether you need legal documentation, tax planning, management advice, or research assistance, Karki Associates Private Limited is ready to help. Visit our registered office in Pokhara or contact us to discuss your requirements.</p>
+    </div>
+
+    <!-- Nepali content -->
+    <div id="np-content" style="display:none;">
+        <h2>कार्की एसोसिएट्स प्राइभेट लिमिटेडको बारेमा</h2>
+        
+        <h3>कम्पनीको सामान्य विवरण</h3>
+        <p>कार्की एसोसिएट्स प्राइभेट लिमिटेड नेपालको <strong>कम्पनी ऐन, २०६३</strong> अन्तर्गत दर्ता भएको निजी कम्पनी हो। हाम्रो रजिस्टर्ड कार्यालय <strong>कास्की जिल्ला, पोखरा महानगरपालिका वडा नं. ७</strong> मा अवस्थित छ।</p>
+        <p>हामी <strong>सेवामूलक</strong> कम्पनी हौं (प्रबन्धपत्रमा उल्लेख भए अनुसार) जसले कानूनी सहायता, लेखा तथा कर परामर्श, व्यवस्थापन सल्लाह, सामाजिक विज्ञान र मानविकीमा अनुसन्धान तथा विकास, कार्यालय प्रशासन, र अन्य प्राविधिक सहायता सेवाहरू प्रदान गर्दछ।</p>
+        
+        <h3>हाम्रो कानूनी आधार</h3>
+        <p>यो कम्पनी कम्पनी ऐन, २०६३ र नेपालका अन्य सबै लागू कानूनहरूको पूर्ण पालना गरी स्थापित गरिएको हो। हाम्रो प्रबन्धपत्र (Memorandum of Association) र नियमावली (Articles of Association) अनुसार कम्पनी सञ्चालन हुन्छ। हाम्रो कानूनी संरचनाका मुख्य विशेषताहरू:</p>
+        <ul>
+            <li><strong>सीमित दायित्व</strong> – हाम्रो शेयरधनीको दायित्व खरिद गरेको शेयरको अंकित मूल्यसम्म सीमित छ (प्रबन्धपत्र दफा ९)।</li>
+            <li><strong>निजी कम्पनीको हैसियत</strong> – हामी एक निजी लिमिटेड कम्पनीको रूपमा पेशागत र इमान्दारीपूर्वक सेवा प्रदान गर्दछौं।</li>
+            <li><strong>नियामक अनुपालन</strong> – यदि कुनै सेवाका लागि छुट्टै इजाजतपत्र वा अनुमति आवश्यक छ भने (जस्तै कानूनी अभ्यास, लेखापरीक्षण, अनुसन्धान गतिविधिहरू), त्यो सेवा सुरु गर्नुअघि हामी सम्बन्धित निकायबाट त्यस्तो स्वीकृति प्राप्त गर्दछौं (प्रबन्धपत्र दफा ४(२) र (३))।</li>
+        </ul>
+        
+        <h3>हाम्रो संस्थापक</h3>
+        <p>यस कम्पनीका संस्थापक <strong>श्री अनिल कार्की</strong> हुन् (पिताको नाम: तोत्रबहादुर कार्की)। श्री कार्की दोलखा जिल्ला (मेलुङ गाउँपालिका वडा नं. २) का स्थायी बासिन्दा हुन् र हाल पोखराबाट कार्यरत छन्। उनले नेपालका व्यक्ति, व्यवसाय र सार्वजनिक निकायहरूलाई उच्च गुणस्तरीय, नैतिक र किफायती व्यावसायिक सेवा उपलब्ध गराउने उद्देश्यले यो कम्पनी स्थापना गरेका हुन्।</p>
+        <p><em>संस्थापकको नागरिकता प्रमाणपत्र नं.: २२-०१-७१-००७६२, जारी मिति: २०७१/२/६, जारी गर्ने जिल्ला: दोलखा।</em></p>
+        
+        <h3>व्यवस्थापन र सञ्चालन</h3>
+        <p>हाम्रो नियमावली (नियम १२ र १३) बमोजिम कम्पनीमा सञ्चालक समिति हुँदैन र साधारण सभा हुँदैन। यसको सट्टा, शेयरधनी (संस्थापक) ले लिखित निर्णय मार्फत सबै निर्णय गर्दछन्। यो सरल सञ्चालन संरचनाले हामीलाई ग्राहकको आवश्यकतामा छिटो प्रतिक्रिया दिन सक्षम बनाउँछ, साथै कानूनी अनुपालन पूर्ण रूपले कायम राख्छ।</p>
+        
+        <h3>किन कार्की एसोसिएट्स?</h3>
+        <ul>
+            <li><strong>एकीकृत सेवा</strong> – कानूनी, लेखा, व्यवस्थापन र अनुसन्धान सहायता एउटै स्थानमा।</li>
+            <li><strong>स्थानीय फाइदा</strong> – पोखरामा आधारित भएर गण्डकी प्रदेश र त्यसभन्दा बाहिरका ग्राहकहरूलाई सेवा।</li>
+            <li><strong>ग्राहक‑केन्द्रित दृष्टिकोण</strong> – प्रत्येक समाधान ग्राहकको विशिष्ट आवश्यकता अनुसार तयार गरिन्छ।</li>
+            <li><strong>नैतिकताप्रति प्रतिबद्धता</strong> – हामी व्यावसायिक आचारसंहिता र लागू कानूनको कडाइका साथ पालना गर्दछौं।</li>
+        </ul>
+        
+        <h3>हाम्रो भविष्यको दिशा</h3>
+        <p>हामी व्यवसाय, गैर‑नाफामूलक संस्था, सरकारी निकाय र व्यक्तिहरूका लागि भरपर्दो साझेदार बन्न चाहन्छौं, जसले पेशागत सल्लाह र सहायता खोज्छन्। हामी आफ्नो विकाससँगै कर्मचारी तालिम, प्रविधि र अनुसन्धान क्षमतामा लगानी गर्दै जानेछौं, साथै व्यावसायिक सेवाको उच्चतम मापदण्डलाई निरन्तर कायम राख्ने छौं।</p>
+        
+        <p><strong>हामीलाई चिन्नुहोस्</strong> – तपाईंलाई कानूनी कागजात, कर योजना, व्यवस्थापन सल्लाह वा अनुसन्धान सहायता चाहिएको भए पनि, कार्की एसोसिएट्स प्राइभेट लिमिटेड तपाईंको सहायताका लागि तयार छ। हाम्रो पोखराको रजिस्टर्ड कार्यालयमा भेट्नुहोस् वा आफ्नो आवश्यकताबारे छलफल गर्न सम्पर्क गर्नुहोस्।</p>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Karki Associates Private Limited. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="terms.html">Terms of Use</a> | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="cookie.html">Cookie Policy</a>
+        </div>
+        <p>Registered Office: Pokhara Metropolitan City, Ward No. 7, Kaski, Nepal</p>
+    </div>
+</footer>
+
+<script>
+    const toggleBtn = document.getElementById('langToggle');
+    const enContent = document.getElementById('en-content');
+    const npContent = document.getElementById('np-content');
+    let currentLang = 'en';
+
+    toggleBtn.addEventListener('click', () => {
+        if (currentLang === 'en') {
+            enContent.style.display = 'none';
+            npContent.style.display = 'block';
+            toggleBtn.textContent = 'English';
+            currentLang = 'np';
+            document.documentElement.lang = 'ne';
+        } else {
+            npContent.style.display = 'none';
+            enContent.style.display = 'block';
+            toggleBtn.textContent = 'नेपाली';
+            currentLang = 'en';
+            document.documentElement.lang = 'en';
+        }
+    });
+
+    const hamburger = document.getElementById('hamburgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', () => {
+        if (mobileNav.style.display === 'flex') {
+            mobileNav.style.display = 'none';
+        } else {
+            mobileNav.style.display = 'flex';
+        }
+    });
+
+    const mobileLinks = mobileNav.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.style.display = 'none';
+        });
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            mobileNav.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
