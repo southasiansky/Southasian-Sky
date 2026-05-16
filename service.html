@@ -6,486 +6,193 @@
     <title>Karki Associates - Services</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: white;
-            color: #1a3e6f;
-            padding: 0.8rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .desktop-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .logo img {
-            max-height: 95px;   /* larger logo */
-            width: auto;
-            display: block;
-        }
-
-        .desktop-nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.8rem;
-            align-items: center;
-        }
-
-        .desktop-nav a {
-            color: #1a3e6f;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-
-        .desktop-nav a:hover {
-            color: #ffc107;
-        }
-
-        /* Dynamic language toggle: white bg, black text, blue border */
-        .lang-switch {
-            background: white;
-            color: black;
-            border: 1.5px solid #1a3e6f;
-            padding: 0.3rem 0.7rem;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.9rem;
-            letter-spacing: 0px;
-            transition: all 0.3s;
-            margin-left: 0.5rem;
-        }
-
-        .lang-switch:hover {
-            background: #1a3e6f;
-            color: white;
-            border-color: #1a3e6f;
-        }
-
-        .mobile-header {
-            display: none;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .hamburger {
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #1a3e6f;
-            padding: 0;
-            line-height: 1;
-        }
-
-        .mobile-nav {
-            display: none;
-            flex-direction: column;
-            background: white;
-            padding: 1rem;
-            border-top: 1px solid #eee;
-            margin-top: 0.8rem;
-        }
-
-        .mobile-nav a {
-            color: #1a3e6f;
-            text-decoration: none;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #eee;
-            font-weight: 500;
-            text-align: center;
-        }
-
-        .mobile-nav a:last-child {
-            border-bottom: none;
-        }
-
-        .mobile-nav a:hover {
-            color: #ffc107;
-        }
-
-        main {
-            background: white;
-            padding: 2rem;
-            margin: 2rem auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        h2 {
-            color: #1a3e6f;
-            margin-bottom: 1rem;
-            border-left: 5px solid #ffd966;
-            padding-left: 15px;
-        }
-
-        h3 {
-            color: #2c5a8c;
-            margin: 1.5rem 0 0.8rem 0;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        ul {
-            margin-left: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.4rem;
-        }
-
-        .service-category {
-            margin-bottom: 2rem;
-        }
-
-        footer {
-            background: #1a3e6f;
-            color: white;
-            text-align: center;
-            padding: 1.5rem 0;
-            margin-top: 2rem;
-        }
-
-        footer a {
-            color: #ffd966;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-links {
-            margin: 0.5rem 0;
-        }
-
-        .footer-links a {
-            margin: 0 0.5rem;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #111; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; color: #000; padding: 0.8rem 0; border-bottom: 1px solid #ccc; position: sticky; top: 0; z-index: 100; }
+        .desktop-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo a { display: block; }
+        .logo img { max-height: 95px; width: auto; display: block; }
+        .desktop-nav ul { display: flex; list-style: none; gap: 1.8rem; align-items: center; }
+        .desktop-nav a { color: #000; text-decoration: none; font-weight: 500; font-size: 1rem; }
+        .desktop-nav a:hover { text-decoration: underline; }
+        .lang-switch { background: #fff; color: #000; border: 1px solid #000; padding: 0.3rem 0.7rem; border-radius: 30px; cursor: pointer; font-weight: bold; font-size: 0.9rem; margin-left: 0.5rem; }
+        .lang-switch:hover { background: #000; color: #fff; }
+        .mobile-header { display: none; align-items: center; justify-content: space-between; width: 100%; }
+        .hamburger { background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #000; padding: 0 0.2rem; }
+        .mobile-right { display: flex; align-items: center; gap: 0.8rem; }
+        .mobile-nav { display: none; flex-direction: column; background: #fff; padding: 1rem; border-top: 1px solid #ccc; margin-top: 0.8rem; }
+        .mobile-nav a { color: #000; text-decoration: none; padding: 0.8rem 0; border-bottom: 1px solid #eee; font-weight: 500; text-align: center; }
+        .mobile-nav a:last-child { border-bottom: none; }
+        main { background: #fff; padding: 2rem; margin: 2rem auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        h2 { color: #000; margin-bottom: 1rem; }
+        h3 { color: #000; margin: 1.5rem 0 0.8rem 0; }
+        p { margin-bottom: 1rem; }
+        ul { margin-left: 1.8rem; margin-bottom: 1rem; }
+        .btn { display: inline-block; background: #000; color: #fff; padding: 0.7rem 1.5rem; text-decoration: none; border-radius: 30px; margin-top: 1rem; }
+        .btn:hover { background: #333; }
+        footer { background: #fff; color: #000; text-align: center; padding: 0.8rem 0; border-top: 1px solid #ccc; }
+        footer a { color: #000; text-decoration: none; margin: 0 0.5rem; font-weight: 500; }
+        footer a:hover { text-decoration: underline; }
+        .footer-policy { margin-bottom: 0.3rem; word-spacing: 0.5rem; }
+        .footer-copyright { margin: 0.2rem 0; font-size: 0.9rem; font-weight: bold; }
         @media (max-width: 768px) {
-            .desktop-header {
-                display: none;
-            }
-            .mobile-header {
-                display: flex;
-            }
-            .logo img {
-                max-height: 65px;   /* larger on mobile too */
-            }
-            .mobile-header .logo {
-                flex-grow: 1;
-                text-align: center;
-            }
-            .lang-switch {
-                font-size: 0.8rem;
-                padding: 0.2rem 0.6rem;
-            }
-            main {
-                padding: 1.5rem;
-            }
+            .desktop-header { display: none; }
+            .mobile-header { display: flex; }
+            .logo img { max-height: 65px; }
+            main { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
-
 <header>
     <div class="container">
-        <!-- Desktop header -->
         <div class="desktop-header">
-            <div class="logo">
-                <img src="images/logo.png" alt="Karki Associates Logo">
-            </div>
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
             <div class="desktop-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="advocate.html">Advocate</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><button id="langToggleDesktop" class="lang-switch">N</button></li>
+                <ul id="navMenuDesktop">
+                    <li><a href="index.html" data-key="home">Home</a></li>
+                    <li><a href="about.html" data-key="about">About</a></li>
+                    <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
+                    <li><a href="service.html" data-key="services">Services</a></li>
+                    <li><a href="blog.html" data-key="blog">Blog</a></li>
+                    <li><a href="contact.html" data-key="contact">Contact</a></li>
+                    <li><button id="langToggleDesktop" class="lang-switch">ने</button></li>
                 </ul>
             </div>
         </div>
-
-        <!-- Mobile header -->
         <div class="mobile-header">
-            <button class="hamburger" id="hamburgerBtn">☰</button>
-            <div class="logo">
-                <img src="images/logo.png" alt="Karki Associates Logo">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
+            <div class="mobile-right">
+                <button id="langToggleMobile" class="lang-switch">ने</button>
+                <button class="hamburger" id="hamburgerBtn">☰</button>
             </div>
-            <button id="langToggleMobile" class="lang-switch">N</button>
         </div>
-
         <div class="mobile-nav" id="mobileNav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="advocate.html">Advocate</a>
-            <a href="service.html">Services</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" data-key="home">Home</a>
+            <a href="about.html" data-key="about">About</a>
+            <a href="advocate.html" data-key="advocate">Advocate</a>
+            <a href="service.html" data-key="services">Services</a>
+            <a href="blog.html" data-key="blog">Blog</a>
+            <a href="contact.html" data-key="contact">Contact</a>
         </div>
     </div>
 </header>
-
 <main class="container">
-    <!-- English content -->
     <div id="en-content">
         <h2>Our Services</h2>
         <p>Karki Associates Private Limited is a <strong>service‑oriented</strong> firm. We provide a comprehensive range of professional services – from legal assistance and accounting to management consulting, research, and office administration. All services are delivered in compliance with the Companies Act, 2063 and other applicable laws of Nepal. Where any service requires a separate license or permit, we obtain such approval before commencing that activity (MOA Clause 4(2) & (3)).</p>
 
-        <div class="service-category">
-            <h3>1. Legal Activities</h3>
-            <ul>
-                <li>Drafting and review of contracts, agreements, MOUs, and other legal documents.</li>
-                <li>Legal opinions and advisory on corporate, civil, criminal, and administrative matters.</li>
-                <li>Representation before District Courts, High Courts, the Supreme Court, and quasi‑judicial bodies.</li>
-                <li>Company registration, amendment, merger, and liquidation under Companies Act, 2063.</li>
-                <li>Intellectual property registration and protection (trademarks, patents, copyrights).</li>
-                <li>Labour and employment law advisory, including service contracts and dispute resolution.</li>
-            </ul>
-            <p><em>Legal services provided by Advocate Anil Karki, member of Nepal Bar Council.</em></p>
-        </div>
+        <h3>1. Legal Activities</h3>
+        <ul><li>Drafting and review of contracts, agreements, MOUs, and other legal documents.</li><li>Legal opinions and advisory on corporate, civil, criminal, and administrative matters.</li><li>Representation before District Courts, High Courts, the Supreme Court, and quasi‑judicial bodies.</li><li>Company registration, amendment, merger, and liquidation under Companies Act, 2063.</li><li>Intellectual property registration and protection (trademarks, patents, copyrights).</li><li>Labour and employment law advisory, including service contracts and dispute resolution.</li></ul>
+        <p><em>Legal services provided by Advocate Anil Karki, member of Nepal Bar Council.</em></p>
 
-        <div class="service-category">
-            <h3>2. Accounting, Audit & Tax Consulting</h3>
-            <ul>
-                <li>Bookkeeping and preparation of financial statements (balance sheet, profit & loss, cash flow).</li>
-                <li>Statutory audit and internal audit services (as per turnover thresholds).</li>
-                <li>Tax planning, registration, and return filing (VAT, TDS, income tax, excise, etc.).</li>
-                <li>Advisory on tax compliance and representation before Inland Revenue Department and tax tribunals.</li>
-                <li>Payroll processing and management.</li>
-            </ul>
-        </div>
+        <h3>2. Accounting, Audit & Tax Consulting</h3>
+        <ul><li>Bookkeeping and preparation of financial statements (balance sheet, profit & loss, cash flow).</li><li>Statutory audit and internal audit services (as per turnover thresholds).</li><li>Tax planning, registration, and return filing (VAT, TDS, income tax, excise, etc.).</li><li>Advisory on tax compliance and representation before Inland Revenue Department and tax tribunals.</li><li>Payroll processing and management.</li></ul>
 
-        <div class="service-category">
-            <h3>3. Management Consulting</h3>
-            <ul>
-                <li>Business strategy formulation and strategic planning.</li>
-                <li>Process improvement, organisational restructuring, and efficiency enhancement.</li>
-                <li>Market research and feasibility studies.</li>
-                <li>Human resource management advisory (recruitment, training, performance evaluation).</li>
-                <li>Project management support and monitoring.</li>
-            </ul>
-        </div>
+        <h3>3. Management Consulting</h3>
+        <ul><li>Business strategy formulation and strategic planning.</li><li>Process improvement, organisational restructuring, and efficiency enhancement.</li><li>Market research and feasibility studies.</li><li>Human resource management advisory (recruitment, training, performance evaluation).</li><li>Project management support and monitoring.</li></ul>
 
-        <div class="service-category">
-            <h3>4. Social Sciences & Humanities Research & Development</h3>
-            <ul>
-                <li>Design and execution of social research studies (surveys, interviews, focus groups).</li>
-                <li>Experimental development projects in sociology, anthropology, economics, political science.</li>
-                <li>Policy analysis, impact assessment, and program evaluation.</li>
-                <li>Data collection, processing, and statistical analysis.</li>
-                <li>Research reports, white papers, and academic publications.</li>
-            </ul>
-        </div>
+        <h3>4. Social Sciences & Humanities Research & Development</h3>
+        <ul><li>Design and execution of social research studies (surveys, interviews, focus groups).</li><li>Experimental development projects in sociology, anthropology, economics, political science.</li><li>Policy analysis, impact assessment, and program evaluation.</li><li>Data collection, processing, and statistical analysis.</li><li>Research reports, white papers, and academic publications.</li></ul>
 
-        <div class="service-category">
-            <h3>5. Office Administrative & Support Services</h3>
-            <ul>
-                <li>Document preparation, formatting, and proofreading.</li>
-                <li>Photocopying, scanning, and printing services.</li>
-                <li>Data entry, database management, and record keeping.</li>
-                <li>Office management support for other businesses (temporary staff, administrative assistance).</li>
-                <li>Preparation of official correspondence, notices, and circulars.</li>
-            </ul>
-        </div>
+        <h3>5. Office Administrative & Support Services</h3>
+        <ul><li>Document preparation, formatting, and proofreading.</li><li>Photocopying, scanning, and printing services.</li><li>Data entry, database management, and record keeping.</li><li>Office management support for other businesses (temporary staff, administrative assistance).</li><li>Preparation of official correspondence, notices, and circulars.</li></ul>
 
-        <div class="service-category">
-            <h3>6. Other Professional, Scientific & Technical Activities</h3>
-            <ul>
-                <li>Translation services (Nepali ↔ English) for legal and official documents.</li>
-                <li>Legal and business advisory for non‑resident Nepalis (NRNs) and foreign investors.</li>
-                <li>Customised training programs on compliance, ethics, and governance.</li>
-                <li>Due diligence and background verification services.</li>
-                <li>Any other professional service permitted under applicable laws of Nepal.</li>
-            </ul>
-        </div>
+        <h3>6. Other Professional, Scientific & Technical Activities</h3>
+        <ul><li>Translation services (Nepali ↔ English) for legal and official documents.</li><li>Legal and business advisory for non‑resident Nepalis (NRNs) and foreign investors.</li><li>Customised training programs on compliance, ethics, and governance.</li><li>Due diligence and background verification services.</li><li>Any other professional service permitted under applicable laws of Nepal.</li></ul>
 
-        <p><a href="contact.html" class="btn" style="display:inline-block; background:#1a3e6f; color:white; padding:0.7rem 1.5rem; text-decoration:none; border-radius:5px; margin-top:1rem;">Get a Consultation</a></p>
+        <a href="contact.html" class="btn">Get a Consultation</a>
     </div>
-
-    <!-- Nepali content -->
     <div id="np-content" style="display:none;">
         <h2>हाम्रा सेवाहरू</h2>
         <p>कार्की एसोसिएट्स प्राइभेट लिमिटेड एउटा <strong>सेवामूलक</strong> कम्पनी हो। हामी कानूनी सहायता, लेखा, व्यवस्थापन परामर्श, अनुसन्धान र कार्यालय प्रशासन लगायतका विभिन्न व्यावसायिक सेवाहरू एकै स्थानमा उपलब्ध गराउँदछौं। सबै सेवाहरू कम्पनी ऐन, २०६३ र नेपालका अन्य प्रचलित कानूनहरूको पालना गरी प्रदान गरिन्छ। जुन सेवाका लागि छुट्टै इजाजतपत्र आवश्यक परेमा, त्यो सेवा सुरु गर्नु अगावै स्वीकृति प्राप्त गरिन्छ (प्रबन्धपत्र दफा ४(२) र (३))।</p>
 
-        <div class="service-category">
-            <h3>१. कानूनी क्रियाकलापहरू</h3>
-            <ul>
-                <li>सम्झौता, करार, बुझपत्र (MOU) र अन्य कानूनी कागजातको मस्यौदा र समीक्षा।</li>
-                <li>कर्पोरेट, सिविल, फौजदारी र प्रशासनिक विषयमा कानूनी राय तथा परामर्श।</li>
-                <li>जिल्ला अदालत, उच्च अदालत, सर्वोच्च अदालत र अर्ध–न्यायिक निकायहरूमा बहस तथा प्रतिनिधित्व।</li>
-                <li>कम्पनी ऐन, २०६३ अन्तर्गत कम्पनी दर्ता, संशोधन, गाभ्ने र खारेज गर्ने कार्य।</li>
-                <li>बौद्धिक सम्पत्ति दर्ता तथा संरक्षण (ट्रेडमार्क, पेटेन्ट, प्रतिलिपि अधिकार)।</li>
-                <li>श्रम तथा रोजगार कानून सल्लाह – सेवा सम्झौता, विवाद समाधान।</li>
-            </ul>
-            <p><em>कानूनी सेवा अधिवक्ता अनिल कार्की (नेपाल बार काउन्सिल सदस्य) द्वारा प्रदान गरिन्छ।</em></p>
-        </div>
+        <h3>१. कानूनी क्रियाकलापहरू</h3>
+        <ul><li>सम्झौता, करार, बुझपत्र (MOU) र अन्य कानूनी कागजातको मस्यौदा र समीक्षा।</li><li>कर्पोरेट, सिविल, फौजदारी र प्रशासनिक विषयमा कानूनी राय तथा परामर्श।</li><li>जिल्ला अदालत, उच्च अदालत, सर्वोच्च अदालत र अर्ध–न्यायिक निकायहरूमा बहस तथा प्रतिनिधित्व।</li><li>कम्पनी ऐन, २०६३ अन्तर्गत कम्पनी दर्ता, संशोधन, गाभ्ने र खारेज गर्ने कार्य।</li><li>बौद्धिक सम्पत्ति दर्ता तथा संरक्षण (ट्रेडमार्क, पेटेन्ट, प्रतिलिपि अधिकार)।</li><li>श्रम तथा रोजगार कानून सल्लाह – सेवा सम्झौता, विवाद समाधान।</li></ul>
+        <p><em>कानूनी सेवा अधिवक्ता अनिल कार्की (नेपाल बार काउन्सिल सदस्य) द्वारा प्रदान गरिन्छ।</em></p>
 
-        <div class="service-category">
-            <h3>२. लेखा, लेखापरीक्षण र कर परामर्श</h3>
-            <ul>
-                <li>हिसाबकिताब र वित्तीय विवरण (वासलात, नाफा–नोक्सान, नगद प्रवाह) तयारी।</li>
-                <li>वैधानिक लेखापरीक्षण र आन्तरिक लेखापरीक्षण सेवा (कारोबारको आधारमा)।</li>
-                <li>कर योजना, दर्ता, र विवरण दाखिला (भ्याट, स्रोत कर, आयकर, एक्साइज)।</li>
-                <li>कर अनुपालन सल्लाह तथा आन्तरिक राजस्व विभाग र कर न्यायाधिकरणमा प्रतिनिधित्व।</li>
-                <li>तलब तथा पारिश्रमिक प्रशोधन र व्यवस्थापन।</li>
-            </ul>
-        </div>
+        <h3>२. लेखा, लेखापरीक्षण र कर परामर्श</h3>
+        <ul><li>हिसाबकिताब र वित्तीय विवरण (वासलात, नाफा–नोक्सान, नगद प्रवाह) तयारी।</li><li>वैधानिक लेखापरीक्षण र आन्तरिक लेखापरीक्षण सेवा (कारोबारको आधारमा)।</li><li>कर योजना, दर्ता, र विवरण दाखिला (भ्याट, स्रोत कर, आयकर, एक्साइज)।</li><li>कर अनुपालन सल्लाह तथा आन्तरिक राजस्व विभाग र कर न्यायाधिकरणमा प्रतिनिधित्व।</li><li>तलब तथा पारिश्रमिक प्रशोधन र व्यवस्थापन।</li></ul>
 
-        <div class="service-category">
-            <h3>३. व्यवस्थापन परामर्श</h3>
-            <ul>
-                <li>व्यवसाय रणनीति निर्माण र रणनीतिक योजना।</li>
-                <li>प्रक्रिया सुधार, संगठनात्मक पुनर्संरचना र दक्षता अभिवृद्धि।</li>
-                <li>बजार अनुसन्धान र सम्भाव्यता अध्ययन।</li>
-                <li>मानव संसाधन व्यवस्थापन सल्लाह (भर्ती, तालिम, कार्यसम्पादन मूल्यांकन)।</li>
-                <li>परियोजना व्यवस्थापन सहायता र अनुगमन।</li>
-            </ul>
-        </div>
+        <h3>३. व्यवस्थापन परामर्श</h3>
+        <ul><li>व्यवसाय रणनीति निर्माण र रणनीतिक योजना।</li><li>प्रक्रिया सुधार, संगठनात्मक पुनर्संरचना र दक्षता अभिवृद्धि।</li><li>बजार अनुसन्धान र सम्भाव्यता अध्ययन।</li><li>मानव संसाधन व्यवस्थापन सल्लाह (भर्ती, तालिम, कार्यसम्पादन मूल्यांकन)।</li><li>परियोजना व्यवस्थापन सहायता र अनुगमन।</li></ul>
 
-        <div class="service-category">
-            <h3>४. सामाजिक विज्ञान एवं मानविकीसम्बन्धी अनुसन्धान</h3>
-            <ul>
-                <li>सामाजिक अनुसन्धान अध्ययनको डिजाइन र कार्यान्वयन (सर्वेक्षण, अन्तर्वार्ता, फोकस समूह)।</li>
-                <li>समाजशास्त्र, मानवशास्त्र, अर्थशास्त्र, राजनीति विज्ञानमा प्रयोगात्मक विकास परियोजनाहरू।</li>
-                <li>नीति विश्लेषण, प्रभाव मूल्यांकन र कार्यक्रम मूल्यांकन।</li>
-                <li>डाटा सङ्कलन, प्रशोधन, र सांख्यिकीय विश्लेषण।</li>
-                <li>अनुसन्धान प्रतिवेदन, व्हाइट पेपर र शैक्षिक प्रकाशन।</li>
-            </ul>
-        </div>
+        <h3>४. सामाजिक विज्ञान एवं मानविकीसम्बन्धी अनुसन्धान</h3>
+        <ul><li>सामाजिक अनुसन्धान अध्ययनको डिजाइन र कार्यान्वयन (सर्वेक्षण, अन्तर्वार्ता, फोकस समूह)।</li><li>समाजशास्त्र, मानवशास्त्र, अर्थशास्त्र, राजनीति विज्ञानमा प्रयोगात्मक विकास परियोजनाहरू।</li><li>नीति विश्लेषण, प्रभाव मूल्यांकन र कार्यक्रम मूल्यांकन।</li><li>डाटा सङ्कलन, प्रशोधन, र सांख्यिकीय विश्लेषण।</li><li>अनुसन्धान प्रतिवेदन, व्हाइट पेपर र शैक्षिक प्रकाशन।</li></ul>
 
-        <div class="service-category">
-            <h3>५. कार्यालय प्रशासनिक तथा सहयोगी सेवाहरू</h3>
-            <ul>
-                <li>कागजात तयारी, ढाँचाकरण, र प्रूफरीडिङ।</li>
-                <li>फोटोकपी, स्क्यानिङ्, र प्रिन्टिङ सेवा।</li>
-                <li>डाटा इन्ट्री, डाटाबेस व्यवस्थापन, र अभिलेख राख्ने।</li>
-                <li>अन्य व्यवसायहरूका लागि कार्यालय व्यवस्थापन सहायता (अस्थायी कर्मचारी, प्रशासनिक सहयोग)।</li>
-                <li>पत्राचार, सूचना र परिपत्र तयारी।</li>
-            </ul>
-        </div>
+        <h3>५. कार्यालय प्रशासनिक तथा सहयोगी सेवाहरू</h3>
+        <ul><li>कागजात तयारी, ढाँचाकरण, र प्रूफरीडिङ।</li><li>फोटोकपी, स्क्यानिङ्, र प्रिन्टिङ सेवा।</li><li>डाटा इन्ट्री, डाटाबेस व्यवस्थापन, र अभिलेख राख्ने।</li><li>अन्य व्यवसायहरूका लागि कार्यालय व्यवस्थापन सहायता (अस्थायी कर्मचारी, प्रशासनिक सहयोग)।</li><li>पत्राचार, सूचना र परिपत्र तयारी।</li></ul>
 
-        <div class="service-category">
-            <h3>६. अन्य पेशागत, वैज्ञानिक र प्राविधिक सेवाहरू</h3>
-            <ul>
-                <li>अनुवाद सेवा (नेपाली ↔ अङ्ग्रेजी) – कानूनी तथा सरकारी कागजातको लागि।</li>
-                <li>गैरआवासीय नेपाली (NRN) र वैदेशिक लगानीकर्ताका लागि कानूनी तथा व्यापारिक परामर्श।</li>
-                <li>अनुपालन, नैतिकता र सुशासन सम्बन्धी तालिम कार्यक्रम (अनुकूलित)।</li>
-                <li>परिशीलन (Due Diligence) र पृष्ठभूमि प्रमाणीकरण सेवा।</li>
-                <li>नेपालको प्रचलित कानून अन्तर्गत अनुमति प्राप्त अन्य कुनै पेशागत सेवा।</li>
-            </ul>
-        </div>
+        <h3>६. अन्य पेशागत, वैज्ञानिक र प्राविधिक सेवाहरू</h3>
+        <ul><li>अनुवाद सेवा (नेपाली ↔ अङ्ग्रेजी) – कानूनी तथा सरकारी कागजातको लागि।</li><li>गैरआवासीय नेपाली (NRN) र वैदेशिक लगानीकर्ताका लागि कानूनी तथा व्यापारिक परामर्श।</li><li>अनुपालन, नैतिकता र सुशासन सम्बन्धी तालिम कार्यक्रम (अनुकूलित)।</li><li>परिशीलन (Due Diligence) र पृष्ठभूमि प्रमाणीकरण सेवा।</li><li>नेपालको प्रचलित कानून अन्तर्गत अनुमति प्राप्त अन्य कुनै पेशागत सेवा।</li></ul>
 
-        <p><a href="contact.html" class="btn" style="display:inline-block; background:#1a3e6f; color:white; padding:0.7rem 1.5rem; text-decoration:none; border-radius:5px; margin-top:1rem;">सम्पर्क गर्नुहोस्</a></p>
+        <a href="contact.html" class="btn">सम्पर्क गर्नुहोस्</a>
     </div>
 </main>
-
 <footer>
     <div class="container">
-        <p>&copy; 2025 Karki Associates Private Limited. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="terms.html">Terms of Use</a> | 
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="cookie.html">Cookie Policy</a>
+        <div class="footer-policy" id="footerPolicyLinks">
+            <a href="terms.html" data-key="terms">Terms of Use</a>
+            <a href="privacy.html" data-key="privacy">Privacy Policy</a>
+            <a href="cookie.html" data-key="cookie">Cookie Policy</a>
         </div>
-        <p>Registered Office: Pokhara Metropolitan City, Ward No. 7, Kaski, Nepal</p>
+        <div class="footer-copyright" id="footerCopyright">© 2026 Karki Associates Private Limited</div>
     </div>
 </footer>
-
 <script>
-    // Dynamic language toggle: button shows "N" when English is active, "E" when Nepali is active
-    function updateToggleButtons() {
-        const enVisible = document.getElementById('en-content').style.display !== 'none';
-        const desktopBtn = document.getElementById('langToggleDesktop');
-        const mobileBtn = document.getElementById('langToggleMobile');
-        const newText = enVisible ? 'N' : 'E';
-        if (desktopBtn) desktopBtn.textContent = newText;
-        if (mobileBtn) mobileBtn.textContent = newText;
-    }
-
-    function toggleLanguage() {
-        const enContent = document.getElementById('en-content');
-        const npContent = document.getElementById('np-content');
-        const isEnglish = enContent.style.display !== 'none';
-        
-        if (isEnglish) {
-            enContent.style.display = 'none';
-            npContent.style.display = 'block';
-            document.documentElement.lang = 'ne';
+    const navTranslations = {
+        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", contact: "Contact" },
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", contact: "सम्पर्क" }
+    };
+    const footerTranslations = {
+        en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
+        ne: { terms: "प्रयोगका सर्तहरू", privacy: "गोपनीयता नीति", cookie: "कुकी नीति" }
+    };
+    function updateUILanguage(lang) {
+        document.querySelectorAll('[data-key]').forEach(el => {
+            const key = el.getAttribute('data-key');
+            if (navTranslations[lang] && navTranslations[lang][key]) el.textContent = navTranslations[lang][key];
+            else if (footerTranslations[lang] && footerTranslations[lang][key]) el.textContent = footerTranslations[lang][key];
+        });
+        const copyrightEl = document.getElementById('footerCopyright');
+        if (lang === 'ne') {
+            copyrightEl.textContent = '© २०२६ कार्की एसोसिएट्स प्राइभेट लिमिटेड';
         } else {
-            npContent.style.display = 'none';
-            enContent.style.display = 'block';
-            document.documentElement.lang = 'en';
+            copyrightEl.textContent = '© 2026 Karki Associates Private Limited';
         }
-        updateToggleButtons();
     }
-
-    const desktopBtn = document.getElementById('langToggleDesktop');
-    const mobileBtn = document.getElementById('langToggleMobile');
-    if (desktopBtn) desktopBtn.addEventListener('click', toggleLanguage);
-    if (mobileBtn) mobileBtn.addEventListener('click', toggleLanguage);
-    
-    // Set initial button text based on default English visibility
-    updateToggleButtons();
-
-    // Hamburger menu
+    function toggleLanguage() {
+        const en = document.getElementById('en-content');
+        const np = document.getElementById('np-content');
+        const isEn = en.style.display !== 'none';
+        if (isEn) {
+            en.style.display = 'none';
+            np.style.display = 'block';
+            document.documentElement.lang = 'ne';
+            updateUILanguage('ne');
+            document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = 'E');
+        } else {
+            np.style.display = 'none';
+            en.style.display = 'block';
+            document.documentElement.lang = 'en';
+            updateUILanguage('en');
+            document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = 'ने');
+        }
+    }
+    document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
+    updateUILanguage('en');
     const hamburger = document.getElementById('hamburgerBtn');
     const mobileNav = document.getElementById('mobileNav');
     if (hamburger) {
         hamburger.addEventListener('click', () => {
-            if (mobileNav.style.display === 'flex') {
-                mobileNav.style.display = 'none';
-            } else {
-                mobileNav.style.display = 'flex';
-            }
+            mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
         });
     }
-
-    const mobileLinks = document.querySelectorAll('.mobile-nav a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (mobileNav) mobileNav.style.display = 'none';
-        });
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+        link.addEventListener('click', () => { if (mobileNav) mobileNav.style.display = 'none'; });
     });
-
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && mobileNav) {
-            mobileNav.style.display = 'none';
-        }
-    });
+    window.addEventListener('resize', () => { if (window.innerWidth > 768 && mobileNav) mobileNav.style.display = 'none'; });
 </script>
-
 </body>
 </html>
