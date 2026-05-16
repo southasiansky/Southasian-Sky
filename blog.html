@@ -6,492 +6,212 @@
     <title>Karki Associates - Blog</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: white;
-            color: #1a3e6f;
-            padding: 0.8rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .desktop-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .logo img {
-            max-height: 95px;
-            width: auto;
-            display: block;
-        }
-
-        .desktop-nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.8rem;
-            align-items: center;
-        }
-
-        .desktop-nav a {
-            color: #1a3e6f;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-
-        .desktop-nav a:hover {
-            color: #ffc107;
-        }
-
-        .lang-switch {
-            background: white;
-            color: black;
-            border: 1.5px solid #1a3e6f;
-            padding: 0.3rem 0.7rem;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-            margin-left: 0.5rem;
-        }
-
-        .lang-switch:hover {
-            background: #1a3e6f;
-            color: white;
-        }
-
-        .mobile-header {
-            display: none;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .hamburger {
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #1a3e6f;
-            padding: 0;
-            line-height: 1;
-        }
-
-        .mobile-nav {
-            display: none;
-            flex-direction: column;
-            background: white;
-            padding: 1rem;
-            border-top: 1px solid #eee;
-            margin-top: 0.8rem;
-        }
-
-        .mobile-nav a {
-            color: #1a3e6f;
-            text-decoration: none;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #eee;
-            font-weight: 500;
-            text-align: center;
-        }
-
-        .mobile-nav a:last-child {
-            border-bottom: none;
-        }
-
-        .mobile-nav a:hover {
-            color: #ffc107;
-        }
-
-        main {
-            background: white;
-            padding: 2rem;
-            margin: 2rem auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        h2 {
-            color: #1a3e6f;
-            margin-bottom: 1.5rem;
-            border-left: 5px solid #ffd966;
-            padding-left: 15px;
-        }
-
-        /* Blog post card */
-        .blog-post {
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            transition: box-shadow 0.3s;
-        }
-        .blog-post:hover {
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        .post-title {
-            color: #1a3e6f;
-            margin-bottom: 0.5rem;
-            font-size: 1.6rem;
-        }
-        .post-meta {
-            color: #666;
-            font-size: 0.85rem;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 0.5rem;
-        }
-        .post-meta span {
-            margin-right: 1rem;
-        }
-        .post-excerpt {
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-        .read-more-btn {
-            background: none;
-            border: none;
-            color: #1a3e6f;
-            font-weight: bold;
-            cursor: pointer;
-            padding: 0;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-        .read-more-btn:hover {
-            color: #ffc107;
-            text-decoration: underline;
-        }
-        .full-content {
-            display: none;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px dashed #ccc;
-        }
-        .full-content p {
-            margin-bottom: 0.8rem;
-        }
-
-        footer {
-            background: #1a3e6f;
-            color: white;
-            text-align: center;
-            padding: 1.5rem 0;
-            margin-top: 2rem;
-        }
-        footer a {
-            color: #ffd966;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        .footer-links {
-            margin: 0.5rem 0;
-        }
-        .footer-links a {
-            margin: 0 0.5rem;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #111; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; color: #000; padding: 0.8rem 0; border-bottom: 1px solid #ccc; position: sticky; top: 0; z-index: 100; }
+        .desktop-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo a { display: block; }
+        .logo img { max-height: 95px; width: auto; display: block; }
+        .desktop-nav ul { display: flex; list-style: none; gap: 1.8rem; align-items: center; }
+        .desktop-nav a { color: #000; text-decoration: none; font-weight: 500; font-size: 1rem; }
+        .desktop-nav a:hover { text-decoration: underline; }
+        .lang-switch { background: #fff; color: #000; border: 1px solid #000; padding: 0.3rem 0.7rem; border-radius: 30px; cursor: pointer; font-weight: bold; font-size: 0.9rem; margin-left: 0.5rem; }
+        .lang-switch:hover { background: #000; color: #fff; }
+        .mobile-header { display: none; align-items: center; justify-content: space-between; width: 100%; }
+        .hamburger { background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #000; padding: 0 0.2rem; }
+        .mobile-right { display: flex; align-items: center; gap: 0.8rem; }
+        .mobile-nav { display: none; flex-direction: column; background: #fff; padding: 1rem; border-top: 1px solid #ccc; margin-top: 0.8rem; }
+        .mobile-nav a { color: #000; text-decoration: none; padding: 0.8rem 0; border-bottom: 1px solid #eee; font-weight: 500; text-align: center; }
+        .mobile-nav a:last-child { border-bottom: none; }
+        main { background: #fff; padding: 2rem; margin: 2rem auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        h2 { color: #000; margin-bottom: 1rem; }
+        .blog-post { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee; }
+        .post-title { margin-bottom: 0.3rem; }
+        .post-title a { color: #000; text-decoration: none; font-size: 1.4rem; font-weight: 500; }
+        .post-title a:hover { text-decoration: underline; }
+        .post-date { color: #555; font-size: 0.85rem; margin-bottom: 0.75rem; }
+        .post-excerpt { margin-bottom: 0.5rem; line-height: 1.5; color: #333; }
+        footer { background: #fff; color: #000; text-align: center; padding: 0.8rem 0; border-top: 1px solid #ccc; }
+        footer a { color: #000; text-decoration: none; margin: 0 0.5rem; font-weight: 500; }
+        footer a:hover { text-decoration: underline; }
+        .footer-policy { margin-bottom: 0.3rem; word-spacing: 0.5rem; }
+        .footer-copyright { margin: 0.2rem 0; font-size: 0.9rem; font-weight: bold; }
         @media (max-width: 768px) {
-            .desktop-header {
-                display: none;
-            }
-            .mobile-header {
-                display: flex;
-            }
-            .logo img {
-                max-height: 65px;
-            }
-            .mobile-header .logo {
-                flex-grow: 1;
-                text-align: center;
-            }
-            main {
-                padding: 1.5rem;
-            }
-            .post-title {
-                font-size: 1.3rem;
-            }
+            .desktop-header { display: none; }
+            .mobile-header { display: flex; }
+            .logo img { max-height: 65px; }
+            main { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
-
 <header>
     <div class="container">
-        <!-- Desktop header -->
         <div class="desktop-header">
-            <div class="logo">
-                <img src="images/logo.png" alt="Karki Associates Logo">
-            </div>
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
             <div class="desktop-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="advocate.html">Advocate</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><button id="langToggleDesktop" class="lang-switch">N</button></li>
+                <ul id="navMenuDesktop">
+                    <li><a href="index.html" data-key="home">Home</a></li>
+                    <li><a href="about.html" data-key="about">About</a></li>
+                    <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
+                    <li><a href="service.html" data-key="services">Services</a></li>
+                    <li><a href="blog.html" data-key="blog">Blog</a></li>
+                    <li><a href="contact.html" data-key="contact">Contact</a></li>
+                    <li><button id="langToggleDesktop" class="lang-switch">ने</button></li>
                 </ul>
             </div>
         </div>
-
-        <!-- Mobile header -->
         <div class="mobile-header">
-            <button class="hamburger" id="hamburgerBtn">☰</button>
-            <div class="logo">
-                <img src="images/logo.png" alt="Karki Associates Logo">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
+            <div class="mobile-right">
+                <button id="langToggleMobile" class="lang-switch">ने</button>
+                <button class="hamburger" id="hamburgerBtn">☰</button>
             </div>
-            <button id="langToggleMobile" class="lang-switch">N</button>
         </div>
-
         <div class="mobile-nav" id="mobileNav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="advocate.html">Advocate</a>
-            <a href="service.html">Services</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" data-key="home">Home</a>
+            <a href="about.html" data-key="about">About</a>
+            <a href="advocate.html" data-key="advocate">Advocate</a>
+            <a href="service.html" data-key="services">Services</a>
+            <a href="blog.html" data-key="blog">Blog</a>
+            <a href="contact.html" data-key="contact">Contact</a>
         </div>
     </div>
 </header>
-
 <main class="container">
-    <!-- English blog content (dynamic) -->
     <div id="en-content">
-        <h2 id="blog-heading-en">Latest Insights</h2>
-        <div id="blog-posts-en"></div>
+        <h2>Latest Insights</h2>
+        
+        <div class="blog-post">
+            <div class="post-title">
+                <a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">Combating money laundering in Nepal</a>
+            </div>
+            <div class="post-date">July 21, 2023</div>
+            <div class="post-excerpt">
+                Stakeholders are concerned that Nepal could be blacklisted or placed on a greylist by the Financial Action Task Force (FATF) because of its failure to resolve several inadequacies in its laws against money laundering and terrorism financing. Even though it is certain that Nepal will be on the FATF greylist, it has an additional deadline of one year for reforms. The FATF provides an observation period before any country is directly monitored, and now Nepal has that time. The legal structures of Nepal are well-enacted, but enforcement has lagged behind. The FATF is not widely accepted, and its agenda needs further critical appraisal as it is better classified as a political organization.
+            </div>
+        </div>
+        
+        <div class="blog-post">
+            <div class="post-title">
+                <a href="https://kathmandupost.com/national/2024/02/08/nepal-takes-big-step-to-avoid-money-laundering-greylist" target="_blank" rel="noopener noreferrer">Nepal takes big step to avoid money laundering greylist</a>
+            </div>
+            <div class="post-date">February 8, 2024</div>
+            <div class="post-excerpt">
+                Nepal has taken a major step towards minimizing the threat of being greylisted by the Financial Action Task Force (FATF). The country's lower house endorsed a bill on money laundering, amending the Money Laundering Prevention Act-2020. This bill addresses legislative deficiencies highlighted by the Asia-Pacific Group on Money Laundering (APG). Following the endorsement, the bill still needs to be passed by the National Assembly and receive presidential authentication to become law. The bill aims to revise 20 laws to control money laundering and terrorist financing. The FATF is an international anti-money laundering body which decides whether to blacklist or greylist a country. The terms 'Blacklist' and 'Greylist' refer to the FATF's lists of 'High-Risk Jurisdictions' and 'Jurisdictions under Increased Monitoring'.
+            </div>
+        </div>
+        
+        <div class="blog-post">
+            <div class="post-title">
+                <a href="https://myrepublica.nagariknetwork.com/news/a-tougher-law-a-bigger-test" target="_blank" rel="noopener noreferrer">A Tougher Law, A Bigger Test</a>
+            </div>
+            <div class="post-date">May 6, 2026</div>
+            <div class="post-excerpt">
+                The government has taken steps to tighten control over financial crime by granting the Department of Money Laundering Investigation (DoMLI) additional jurisdiction under a new regulation, altering how investigations are conducted. One of the most significant changes is the removal of the previous requirement that money laundering charges be linked to a specific underlying offense. The new law re-centralizes authority under DoMLI while broadening the range of offenses that may trigger investigations, including smuggling, tax evasion, financial market misconduct, and insider trading. While this move is both timely and necessary, the expanded authority of DoMLI must be matched with transparency, independent oversight, and clear procedural safeguards to prevent misuse.
+            </div>
+        </div>
+        
+        <div class="blog-post">
+            <div class="post-title">
+                <a href="https://kathmandupost.com/national/2025/08/12/nepal-orders-payment-service-providers-to-freeze-terrorist-linked-assets-to-exit-fatf-grey-list" target="_blank" rel="noopener noreferrer">Nepal orders payment service providers to freeze terrorist-linked assets to exit FATF grey list</a>
+            </div>
+            <div class="post-date">August 12, 2025</div>
+            <div class="post-excerpt">
+                New central bank guidelines require payment service providers (PSPs) to block funds of individuals and groups listed by the United Nations or the home ministry. This move, part of a broader strategy to exit the Financial Action Task Force's (FATF) 'grey list', comes amid rising cyber-enabled fraud targeting youth and students. The guidelines aim to strengthen Nepal's anti-money laundering and counter-terrorist financing (AML/CFT) regime. The FATF had placed Nepal on the grey list in February 2025, citing failures to fully implement necessary legal and structural reforms. The central bank's directive is seen as a critical step to address these deficiencies and demonstrate progress to the FATF.
+            </div>
+        </div>
+        
+        <div class="blog-post">
+            <div class="post-title">
+                <a href="https://kathmandupost.com/national/2025/08/11/government-tightens-screws-on-cooperatives-to-exit-fatf-grey-list" target="_blank" rel="noopener noreferrer">Government tightens screws on cooperatives to exit FATF grey list</a>
+            </div>
+            <div class="post-date">August 11, 2025</div>
+            <div class="post-excerpt">
+                Nepal's placement on the Financial Action Task Force (FATF) grey list in February 2025, due to its failure to meet several obligations, has triggered intensified regulatory scrutiny on cooperatives. In response, the government is introducing stricter compliance measures, including mandatory reporting of suspicious transactions, enhanced customer due diligence, and regular audits by the central bank. The move reflects a broader push to strengthen the country's anti-money laundering and counter-terrorist financing (AML/CFT) framework. The FATF has given Nepal a deadline to address these deficiencies, with a review expected in 2026. Failure to comply could lead to further sanctions, including blacklisting.
+            </div>
+        </div>
+        
+        <div class="blog-post">
+            <div class="post-title">
+                <a href="https://www.tribuneindia.com/news/nation/nepal-continue-to-remain-in-fatfs-greylist" target="_blank" rel="noopener noreferrer">Nepal continue to remain in FATF's greylist</a>
+            </div>
+            <div class="post-date">October 25, 2025</div>
+            <div class="post-excerpt">
+                Since February 2025, Nepal has made a high-level political commitment to work with the FATF and the Asia Pacific Group (APG) to strengthen the effectiveness of its Anti-Money Laundering and Combating the Financing of Terrorism (AML/CFT) regime. Despite these efforts, the FATF's plenary meeting in October 2025 decided that Nepal will continue to remain on the grey list, citing insufficient progress in implementing its action plan. The FATF noted that while Nepal has taken some steps, it needs to demonstrate sustained progress in prosecuting money laundering cases, confiscating criminal assets, and effectively regulating non-financial sectors.
+            </div>
+        </div>
+        
     </div>
-
-    <!-- Nepali blog content (static translation of headings only, posts remain English for simplicity) -->
     <div id="np-content" style="display:none;">
-        <h2 id="blog-heading-np">नवीनतम लेखहरू</h2>
-        <div id="blog-posts-np"></div>
-        <p style="margin-top:1rem; color:#666;">* ब्लग पोस्टहरू अङ्ग्रेजीमा छन्।</p>
+        <h2>नवीनतम लेखहरू</h2>
+        <p style="margin-bottom:1rem; color:#666;">नवीनतम समाचार र अन्तर्दृष्टिहरूको लागि कृपया अंग्रेजी संस्करण हेर्नुहोस्।</p>
     </div>
 </main>
-
 <footer>
     <div class="container">
-        <p>&copy; 2025 Karki Associates Private Limited. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="terms.html">Terms of Use</a> | 
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="cookie.html">Cookie Policy</a>
+        <div class="footer-policy" id="footerPolicyLinks">
+            <a href="terms.html" data-key="terms">Terms of Use</a>
+            <a href="privacy.html" data-key="privacy">Privacy Policy</a>
+            <a href="cookie.html" data-key="cookie">Cookie Policy</a>
         </div>
-        <p>Registered Office: Pokhara Metropolitan City, Ward No. 7, Kaski, Nepal</p>
+        <div class="footer-copyright" id="footerCopyright">© 2026 Karki Associates Private Limited</div>
     </div>
 </footer>
-
 <script>
-    // ---------- BLOG POSTS DATABASE (easily add or edit posts here) ----------
-    const blogPosts = [
-        {
-            id: 1,
-            title: "New Companies Act Amendments: What Businesses Need to Know",
-            date: "April 15, 2025",
-            author: "Adv. Anil Karki",
-            category: "Legal Update",
-            excerpt: "The Government of Nepal has introduced significant amendments to the Companies Act, 2063. These changes affect share transfer procedures, board meeting requirements, and annual compliance filings. Learn how your business can stay compliant...",
-            fullContent: "<p>The recently passed amendment bill introduces several key provisions: simplified share transfer for private companies, mandatory e‑filing of annual returns, and reduced penalties for late filing within 30 days. Additionally, single‑shareholder companies now have more flexibility in holding general meetings.</p><p>We recommend all registered companies review their internal bylaws and update their Articles of Association accordingly. For a full analysis or assistance with compliance, contact our office.</p>"
-        },
-        {
-            id: 2,
-            title: "Tax Deadlines for Fiscal Year 2081/82",
-            date: "April 5, 2025",
-            author: "Tax Team",
-            category: "Tax Advisory",
-            excerpt: "Stay ahead of the upcoming tax deadlines. Inland Revenue Department has published the calendar for VAT, TDS, and income tax returns. Missing deadlines could result in penalties up to 15%...",
-            fullContent: "<p>Key deadlines: VAT and TDS returns for the end of the fiscal year must be filed by Kartik 15. Advance tax payments are due on Ashwin 15 and Falgun 15. Newly registered businesses must also submit their first annual audit report within six months of the fiscal year end.</p><p>Our tax consultants can help you prepare and file on time. Contact us for a consultation.</p>"
-        },
-        {
-            id: 3,
-            title: "Digital Service Records: Legal Requirements for Employers",
-            date: "March 20, 2025",
-            author: "Adv. Anil Karki",
-            category: "Labour Law",
-            excerpt: "With the digitisation of government services, employers must now maintain digital records of employee service contracts, leave, and salary details. Failure to comply may lead to inspections...",
-            fullContent: "<p>The Labour Act, 2074 requires every establishment to keep electronic attendance records, annual leave ledgers, and settlement statements. The new online portal 'Shram Suvidha' allows employers to register and update employee information directly.</p><p>We provide end‑to‑end setup of digital HR systems and ensure full labour law compliance.</p>"
-        },
-        {
-            id: 4,
-            title: "Intellectual Property Protection for Small Businesses",
-            date: "March 10, 2025",
-            author: "Legal Desk",
-            category: "IPR",
-            excerpt: "Trademark registration in Nepal has become faster with the new online filing system. Small businesses can now protect their brand identity at a lower cost...",
-            fullContent: "<p>The Department of Industry has streamlined the trademark registration process, reducing the average processing time to 8‑10 months. We assist clients from trademark search to registration and renewal.</p><p>Don't let others misuse your brand – secure your intellectual property rights today.</p>"
-        }
-    ];
-
-    // Function to render blog posts in a given container (English)
-    function renderPosts(containerId) {
-        const container = document.getElementById(containerId);
-        if (!container) return;
-        container.innerHTML = '';
-        blogPosts.forEach(post => {
-            const postDiv = document.createElement('div');
-            postDiv.className = 'blog-post';
-            postDiv.setAttribute('data-id', post.id);
-            postDiv.innerHTML = `
-                <h3 class="post-title">${escapeHtml(post.title)}</h3>
-                <div class="post-meta">
-                    <span><strong>📅 ${escapeHtml(post.date)}</strong></span>
-                    <span><strong>✍️ ${escapeHtml(post.author)}</strong></span>
-                    <span><strong>📂 ${escapeHtml(post.category)}</strong></span>
-                </div>
-                <div class="post-excerpt">${escapeHtml(post.excerpt)}</div>
-                <button class="read-more-btn" data-id="${post.id}">Read more ▼</button>
-                <div class="full-content" id="full-${post.id}" style="display:none;">${post.fullContent}</div>
-            `;
-            container.appendChild(postDiv);
+    const navTranslations = {
+        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", contact: "Contact" },
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", contact: "सम्पर्क" }
+    };
+    const footerTranslations = {
+        en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
+        ne: { terms: "प्रयोगका सर्तहरू", privacy: "गोपनीयता नीति", cookie: "कुकी नीति" }
+    };
+    function updateUILanguage(lang) {
+        document.querySelectorAll('[data-key]').forEach(el => {
+            const key = el.getAttribute('data-key');
+            if (navTranslations[lang] && navTranslations[lang][key]) el.textContent = navTranslations[lang][key];
+            else if (footerTranslations[lang] && footerTranslations[lang][key]) el.textContent = footerTranslations[lang][key];
         });
-
-        // Attach event listeners to all "Read more" buttons
-        document.querySelectorAll('.read-more-btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                const id = this.getAttribute('data-id');
-                const fullDiv = document.getElementById(`full-${id}`);
-                if (fullDiv.style.display === 'none' || fullDiv.style.display === '') {
-                    fullDiv.style.display = 'block';
-                    this.innerHTML = 'Read less ▲';
-                } else {
-                    fullDiv.style.display = 'none';
-                    this.innerHTML = 'Read more ▼';
-                }
-            });
-        });
-    }
-
-    // Helper to escape HTML
-    function escapeHtml(str) {
-        if (!str) return '';
-        return str.replace(/[&<>]/g, function(m) {
-            if (m === '&') return '&amp;';
-            if (m === '<') return '&lt;';
-            if (m === '>') return '&gt;';
-            return m;
-        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
-            return c;
-        });
-    }
-
-    // Render posts in English container initially (both languages will show same posts because Nepali container will copy English posts)
-    renderPosts('blog-posts-en');
-
-    // For Nepali view, we also render posts but keep content English; we can copy the same rendered HTML.
-    function renderNepaliPosts() {
-        const npContainer = document.getElementById('blog-posts-np');
-        if (!npContainer) return;
-        // Clone the English posts (already rendered) and adjust any text that needs translation? But we keep content English.
-        const enContainer = document.getElementById('blog-posts-en');
-        if (enContainer) {
-            npContainer.innerHTML = enContainer.innerHTML;
-            // Re-attach read-more events for Nepali container buttons
-            document.querySelectorAll('#blog-posts-np .read-more-btn').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    const id = this.getAttribute('data-id');
-                    const fullDiv = document.getElementById(`full-${id}`);
-                    if (fullDiv) {
-                        if (fullDiv.style.display === 'none' || fullDiv.style.display === '') {
-                            fullDiv.style.display = 'block';
-                            this.innerHTML = 'Read less ▲';
-                        } else {
-                            fullDiv.style.display = 'none';
-                            this.innerHTML = 'Read more ▼';
-                        }
-                    }
-                });
-            });
-        }
-    }
-    renderNepaliPosts();
-
-    // Language toggle logic (E/N) with dynamic button text and toggling English/Nepali UI
-    function updateToggleButtons() {
-        const enVisible = document.getElementById('en-content').style.display !== 'none';
-        const desktopBtn = document.getElementById('langToggleDesktop');
-        const mobileBtn = document.getElementById('langToggleMobile');
-        const newText = enVisible ? 'N' : 'E';
-        if (desktopBtn) desktopBtn.textContent = newText;
-        if (mobileBtn) mobileBtn.textContent = newText;
-    }
-
-    function toggleLanguage() {
-        const enContent = document.getElementById('en-content');
-        const npContent = document.getElementById('np-content');
-        const isEnglish = enContent.style.display !== 'none';
-        if (isEnglish) {
-            enContent.style.display = 'none';
-            npContent.style.display = 'block';
-            document.documentElement.lang = 'ne';
+        const copyrightEl = document.getElementById('footerCopyright');
+        if (lang === 'ne') {
+            copyrightEl.textContent = '© २०२६ कार्की एसोसिएट्स प्राइभेट लिमिटेड';
         } else {
-            npContent.style.display = 'none';
-            enContent.style.display = 'block';
-            document.documentElement.lang = 'en';
+            copyrightEl.textContent = '© 2026 Karki Associates Private Limited';
         }
-        updateToggleButtons();
     }
-
-    const desktopBtn = document.getElementById('langToggleDesktop');
-    const mobileBtn = document.getElementById('langToggleMobile');
-    if (desktopBtn) desktopBtn.addEventListener('click', toggleLanguage);
-    if (mobileBtn) mobileBtn.addEventListener('click', toggleLanguage);
-    updateToggleButtons();
-
-    // Hamburger menu
+    function toggleLanguage() {
+        const en = document.getElementById('en-content');
+        const np = document.getElementById('np-content');
+        const isEn = en.style.display !== 'none';
+        if (isEn) {
+            en.style.display = 'none';
+            np.style.display = 'block';
+            document.documentElement.lang = 'ne';
+            updateUILanguage('ne');
+            document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = 'E');
+        } else {
+            np.style.display = 'none';
+            en.style.display = 'block';
+            document.documentElement.lang = 'en';
+            updateUILanguage('en');
+            document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = 'ने');
+        }
+    }
+    document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
+    updateUILanguage('en');
     const hamburger = document.getElementById('hamburgerBtn');
     const mobileNav = document.getElementById('mobileNav');
     if (hamburger) {
         hamburger.addEventListener('click', () => {
-            if (mobileNav.style.display === 'flex') {
-                mobileNav.style.display = 'none';
-            } else {
-                mobileNav.style.display = 'flex';
-            }
+            mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
         });
     }
-
-    const mobileLinks = document.querySelectorAll('.mobile-nav a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (mobileNav) mobileNav.style.display = 'none';
-        });
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+        link.addEventListener('click', () => { if (mobileNav) mobileNav.style.display = 'none'; });
     });
-
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && mobileNav) {
-            mobileNav.style.display = 'none';
-        }
-    });
+    window.addEventListener('resize', () => { if (window.innerWidth > 768 && mobileNav) mobileNav.style.display = 'none'; });
 </script>
-
 </body>
 </html>
