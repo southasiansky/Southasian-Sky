@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karki Associates - Contact</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: white;
+            color: #1a3e6f;
+            padding: 0.8rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .desktop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo img {
+            max-height: 95px;
+            width: auto;
+            display: block;
+        }
+
+        .desktop-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+            align-items: center;
+        }
+
+        .desktop-nav a {
+            color: #1a3e6f;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .desktop-nav a:hover {
+            color: #ffc107;
+        }
+
+        .lang-switch {
+            background: white;
+            color: black;
+            border: 1.5px solid #1a3e6f;
+            padding: 0.3rem 0.7rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            margin-left: 0.5rem;
+        }
+
+        .lang-switch:hover {
+            background: #1a3e6f;
+            color: white;
+        }
+
+        .mobile-header {
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hamburger {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #1a3e6f;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            background: white;
+            padding: 1rem;
+            border-top: 1px solid #eee;
+            margin-top: 0.8rem;
+        }
+
+        .mobile-nav a {
+            color: #1a3e6f;
+            text-decoration: none;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav a:hover {
+            color: #ffc107;
+        }
+
+        main {
+            background: white;
+            padding: 2rem;
+            margin: 2rem auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #1a3e6f;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #ffd966;
+            padding-left: 15px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+        }
+
+        .contact-info strong {
+            color: #1a3e6f;
+        }
+
+        .map-placeholder {
+            background: #e9ecef;
+            height: 250px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            margin-top: 1rem;
+        }
+
+        .contact-form {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+            color: #1a3e6f;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background: #1a3e6f;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #0f2c4f;
+        }
+
+        footer {
+            background: #1a3e6f;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #ffd966;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin: 0.5rem 0;
+        }
+
+        .footer-links a {
+            margin: 0 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-header {
+                display: none;
+            }
+            .mobile-header {
+                display: flex;
+            }
+            .logo img {
+                max-height: 65px;
+            }
+            .mobile-header .logo {
+                flex-grow: 1;
+                text-align: center;
+            }
+            main {
+                padding: 1.5rem;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <!-- Desktop header -->
+        <div class="desktop-header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Karki Associates Logo">
+            </div>
+            <div class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="advocate.html">Advocate</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button id="langToggleDesktop" class="lang-switch">N</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile header -->
+        <div class="mobile-header">
+            <button class="hamburger" id="hamburgerBtn">☰</button>
+            <div class="logo">
+                <img src="images/logo.png" alt="Karki Associates Logo">
+            </div>
+            <button id="langToggleMobile" class="lang-switch">N</button>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="advocate.html">Advocate</a>
+            <a href="service.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <!-- English content -->
+    <div id="en-content">
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>📍 Registered Office</strong><br>
+                Karki Associates Private Limited<br>
+                Pokhara Metropolitan City, Ward No. 7<br>
+                Kaski District, Gandaki Province<br>
+                Nepal</p>
+                <p><strong>📞 Phone</strong><br>
+                +977‑9851068714</p>
+                <p><strong>✉️ Email</strong><br>
+                info@karkiassociates.com</p>
+                <p><strong>🕒 Office Hours</strong><br>
+                Sunday – Friday: 10:00 AM – 5:00 PM (Nepal Time)<br>
+                Closed on Saturdays and public holidays</p>
+                <div class="map-placeholder">
+                    📍 Map: Pokhara Metropolitan City, Ward No. 7, Kaski
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactFormEn" action="#" method="post">
+                    <div class="form-group">
+                        <label for="nameEn">Full Name *</label>
+                        <input type="text" id="nameEn" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailEn">Email Address *</label>
+                        <input type="email" id="emailEn" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneEn">Phone Number</label>
+                        <input type="tel" id="phoneEn" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subjectEn">Subject *</label>
+                        <select id="subjectEn" name="subject" required>
+                            <option value="">-- Select --</option>
+                            <option value="Legal Consultation">Legal Consultation</option>
+                            <option value="Accounting/Tax">Accounting & Tax</option>
+                            <option value="Management Consulting">Management Consulting</option>
+                            <option value="Research Support">Research Support</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="messageEn">Message *</label>
+                        <textarea id="messageEn" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                    <p style="font-size:0.8rem; margin-top:1rem; color:#666;">We will respond within 1‑2 business days. Do not share confidential information.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nepali content (same structure, translated labels) -->
+    <div id="np-content" style="display:none;">
+        <h2>सम्पर्क गर्नुहोस्</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>📍 रजिस्टर्ड कार्यालय</strong><br>
+                कार्की एसोसिएट्स प्राइभेट लिमिटेड<br>
+                पोखरा महानगरपालिका, वडा नं. ७<br>
+                कास्की जिल्ला, गण्डकी प्रदेश<br>
+                नेपाल</p>
+                <p><strong>📞 फोन</strong><br>
+                +977‑9851068714</p>
+                <p><strong>✉️ इमेल</strong><br>
+                info@karkiassociates.com</p>
+                <p><strong>🕒 कार्यालय समय</strong><br>
+                आइतबार – शुक्रबार: १०:०० बजे – १७:०० बजे (नेपाल समय)<br>
+                शनिबार र सार्वजनिक बिदामा बन्द</p>
+                <div class="map-placeholder">
+                    📍 नक्सा: पोखरा महानगरपालिका, वडा नं. ७, कास्की
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactFormNp" action="#" method="post">
+                    <div class="form-group">
+                        <label for="nameNp">पूरा नाम *</label>
+                        <input type="text" id="nameNp" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailNp">इमेल ठेगाना *</label>
+                        <input type="email" id="emailNp" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNp">फोन नम्बर</label>
+                        <input type="tel" id="phoneNp" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subjectNp">विषय *</label>
+                        <select id="subjectNp" name="subject" required>
+                            <option value="">-- चयन गर्नुहोस् --</option>
+                            <option value="Legal Consultation">कानूनी परामर्श</option>
+                            <option value="Accounting/Tax">लेखा तथा कर</option>
+                            <option value="Management Consulting">व्यवस्थापन परामर्श</option>
+                            <option value="Research Support">अनुसन्धान सहायता</option>
+                            <option value="Other">अन्य</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="messageNp">सन्देश *</label>
+                        <textarea id="messageNp" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">सन्देश पठाउनुहोस्</button>
+                    <p style="font-size:0.8rem; margin-top:1rem; color:#666;">हामी १-२ व्यावसायिक दिनभित्र जवाफ दिनेछौं। कृपया गोप्य जानकारी नपठाउनुहोस्।</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Karki Associates Private Limited. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="terms.html">Terms of Use</a> | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="cookie.html">Cookie Policy</a>
+        </div>
+        <p>Registered Office: Pokhara Metropolitan City, Ward No. 7, Kaski, Nepal</p>
+    </div>
+</footer>
+
+<script>
+    // Language toggle logic (E/N) with dynamic button text
+    function updateToggleButtons() {
+        const enVisible = document.getElementById('en-content').style.display !== 'none';
+        const desktopBtn = document.getElementById('langToggleDesktop');
+        const mobileBtn = document.getElementById('langToggleMobile');
+        const newText = enVisible ? 'N' : 'E';
+        if (desktopBtn) desktopBtn.textContent = newText;
+        if (mobileBtn) mobileBtn.textContent = newText;
+    }
+
+    function toggleLanguage() {
+        const enContent = document.getElementById('en-content');
+        const npContent = document.getElementById('np-content');
+        const isEnglish = enContent.style.display !== 'none';
+        if (isEnglish) {
+            enContent.style.display = 'none';
+            npContent.style.display = 'block';
+            document.documentElement.lang = 'ne';
+        } else {
+            npContent.style.display = 'none';
+            enContent.style.display = 'block';
+            document.documentElement.lang = 'en';
+        }
+        updateToggleButtons();
+    }
+
+    const desktopBtn = document.getElementById('langToggleDesktop');
+    const mobileBtn = document.getElementById('langToggleMobile');
+    if (desktopBtn) desktopBtn.addEventListener('click', toggleLanguage);
+    if (mobileBtn) mobileBtn.addEventListener('click', toggleLanguage);
+    updateToggleButtons();
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            if (mobileNav.style.display === 'flex') {
+                mobileNav.style.display = 'none';
+            } else {
+                mobileNav.style.display = 'flex';
+            }
+        });
+    }
+
+    const mobileLinks = document.querySelectorAll('.mobile-nav a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (mobileNav) mobileNav.style.display = 'none';
+        });
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && mobileNav) {
+            mobileNav.style.display = 'none';
+        }
+    });
+
+    // Prevent actual form submission for demo (you can later integrate backend)
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('This is a demo. In a real website, this form would send an email. Thank you for reaching out!');
+        });
+    });
+</script>
+
+</body>
+</html>
