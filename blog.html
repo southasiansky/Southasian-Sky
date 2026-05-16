@@ -10,23 +10,24 @@
         body {
             font-family: 'Arial', sans-serif;
             font-size: 1.125rem;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #111;
-            background: #f5f5f5;
+            background: #f8f8f8;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
         header {
             background: #fff;
             color: #000;
             padding: 0.8rem 0;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #e0e0e0;
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
         }
         .desktop-header {
             display: flex;
@@ -34,12 +35,13 @@
             align-items: center;
             flex-wrap: wrap;
         }
-        .logo a { display: block; }
+        .logo a { display: block; transition: opacity 0.2s; }
+        .logo a:hover { opacity: 0.85; }
         .logo img { max-height: 95px; width: auto; display: block; }
         .desktop-nav ul {
             display: flex;
             list-style: none;
-            gap: 1.8rem;
+            gap: 2rem;
             align-items: center;
         }
         .desktop-nav a {
@@ -47,21 +49,23 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 1.125rem;
+            transition: color 0.2s;
         }
-        .desktop-nav a:hover { text-decoration: underline; }
+        .desktop-nav a:hover { color: #444; text-decoration: underline; }
         .lang-switch {
             background: #fff;
             color: #000;
-            border: 1px solid #000;
-            padding: 0.3rem 0.7rem;
+            border: 1px solid #333;
+            padding: 0.3rem 0.8rem;
             border-radius: 30px;
             cursor: pointer;
             font-weight: bold;
             font-size: 0.9rem;
             margin-left: 0.5rem;
             font-family: 'Arial', sans-serif;
+            transition: all 0.2s;
         }
-        .lang-switch:hover { background: #000; color: #fff; }
+        .lang-switch:hover { background: #000; color: #fff; border-color: #000; }
         .mobile-header {
             display: none;
             align-items: center;
@@ -74,20 +78,23 @@
             font-size: 1.8rem;
             cursor: pointer;
             color: #000;
-            padding: 0 0.2rem;
+            padding: 0;
+            transition: opacity 0.2s;
         }
+        .hamburger:hover { opacity: 0.7; }
         .mobile-right {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1rem;
         }
         .mobile-nav {
             display: none;
             flex-direction: column;
             background: #fff;
             padding: 1rem;
-            border-top: 1px solid #ccc;
+            border-top: 1px solid #e0e0e0;
             margin-top: 0.8rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         }
         .mobile-nav a {
             color: #000;
@@ -96,52 +103,83 @@
             border-bottom: 1px solid #eee;
             font-weight: 500;
             text-align: center;
+            transition: background 0.2s;
         }
         .mobile-nav a:last-child { border-bottom: none; }
+        .mobile-nav a:hover { background: #f5f5f5; }
         main {
             background: #fff;
-            padding: 2rem;
+            padding: 2.5rem;
             margin: 3rem auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s;
         }
-        h2 { color: #000; margin-bottom: 1rem; font-size: 1.8rem; }
-        .blog-post { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee; }
-        .post-title { margin-bottom: 0.3rem; }
-        .post-title a { color: #000; text-decoration: none; font-size: 1.4rem; font-weight: 500; }
+        h2 {
+            color: #000;
+            margin-bottom: 1.2rem;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        .blog-post {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .post-title {
+            margin-bottom: 0.3rem;
+        }
+        .post-title a {
+            color: #000;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
         .post-title a:hover { text-decoration: underline; }
-        .post-date { color: #555; font-size: 0.85rem; margin-bottom: 0.75rem; }
-        .post-excerpt { margin-bottom: 0.5rem; line-height: 1.5; color: #333; }
+        .post-date {
+            color: #555;
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+        .post-excerpt {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+            color: #333;
+        }
         footer {
             background: #fff;
             color: #000;
             text-align: center;
-            padding: 0.8rem 0;
-            border-top: 1px solid #ccc;
+            padding: 1.2rem 0;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 2rem;
         }
         footer a {
             color: #000;
             text-decoration: none;
-            margin: 0 0.3rem;
+            margin: 0 0.4rem;
             font-weight: 500;
-            font-size: 1.125rem;
+            font-size: 1rem;
+            transition: opacity 0.2s;
         }
-        footer a:hover { text-decoration: underline; }
-        .footer-policy { margin-bottom: 0.3rem; word-spacing: normal; }
+        footer a:hover { text-decoration: underline; opacity: 0.8; }
+        .footer-policy { margin-bottom: 0.5rem; word-spacing: normal; }
         .footer-copyright {
-            margin: 0.2rem 0;
-            font-size: 1.125rem;
-            font-weight: bold;
+            margin: 0.3rem 0;
+            font-size: 0.95rem;
+            font-weight: normal;
+            letter-spacing: 0.3px;
         }
         @media (max-width: 768px) {
             .desktop-header { display: none; }
             .mobile-header { display: flex; }
-            .logo img { max-height: 65px; }
-            main { padding: 1.5rem; margin: 1.5rem auto; }
-            body { font-size: 1rem; }
-            .desktop-nav a, footer a { font-size: 1rem; }
-            .footer-copyright { font-size: 1rem; }
+            .logo img { max-height: 60px; }
+            main { padding: 1.5rem; margin: 1.5rem auto; border-radius: 12px; }
+            h2 { font-size: 1.6rem; }
             .post-title a { font-size: 1.2rem; }
+            body { font-size: 1rem; line-height: 1.6; }
+            .container { padding: 0 16px; }
         }
     </style>
 </head>
@@ -155,8 +193,8 @@
                     <li><a href="index.html" data-key="home">Home</a></li>
                     <li><a href="about.html" data-key="about">About</a></li>
                     <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
-                    <li><a href="service.html" data-key="services">Services</a></li>
                     <li><a href="blog.html" data-key="blog">Blog</a></li>
+                    <li><a href="opinion.html" data-key="opinion">Opinion</a></li>
                     <li><a href="contact.html" data-key="contact">Contact</a></li>
                     <li><button id="langToggleDesktop" class="lang-switch">ने</button></li>
                 </ul>
@@ -173,92 +211,37 @@
             <a href="index.html" data-key="home">Home</a>
             <a href="about.html" data-key="about">About</a>
             <a href="advocate.html" data-key="advocate">Advocate</a>
-            <a href="service.html" data-key="services">Services</a>
             <a href="blog.html" data-key="blog">Blog</a>
+            <a href="opinion.html" data-key="opinion">Opinion</a>
             <a href="contact.html" data-key="contact">Contact</a>
         </div>
     </div>
 </header>
 <main class="container">
-    <!-- English Blog Posts -->
+    <!-- English Blog Post -->
     <div id="en-content">
         <h2>Latest Insights</h2>
-
         <div class="blog-post">
-            <div class="post-title"><a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">Combating money laundering in Nepal</a></div>
+            <div class="post-title">
+                <a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">Combating money laundering in Nepal</a>
+            </div>
             <div class="post-date">July 21, 2023</div>
-            <div class="post-excerpt">Stakeholders are concerned that Nepal could be blacklisted or placed on a greylist by the Financial Action Task Force (FATF) because of its failure to resolve several inadequacies in its laws against money laundering and terrorism financing. Even though it is certain that Nepal will be on the FATF greylist, it has an additional deadline of one year for reforms. The FATF provides an observation period before any country is directly monitored, and now Nepal has that time. The legal structures of Nepal are well-enacted, but enforcement has lagged behind. The FATF is not widely accepted, and its agenda needs further critical appraisal as it is better classified as a political organization.</div>
-        </div>
-
-        <div class="blog-post">
-            <div class="post-title"><a href="https://kathmandupost.com/national/2024/02/08/nepal-takes-big-step-to-avoid-money-laundering-greylist" target="_blank" rel="noopener noreferrer">Nepal takes big step to avoid money laundering greylist</a></div>
-            <div class="post-date">February 8, 2024</div>
-            <div class="post-excerpt">Nepal has taken a major step towards minimizing the threat of being greylisted by the Financial Action Task Force (FATF). The country's lower house endorsed a bill on money laundering, amending the Money Laundering Prevention Act-2020. This bill addresses legislative deficiencies highlighted by the Asia-Pacific Group on Money Laundering (APG). Following the endorsement, the bill still needs to be passed by the National Assembly and receive presidential authentication to become law. The bill aims to revise 20 laws to control money laundering and terrorist financing. The FATF is an international anti-money laundering body which decides whether to blacklist or greylist a country.</div>
-        </div>
-
-        <div class="blog-post">
-            <div class="post-title"><a href="https://myrepublica.nagariknetwork.com/news/a-tougher-law-a-bigger-test" target="_blank" rel="noopener noreferrer">A Tougher Law, A Bigger Test</a></div>
-            <div class="post-date">May 6, 2026</div>
-            <div class="post-excerpt">The government has taken steps to tighten control over financial crime by granting the Department of Money Laundering Investigation (DoMLI) additional jurisdiction under a new regulation, altering how investigations are conducted. One of the most significant changes is the removal of the previous requirement that money laundering charges be linked to a specific underlying offense. The new law re-centralizes authority under DoMLI while broadening the range of offenses that may trigger investigations, including smuggling, tax evasion, financial market misconduct, and insider trading. While this move is both timely and necessary, the expanded authority of DoMLI must be matched with transparency, independent oversight, and clear procedural safeguards to prevent misuse.</div>
-        </div>
-
-        <div class="blog-post">
-            <div class="post-title"><a href="https://kathmandupost.com/national/2025/08/12/nepal-orders-payment-service-providers-to-freeze-terrorist-linked-assets-to-exit-fatf-grey-list" target="_blank" rel="noopener noreferrer">Nepal orders payment service providers to freeze terrorist-linked assets to exit FATF grey list</a></div>
-            <div class="post-date">August 12, 2025</div>
-            <div class="post-excerpt">New central bank guidelines require payment service providers (PSPs) to block funds of individuals and groups listed by the United Nations or the home ministry. This move, part of a broader strategy to exit the Financial Action Task Force's (FATF) 'grey list', comes amid rising cyber-enabled fraud targeting youth and students. The guidelines aim to strengthen Nepal's anti-money laundering and counter-terrorist financing (AML/CFT) regime. The FATF had placed Nepal on the grey list in February 2025, citing failures to fully implement necessary legal and structural reforms. The central bank's directive is seen as a critical step to address these deficiencies and demonstrate progress to the FATF.</div>
-        </div>
-
-        <div class="blog-post">
-            <div class="post-title"><a href="https://kathmandupost.com/national/2025/08/11/government-tightens-screws-on-cooperatives-to-exit-fatf-grey-list" target="_blank" rel="noopener noreferrer">Government tightens screws on cooperatives to exit FATF grey list</a></div>
-            <div class="post-date">August 11, 2025</div>
-            <div class="post-excerpt">Nepal's placement on the Financial Action Task Force (FATF) grey list in February 2025, due to its failure to meet several obligations, has triggered intensified regulatory scrutiny on cooperatives. In response, the government is introducing stricter compliance measures, including mandatory reporting of suspicious transactions, enhanced customer due diligence, and regular audits by the central bank. The move reflects a broader push to strengthen the country's anti-money laundering and counter-terrorist financing (AML/CFT) framework. The FATF has given Nepal a deadline to address these deficiencies, with a review expected in 2026. Failure to comply could lead to further sanctions, including blacklisting.</div>
-        </div>
-
-        <div class="blog-post">
-            <div class="post-title"><a href="https://www.tribuneindia.com/news/nation/nepal-continue-to-remain-in-fatfs-greylist" target="_blank" rel="noopener noreferrer">Nepal continue to remain in FATF's greylist</a></div>
-            <div class="post-date">October 25, 2025</div>
-            <div class="post-excerpt">Since February 2025, Nepal has made a high-level political commitment to work with the FATF and the Asia Pacific Group (APG) to strengthen the effectiveness of its Anti-Money Laundering and Combating the Financing of Terrorism (AML/CFT) regime. Despite these efforts, the FATF's plenary meeting in October 2025 decided that Nepal will continue to remain on the grey list, citing insufficient progress in implementing its action plan. The FATF noted that while Nepal has taken some steps, it needs to demonstrate sustained progress in prosecuting money laundering cases, confiscating criminal assets, and effectively regulating non-financial sectors.</div>
+            <div class="post-excerpt">
+                Stakeholders are concerned that Nepal could be blacklisted or placed on a greylist by the Financial Action Task Force (FATF) because of its failure to resolve several inadequacies in its laws against money laundering and terrorism financing. Even though it is certain that Nepal will be on the FATF greylist, it has an additional deadline of one year for reforms. The FATF provides an observation period before any country is directly monitored, and now Nepal has that time. The legal structures of Nepal are well-enacted, but enforcement has lagged behind. The FATF is not widely accepted, and its agenda needs further critical appraisal as it is better classified as a political organization.
+            </div>
         </div>
     </div>
-
-    <!-- Nepali Blog Posts (translated) -->
+    <!-- Nepali Blog Post (translated) -->
     <div id="np-content" style="display:none;">
         <h2>नवीनतम लेखहरू</h2>
-
         <div class="blog-post">
-            <div class="post-title"><a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">नेपालमा मनी लन्ड्रिङ नियन्त्रण</a></div>
+            <div class="post-title">
+                <a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">नेपालमा मनी लन्ड्रिङ नियन्त्रण</a>
+            </div>
             <div class="post-date">जुलाई २१, २०२३</div>
-            <div class="post-excerpt">नेपाल मनी लन्ड्रिङ तथा आतंककारी क्रियाकलापमा वित्तीय सहायता नियन्त्रणसम्बन्धी कानूनमा केही कमजोरीहरू सुधार गर्न नसकेको भन्दै यसलाई वित्तीय कार्य समूह (FATF) को ग्रेलिस्टमा राखिने सम्भावना रहेको छ। हितधारकहरूले नेपाल कालोसूची वा ग्रेलिस्टमा पर्न सक्ने चिन्ता व्यक्त गरेका छन्। नेपाल FATF को ग्रेलिस्टमा पर्ने निश्चित जस्तै भए पनि, सुधारका लागि एक वर्षको अतिरिक्त समय दिइएको छ। FATF ले कुनै पनि देशलाई प्रत्यक्ष निगरानीमा राख्नु अघि पर्यवेक्षण अवधि दिन्छ, र नेपालसँग अहिले त्यो समय छ। नेपालको कानूनी संरचना राम्रो छ तर कार्यान्वयन कमजोर छ।</div>
-        </div>
-
-        <div class="blog-post">
-            <div class="post-title"><a href="https://kathmandupost.com/national/2024/02/08/nepal-takes-big-step-to-avoid-money-laundering-greylist" target="_blank" rel="noopener noreferrer">ग्रेलिस्टमा पर्नबाट जोगिन नेपालको ठूलो कदम</a></div>
-            <div class="post-date">फेब्रुअरी ८, २०२४</div>
-            <div class="post-excerpt">नेपालले FATF को ग्रेलिस्टमा पर्ने जोखिम कम गर्न महत्वपूर्ण कदम चालेको छ। संसदको प्रतिनिधि सभाले मनी लन्ड्रिङ नियन्त्रण ऐन, २०२० मा संशोधन गर्ने विधेयक पारित गरेको छ। यो विधेयकले एसिया-प्रशान्त मनी लन्ड्रिङ समूहले औंल्याएका कानूनी कमजोरीहरू सम्बोधन गर्दछ। विधेयक राष्ट्रिय सभाबाट पारित भई राष्ट्रपतिबाट प्रमाणीकरण पछि मात्र कानून बन्नेछ। यसले मनी लन्ड्रिङ र आतंककारी वित्तीय सहायता नियन्त्रणका लागि २० वटा कानून संशोधन गर्ने लक्ष्य राखेको छ।</div>
-        </div>
-
-        <div class="blog-post">
-            <div class="post-title"><a href="https://myrepublica.nagariknetwork.com/news/a-tougher-law-a-bigger-test" target="_blank" rel="noopener noreferrer">कडा कानून, ठूलो परीक्षा</a></div>
-            <div class="post-date">मे ६, २०२६</div>
-            <div class="post-excerpt">सरकारले नयाँ नियमावली अन्तर्गत मनी लन्ड्रिङ अनुसन्धान विभाग (DoMLI) लाई थप अधिकार दिई वित्तीय अपराध नियन्त्रण कडा बनाएको छ। सबैभन्दा महत्वपूर्ण परिवर्तन भनेको मनी लन्ड्रिङको अभियोग कुनै अन्तर्निहित अपराधसँग जोडिनुपर्ने पुरानो व्यवस्था हटाइएको छ। नयाँ कानूनले DoMLI अन्तर्गत अधिकार पुन: केन्द्रित गरेको छ, साथै तस्करी, कर छली, वित्तीय बजार दुरुपयोग, र भित्री व्यापार जस्ता अपराधहरू अनुसन्धान दायरामा ल्याएको छ।</div>
-        </div>
-
-        <div class="blog-post">
-            <div class="post-title"><a href="https://kathmandupost.com/national/2025/08/12/nepal-orders-payment-service-providers-to-freeze-terrorist-linked-assets-to-exit-fatf-grey-list" target="_blank" rel="noopener noreferrer">FATF ग्रेलिस्टबाट बाहिरिन भुक्तानी सेवा प्रदायकलाई तोक्ने आदेश</a></div>
-            <div class="post-date">अगस्ट १२, २०२५</div>
-            <div class="post-excerpt">नेपाल राष्ट्र बैंकको नयाँ निर्देशन अनुसार भुक्तानी सेवा प्रदायक (PSP) हरूले संयुक्त राष्ट्र संघ वा गृह मन्त्रालयले सूचीकृत गरेका व्यक्ति वा समूहका कोष रोक्का गर्नुपर्नेछ। FATF को ग्रेलिस्टबाट बाहिरिने रणनीतिको भागको रूपमा लिइएको यो कदम युवा तथा विद्यार्थीहरूलाई लक्षित साइबर ठगी घटना बढ्दै गएको अवस्थामा आएको हो। FATF ले फेब्रुअरी २०२५ मा आवश्यक कानूनी तथा संरचनात्मक सुधार गर्न नसकेको भन्दै नेपाललाई ग्रेलिस्टमा राखेको थियो।</div>
-        </div>
-
-        <div class="blog-post">
-            <div class="post-title"><a href="https://kathmandupost.com/national/2025/08/11/government-tightens-screws-on-cooperatives-to-exit-fatf-grey-list" target="_blank" rel="noopener noreferrer">FATF ग्रेलिस्टबाट बाहिरिन सहकारी संस्थाहरूलाई कडाइ</a></div>
-            <div class="post-date">अगस्ट ११, २०२५</div>
-            <div class="post-excerpt">फेब्रुअरी २०२५ मा FATF को ग्रेलिस्टमा राखिएपछि, नेपालले सहकारी क्षेत्रमा नियामकीय कडाइ बढाएको छ। सरकारले शंकास्पद कारोबार अनिवार्य रिपोर्टिङ, ग्राहक परिशीलन बढाउने, र राष्ट्र बैंकबाट नियमित लेखापरीक्षण गर्ने जस्ता कडा अनुपालन उपायहरू ल्याउँदैछ। FATF ले नेपाललाई कमजोरी सुधार गर्न समयसीमा दिएको छ र २०२६ मा पुनरावलोकन गर्नेछ।</div>
-        </div>
-
-        <div class="blog-post">
-            <div class="post-title"><a href="https://www.tribuneindia.com/news/nation/nepal-continue-to-remain-in-fatfs-greylist" target="_blank" rel="noopener noreferrer">नेपाल FATF को ग्रेलिस्टमा नै रहने</a></div>
-            <div class="post-date">अक्टोबर २५, २०२५</div>
-            <div class="post-excerpt">फेब्रुअरी २०२५ देखि नेपालले FATF र APG सँग मिलेर आफ्नो एन्टी-मनी लन्ड्रिङ तथा आतंककारी वित्तीय सहायता नियन्त्रण प्रभावकारिता सुधार्न उच्च-स्तरीय राजनीतिक प्रतिबद्धता जनाएको छ। यी प्रयासहरूको बाबजुद, FATF को अक्टोबर २०२५ को पूर्ण सत्रले नेपाल आफ्नो कार्ययोजना कार्यान्वयनमा अपर्याप्त प्रगति भएको भन्दै ग्रेलिस्टमै रहने निर्णय गरेको छ। FATF ले मनी लन्ड्रिङ मुद्दा अभियोजन, अपराधिक सम्पत्ति जफत, र गैर-वित्तीय क्षेत्रको प्रभावकारी नियमनमा निरन्तर प्रगति देखाउन आवश्यक रहेको औंल्याएको छ।</div>
+            <div class="post-excerpt">
+                नेपाल मनी लन्ड्रिङ तथा आतंककारी क्रियाकलापमा वित्तीय सहायता नियन्त्रणसम्बन्धी कानूनमा केही कमजोरीहरू सुधार गर्न नसकेको भन्दै यसलाई वित्तीय कार्य समूह (FATF) को ग्रेलिस्टमा राखिने सम्भावना रहेको छ। हितधारकहरूले नेपाल कालोसूची वा ग्रेलिस्टमा पर्न सक्ने चिन्ता व्यक्त गरेका छन्। नेपाल FATF को ग्रेलिस्टमा पर्ने निश्चित जस्तै भए पनि, सुधारका लागि एक वर्षको अतिरिक्त समय दिइएको छ। FATF ले कुनै पनि देशलाई प्रत्यक्ष निगरानीमा राख्नु अघि पर्यवेक्षण अवधि दिन्छ, र नेपालसँग अहिले त्यो समय छ। नेपालको कानूनी संरचना राम्रो छ तर कार्यान्वयन कमजोर छ। FATF व्यापक रूपमा स्वीकार गरिएको छैन, र यसको एजेन्डा थप गम्भीर समीक्षाको आवश्यकता छ किनकि यसलाई राजनीतिक संगठनको रूपमा वर्गीकृत गर्न सकिन्छ।
+            </div>
         </div>
     </div>
 </main>
@@ -275,8 +258,8 @@
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
-        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", contact: "Contact" },
-        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", contact: "सम्पर्क" }
+        en: { home: "Home", about: "About", advocate: "Advocate", blog: "Blog", opinion: "Opinion", contact: "Contact" },
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", blog: "ब्लग", opinion: "राय", contact: "सम्पर्क" }
     };
     const footerTranslations = {
         en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
