@@ -10,23 +10,24 @@
         body {
             font-family: 'Arial', sans-serif;
             font-size: 1.125rem;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #111;
-            background: #f5f5f5;
+            background: #f8f8f8;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
         header {
             background: #fff;
             color: #000;
             padding: 0.8rem 0;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #e0e0e0;
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
         }
         .desktop-header {
             display: flex;
@@ -34,12 +35,13 @@
             align-items: center;
             flex-wrap: wrap;
         }
-        .logo a { display: block; }
+        .logo a { display: block; transition: opacity 0.2s; }
+        .logo a:hover { opacity: 0.85; }
         .logo img { max-height: 95px; width: auto; display: block; }
         .desktop-nav ul {
             display: flex;
             list-style: none;
-            gap: 1.8rem;
+            gap: 2rem;
             align-items: center;
         }
         .desktop-nav a {
@@ -47,21 +49,23 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 1.125rem;
+            transition: color 0.2s;
         }
-        .desktop-nav a:hover { text-decoration: underline; }
+        .desktop-nav a:hover { color: #444; text-decoration: underline; }
         .lang-switch {
             background: #fff;
             color: #000;
-            border: 1px solid #000;
-            padding: 0.3rem 0.7rem;
+            border: 1px solid #333;
+            padding: 0.3rem 0.8rem;
             border-radius: 30px;
             cursor: pointer;
             font-weight: bold;
             font-size: 0.9rem;
             margin-left: 0.5rem;
             font-family: 'Arial', sans-serif;
+            transition: all 0.2s;
         }
-        .lang-switch:hover { background: #000; color: #fff; }
+        .lang-switch:hover { background: #000; color: #fff; border-color: #000; }
         .mobile-header {
             display: none;
             align-items: center;
@@ -74,20 +78,23 @@
             font-size: 1.8rem;
             cursor: pointer;
             color: #000;
-            padding: 0 0.2rem;
+            padding: 0;
+            transition: opacity 0.2s;
         }
+        .hamburger:hover { opacity: 0.7; }
         .mobile-right {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1rem;
         }
         .mobile-nav {
             display: none;
             flex-direction: column;
             background: #fff;
             padding: 1rem;
-            border-top: 1px solid #ccc;
+            border-top: 1px solid #e0e0e0;
             margin-top: 0.8rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         }
         .mobile-nav a {
             color: #000;
@@ -96,48 +103,65 @@
             border-bottom: 1px solid #eee;
             font-weight: 500;
             text-align: center;
+            transition: background 0.2s;
         }
         .mobile-nav a:last-child { border-bottom: none; }
+        .mobile-nav a:hover { background: #f5f5f5; }
         main {
             background: #fff;
-            padding: 2rem;
+            padding: 2.5rem;
             margin: 3rem auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s;
         }
-        h2 { color: #000; margin-bottom: 1rem; font-size: 1.8rem; }
-        h3 { color: #000; margin: 1.5rem 0 0.8rem 0; font-size: 1.4rem; }
-        p, ul, li { margin-bottom: 0.5rem; }
-        ul { margin-left: 1.8rem; }
+        h2 {
+            color: #000;
+            margin-bottom: 1.2rem;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        h3 {
+            color: #000;
+            margin: 2rem 0 0.8rem 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        p { margin-bottom: 1rem; }
         footer {
             background: #fff;
             color: #000;
             text-align: center;
-            padding: 0.8rem 0;
-            border-top: 1px solid #ccc;
+            padding: 1.2rem 0;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 2rem;
         }
         footer a {
             color: #000;
             text-decoration: none;
-            margin: 0 0.3rem;
+            margin: 0 0.4rem;
             font-weight: 500;
-            font-size: 1.125rem;
+            font-size: 1rem;
+            transition: opacity 0.2s;
         }
-        footer a:hover { text-decoration: underline; }
-        .footer-policy { margin-bottom: 0.3rem; word-spacing: normal; }
+        footer a:hover { text-decoration: underline; opacity: 0.8; }
+        .footer-policy { margin-bottom: 0.5rem; word-spacing: normal; }
         .footer-copyright {
-            margin: 0.2rem 0;
-            font-size: 1.125rem;
-            font-weight: bold;
+            margin: 0.3rem 0;
+            font-size: 0.95rem;
+            font-weight: normal;
+            letter-spacing: 0.3px;
         }
         @media (max-width: 768px) {
             .desktop-header { display: none; }
             .mobile-header { display: flex; }
-            .logo img { max-height: 65px; }
-            main { padding: 1.5rem; margin: 1.5rem auto; }
-            body { font-size: 1rem; }
-            .desktop-nav a, footer a { font-size: 1rem; }
-            .footer-copyright { font-size: 1rem; }
+            .logo img { max-height: 60px; }
+            main { padding: 1.5rem; margin: 1.5rem auto; border-radius: 12px; }
+            h2 { font-size: 1.6rem; }
+            h3 { font-size: 1.3rem; }
+            body { font-size: 1rem; line-height: 1.6; }
+            .container { padding: 0 16px; }
         }
     </style>
 </head>
@@ -151,8 +175,8 @@
                     <li><a href="index.html" data-key="home">Home</a></li>
                     <li><a href="about.html" data-key="about">About</a></li>
                     <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
-                    <li><a href="service.html" data-key="services">Services</a></li>
                     <li><a href="blog.html" data-key="blog">Blog</a></li>
+                    <li><a href="opinion.html" data-key="opinion">Opinion</a></li>
                     <li><a href="contact.html" data-key="contact">Contact</a></li>
                     <li><button id="langToggleDesktop" class="lang-switch">ने</button></li>
                 </ul>
@@ -169,52 +193,28 @@
             <a href="index.html" data-key="home">Home</a>
             <a href="about.html" data-key="about">About</a>
             <a href="advocate.html" data-key="advocate">Advocate</a>
-            <a href="service.html" data-key="services">Services</a>
             <a href="blog.html" data-key="blog">Blog</a>
+            <a href="opinion.html" data-key="opinion">Opinion</a>
             <a href="contact.html" data-key="contact">Contact</a>
         </div>
     </div>
 </header>
 <main class="container">
+    <!-- English content -->
     <div id="en-content">
         <h2>Advocate Anil Karki</h2>
-        <p><strong>Founder & Director, Karki Associates Private Limited</strong></p>
-        <h3>Qualification & Professional Standing</h3>
-        <p>Mr. Anil Karki is a licensed advocate registered with the Nepal Bar Council, the statutory authority that regulates the legal profession in Nepal under the Nepal Bar Council Act, 2048 (1993). He holds a Bachelor of Laws (LLB) degree from a recognized university and has successfully completed the advocate licensing examination conducted by the Nepal Bar Council, which is mandatory for any individual seeking to practice law in Nepal's courts.</p>
-        <p>As a member of the Nepal Bar Council, Mr. Karki is bound by the professional code of conduct and ethical standards prescribed for legal practitioners. Only advocates registered with the Nepal Bar Council are authorized to provide legal services and represent clients before District Courts, High Courts, and the Supreme Court of Nepal.</p>
-        <h3>Role at Karki Associates Private Limited</h3>
-        <p>As the Founder and Director of Karki Associates Private Limited, Mr. Karki leads the company's legal practice and oversees all professional service delivery. Under the company's Articles of Association, he serves as the sole shareholder and decision‑maker, managing the firm's operations through written resolutions (AOA Clauses 12 & 13).</p>
-        <p>In this capacity, he is responsible for:</p>
-        <ul><li>Legal advisory and documentation – Providing legal opinions, drafting contracts, agreements, and other legal instruments.</li><li>Litigation representation – Appearing before courts, tribunals, and quasi‑judicial authorities on behalf of clients.</li><li>Corporate compliance – Assisting businesses with company registration, regulatory filings, and compliance with Nepal's Companies Act, 2063.</li><li>Tax and accounting advisory – Collaborating with the firm's accounting team to provide integrated legal‑tax solutions.</li><li>Client relationship management – Ensuring that all legal services are delivered professionally, confidentially, and in full compliance with applicable laws and ethical standards.</li></ul>
-        <h3>Areas of Legal Practice</h3>
-        <p>Drawing on the company's broad service‑oriented objectives as stated in the Memorandum of Association (MOA Clause 4), Mr. Karki offers legal expertise in the following areas:</p>
-        <ul><li>Corporate and commercial law – company formation, share transfers, mergers, and liquidation.</li><li>Civil litigation – property disputes, contract enforcement, debt recovery, and family matters.</li><li>Criminal law – defense representation, bail applications, and criminal appeals.</li><li>Administrative and constitutional law – writ petitions, public interest litigation, and regulatory compliance.</li><li>Labour and employment law – advising on service contracts, termination, and workplace disputes.</li><li>Taxation law – representing clients before tax authorities and handling tax disputes.</li></ul>
-        <h3>Professional Commitment</h3>
-        <p>Mr. Karki is committed to upholding the highest standards of legal practice. He strictly follows the professional ethics and rules of conduct prescribed by the Nepal Bar Council, including duties of confidentiality, diligence, and loyalty to clients. Every legal service is provided only after a proper client engagement agreement is executed, and where a specific license or approval is required for a particular activity (such as appearing before a specialized tribunal), Mr. Karki ensures that such authorization is obtained in advance, in accordance with MOA Clause 4(2).</p>
-        <h3>Contact Information</h3>
-        <p>For legal consultations, representation, or any legal assistance, you may reach Advocate Anil Karki at the company's registered office:</p>
-        <p><strong>Karki Associates Private Limited</strong><br>Pokhara Metropolitan City, Ward No. 7, Kaski District, Nepal</p>
-        <p>Or contact us via the <a href="contact.html">Contact page</a> to schedule an appointment.</p>
+        <p>The company was founded by Mr. Anil Karki, son of Mr. Totra Bahadur Karki. He is a resident of Dolakha district, specifically Melung Gaupalika, Ward No. 2, and currently operates from Pokhara and Kathmandu. He is committed to building a firm that provides high‑quality, ethical, and affordable professional services to individuals, businesses, and public bodies in Nepal.</p>
+        <p>Advocate Karki is a licensed advocate registered with the Nepal Bar Council, the statutory authority that regulates the legal profession in Nepal under the Nepal Bar Council Act, 1993. He holds a Bachelor of Laws (LLB) degree from the University of Delhi and has successfully completed the advocate licensing examination conducted by the Nepal Bar Council, which is mandatory for anyone seeking to practice law in Nepali courts. He also holds a Master of Comparative Laws from the University of Delhi.</p>
+        <p>Advocate Karki is committed to upholding the highest standards of legal practice. He strictly follows the professional ethics and rules of conduct prescribed by the Nepal Bar Council, including the duties of confidentiality, diligence, and loyalty to clients. Every legal service is provided only after a proper client engagement agreement is executed. He is bound by the professional code of conduct and ethical standards prescribed for legal practitioners.</p>
+        <p>As the Founder and Director of the company, Advocate Karki leads the legal practice and oversees all professional service delivery. Under the Articles of Association, he serves as the sole shareholder and decision‑maker, managing the company’s operations through written resolutions. In this capacity, he is responsible for legal advisory and documentation, litigation representation, corporate compliance, and client relationship management.</p>
     </div>
+    <!-- Nepali content -->
     <div id="np-content" style="display:none;">
         <h2>अधिवक्ता अनिल कार्की</h2>
-        <p><strong>संस्थापक तथा निर्देशक, कार्की एसोसिएट्स प्राइभेट लिमिटेड</strong></p>
-        <h3>योग्यता तथा व्यावसायिक हैसियत</h3>
-        <p>श्री अनिल कार्की नेपाल बार काउन्सिलमा दर्ता भएका अधिवक्ता हुन्। नेपाल बार काउन्सिल अधिनियम, २०४८ अन्तर्गत स्थापित नेपाल बार काउन्सिल नेपालको कानूनी पेशाको नियमन गर्ने वैधानिक निकाय हो। उनले मान्यता प्राप्त विश्वविद्यालयबाट कानून स्नातक (एलएल.बी.) उत्तीर्ण गरी नेपाल बार काउन्सिलद्वारा सञ्चालित अधिवक्ता इजाजतपत्र परीक्षा सफलतापूर्वक उत्तीर्ण गरेका छन्। नेपालको अदालतमा कानूनी अभ्यास गर्नका लागि यो परीक्षा उत्तीर्ण गर्नु अनिवार्य हुन्छ।</p>
-        <p>नेपाल बार काउन्सिलको सदस्यका रूपमा श्री कार्की कानूनी व्यवसायीहरूका लागि तोकिएको व्यावसायिक आचारसंहिता र नैतिक मापदण्डहरूबाट बाँधिएका छन्। नेपाल बार काउन्सिलमा दर्ता भएका अधिवक्ता मात्रै कानूनी सेवा प्रदान गर्न र जिल्ला अदालत, उच्च अदालत तथा सर्वोच्च अदालतमा ग्राहकको पक्षमा बहस गर्न अधिकृत हुन्छन्।</p>
-        <h3>कार्की एसोसिएट्स प्राइभेट लिमिटेडमा भूमिका</h3>
-        <p>कार्की एसोसिएट्स प्राइभेट लिमिटेडका संस्थापक तथा निर्देशक का रूपमा श्री कार्कीले कम्पनीको कानूनी अभ्यासको नेतृत्व गर्दै सबै व्यावसायिक सेवा प्रदानको अनुगमन गर्छन्। कम्पनीको नियमावली अनुसार उनी एकल शेयरधनी तथा निर्णयकर्ताको रूपमा कार्यरत छन्, र सबै सञ्चालनसम्बन्धी निर्णयहरू लिखित रूपमा गर्दछन् (नियमावली दफा १२ र १३)।</p>
-        <p>यस हैसियतमा उनका प्रमुख कार्यहरू निम्न छन्:</p>
-        <ul><li>कानूनी सल्लाह तथा कागजात तयारी – कानूनी राय दिने, सम्झौता पत्र, ठेक्का पत्र तथा अन्य कानूनी कागजातहरूको मस्यौदा तयार गर्ने।</li><li>मुद्दा लडाइँ र बहस – ग्राहकको तर्फबाट अदालत, न्यायाधिकरण र अर्ध–न्यायिक निकायहरूमा उपस्थित हुने र पक्ष राख्ने।</li><li>कर्पोरेट अनुपालन – कम्पनी दर्ता, नियामक विवरण दाखिला र कम्पनी ऐन, २०६३ अन्तर्गतको अनुपालनमा व्यवसायलाई सहयोग गर्ने।</li><li>कर तथा लेखा सम्बन्धी परामर्श – फर्मको लेखा टोलीसँग समन्वय गरी एकीकृत कानूनी–कर समाधानहरू उपलब्ध गराउने।</li><li>ग्राहक सम्बन्ध व्यवस्थापन – सबै कानूनी सेवाहरू व्यावसायिक, गोप्य र लागू कानून तथा नैतिक मापदण्डको पूर्ण पालना हुने गरी प्रदान गरिएको सुनिश्चित गर्ने।</li></ul>
-        <h3>कानूनी अभ्यासका क्षेत्रहरू</h3>
-        <p>कम्पनीको प्रबन्धपत्रमा उल्लेखित सेवामूलक व्यवसायिक लक्ष्यहरू (प्रबन्धपत्र दफा ४) अनुरूप श्री कार्कीले निम्न कानूनी क्षेत्रहरूमा विशेषज्ञता प्रदान गर्दछन्:</p>
-        <ul><li>कर्पोरेट तथा व्यापारिक कानून – कम्पनी स्थापना, शेयर हस्तान्तरण, कम्पनी गाभ्ने र खारेज गर्ने कार्य।</li><li>सिविल मुद्दा – जग्गा विवाद, ठेक्काको कार्यान्वयन, ऋण उठाउने र पारिवारिक मुद्दाहरू।</li><li>फौजदारी मुद्दा – बचाउ पक्षको प्रस्तुति, धरौटी निवेदन र फौजदारी अपीलहरू।</li><li>प्रशासनिक तथा संवैधानिक कानून – रिट निवेदन, सार्वजनिक सरोकारका मुद्दा र नियामक अनुपालन।</li><li>श्रम तथा रोजगार कानून – सेवा सम्झौता, सेवाबाट हटाउने र कार्यस्थल विवादमा सल्लाह उपलब्ध गराउने।</li><li>कर कानून – कर प्राधिकरणमा ग्राहकको प्रतिनिधित्व तथा कर विवादको समाधान।</li></ul>
-        <h3>व्यावसायिक प्रतिबद्धता</h3>
-        <p>श्री कार्की कानूनी अभ्यासको उच्चतम मापदण्ड कायम गर्न प्रतिबद्ध छन्। उनले नेपाल बार काउन्सिलले तोकेको व्यावसायिक आचारसंहिता र नियमहरू (गोपनीयता, इमानदारी, परिश्रमशीलता र ग्राहकप्रति वफादारी) कडाइका साथ पालना गर्छन्। हरेक कानूनी सेवा औपचारिक ग्राहक सम्झौता भएपछि मात्रै प्रदान गरिन्छ। साथै, कुनै विशिष्ट सेवाका लागि छुट्टै इजाजतपत्र वा स्वीकृति आवश्यक परेमा (जस्तै कुनै विशेष न्यायिक निकायमा बहस गर्नुपर्दा), प्रबन्धपत्र दफा ४(२) अनुसार त्यस्तो स्वीकृति पूर्व प्राप्त गरी मात्र सेवा प्रदान गरिन्छ।</p>
-        <h3>सम्पर्क विवरण</h3>
-        <p>कानूनी परामर्श, मुद्दाको प्रतिनिधित्व वा कुनै कानूनी सहायताका लागि तपाईं अधिवक्ता अनिल कार्कीलाई कम्पनीको रजिस्टर्ड कार्यालयमा सम्पर्क गर्न सक्नुहुन्छ:</p>
-        <p><strong>कार्की एसोसिएट्स प्राइभेट लिमिटेड</strong><br>पोखरा महानगरपालिका, वडा नं. ७, कास्की जिल्ला, नेपाल</p>
-        <p>वा <a href="contact.html">सम्पर्क पृष्ठ</a> मार्फत भेट्नको लागि समय तोक्न सक्नुहुन्छ।</p>
+        <p>यस कम्पनीका संस्थापक श्री अनिल कार्की हुन् (पिताको नाम तोत्रबहादुर कार्की)। उनी दोलखा जिल्ला, मेलुङ गाउँपालिका वडा नं. २ का स्थायी बासिन्दा हुन् र हाल पोखरा र काठमाडौंबाट कार्यरत छन्। उनी नेपालका व्यक्ति, व्यवसाय र सार्वजनिक निकायहरूलाई उच्च गुणस्तरीय, नैतिक र किफायती व्यावसायिक सेवा उपलब्ध गराउने प्रतिबद्धताका साथ यो कम्पनी सञ्चालन गर्दछन्।</p>
+        <p>अधिवक्ता कार्की नेपाल कानून व्यवसायी परिषद्मा दर्ता भएका अधिवक्ता हुन्। नेपाल कानून व्यवसायी परिषद् ऐन, २०५० अन्तर्गत स्थापित यो निकाय नेपालको कानूनी पेशाको नियमन गर्ने वैधानिक निकाय हो। उनले दिल्ली विश्वविद्यालयबाट कानून स्नातक (एलएल.बी.) गरेका छन् र नेपाल कानून व्यवसायी परिषद्द्वारा सञ्चालित अधिवक्ता तहको परीक्षा सफलतापूर्वक उत्तीर्ण गरेका छन्, जुन नेपालको अदालतमा कानूनी अभ्यास गर्नका लागि अनिवार्य छ। उनले दिल्ली विश्वविद्यालयबाट तुलनात्मक कानूनमा स्नातकोत्तर पनि हासिल गरेका छन्।</p>
+        <p>अधिवक्ता कार्की कानूनी अभ्यासको उच्चतम मापदण्ड कायम गर्न प्रतिबद्ध छन्। उनले नेपाल कानून व्यवसायी परिषद्ले तोकेको व्यावसायिक आचारसंहिता र नियमहरू, जसमा गोपनीयता, इमानदारी, परिश्रमशीलता र ग्राहकप्रति वफादारीका दायित्वहरू समावेश छन्, कडाइका साथ पालना गर्दछन्। हरेक कानूनी सेवा औपचारिक ग्राहक सम्झौता भएपछि मात्र प्रदान गरिन्छ। उनी कानूनी व्यवसायीहरूका लागि निर्धारित व्यावसायिक आचारसंहिता र नैतिक मापदण्डहरूबाट बाँधिएका छन्।</p>
+        <p>कम्पनीका संस्थापक तथा निर्देशकको रूपमा, अधिवक्ता कार्कीले कम्पनीको कानूनी अभ्यासको नेतृत्व गर्दछन् र सबै व्यावसायिक सेवा प्रदानको अनुगमन गर्दछन्। नियमावली अनुसार, उनी एकल शेयरधनी तथा निर्णयकर्ताको रूपमा कार्यरत छन्, र लिखित निर्णय मार्फत कम्पनीको सञ्चालन व्यवस्थापन गर्दछन्। यस हैसियतमा, उनी कानूनी सल्लाह तथा कागजात तयारी, मुद्दा प्रतिनिधित्व, कर्पोरेट अनुपालन, र ग्राहक सम्बन्ध व्यवस्थापनको जिम्मेवारी वहन गर्दछन्।</p>
     </div>
 </main>
 <footer>
@@ -230,8 +230,8 @@
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
-        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", contact: "Contact" },
-        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", contact: "सम्पर्क" }
+        en: { home: "Home", about: "About", advocate: "Advocate", blog: "Blog", opinion: "Opinion", contact: "Contact" },
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", blog: "ब्लग", opinion: "राय", contact: "सम्पर्क" }
     };
     const footerTranslations = {
         en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
