@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karki Associates - Opinion</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: #111;
+            background: #f8f8f8;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        header {
+            background: #fff;
+            color: #000;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+        }
+        .desktop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo a { display: block; transition: opacity 0.2s; }
+        .logo a:hover { opacity: 0.85; }
+        .logo img { max-height: 95px; width: auto; display: block; }
+        .desktop-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        .desktop-nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.125rem;
+            transition: color 0.2s;
+        }
+        .desktop-nav a:hover { color: #444; text-decoration: underline; }
+        .lang-switch {
+            background: #fff;
+            color: #000;
+            border: 1px solid #333;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+            font-family: 'Arial', sans-serif;
+            transition: all 0.2s;
+        }
+        .lang-switch:hover { background: #000; color: #fff; border-color: #000; }
+        .mobile-header {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .hamburger {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #000;
+            padding: 0;
+            transition: opacity 0.2s;
+        }
+        .hamburger:hover { opacity: 0.7; }
+        .mobile-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            background: #fff;
+            padding: 1rem;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 0.8rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .mobile-nav a {
+            color: #000;
+            text-decoration: none;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            font-weight: 500;
+            text-align: center;
+            transition: background 0.2s;
+        }
+        .mobile-nav a:last-child { border-bottom: none; }
+        .mobile-nav a:hover { background: #f5f5f5; }
+        main {
+            background: #fff;
+            padding: 2.5rem;
+            margin: 3rem auto;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s;
+        }
+        h2 {
+            color: #000;
+            margin-bottom: 1.2rem;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        .opinion-post {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .post-title {
+            margin-bottom: 0.3rem;
+        }
+        .post-title a {
+            color: #000;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        .post-title a:hover { text-decoration: underline; }
+        .post-date {
+            color: #555;
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+        .post-excerpt {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+            color: #333;
+        }
+        footer {
+            background: #fff;
+            color: #000;
+            text-align: center;
+            padding: 1.2rem 0;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 0.4rem;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+        }
+        footer a:hover { text-decoration: underline; opacity: 0.8; }
+        .footer-policy { margin-bottom: 0.5rem; word-spacing: normal; }
+        .footer-copyright {
+            margin: 0.3rem 0;
+            font-size: 0.95rem;
+            font-weight: normal;
+            letter-spacing: 0.3px;
+        }
+        @media (max-width: 768px) {
+            .desktop-header { display: none; }
+            .mobile-header { display: flex; }
+            .logo img { max-height: 60px; }
+            main { padding: 1.5rem; margin: 1.5rem auto; border-radius: 12px; }
+            h2 { font-size: 1.6rem; }
+            .post-title a { font-size: 1.2rem; }
+            body { font-size: 1rem; line-height: 1.6; }
+            .container { padding: 0 16px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="desktop-header">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
+            <div class="desktop-nav">
+                <ul id="navMenuDesktop">
+                    <li><a href="index.html" data-key="home">Home</a></li>
+                    <li><a href="about.html" data-key="about">About</a></li>
+                    <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
+                    <li><a href="blog.html" data-key="blog">Blog</a></li>
+                    <li><a href="opinion.html" data-key="opinion">Opinion</a></li>
+                    <li><a href="contact.html" data-key="contact">Contact</a></li>
+                    <li><button id="langToggleDesktop" class="lang-switch">ने</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mobile-header">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
+            <div class="mobile-right">
+                <button id="langToggleMobile" class="lang-switch">ने</button>
+                <button class="hamburger" id="hamburgerBtn">☰</button>
+            </div>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html" data-key="home">Home</a>
+            <a href="about.html" data-key="about">About</a>
+            <a href="advocate.html" data-key="advocate">Advocate</a>
+            <a href="blog.html" data-key="blog">Blog</a>
+            <a href="opinion.html" data-key="opinion">Opinion</a>
+            <a href="contact.html" data-key="contact">Contact</a>
+        </div>
+    </div>
+</header>
+<main class="container">
+    <!-- English Opinion Post -->
+    <div id="en-content">
+        <h2>Opinion & Analysis</h2>
+        <div class="opinion-post">
+            <div class="post-title">
+                <a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">Combating money laundering in Nepal</a>
+            </div>
+            <div class="post-date">July 21, 2023</div>
+            <div class="post-excerpt">
+                Stakeholders are concerned that Nepal could be blacklisted or placed on a greylist by the Financial Action Task Force (FATF) because of its failure to resolve several inadequacies in its laws against money laundering and terrorism financing. Even though it is certain that Nepal will be on the FATF greylist, it has an additional deadline of one year for reforms. The FATF provides an observation period before any country is directly monitored, and now Nepal has that time. The legal structures of Nepal are well-enacted, but enforcement has lagged behind. The FATF is not widely accepted, and its agenda needs further critical appraisal as it is better classified as a political organization.
+            </div>
+        </div>
+    </div>
+    <!-- Nepali Opinion Post (translated) -->
+    <div id="np-content" style="display:none;">
+        <h2>राय तथा विश्लेषण</h2>
+        <div class="opinion-post">
+            <div class="post-title">
+                <a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">नेपालमा मनी लन्ड्रिङ नियन्त्रण</a>
+            </div>
+            <div class="post-date">जुलाई २१, २०२३</div>
+            <div class="post-excerpt">
+                नेपाल मनी लन्ड्रिङ तथा आतंककारी क्रियाकलापमा वित्तीय सहायता नियन्त्रणसम्बन्धी कानूनमा केही कमजोरीहरू सुधार गर्न नसकेको भन्दै यसलाई वित्तीय कार्य समूह (FATF) को ग्रेलिस्टमा राखिने सम्भावना रहेको छ। हितधारकहरूले नेपाल कालोसूची वा ग्रेलिस्टमा पर्न सक्ने चिन्ता व्यक्त गरेका छन्। नेपाल FATF को ग्रेलिस्टमा पर्ने निश्चित जस्तै भए पनि, सुधारका लागि एक वर्षको अतिरिक्त समय दिइएको छ। FATF ले कुनै पनि देशलाई प्रत्यक्ष निगरानीमा राख्नु अघि पर्यवेक्षण अवधि दिन्छ, र नेपालसँग अहिले त्यो समय छ। नेपालको कानूनी संरचना राम्रो छ तर कार्यान्वयन कमजोर छ। FATF व्यापक रूपमा स्वीकार गरिएको छैन, र यसको एजेन्डा थप गम्भीर समीक्षाको आवश्यकता छ किनकि यसलाई राजनीतिक संगठनको रूपमा वर्गीकृत गर्न सकिन्छ।
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <div class="footer-policy" id="footerPolicyLinks">
+            <a href="terms.html" data-key="terms">Terms of Use</a>
+            <a href="privacy.html" data-key="privacy">Privacy Policy</a>
+            <a href="cookie.html" data-key="cookie">Cookie Policy</a>
+        </div>
+        <div class="footer-copyright" id="footerCopyright">© 2026 Karki Associates Private Limited</div>
+    </div>
+</footer>
+<script>
+    let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    const navTranslations = {
+        en: { home: "Home", about: "About", advocate: "Advocate", blog: "Blog", opinion: "Opinion", contact: "Contact" },
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", blog: "ब्लग", opinion: "राय", contact: "सम्पर्क" }
+    };
+    const footerTranslations = {
+        en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
+        ne: { terms: "प्रयोगका सर्तहरू", privacy: "गोपनीयता नीति", cookie: "कुकी नीति" }
+    };
+    function updateUILanguage(lang) {
+        document.querySelectorAll('[data-key]').forEach(el => {
+            const key = el.getAttribute('data-key');
+            if (navTranslations[lang] && navTranslations[lang][key]) el.textContent = navTranslations[lang][key];
+            else if (footerTranslations[lang] && footerTranslations[lang][key]) el.textContent = footerTranslations[lang][key];
+        });
+        const copyrightEl = document.getElementById('footerCopyright');
+        copyrightEl.textContent = (lang === 'ne') ? '© २०२६ कार्की एसोसिएट्स प्राइभेट लिमिटेड' : '© 2026 Karki Associates Private Limited';
+    }
+    function setLanguage(lang) {
+        currentLanguage = lang;
+        localStorage.setItem('selectedLanguage', lang);
+        const en = document.getElementById('en-content'), np = document.getElementById('np-content');
+        if (lang === 'ne') { en.style.display = 'none'; np.style.display = 'block'; document.documentElement.lang = 'ne'; }
+        else { np.style.display = 'none'; en.style.display = 'block'; document.documentElement.lang = 'en'; }
+        updateUILanguage(lang);
+        document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = (lang === 'en') ? 'ने' : 'E');
+    }
+    function toggleLanguage() { setLanguage(currentLanguage === 'en' ? 'ne' : 'en'); }
+    setLanguage(currentLanguage);
+    document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
+    const hamburger = document.getElementById('hamburgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if (hamburger) hamburger.addEventListener('click', () => { mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex'; });
+    document.querySelectorAll('.mobile-nav a').forEach(link => link.addEventListener('click', () => { if (mobileNav) mobileNav.style.display = 'none'; }));
+    window.addEventListener('resize', () => { if (window.innerWidth > 768 && mobileNav) mobileNav.style.display = 'none'; });
+</script>
+</body>
+</html>
