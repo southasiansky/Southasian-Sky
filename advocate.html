@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karki Associates – Advocate Anil Karki</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #1a3e6f;
+            color: white;
+            padding: 0.8rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .logo img {
+            max-height: 100px;
+            width: auto;
+            display: block;
+        }
+
+        .desktop-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .desktop-nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .desktop-nav a:hover {
+            color: #ffd966;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: white;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #1a3e6f;
+            flex-direction: column;
+            padding: 1rem;
+            border-top: 1px solid #ffd966;
+            z-index: 200;
+        }
+
+        .mobile-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            font-weight: 500;
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav a:hover {
+            color: #ffd966;
+        }
+
+        #langToggle {
+            background: #ffd966;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #1a3e6f;
+            transition: background 0.3s;
+            white-space: nowrap;
+        }
+
+        #langToggle:hover {
+            background: #ffc107;
+        }
+
+        main {
+            background: white;
+            padding: 2rem;
+            margin: 2rem auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #1a3e6f;
+            margin-bottom: 1rem;
+            border-left: 5px solid #ffd966;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #2c5a8c;
+            margin: 1.5rem 0 0.8rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-left: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        footer {
+            background: #1a3e6f;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #ffd966;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin: 0.5rem 0;
+        }
+
+        .footer-links a {
+            margin: 0 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .logo img {
+                max-height: 70px;
+            }
+            .header-flex {
+                justify-content: space-between;
+            }
+            main {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-flex">
+        <button class="hamburger" id="hamburgerBtn">☰</button>
+        <div class="logo">
+            <img src="images/logo.png" alt="Karki Associates Logo">
+        </div>
+        <button id="langToggle">नेपाली</button>
+    </div>
+
+    <div class="container desktop-nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="advocate.html">Advocate</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="advocate.html">Advocate</a>
+        <a href="service.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</header>
+
+<main class="container">
+    <!-- English content -->
+    <div id="en-content">
+        <h2>Advocate Anil Karki</h2>
+        <p><strong>Founder & Director, Karki Associates Private Limited</strong></p>
+
+        <h3>Qualification & Professional Standing</h3>
+        <p>Mr. Anil Karki is a licensed <strong>advocate registered with the Nepal Bar Council</strong>, the statutory authority that regulates the legal profession in Nepal under the Nepal Bar Council Act, 2048 (1993). He holds a Bachelor of Laws (LLB) degree from a recognized university and has successfully completed the advocate licensing examination conducted by the Nepal Bar Council, which is mandatory for any individual seeking to practice law in Nepal's courts.</p>
+        <p>As a member of the Nepal Bar Council, Mr. Karki is bound by the professional code of conduct and ethical standards prescribed for legal practitioners. Only advocates registered with the Nepal Bar Council are authorized to provide legal services and represent clients before District Courts, High Courts, and the Supreme Court of Nepal.</p>
+
+        <h3>Role at Karki Associates Private Limited</h3>
+        <p>As the <strong>Founder and Director</strong> of Karki Associates Private Limited, Mr. Karki leads the company's legal practice and oversees all professional service delivery. Under the company's Articles of Association, he serves as the sole shareholder and decision‑maker, managing the firm's operations through written resolutions (AOA Clauses 12 & 13).</p>
+        <p>In this capacity, he is responsible for:</p>
+        <ul>
+            <li><strong>Legal advisory and documentation</strong> – Providing legal opinions, drafting contracts, agreements, and other legal instruments.</li>
+            <li><strong>Litigation representation</strong> – Appearing before courts, tribunals, and quasi‑judicial authorities on behalf of clients.</li>
+            <li><strong>Corporate compliance</strong> – Assisting businesses with company registration, regulatory filings, and compliance with Nepal's Companies Act, 2063.</li>
+            <li><strong>Tax and accounting advisory</strong> – Collaborating with the firm's accounting team to provide integrated legal‑tax solutions.</li>
+            <li><strong>Client relationship management</strong> – Ensuring that all legal services are delivered professionally, confidentially, and in full compliance with applicable laws and ethical standards.</li>
+        </ul>
+
+        <h3>Areas of Legal Practice</h3>
+        <p>Drawing on the company's broad service‑oriented objectives as stated in the Memorandum of Association (MOA Clause 4), Mr. Karki offers legal expertise in the following areas:</p>
+        <ul>
+            <li><strong>Corporate and commercial law</strong> – company formation, share transfers, mergers, and liquidation.</li>
+            <li><strong>Civil litigation</strong> – property disputes, contract enforcement, debt recovery, and family matters.</li>
+            <li><strong>Criminal law</strong> – defense representation, bail applications, and criminal appeals.</li>
+            <li><strong>Administrative and constitutional law</strong> – writ petitions, public interest litigation, and regulatory compliance.</li>
+            <li><strong>Labour and employment law</strong> – advising on service contracts, termination, and workplace disputes.</li>
+            <li><strong>Taxation law</strong> – representing clients before tax authorities and handling tax disputes.</li>
+        </ul>
+
+        <h3>Professional Commitment</h3>
+        <p>Mr. Karki is committed to upholding the highest standards of legal practice. He strictly follows the professional ethics and rules of conduct prescribed by the Nepal Bar Council, including duties of confidentiality, diligence, and loyalty to clients. Every legal service is provided only after a proper client engagement agreement is executed, and where a specific license or approval is required for a particular activity (such as appearing before a specialized tribunal), Mr. Karki ensures that such authorization is obtained in advance, in accordance with MOA Clause 4(2).</p>
+
+        <h3>Contact Information</h3>
+        <p>For legal consultations, representation, or any legal assistance, you may reach Advocate Anil Karki at the company's registered office:</p>
+        <p><strong>Karki Associates Private Limited</strong><br>
+        Pokhara Metropolitan City, Ward No. 7, Kaski District, Nepal</p>
+        <p>Or contact us via the <a href="contact.html">Contact page</a> to schedule an appointment.</p>
+    </div>
+
+    <!-- Nepali content -->
+    <div id="np-content" style="display:none;">
+        <h2>अधिवक्ता अनिल कार्की</h2>
+        <p><strong>संस्थापक तथा निर्देशक, कार्की एसोसिएट्स प्राइभेट लिमिटेड</strong></p>
+
+        <h3>योग्यता तथा व्यावसायिक हैसियत</h3>
+        <p>श्री अनिल कार्की <strong>नेपाल बार काउन्सिलमा दर्ता भएका अधिवक्ता</strong> हुन्। नेपाल बार काउन्सिल अधिनियम, २०४८ अन्तर्गत स्थापित नेपाल बार काउन्सिल नेपालको कानूनी पेशाको नियमन गर्ने वैधानिक निकाय हो। उनले मान्यता प्राप्त विश्वविद्यालयबाट कानून स्नातक (एलएल.बी.) उत्तीर्ण गरी नेपाल बार काउन्सिलद्वारा सञ्चालित अधिवक्ता इजाजतपत्र परीक्षा सफलतापूर्वक उत्तीर्ण गरेका छन्। नेपालको अदालतमा कानूनी अभ्यास गर्नका लागि यो परीक्षा उत्तीर्ण गर्नु अनिवार्य हुन्छ।</p>
+        <p>नेपाल बार काउन्सिलको सदस्यका रूपमा श्री कार्की कानूनी व्यवसायीहरूका लागि तोकिएको व्यावसायिक आचारसंहिता र नैतिक मापदण्डहरूबाट बाँधिएका छन्। नेपाल बार काउन्सिलमा दर्ता भएका अधिवक्ता मात्रै कानूनी सेवा प्रदान गर्न र जिल्ला अदालत, उच्च अदालत तथा सर्वोच्च अदालतमा ग्राहकको पक्षमा बहस गर्न अधिकृत हुन्छन्।</p>
+
+        <h3>कार्की एसोसिएट्स प्राइभेट लिमिटेडमा भूमिका</h3>
+        <p>कार्की एसोसिएट्स प्राइभेट लिमिटेडका <strong>संस्थापक तथा निर्देशक</strong> का रूपमा श्री कार्कीले कम्पनीको कानूनी अभ्यासको नेतृत्व गर्दै सबै व्यावसायिक सेवा प्रदानको अनुगमन गर्छन्। कम्पनीको नियमावली अनुसार उनी एकल शेयरधनी तथा निर्णयकर्ताको रूपमा कार्यरत छन्, र सबै सञ्चालनसम्बन्धी निर्णयहरू लिखित रूपमा गर्दछन् (नियमावली दफा १२ र १३)।</p>
+        <p>यस हैसियतमा उनका प्रमुख कार्यहरू निम्न छन्:</p>
+        <ul>
+            <li><strong>कानूनी सल्लाह तथा कागजात तयारी</strong> – कानूनी राय दिने, सम्झौता पत्र, ठेक्का पत्र तथा अन्य कानूनी कागजातहरूको मस्यौदा तयार गर्ने।</li>
+            <li><strong>मुद्दा लडाइँ र बहस</strong> – ग्राहकको तर्फबाट अदालत, न्यायाधिकरण र अर्ध–न्यायिक निकायहरूमा उपस्थित हुने र पक्ष राख्ने।</li>
+            <li><strong>कर्पोरेट अनुपालन</strong> – कम्पनी दर्ता, नियामक विवरण दाखिला र कम्पनी ऐन, २०६३ अन्तर्गतको अनुपालनमा व्यवसायलाई सहयोग गर्ने।</li>
+            <li><strong>कर तथा लेखा सम्बन्धी परामर्श</strong> – फर्मको लेखा टोलीसँग समन्वय गरी एकीकृत कानूनी–कर समाधानहरू उपलब्ध गराउने।</li>
+            <li><strong>ग्राहक सम्बन्ध व्यवस्थापन</strong> – सबै कानूनी सेवाहरू व्यावसायिक, गोप्य र लागू कानून तथा नैतिक मापदण्डको पूर्ण पालना हुने गरी प्रदान गरिएको सुनिश्चित गर्ने।</li>
+        </ul>
+
+        <h3>कानूनी अभ्यासका क्षेत्रहरू</h3>
+        <p>कम्पनीको प्रबन्धपत्रमा उल्लेखित सेवामूलक व्यवसायिक लक्ष्यहरू (प्रबन्धपत्र दफा ४) अनुरूप श्री कार्कीले निम्न कानूनी क्षेत्रहरूमा विशेषज्ञता प्रदान गर्दछन्:</p>
+        <ul>
+            <li><strong>कर्पोरेट तथा व्यापारिक कानून</strong> – कम्पनी स्थापना, शेयर हस्तान्तरण, कम्पनी गाभ्ने र खारेज गर्ने कार्य।</li>
+            <li><strong>सिविल मुद्दा</strong> – जग्गा विवाद, ठेक्काको कार्यान्वयन, ऋण उठाउने र पारिवारिक मुद्दाहरू।</li>
+            <li><strong>फौजदारी मुद्दा</strong> – बचाउ पक्षको प्रस्तुति, धरौटी निवेदन र फौजदारी अपीलहरू।</li>
+            <li><strong>प्रशासनिक तथा संवैधानिक कानून</strong> – रिट निवेदन, सार्वजनिक सरोकारका मुद्दा र नियामक अनुपालन।</li>
+            <li><strong>श्रम तथा रोजगार कानून</strong> – सेवा सम्झौता, सेवाबाट हटाउने र कार्यस्थल विवादमा सल्लाह उपलब्ध गराउने।</li>
+            <li><strong>कर कानून</strong> – कर प्राधिकरणमा ग्राहकको प्रतिनिधित्व तथा कर विवादको समाधान।</li>
+        </ul>
+
+        <h3>व्यावसायिक प्रतिबद्धता</h3>
+        <p>श्री कार्की कानूनी अभ्यासको उच्चतम मापदण्ड कायम गर्न प्रतिबद्ध छन्। उनले नेपाल बार काउन्सिलले तोकेको व्यावसायिक आचारसंहिता र नियमहरू (गोपनीयता, इमानदारी, परिश्रमशीलता र ग्राहकप्रति वफादारी) कडाइका साथ पालना गर्छन्। हरेक कानूनी सेवा औपचारिक ग्राहक सम्झौता भएपछि मात्रै प्रदान गरिन्छ। साथै, कुनै विशिष्ट सेवाका लागि छुट्टै इजाजतपत्र वा स्वीकृति आवश्यक परेमा (जस्तै कुनै विशेष न्यायिक निकायमा बहस गर्नुपर्दा), प्रबन्धपत्र दफा ४(२) अनुसार त्यस्तो स्वीकृति पूर्व प्राप्त गरी मात्र सेवा प्रदान गरिन्छ।</p>
+
+        <h3>सम्पर्क विवरण</h3>
+        <p>कानूनी परामर्श, मुद्दाको प्रतिनिधित्व वा कुनै कानूनी सहायताका लागि तपाईं अधिवक्ता अनिल कार्कीलाई कम्पनीको रजिस्टर्ड कार्यालयमा सम्पर्क गर्न सक्नुहुन्छ:</p>
+        <p><strong>कार्की एसोसिएट्स प्राइभेट लिमिटेड</strong><br>
+        पोखरा महानगरपालिका, वडा नं. ७, कास्की जिल्ला, नेपाल</p>
+        <p>वा <a href="contact.html">सम्पर्क पृष्ठ</a> मार्फत भेट्नको लागि समय तोक्न सक्नुहुन्छ।</p>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Karki Associates Private Limited. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="terms.html">Terms of Use</a> | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="cookie.html">Cookie Policy</a>
+        </div>
+        <p>Registered Office: Pokhara Metropolitan City, Ward No. 7, Kaski, Nepal</p>
+    </div>
+</footer>
+
+<script>
+    const toggleBtn = document.getElementById('langToggle');
+    const enContent = document.getElementById('en-content');
+    const npContent = document.getElementById('np-content');
+    let currentLang = 'en';
+
+    toggleBtn.addEventListener('click', () => {
+        if (currentLang === 'en') {
+            enContent.style.display = 'none';
+            npContent.style.display = 'block';
+            toggleBtn.textContent = 'English';
+            currentLang = 'np';
+            document.documentElement.lang = 'ne';
+        } else {
+            npContent.style.display = 'none';
+            enContent.style.display = 'block';
+            toggleBtn.textContent = 'नेपाली';
+            currentLang = 'en';
+            document.documentElement.lang = 'en';
+        }
+    });
+
+    const hamburger = document.getElementById('hamburgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', () => {
+        if (mobileNav.style.display === 'flex') {
+            mobileNav.style.display = 'none';
+        } else {
+            mobileNav.style.display = 'flex';
+        }
+    });
+
+    const mobileLinks = mobileNav.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.style.display = 'none';
+        });
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            mobileNav.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
