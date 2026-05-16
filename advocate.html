@@ -7,38 +7,137 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #111; background: #f5f5f5; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background: #fff; color: #000; padding: 0.8rem 0; border-bottom: 1px solid #ccc; position: sticky; top: 0; z-index: 100; }
-        .desktop-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: #111;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: #fff;
+            color: #000;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #ccc;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .desktop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
         .logo a { display: block; }
         .logo img { max-height: 95px; width: auto; display: block; }
-        .desktop-nav ul { display: flex; list-style: none; gap: 1.8rem; align-items: center; }
-        .desktop-nav a { color: #000; text-decoration: none; font-weight: 500; font-size: 1rem; }
+        .desktop-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+            align-items: center;
+        }
+        .desktop-nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.125rem;
+        }
         .desktop-nav a:hover { text-decoration: underline; }
-        .lang-switch { background: #fff; color: #000; border: 1px solid #000; padding: 0.3rem 0.7rem; border-radius: 30px; cursor: pointer; font-weight: bold; font-size: 0.9rem; margin-left: 0.5rem; }
+        .lang-switch {
+            background: #fff;
+            color: #000;
+            border: 1px solid #000;
+            padding: 0.3rem 0.7rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+            font-family: 'Arial', sans-serif;
+        }
         .lang-switch:hover { background: #000; color: #fff; }
-        .mobile-header { display: none; align-items: center; justify-content: space-between; width: 100%; }
-        .hamburger { background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #000; padding: 0 0.2rem; }
-        .mobile-right { display: flex; align-items: center; gap: 0.8rem; }
-        .mobile-nav { display: none; flex-direction: column; background: #fff; padding: 1rem; border-top: 1px solid #ccc; margin-top: 0.8rem; }
-        .mobile-nav a { color: #000; text-decoration: none; padding: 0.8rem 0; border-bottom: 1px solid #eee; font-weight: 500; text-align: center; }
+        .mobile-header {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .hamburger {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #000;
+            padding: 0 0.2rem;
+        }
+        .mobile-right {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            background: #fff;
+            padding: 1rem;
+            border-top: 1px solid #ccc;
+            margin-top: 0.8rem;
+        }
+        .mobile-nav a {
+            color: #000;
+            text-decoration: none;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            font-weight: 500;
+            text-align: center;
+        }
         .mobile-nav a:last-child { border-bottom: none; }
-        main { background: #fff; padding: 2rem; margin: 2rem auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        h2 { color: #000; margin-bottom: 1rem; }
-        h3 { color: #000; margin: 1.5rem 0 0.8rem 0; }
-        p { margin-bottom: 1rem; }
-        ul { margin-left: 1.8rem; margin-bottom: 1rem; }
-        footer { background: #fff; color: #000; text-align: center; padding: 0.8rem 0; border-top: 1px solid #ccc; }
-        footer a { color: #000; text-decoration: none; margin: 0 0.5rem; }
+        main {
+            background: #fff;
+            padding: 2rem;
+            margin: 3rem auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        h2 { color: #000; margin-bottom: 1rem; font-size: 1.8rem; }
+        h3 { color: #000; margin: 1.5rem 0 0.8rem 0; font-size: 1.4rem; }
+        p, ul, li { margin-bottom: 0.5rem; }
+        ul { margin-left: 1.8rem; }
+        footer {
+            background: #fff;
+            color: #000;
+            text-align: center;
+            padding: 0.8rem 0;
+            border-top: 1px solid #ccc;
+        }
+        footer a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 0.3rem;
+            font-weight: 500;
+            font-size: 1.125rem;
+        }
         footer a:hover { text-decoration: underline; }
-        .footer-policy { margin-bottom: 0.3rem; word-spacing: 0.5rem; }
-        .footer-copyright { margin: 0.2rem 0; font-size: 0.9rem; }
+        .footer-policy { margin-bottom: 0.3rem; word-spacing: normal; }
+        .footer-copyright {
+            margin: 0.2rem 0;
+            font-size: 1.125rem;
+            font-weight: bold;
+        }
         @media (max-width: 768px) {
             .desktop-header { display: none; }
             .mobile-header { display: flex; }
             .logo img { max-height: 65px; }
-            main { padding: 1.5rem; }
+            main { padding: 1.5rem; margin: 1.5rem auto; }
+            body { font-size: 1rem; }
+            .desktop-nav a, footer a { font-size: 1rem; }
+            .footer-copyright { font-size: 1rem; }
         }
     </style>
 </head>
@@ -129,6 +228,7 @@
     </div>
 </footer>
 <script>
+    let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
         en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", contact: "Contact" },
         ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", contact: "सम्पर्क" }
@@ -144,42 +244,24 @@
             else if (footerTranslations[lang] && footerTranslations[lang][key]) el.textContent = footerTranslations[lang][key];
         });
         const copyrightEl = document.getElementById('footerCopyright');
-        if (lang === 'ne') {
-            copyrightEl.textContent = '© २०२६ कार्की एसोसिएट्स प्राइभेट लिमिटेड';
-        } else {
-            copyrightEl.textContent = '© 2026 Karki Associates Private Limited';
-        }
+        copyrightEl.textContent = (lang === 'ne') ? '© २०२६ कार्की एसोसिएट्स प्राइभेट लिमिटेड' : '© 2026 Karki Associates Private Limited';
     }
-    function toggleLanguage() {
-        const en = document.getElementById('en-content');
-        const np = document.getElementById('np-content');
-        const isEn = en.style.display !== 'none';
-        if (isEn) {
-            en.style.display = 'none';
-            np.style.display = 'block';
-            document.documentElement.lang = 'ne';
-            updateUILanguage('ne');
-            document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = 'E');
-        } else {
-            np.style.display = 'none';
-            en.style.display = 'block';
-            document.documentElement.lang = 'en';
-            updateUILanguage('en');
-            document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = 'ने');
-        }
+    function setLanguage(lang) {
+        currentLanguage = lang;
+        localStorage.setItem('selectedLanguage', lang);
+        const en = document.getElementById('en-content'), np = document.getElementById('np-content');
+        if (lang === 'ne') { en.style.display = 'none'; np.style.display = 'block'; document.documentElement.lang = 'ne'; }
+        else { np.style.display = 'none'; en.style.display = 'block'; document.documentElement.lang = 'en'; }
+        updateUILanguage(lang);
+        document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = (lang === 'en') ? 'ने' : 'E');
     }
+    function toggleLanguage() { setLanguage(currentLanguage === 'en' ? 'ne' : 'en'); }
+    setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
-    updateUILanguage('en');
     const hamburger = document.getElementById('hamburgerBtn');
     const mobileNav = document.getElementById('mobileNav');
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
-        });
-    }
-    document.querySelectorAll('.mobile-nav a').forEach(link => {
-        link.addEventListener('click', () => { if (mobileNav) mobileNav.style.display = 'none'; });
-    });
+    if (hamburger) hamburger.addEventListener('click', () => { mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex'; });
+    document.querySelectorAll('.mobile-nav a').forEach(link => link.addEventListener('click', () => { if (mobileNav) mobileNav.style.display = 'none'; }));
     window.addEventListener('resize', () => { if (window.innerWidth > 768 && mobileNav) mobileNav.style.display = 'none'; });
 </script>
 </body>
