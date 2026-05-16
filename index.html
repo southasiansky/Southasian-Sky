@@ -25,87 +25,84 @@
             padding: 0 20px;
         }
 
-        /* Header - larger */
+        /* Header - white background */
         header {
-            background: #1a3e6f;
-            color: white;
-            padding: 1.5rem 0;
+            background: white;
+            color: #1a3e6f;
+            padding: 0.8rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        /* Logo centered */
-        .logo {
-            text-align: center;
-            margin-bottom: 1.2rem;
+        /* Desktop layout: logo left, nav right, lang toggle as button */
+        .desktop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
         .logo img {
-            max-height: 120px;   /* bigger than before */
+            max-height: 70px;
             width: auto;
-            display: inline-block;
+            display: block;
         }
 
-        /* Desktop navigation - centered */
+        /* Navigation links - right side */
         .desktop-nav ul {
             display: flex;
-            justify-content: center;
             list-style: none;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 1.2rem;
+            gap: 1.8rem;
+            align-items: center;
         }
 
         .desktop-nav a {
-            color: white;
+            color: #1a3e6f;
             text-decoration: none;
             font-weight: 500;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: color 0.3s;
         }
 
         .desktop-nav a:hover {
-            color: #ffd966;
+            color: #ffc107;
         }
 
-        /* Language toggle container - centered */
-        .lang-container {
-            text-align: center;
-        }
-
-        #langToggle {
-            background: #ffd966;
+        /* Language toggle as E/N switch */
+        .lang-switch {
+            background: #1a3e6f;
+            color: white;
             border: none;
-            padding: 0.6rem 1.5rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 30px;
             cursor: pointer;
             font-weight: bold;
-            color: #1a3e6f;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
             transition: all 0.3s;
-            font-size: 1rem;
+            margin-left: 0.5rem;
         }
 
-        #langToggle:hover {
+        .lang-switch:hover {
             background: #ffc107;
-            transform: scale(1.02);
+            color: #1a3e6f;
         }
 
-        /* Mobile navigation (hamburger) - hidden on desktop */
+        /* Mobile elements (hidden on desktop) */
         .mobile-header {
             display: none;
-            align-items: center;
             justify-content: space-between;
-            width: 100%;
+            align-items: center;
         }
 
         .hamburger {
             background: none;
             border: none;
-            font-size: 2rem;
+            font-size: 1.8rem;
             cursor: pointer;
-            color: white;
+            color: #1a3e6f;
             padding: 0;
             line-height: 1;
         }
@@ -113,16 +110,17 @@
         .mobile-nav {
             display: none;
             flex-direction: column;
-            background: #1a3e6f;
+            background: white;
             padding: 1rem;
-            border-top: 1px solid #ffd966;
+            border-top: 1px solid #eee;
+            margin-top: 0.8rem;
         }
 
         .mobile-nav a {
-            color: white;
+            color: #1a3e6f;
             text-decoration: none;
             padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid #eee;
             font-weight: 500;
             text-align: center;
         }
@@ -132,7 +130,7 @@
         }
 
         .mobile-nav a:hover {
-            color: #ffd966;
+            color: #ffc107;
         }
 
         /* Main content */
@@ -205,23 +203,24 @@
             margin: 0 0.5rem;
         }
 
-        /* Responsive: on mobile, hide desktop nav and show hamburger */
+        /* Responsive */
         @media (max-width: 768px) {
-            .desktop-nav {
+            .desktop-header {
                 display: none;
             }
             .mobile-header {
                 display: flex;
             }
-            .logo {
-                margin-bottom: 0;
-                flex-grow: 1;
-            }
             .logo img {
-                max-height: 80px;
+                max-height: 50px;
             }
-            .lang-container {
-                margin-top: 1rem;
+            .mobile-header .logo {
+                flex-grow: 1;
+                text-align: center;
+            }
+            .lang-switch {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.6rem;
             }
             main {
                 padding: 1.5rem;
@@ -233,48 +232,42 @@
 
 <header>
     <div class="container">
-        <!-- Mobile layout (hamburger left, logo center, lang toggle right) -->
+        <!-- Desktop header (logo left, nav right, lang toggle as E/N) -->
+        <div class="desktop-header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Karki Associates Logo">
+            </div>
+            <div class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="advocate.html">Advocate</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button id="langToggleDesktop" class="lang-switch">E/N</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile header (hamburger left, logo center, language toggle right) -->
         <div class="mobile-header">
             <button class="hamburger" id="hamburgerBtn">☰</button>
             <div class="logo">
                 <img src="images/logo.png" alt="Karki Associates Logo">
             </div>
-            <div></div> <!-- spacer for alignment -->
+            <button id="langToggleMobile" class="lang-switch">E/N</button>
         </div>
 
-        <!-- Desktop layout (logo centered, nav centered, toggle below) -->
-        <div class="desktop-logo">
-            <div class="logo">
-                <img src="images/logo.png" alt="Karki Associates Logo">
-            </div>
+        <!-- Mobile dropdown menu -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="advocate.html">Advocate</a>
+            <a href="service.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
         </div>
-
-        <!-- Desktop navigation -->
-        <div class="desktop-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="advocate.html">Advocate</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-
-        <!-- Language toggle - centered below navigation (desktop) -->
-        <div class="lang-container">
-            <button id="langToggle">नेपाली</button>
-        </div>
-    </div>
-
-    <!-- Mobile dropdown menu -->
-    <div class="mobile-nav" id="mobileNav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="advocate.html">Advocate</a>
-        <a href="service.html">Services</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
     </div>
 </header>
 
@@ -349,32 +342,33 @@
 </footer>
 
 <script>
-    // Language toggle
-    const toggleBtn = document.getElementById('langToggle');
-    const enContent = document.getElementById('en-content');
-    const npContent = document.getElementById('np-content');
-    let currentLang = 'en';
-
-    toggleBtn.addEventListener('click', () => {
-        if (currentLang === 'en') {
+    // Language toggle function (works for both desktop and mobile buttons)
+    function toggleLanguage() {
+        const enContent = document.getElementById('en-content');
+        const npContent = document.getElementById('np-content');
+        const isEnglish = enContent.style.display !== 'none';
+        
+        if (isEnglish) {
             enContent.style.display = 'none';
             npContent.style.display = 'block';
-            toggleBtn.textContent = 'English';
-            currentLang = 'np';
             document.documentElement.lang = 'ne';
         } else {
             npContent.style.display = 'none';
             enContent.style.display = 'block';
-            toggleBtn.textContent = 'नेपाली';
-            currentLang = 'en';
             document.documentElement.lang = 'en';
         }
-    });
+    }
 
-    // Hamburger menu for mobile
+    const desktopBtn = document.getElementById('langToggleDesktop');
+    const mobileBtn = document.getElementById('langToggleMobile');
+    
+    if (desktopBtn) desktopBtn.addEventListener('click', toggleLanguage);
+    if (mobileBtn) mobileBtn.addEventListener('click', toggleLanguage);
+
+    // Hamburger menu
     const hamburger = document.getElementById('hamburgerBtn');
     const mobileNav = document.getElementById('mobileNav');
-
+    
     if (hamburger) {
         hamburger.addEventListener('click', () => {
             if (mobileNav.style.display === 'flex') {
@@ -385,6 +379,7 @@
         });
     }
 
+    // Close mobile nav when a link is clicked
     const mobileLinks = document.querySelectorAll('.mobile-nav a');
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -392,9 +387,10 @@
         });
     });
 
+    // Ensure mobile nav is hidden on resize to desktop
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            if (mobileNav) mobileNav.style.display = 'none';
+        if (window.innerWidth > 768 && mobileNav) {
+            mobileNav.style.display = 'none';
         }
     });
 </script>
