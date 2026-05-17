@@ -247,9 +247,22 @@
     </div>
 </header>
 <main class="container">
-    <!-- English Opinion Post -->
+    <!-- English Opinion Posts -->
     <div id="en-content">
         <h2>Opinion & Analysis</h2>
+        
+        <!-- NEW OPINION POST (February 4, 2025) -->
+        <div class="opinion-post">
+            <div class="post-title">
+                <a href="https://myrepublica.nagariknetwork.com/news/avoiding-nepals-fatf-grey-listing-59-64.html" target="_blank" rel="noopener noreferrer">Avoiding Nepal's FATF Grey-listing</a>
+            </div>
+            <div class="post-date">February 4, 2025</div>
+            <div class="post-excerpt">
+                The critical inquiry, consequently, is whether Nepal has effectively employed this one-year timeframe or simply depended on superficial bureaucratic maneuverings and diplomatic strategies to delay its grey-listing. The answer is stark. Nepal has unequivocally failed to execute the structural, financial, and legal reforms required to adhere to global AML/CFT standards, consequently placing itself once more under international scrutiny.
+            </div>
+        </div>
+        
+        <!-- EXISTING OPINION POST (July 21, 2023) -->
         <div class="opinion-post">
             <div class="post-title">
                 <a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">Combating money laundering in Nepal</a>
@@ -260,9 +273,23 @@
             </div>
         </div>
     </div>
-    <!-- Nepali Opinion Post -->
+    
+    <!-- Nepali Opinion Posts (translations) -->
     <div id="np-content" style="display:none;">
-        <h2>राय तथा विश्लेषण</h2>
+        <h2>विचार तथा विश्लेषण</h2>
+        
+        <!-- NEW OPINION POST - Nepali translation (February 4, 2025) -->
+        <div class="opinion-post">
+            <div class="post-title">
+                <a href="https://myrepublica.nagariknetwork.com/news/avoiding-nepals-fatf-grey-listing-59-64.html" target="_blank" rel="noopener noreferrer">नेपाललाई FATF ग्रेलिस्टमा पर्नबाट जोगाउने</a>
+            </div>
+            <div class="post-date">फेब्रुअरी ४, २०२५</div>
+            <div class="post-excerpt">
+                तसर्थ, महत्वपूर्ण प्रश्न यो हो कि नेपालले यो एक वर्षको समयावधिलाई प्रभावकारी रूपमा प्रयोग गरेको छ वा केवल सतही नोकरशाही चालबाजी र कूटनीतिक रणनीतिहरूमा निर्भर रहेर आफ्नो ग्रेलिस्टिङ ढिलाइ गरेको छ। उत्तर स्पष्ट छ। नेपालले विश्वव्यापी एएमएल/सीएफटी मापदण्डहरूको पालना गर्न आवश्यक संरचनात्मक, वित्तीय र कानूनी सुधारहरू लागू गर्न पूर्ण रूपमा असफल भएको छ, जसले गर्दा आफैलाई पुनः अन्तर्राष्ट्रिय निगरानीमा राखेको छ।
+            </div>
+        </div>
+        
+        <!-- EXISTING OPINION POST - Nepali translation (July 21, 2023) -->
         <div class="opinion-post">
             <div class="post-title">
                 <a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">नेपालमा मनी लन्ड्रिङ नियन्त्रण</a>
@@ -288,7 +315,7 @@
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
         en: { home: "Home", about: "About", advocate: "Advocate", blog: "Blog", opinion: "Opinion", contact: "Contact" },
-        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", blog: "ब्लग", opinion: "राय", contact: "सम्पर्क" }
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", blog: "ब्लग", opinion: "विचार", contact: "सम्पर्क" }
     };
     const footerTranslations = {
         en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
