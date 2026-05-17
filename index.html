@@ -24,8 +24,7 @@
             color: #000;
             padding: 0.8rem 0;
             border-bottom: 1px solid #e0e0e0;
-            position: sticky;
-            top: 0;
+            position: relative;
             z-index: 100;
             box-shadow: 0 1px 4px rgba(0,0,0,0.03);
         }
@@ -87,30 +86,55 @@
             align-items: center;
             gap: 1rem;
         }
-        .mobile-nav {
+        .mobile-overlay {
             display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 1000;
             flex-direction: column;
-            background: #fff;
-            padding: 1rem;
-            border-top: 1px solid #e0e0e0;
-            margin-top: 0.8rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow-y: auto;
         }
-        .mobile-nav a {
+        .mobile-overlay a {
+            display: block;
             color: #000;
             text-decoration: none;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #eee;
+            font-size: 1.8rem;
             font-weight: 500;
-            text-align: center;
+            padding: 1rem;
+            margin: 0.5rem 0;
             transition: background 0.2s;
         }
-        .mobile-nav a:last-child { border-bottom: none; }
-        .mobile-nav a:hover { background: #f5f5f5; }
+        .mobile-overlay a:hover {
+            background: #f5f5f5;
+        }
+        .close-overlay {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #000;
+            background: none;
+            border: none;
+        }
+        @media (max-width: 768px) {
+            .desktop-header { display: none; }
+            .mobile-header { display: flex; }
+            .logo img { max-height: 60px; }
+            body { font-size: 1rem; line-height: 1.6; }
+            .container { padding: 0 16px; }
+        }
         main {
             background: #fff;
             padding: 2.5rem;
-            margin: 3rem auto;
+            margin: 10rem auto 8rem auto;
             border-radius: 16px;
             box-shadow: 0 8px 24px rgba(0,0,0,0.05);
             transition: box-shadow 0.3s;
@@ -156,14 +180,13 @@
             letter-spacing: 0.3px;
         }
         @media (max-width: 768px) {
-            .desktop-header { display: none; }
-            .mobile-header { display: flex; }
-            .logo img { max-height: 60px; }
-            main { padding: 1.5rem; margin: 1.5rem auto; border-radius: 12px; }
+            main {
+                margin: 8rem auto 6rem auto;
+                padding: 1.5rem;
+                border-radius: 12px;
+            }
             h2 { font-size: 1.6rem; }
             h3 { font-size: 1.3rem; }
-            body { font-size: 1rem; line-height: 1.6; }
-            .container { padding: 0 16px; }
         }
     </style>
 </head>
@@ -191,7 +214,8 @@
                 <button class="hamburger" id="hamburgerBtn">☰</button>
             </div>
         </div>
-        <div class="mobile-nav" id="mobileNav">
+        <div id="mobileOverlay" class="mobile-overlay">
+            <button class="close-overlay" id="closeOverlayBtn">&times;</button>
             <a href="index.html" data-key="home">Home</a>
             <a href="about.html" data-key="about">About</a>
             <a href="advocate.html" data-key="advocate">Advocate</a>
@@ -202,7 +226,6 @@
     </div>
 </header>
 <main class="container">
-    <!-- English content -->
     <div id="en-content">
         <h2>Welcome to Karki Associates</h2>
         <p>We are a professional service company focused on legal practice, management consulting, and research and development. We are a registered private company under the Companies Act, 2006 of Nepal. Our registered office is located at Rastra Bank Chowk, Pokhara Metropolitan City, Ward No. 7, Kaski District, Nepal. We also maintain an office at Bagbazar, Kathmandu Metropolitan City, Ward No. 28, Kathmandu District, Nepal.</p>
@@ -210,7 +233,6 @@
         <p>Our legal services include advisory, documentation, and representation in various courts and tribunals. In management consulting, we offer business strategy formulation, process improvement, organisational restructuring, and human resource advisory. Our research and development services involve the design and execution of social studies, surveys, feasibility studies, policy analysis, and experimental development projects in social sciences and humanities.</p>
         <p>We are fully compliant with the Companies Act, 2006, and all applicable laws of Nepal. With offices in Pokhara and Kathmandu, we are easily accessible to clients across the country. We offer integrated solutions that cover legal, financial, and management needs, all from a single firm. Our client‑centric and ethical approach ensures that every solution is tailored to specific requirements while maintaining the highest professional standards.</p>
     </div>
-    <!-- Nepali content -->
     <div id="np-content" style="display:none;">
         <h2>कार्की एसोसिएट्समा तपाईंलाई स्वागत छ</h2>
         <p>हामी कानूनी सेवा, व्यवस्थापन परामर्श, तथा अनुसन्धान र विकासमा केन्द्रित एक व्यावसायिक कम्पनी हौं। हामी नेपालको कम्पनी ऐन, २०६३ अन्तर्गत दर्ता भएको निजी कम्पनी हौं। हाम्रो रजिस्टर्ड कार्यालय राष्ट्र बैंक चोक, पोखरा महानगरपालिका वडा नं. ७, कास्की जिल्ला, नेपालमा अवस्थित छ। साथै, हाम्रो बागबजार, काठमाडौं महानगरपालिका वडा नं. २८, काठमाडौं जिल्ला, नेपालमा समेत कार्यालय रहेको छ।</p>
@@ -260,11 +282,28 @@
     function toggleLanguage() { setLanguage(currentLanguage === 'en' ? 'ne' : 'en'); }
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
+
     const hamburger = document.getElementById('hamburgerBtn');
-    const mobileNav = document.getElementById('mobileNav');
-    if (hamburger) hamburger.addEventListener('click', () => { mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex'; });
-    document.querySelectorAll('.mobile-nav a').forEach(link => link.addEventListener('click', () => { if (mobileNav) mobileNav.style.display = 'none'; }));
-    window.addEventListener('resize', () => { if (window.innerWidth > 768 && mobileNav) mobileNav.style.display = 'none'; });
+    const overlay = document.getElementById('mobileOverlay');
+    const closeBtn = document.getElementById('closeOverlayBtn');
+
+    function openOverlay() {
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    function closeOverlay() {
+        overlay.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    if (hamburger) hamburger.addEventListener('click', openOverlay);
+    if (closeBtn) closeBtn.addEventListener('click', closeOverlay);
+    const overlayLinks = overlay.querySelectorAll('a');
+    overlayLinks.forEach(link => {
+        link.addEventListener('click', () => closeOverlay());
+    });
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && overlay.style.display === 'flex') closeOverlay();
+    });
 </script>
 </body>
 </html>
