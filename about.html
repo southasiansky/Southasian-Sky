@@ -133,14 +133,15 @@
         }
         main {
             background: #fff;
-            padding: 2.5rem;
-            margin: 10rem auto 8rem auto;
-            border-radius: 16px;
+            padding: 5rem 2.5rem 2.5rem 2.5rem;
+            margin: 10rem auto 0 auto;
+            border-radius: 0;
             box-shadow: 0 8px 24px rgba(0,0,0,0.05);
             transition: box-shadow 0.3s;
         }
         h2 {
             color: #000;
+            margin-top: 1rem;
             margin-bottom: 1.2rem;
             font-size: 2rem;
             font-weight: 600;
@@ -159,7 +160,7 @@
             text-align: center;
             padding: 1.2rem 0;
             border-top: 1px solid #e0e0e0;
-            margin-top: 2rem;
+            margin-top: 0;
         }
         footer a {
             color: #000;
@@ -173,17 +174,22 @@
         .footer-policy { margin-bottom: 0.5rem; word-spacing: normal; }
         .footer-copyright {
             margin: 0.3rem 0;
-            font-size: 0.95rem;
-            font-weight: normal;
-            letter-spacing: 0.3px;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: normal;
         }
         @media (max-width: 768px) {
             main {
-                margin: 8rem auto 6rem auto;
-                padding: 1.5rem;
-                border-radius: 12px;
+                margin: 8rem auto 0 auto;
+                padding: 3rem 1.5rem 1.5rem 1.5rem;
+                border-radius: 0;
             }
-            h2 { font-size: 1.6rem; }
+            h2 {
+                font-size: 1.6rem;
+                margin-top: 0.5rem;
+            }
+            h3 { font-size: 1.3rem; }
+            .footer-copyright { font-size: 1rem; }
         }
     </style>
 </head>
@@ -265,7 +271,11 @@
             else if (footerTranslations[lang] && footerTranslations[lang][key]) el.textContent = footerTranslations[lang][key];
         });
         const copyrightEl = document.getElementById('footerCopyright');
-        copyrightEl.textContent = (lang === 'ne') ? '© २०२६ कार्की एसोसिएट्स प्राइभेट लिमिटेड' : '© 2026 Karki Associates Private Limited';
+        if (lang === 'ne') {
+            copyrightEl.textContent = '© २०८३ कार्की एसोसिएट्स प्राइभेट लिमिटेड';
+        } else {
+            copyrightEl.textContent = '© 2026 Karki Associates Private Limited';
+        }
     }
     function setLanguage(lang) {
         currentLanguage = lang;
