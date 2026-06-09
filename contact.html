@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karki Associates - Terms of Use</title>
+    <title>Karki Associates - Contact</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -147,15 +147,46 @@
             font-weight: 600;
             letter-spacing: -0.01em;
         }
-        h3 {
-            color: #000;
-            margin: 2rem 0 0.8rem 0;
-            font-size: 1.5rem;
-            font-weight: 600;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
         }
-        p { margin-bottom: 1rem; }
-        ul { margin-left: 1.8rem; margin-bottom: 1rem; }
-        li { margin-bottom: 0.3rem; }
+        .contact-info, .contact-form {
+            background: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        .contact-info p { margin-bottom: 1rem; }
+        .contact-info strong { color: #000; }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+            color: #000;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: 'Arial', sans-serif;
+            font-size: 1rem;
+        }
+        .btn-submit {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background 0.3s;
+            font-family: 'Arial', sans-serif;
+        }
+        .btn-submit:hover { background: #333; }
         footer {
             background: #fff;
             color: #000;
@@ -187,7 +218,7 @@
                 border-radius: 0;
             }
             h2 { font-size: 1.6rem; margin-top: 0.5rem; }
-            h3 { font-size: 1.3rem; }
+            .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
             .footer-copyright { font-size: 1rem; }
         }
     </style>
@@ -230,69 +261,119 @@
     </div>
 </header>
 <main class="container">
-    <!-- English Terms of Use -->
+    <!-- English content -->
     <div id="en-content">
-        <h2>Terms of Use</h2>
-        <p><strong>Effective Date: January 1, 2026</strong></p>
-        <p>Welcome to the website of <strong>Karki Associates Private Limited</strong> (“Company”, “we”, “us”, or “our”). By accessing or using our website (the “Site”), you agree to comply with and be bound by the following terms and conditions (the “Terms”). If you do not agree to these Terms, please do not use the Site.</p>
-        <h3>1. Use of Website</h3>
-        <p>You may use the Site for lawful purposes only. You agree not to:</p>
-        <ul>
-            <li>Use the Site in any way that violates any applicable local, national, or international law or regulation.</li>
-            <li>Attempt to gain unauthorized access to any portion of the Site, or any other systems or networks connected to the Site.</li>
-            <li>Transmit any viruses, malware, or other harmful code.</li>
-            <li>Scrape, copy, or distribute any content from the Site without our prior written consent.</li>
-        </ul>
-        <h3>2. Intellectual Property</h3>
-        <p>All content on this Site, including text, graphics, logos, images, and software, is the property of Karki Associates Private Limited or its licensors and is protected by Nepali and international copyright, trademark, and other intellectual property laws. You may not reproduce, modify, distribute, or republish any content without our express written permission.</p>
-        <h3>3. No Attorney-Client Relationship</h3>
-        <p>Information provided on this Site is for general informational purposes only and does not constitute legal advice. Use of the Site does not create an attorney-client relationship between you and Karki Associates Private Limited or any of its advocates. You should consult a qualified legal professional for advice regarding your individual situation.</p>
-        <h3>4. Limitation of Liability</h3>
-        <p>To the maximum extent permitted by law, Karki Associates Private Limited shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising out of your access to or use of the Site, even if advised of the possibility of such damages. This limitation applies to all claims, whether based on warranty, contract, tort, or any other legal theory.</p>
-        <h3>5. Third-Party Links</h3>
-        <p>The Site may contain links to third-party websites. These links are provided for your convenience only, and we do not endorse or assume any responsibility for the content, privacy policies, or practices of any third-party sites. Access them at your own risk.</p>
-        <h3>6. Governing Law and Dispute Resolution</h3>
-        <p>These Terms shall be governed by and construed in accordance with the laws of Nepal. Any dispute arising out of or relating to these Terms or your use of the Site shall be submitted to the exclusive jurisdiction of the courts of Pokhara, Kaski District, Nepal.</p>
-        <h3>7. Changes to Terms</h3>
-        <p>We reserve the right to modify or update these Terms at any time without prior notice. The “Effective Date” at the top of this page indicates when the latest changes were made. Your continued use of the Site after any changes constitutes acceptance of the revised Terms.</p>
-        <h3>8. Contact Information</h3>
-        <p>If you have any questions about these Terms, please contact us at:</p>
-        <p><strong>Karki Associates Private Limited</strong><br>
-        Pokhara Metropolitan City, Ward No. 7, Kaski District, Nepal<br>
-        Email: karkiassociates@asia.com<br>
-        Phone: +977‑9851068714</p>
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>Registered Office</strong><br>
+                Karki Associates Private Limited<br>
+                Rastra Bank Chowk (In the building of Juice Box)<br>
+                Pokhara Metropolitan City, Ward No. 7<br>
+                Kaski District, Gandaki Province, Nepal</p>
+                <p><strong>Branch Office</strong><br>
+                Karki Associates Private Limited<br>
+                Bagbazar (Opposite of GEFONT Office)<br>
+                Kathmandu Metropolitan City, Ward No. 28<br>
+                Kathmandu District, Bagmati Province, Nepal</p>
+                <p><strong>Phone</strong><br>
+                +977‑9851068714</p>
+                <p><strong>Email</strong><br>
+                karkiassociates@asia.com</p>
+            </div>
+            <div class="contact-form">
+                <form id="contactFormEn" action="https://formsubmit.co/karkiassociates@asia.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - Karki Associates">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="thankyou.html">
+                    <div class="form-group">
+                        <label for="nameEn">Full Name *</label>
+                        <input type="text" id="nameEn" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailEn">Email Address *</label>
+                        <input type="email" id="emailEn" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneEn">Phone Number</label>
+                        <input type="tel" id="phoneEn" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subjectEn">Subject *</label>
+                        <select id="subjectEn" name="subject" required>
+                            <option value="">-- Select --</option>
+                            <option value="Legal Consultation">Legal Consultation</option>
+                            <option value="Management Consulting">Management Consulting</option>
+                            <option value="Research Support">Research Support</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="messageEn">Message *</label>
+                        <textarea id="messageEn" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                    <p style="font-size:0.8rem; margin-top:1rem; color:#555;">We will respond within 1‑2 business days. Do not share confidential information.</p>
+                </form>
+            </div>
+        </div>
     </div>
-    <!-- Nepali Terms of Use -->
+    <!-- Nepali content -->
     <div id="np-content" style="display:none;">
-        <h2>प्रयोगका सर्तहरू</h2>
-        <p><strong>प्रभावकारी मिति: २०८२ पुष १६ (जनवरी १, २०२६)</strong></p>
-        <p><strong>कार्की एसोसिएट्स प्राइभेट लिमिटेड</strong> (“कम्पनी”, “हामी”, “हाम्रो”) को वेबसाइटमा पहुँच गर्नु वा प्रयोग गर्नुभएको छ भने, तपाईं निम्न सर्तहरू (यसलाई “सर्तहरू” भनिन्छ) बाट बाधित हुन सहमत हुनुहुन्छ। यदि तपाईं यी सर्तहरूसँग सहमत नहुनुहुन्छ भने, कृपया यो साइट प्रयोग नगर्नुहोस्।</p>
-        <h3>१. वेबसाइटको प्रयोग</h3>
-        <p>तपाईंले साइटको प्रयोग केवल वैधानिक उद्देश्यका लागि मात्र गर्न सक्नुहुन्छ। तपाईं निम्न कार्यहरू गर्न सहमत हुनुहुन्न:</p>
-        <ul>
-            <li>लागू हुने कुनै पनि स्थानीय, राष्ट्रिय वा अन्तर्राष्ट्रिय कानून वा नियमको विपरीत साइट प्रयोग गर्ने।</li>
-            <li>साइटको कुनै भाग, वा साइटसँग जडित अन्य प्रणाली वा सञ्जालहरूमा अनधिकृत पहुँच प्राप्त गर्ने प्रयास गर्ने।</li>
-            <li>कम्प्युटर भाइरस, मालवेर वा अन्य हानिकारक कोड प्रसारण गर्ने।</li>
-            <li>हाम्रो पूर्व लिखित सहमति बिना साइटको कुनै सामग्री स्क्र्याप गर्ने, प्रतिलिपि गर्ने वा वितरण गर्ने।</li>
-        </ul>
-        <h3>२. बौद्धिक सम्पत्ति</h3>
-        <p>यस साइटको सबै सामग्री (पाठ, ग्राफिक्स, लोगो, छविहरू, तथा सफ्टवेर) कार्की एसोसिएट्स प्राइभेट लिमिटेड वा यसको इजाजतपत्रदाताको सम्पत्ति हो र नेपाली तथा अन्तर्राष्ट्रिय प्रतिलिपि अधिकार, ट्रेडमार्क, र अन्य बौद्धिक सम्पत्ति कानूनहरूद्वारा संरक्षित छ। हाम्रो स्पष्ट लिखित अनुमति बिना कुनै पनि सामग्री पुनरुत्पादन, परिमार्जन, वितरण वा पुन: प्रकाशित गर्न सकिँदैन।</p>
-        <h3>३. वकील-ग्राहक सम्बन्धको अभाव</h3>
-        <p>यस साइटमा प्रदान गरिएको जानकारी केवल सामान्य सूचनात्मक उद्देश्यका लागि हो र यसले कानूनी सल्लाह गठन गर्दैन। साइटको प्रयोगले तपाईं र कार्की एसोसिएट्स प्राइभेट लिमिटेड वा यसका कुनै अधिवक्ता बीच वकील-ग्राहक सम्बन्ध सिर्जना गर्दैन। तपाईंले आफ्नो व्यक्तिगत परिस्थितिको बारेमा सल्लाहको लागि योग्य कानूनी पेशेवरसँग परामर्श गर्नुपर्छ।</p>
-        <h3>४. दायित्वको सीमा</h3>
-        <p>कानूनले अनुमति दिएको अधिकतम सीमासम्म, कार्की एसोसिएट्स प्राइभेट लिमिटेड साइटमा तपाईंको पहुँच वा प्रयोगबाट उत्पन्न हुने कुनै पनि प्रत्यक्ष, अप्रत्यक्ष, आकस्मिक, परिणामात्मक, वा दण्डात्मक क्षतिहरूको लागि उत्तरदायी हुनेछैन, भले पनि त्यस्तो क्षतिको सम्भावनाको बारेमा सल्लाह दिइएको भए तापनि। यो सीमा वारेन्टी, करार, क्षति, वा कुनै अन्य कानूनी सिद्धान्तमा आधारित सबै दाबीहरूमा लागू हुन्छ।</p>
-        <h3>५. तेस्रो-पक्ष लिङ्कहरू</h3>
-        <p>साइटमा तेस्रो-पक्षको वेबसाइटहरूको लिङ्क हुन सक्छ। यी लिङ्कहरू केवल तपाईंको सुविधाको लागि प्रदान गरिएका हुन्, र हामी कुनै पनि तेस्रो-पक्ष साइटको सामग्री, गोपनीयता नीति, वा अभ्यासहरूको लागि समर्थन वा जिम्मेवारी लिँदैनौं। तपाईं आफ्नै जोखिममा ती साइटहरूमा पहुँच गर्नुहोस्।</p>
-        <h3>६. विनियामक कानून र विवाद समाधान</h3>
-        <p>यी सर्तहरू नेपालको कानूनद्वारा शासित र व्याख्या गरिनेछ। यी सर्तहरू वा साइटको तपाईंको प्रयोगसँग सम्बन्धित कुनै पनि विवाद पोखरा, कास्की जिल्ला, नेपालको अदालतको विशेष अधिकारक्षेत्रमा पेश गरिनेछ।</p>
-        <h3>७. सर्तहरूमा परिवर्तन</h3>
-        <p>हामी कुनै पनि समयमा बिना सूचना यी सर्तहरू परिमार्जन वा अद्यावधिक गर्ने अधिकार सुरक्षित राख्छौं। यस पृष्ठको शीर्षमा रहेको “प्रभावकारी मिति” ले पछिल्लो परिवर्तन कहिले गरियो भनी देखाउँछ। कुनै पनि परिवर्तन पछि साइटको तपाईंको निरन्तर प्रयोगले संशोधित सर्तहरू स्वीकार गरेको मानिनेछ।</p>
-        <h3>८. सम्पर्क जानकारी</h3>
-        <p>यी सर्तहरूको बारेमा कुनै प्रश्न भए, कृपया हामीलाई निम्न ठेगानामा सम्पर्क गर्नुहोस्:</p>
-        <p><strong>कार्की एसोसिएट्स प्राइभेट लिमिटेड</strong><br>
-        पोखरा महानगरपालिका, वडा नं. ७, कास्की जिल्ला, नेपाल<br>
-        इमेल: karkiassociates@asia.com<br>
-        फोन: +977‑9851068714</p>
+        <h2>सम्पर्क गर्नुहोस्</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>रजिस्टर्ड कार्यालय</strong><br>
+                कार्की एसोसिएट्स प्राइभेट लिमिटेड<br>
+                राष्ट्र बैंक चोक (जुस बक्सको भवनमा)<br>
+                पोखरा महानगरपालिका, वडा नं. ७<br>
+                कास्की जिल्ला, गण्डकी प्रदेश, नेपाल</p>
+                <p><strong>शाखा कार्यालय</strong><br>
+                कार्की एसोसिएट्स प्राइभेट लिमिटेड<br>
+                बागबजार (GEFONT कार्यालयको विपरीत)<br>
+                काठमाडौं महानगरपालिका, वडा नं. २८<br>
+                काठमाडौं जिल्ला, बागमती प्रदेश, नेपाल</p>
+                <p><strong>फोन</strong><br>
+                +977‑9851068714</p>
+                <p><strong>इमेल</strong><br>
+                karkiassociates@asia.com</p>
+            </div>
+            <div class="contact-form">
+                <form id="contactFormNp" action="https://formsubmit.co/karkiassociates@asia.com" method="POST">
+                    <input type="hidden" name="_subject" value="नयाँ सम्पर्क फारम - कार्की एसोसिएट्स">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="thankyou.html">
+                    <div class="form-group">
+                        <label for="nameNp">पूरा नाम *</label>
+                        <input type="text" id="nameNp" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailNp">इमेल ठेगाना *</label>
+                        <input type="email" id="emailNp" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNp">फोन नम्बर</label>
+                        <input type="tel" id="phoneNp" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subjectNp">विषय *</label>
+                        <select id="subjectNp" name="subject" required>
+                            <option value="">-- चयन गर्नुहोस् --</option>
+                            <option value="Legal Consultation">कानूनी परामर्श</option>
+                            <option value="Management Consulting">व्यवस्थापन परामर्श</option>
+                            <option value="Research Support">अनुसन्धान सहायता</option>
+                            <option value="Other">अन्य</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="messageNp">सन्देश *</label>
+                        <textarea id="messageNp" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">सन्देश पठाउनुहोस्</button>
+                    <p style="font-size:0.8rem; margin-top:1rem; color:#555;">हामी १-२ व्यावसायिक दिनभित्र जवाफ दिनेछौं। गोप्य जानकारी नपठाउनुहोस्।</p>
+                </form>
+            </div>
+        </div>
     </div>
 </main>
 <footer>
