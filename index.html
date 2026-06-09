@@ -15,7 +15,7 @@
             background: #f8f8f8;
         }
         .container {
-            max-width: 1300px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -193,6 +193,7 @@
                     <li><a href="index.html" data-key="home">Home</a></li>
                     <li><a href="about.html" data-key="about">About</a></li>
                     <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
+                    <li><a href="service.html" data-key="services">Services</a></li>
                     <li><a href="blog.html" data-key="blog">Blog</a></li>
                     <li><a href="opinion.html" data-key="opinion">Opinion</a></li>
                     <li><a href="contact.html" data-key="contact">Contact</a></li>
@@ -212,6 +213,7 @@
             <a href="index.html" data-key="home">Home</a>
             <a href="about.html" data-key="about">About</a>
             <a href="advocate.html" data-key="advocate">Advocate</a>
+            <a href="service.html" data-key="services">Services</a>
             <a href="blog.html" data-key="blog">Blog</a>
             <a href="opinion.html" data-key="opinion">Opinion</a>
             <a href="contact.html" data-key="contact">Contact</a>
@@ -219,7 +221,7 @@
     </div>
 </header>
 <main class="container">
-    <!-- English content (new) -->
+    <!-- English content -->
     <div id="en-content">
         <h2>Welcome</h2>
         <p>Karki Associates is a law firm dedicated to the provision of comprehensive legal services grounded in rigorous analysis, ethical practice, and unwavering commitment to client welfare. We strive to deliver high quality, client focused legal solutions that are both practical and legally sound.</p>
@@ -228,7 +230,7 @@
         <p>At Karki Associates, we hold that good legal service is not merely about winning cases, but it is about building trust. We listen to your narrative, understand your objectives, and craft a strategy tailored to your specific situation. We provide honest assessments of your prospects, the costs involved, and the timeframes you may reasonably expect.</p>
         <p>The law can be intimidating, but you do not have to face it alone. Whether you have an urgent court matter, a business compliance question, or a legal document that needs review, Karki Associates is ready to assist. No matter how complex or simple your legal issue, we accord it the same level of attention and professionalism.</p>
     </div>
-    <!-- Nepali content (new) -->
+    <!-- Nepali content -->
     <div id="np-content" style="display:none;">
         <h2>स्वागत छ</h2>
         <p>कार्की एसोसिएट्स एउटा कानूनी फर्म हो जुन गहन विश्लेषण, नैतिक आचरण र ग्राहकहितप्रति अटल प्रतिबद्धतामा आधारित व्यापक कानूनी सेवा प्रदान गर्न समर्पित छ। हामी उच्च गुणस्तरीय, ग्राहक–केन्द्रित तथा व्यावहारिक र कानूनी दृष्टिले सुसंगत समाधानहरू प्रस्तुत गर्ने प्रयास गर्दछौँ।</p>
@@ -251,8 +253,8 @@
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
-        en: { home: "Home", about: "About", advocate: "Advocate", blog: "Blog", opinion: "Opinion", contact: "Contact" },
-        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", blog: "ब्लग", opinion: "विचार", contact: "सम्पर्क" }
+        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", opinion: "Opinion", contact: "Contact" },
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", opinion: "विचार", contact: "सम्पर्क" }
     };
     const footerTranslations = {
         en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
