@@ -78,51 +78,49 @@
             cursor: pointer;
             color: #000;
             padding: 0;
-            transition: opacity 0.2s;
+            transition: all 0.3s ease;
+            width: 40px;
+            text-align: center;
         }
-        .hamburger:hover { opacity: 0.7; }
+        .hamburger.open {
+            transform: rotate(90deg);
+        }
         .mobile-right {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-        .mobile-overlay {
+        .mobile-slide-menu {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             background-color: #fff;
-            z-index: 1000;
+            z-index: 98;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             overflow-y: auto;
+            padding: 1rem;
+            top: 80px;
+            height: calc(100vh - 80px);
         }
-        .mobile-overlay a {
+        .mobile-slide-menu a {
             display: block;
             color: #000;
             text-decoration: none;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 500;
-            padding: 1rem;
-            margin: 0.5rem 0;
+            padding: 0.8rem;
+            margin: 0.3rem 0;
             transition: background 0.2s;
+            width: 100%;
         }
-        .mobile-overlay a:hover {
+        .mobile-slide-menu a:hover {
             background: #f5f5f5;
-        }
-        .close-overlay {
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #000;
-            background: none;
-            border: none;
         }
         @media (max-width: 768px) {
             .desktop-header { display: none; }
@@ -130,6 +128,14 @@
             .logo img { max-height: 60px; }
             body { font-size: 1rem; line-height: 1.6; }
             .container { padding: 0 16px; }
+            .mobile-slide-menu a {
+                font-size: 1.2rem;
+                padding: 0.6rem;
+            }
+            .mobile-slide-menu {
+                top: 65px;
+                height: calc(100vh - 65px);
+            }
         }
         main {
             background: #fff;
@@ -234,8 +240,7 @@
                 <button class="hamburger" id="hamburgerBtn">☰</button>
             </div>
         </div>
-        <div id="mobileOverlay" class="mobile-overlay">
-            <button class="close-overlay" id="closeOverlayBtn">&times;</button>
+        <div id="mobileSlideMenu" class="mobile-slide-menu">
             <a href="index.html" data-key="home">Home</a>
             <a href="about.html" data-key="about">About</a>
             <a href="advocate.html" data-key="advocate">Advocate</a>
@@ -298,6 +303,7 @@
         } else {
             copyrightEl.textContent = '© 2026 Karki Associates Private Limited';
         }
+        document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = (lang === 'en') ? 'ने' : 'E');
     }
     function setLanguage(lang) {
         currentLanguage = lang;
@@ -306,32 +312,42 @@
         if (lang === 'ne') { en.style.display = 'none'; np.style.display = 'block'; document.documentElement.lang = 'ne'; }
         else { np.style.display = 'none'; en.style.display = 'block'; document.documentElement.lang = 'en'; }
         updateUILanguage(lang);
-        document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = (lang === 'en') ? 'ने' : 'E');
     }
     function toggleLanguage() { setLanguage(currentLanguage === 'en' ? 'ne' : 'en'); }
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
 
     const hamburger = document.getElementById('hamburgerBtn');
-    const overlay = document.getElementById('mobileOverlay');
-    const closeBtn = document.getElementById('closeOverlayBtn');
+    const slideMenu = document.getElementById('mobileSlideMenu');
+    let isMenuOpen = false;
 
-    function openOverlay() {
-        overlay.style.display = 'flex';
+    function openMenu() {
+        slideMenu.style.display = 'flex';
+        hamburger.classList.add('open');
+        hamburger.textContent = '✕';
+        isMenuOpen = true;
         document.body.style.overflow = 'hidden';
     }
-    function closeOverlay() {
-        overlay.style.display = 'none';
+    function closeMenu() {
+        slideMenu.style.display = 'none';
+        hamburger.classList.remove('open');
+        hamburger.textContent = '☰';
+        isMenuOpen = false;
         document.body.style.overflow = '';
     }
-    if (hamburger) hamburger.addEventListener('click', openOverlay);
-    if (closeBtn) closeBtn.addEventListener('click', closeOverlay);
-    const overlayLinks = overlay.querySelectorAll('a');
-    overlayLinks.forEach(link => {
-        link.addEventListener('click', () => closeOverlay());
+    if (hamburger) {
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (isMenuOpen) closeMenu();
+            else openMenu();
+        });
+    }
+    const menuLinks = slideMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => closeMenu());
     });
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && overlay.style.display === 'flex') closeOverlay();
+        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
     });
 </script>
 </body>
