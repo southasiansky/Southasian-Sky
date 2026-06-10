@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karki Associates - Blog</title>
+    <title>Legal Insights & News – Karki Associates Blog</title>
+    <meta name="description" content="Read the latest legal insights, analysis of Nepal’s anti‑money laundering laws, FATF greylist updates, and more. Stay informed with Karki Associates’ blog.">
+    <meta name="keywords" content="legal blog Nepal, money laundering, FATF greylist, Nepal law updates, Karki Associates blog">
+    <meta name="author" content="Karki Associates Private Limited">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://karkiassociates.com.np/blog.html">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karkiassociates.com.np/blog.html">
+    <meta property="og:title" content="Legal Insights & News – Karki Associates Blog">
+    <meta property="og:description" content="Read the latest legal insights, analysis of Nepal’s anti‑money laundering laws, FATF greylist updates, and more.">
+    <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://karkiassociates.com.np/blog.html">
+    <meta property="twitter:title" content="Legal Insights & News – Karki Associates Blog">
+    <meta property="twitter:description" content="Read the latest legal insights, analysis of Nepal’s anti‑money laundering laws, FATF greylist updates, and more.">
+    <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
+        /* Same base styles as previous pages (unchanged) */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Arial', sans-serif;
@@ -288,6 +306,33 @@
         <div class="footer-copyright" id="footerCopyright">© 2026 Karki Associates Private Limited</div>
     </div>
 </footer>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Combating money laundering in Nepal",
+  "datePublished": "2023-07-21",
+  "dateModified": "2023-07-21",
+  "author": {
+    "@type": "Organization",
+    "name": "Karki Associates Private Limited"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Karki Associates Private Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://karkiassociates.com.np/images/logo.png"
+    }
+  },
+  "url": "https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal",
+  "description": "Analysis of Nepal's anti-money laundering laws and the risk of FATF grey-listing.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://karkiassociates.com.np/blog.html"
+  }
+}
+</script>
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
@@ -327,7 +372,6 @@
     const hamburger = document.getElementById('hamburgerBtn');
     const slideMenu = document.getElementById('mobileSlideMenu');
     let isMenuOpen = false;
-
     function openMenu() {
         slideMenu.style.display = 'flex';
         hamburger.classList.add('open');
@@ -343,19 +387,11 @@
         document.body.style.overflow = '';
     }
     if (hamburger) {
-        hamburger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (isMenuOpen) closeMenu();
-            else openMenu();
-        });
+        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
     }
     const menuLinks = slideMenu.querySelectorAll('a');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => closeMenu());
-    });
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
-    });
+    menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
+    window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
 </script>
 </body>
 </html>
