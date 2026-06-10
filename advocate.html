@@ -179,7 +179,7 @@
         p {
             margin-bottom: 1rem;
         }
-        /* Profile photo – floated right, with margin */
+        /* Profile photo – floated right, no border, no shadow */
         .profile-photo {
             float: right;
             margin: 0 0 1rem 1.5rem;
@@ -188,11 +188,10 @@
         .profile-photo img {
             width: 100%;
             height: auto;
-            border-radius: 12px;
-            border: 3px solid #1a3e6f;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 0;      /* no rounded corners */
+            border: none;          /* no border */
+            box-shadow: none;      /* no shadow */
         }
-        /* Clearfix for the content after the floated image */
         .clearfix::after {
             content: "";
             clear: both;
@@ -285,7 +284,6 @@
     <!-- English content -->
     <div id="en-content">
         <h1>Advocate Anil Karki</h1>
-        <!-- Profile photo on the right side -->
         <div class="profile-photo">
             <img src="images/anil-karki-profile.jpg" alt="Advocate Anil Karki">
         </div>
@@ -293,7 +291,7 @@
         <p>Anil Karki is the founder and director of Karki Associates Private Limited. He is a licensed advocate duly enrolled with the Nepal Bar Council. He holds a Bachelor of Laws (LL.B.) degree from the University of Delhi. He subsequently earned a Master of Comparative Laws (M.C.L.), also from the University of Delhi, which provided him with advanced training in comparative legal methodologies and cross jurisdictional analysis. He has successfully completed the advocate licensing examination conducted by the Nepal Bar Council.</p>
         <h3>Professional Experience & Foundational Journey</h3>
         <p>Before establishing Karki Associates, Advocate Karki gained substantial practical experience in legal research, documentation, and court proceedings. He studied on a range of civil, criminal, and constitutional matters, developing a thorough understanding of Nepal's substantive and procedural laws. This foundation enabled him to identify gaps in the delivery of legal services, particularly the need for a firm that combines rigorous legal analysis with transparent client communication and affordable professional fees. In response to that need, he founded Karki Associates. As the sole promoter and director of the company, he has built an institution that offers integrated legal solutions.</p>
-        <div class="clearfix"></div> <!-- optional, ensures subsequent content clears floated image -->
+        <div class="clearfix"></div>
         <h3>Legal Ethics & Professional Conduct</h3>
         <p>Advocate Karki is committed to upholding the highest standards of the legal profession. He strictly adheres to the professional ethics and rules of conduct prescribed by the Nepal Bar Council, including the fundamental duties of confidentiality, diligence, loyalty to clients, and avoidance of conflicts of interest. Every legal service provided by Karki Associates is preceded by a proper client engagement agreement, which clearly defines the scope of work, fee arrangement, and responsibilities of both parties. Advocate Karki considers this written agreement not merely a contractual formality but a cornerstone of professional accountability. He is bound by the professional code of conduct applicable to all legal practitioners in Nepal, which includes the duty to act with integrity, to maintain the honour of the legal profession, and to avoid any conduct that would bring the administration of justice into disrepute.</p>
         <h3>Legal Philosophy & Vision</h3>
