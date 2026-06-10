@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karki Associates - Opinion</title>
+    <title>Opinion & Analysis – Legal Commentary on FATF, Reforms in Nepal</title>
+    <meta name="description" content="Expert legal opinions on Nepal’s anti‑money laundering framework, FATF grey‑listing, regulatory reforms, and other critical legal issues. Written by Advocate Anil Karki.">
+    <meta name="keywords" content="legal opinion Nepal, FATF analysis, money laundering opinion, Nepal law commentary, Karki Associates opinion">
+    <meta name="author" content="Karki Associates Private Limited">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://karkiassociates.com.np/opinion.html">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karkiassociates.com.np/opinion.html">
+    <meta property="og:title" content="Opinion & Analysis – Legal Commentary on FATF, Reforms in Nepal">
+    <meta property="og:description" content="Expert legal opinions on Nepal’s anti‑money laundering framework, FATF grey‑listing, and regulatory reforms.">
+    <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://karkiassociates.com.np/opinion.html">
+    <meta property="twitter:title" content="Opinion & Analysis – Legal Commentary on FATF, Reforms in Nepal">
+    <meta property="twitter:description" content="Expert legal opinions on Nepal’s anti‑money laundering framework, FATF grey‑listing, and regulatory reforms.">
+    <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
+        /* Same base styles as previous pages (unchanged) */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Arial', sans-serif;
@@ -306,6 +324,65 @@
         <div class="footer-copyright" id="footerCopyright">© 2026 Karki Associates Private Limited</div>
     </div>
 </footer>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "BlogPosting",
+        "headline": "Avoiding Nepal's FATF Grey-listing",
+        "datePublished": "2025-02-04",
+        "dateModified": "2025-02-04",
+        "author": {
+          "@type": "Organization",
+          "name": "Karki Associates Private Limited"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Karki Associates Private Limited",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://karkiassociates.com.np/images/logo.png"
+          }
+        },
+        "url": "https://myrepublica.nagariknetwork.com/news/avoiding-nepals-fatf-grey-listing-59-64.html",
+        "description": "Analysis of Nepal's failure to implement AML/CFT reforms and its continued risk of FATF grey-listing."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "BlogPosting",
+        "headline": "Combating money laundering in Nepal",
+        "datePublished": "2023-07-21",
+        "dateModified": "2023-07-21",
+        "author": {
+          "@type": "Organization",
+          "name": "Karki Associates Private Limited"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Karki Associates Private Limited",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://karkiassociates.com.np/images/logo.png"
+          }
+        },
+        "url": "https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal",
+        "description": "Stakeholder concerns about Nepal's potential FATF blacklisting due to deficiencies in anti-money laundering laws."
+      }
+    }
+  ],
+  "name": "Opinion & Analysis on FATF and Legal Reforms in Nepal",
+  "description": "Expert legal opinions on Nepal’s anti‑money laundering framework, FATF grey‑listing, and regulatory reforms.",
+  "url": "https://karkiassociates.com.np/opinion.html"
+}
+</script>
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
@@ -345,7 +422,6 @@
     const hamburger = document.getElementById('hamburgerBtn');
     const slideMenu = document.getElementById('mobileSlideMenu');
     let isMenuOpen = false;
-
     function openMenu() {
         slideMenu.style.display = 'flex';
         hamburger.classList.add('open');
@@ -361,19 +437,11 @@
         document.body.style.overflow = '';
     }
     if (hamburger) {
-        hamburger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (isMenuOpen) closeMenu();
-            else openMenu();
-        });
+        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
     }
     const menuLinks = slideMenu.querySelectorAll('a');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => closeMenu());
-    });
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
-    });
+    menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
+    window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
 </script>
 </body>
 </html>
