@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karki Associates - Advocate</title>
+    <title>Advocate Anil Karki – Education & Legal Expertise | Karki Associates</title>
+    <meta name="description" content="Advocate Anil Karki, founder of Karki Associates. Holds LL.B. and M.C.L. from University of Delhi. Registered with Nepal Bar Council. Committed to ethical, client‑focused legal practice in Nepal.">
+    <meta name="keywords" content="advocate Pokhara, Kathmandu lawyer, Anil Karki, Nepal Bar Council, legal ethics, corporate lawyer Nepal, University of Delhi">
+    <meta name="author" content="Karki Associates Private Limited">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://karkiassociates.com.np/advocate.html">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://karkiassociates.com.np/advocate.html">
+    <meta property="og:title" content="Advocate Anil Karki – Founder & Director, Karki Associates">
+    <meta property="og:description" content="Advocate Anil Karki: LL.B. and M.C.L. from University of Delhi, registered with Nepal Bar Council. Ethical, client‑centered legal practice.">
+    <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://karkiassociates.com.np/advocate.html">
+    <meta property="twitter:title" content="Advocate Anil Karki – Founder & Director, Karki Associates">
+    <meta property="twitter:description" content="Advocate Anil Karki: LL.B. and M.C.L. from University of Delhi, registered with Nepal Bar Council.">
+    <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -268,6 +285,38 @@
         <div class="footer-copyright" id="footerCopyright">© 2026 Karki Associates Private Limited</div>
     </div>
 </footer>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Anil Karki",
+  "jobTitle": "Advocate & Director",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Karki Associates Private Limited"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Delhi"
+  },
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Bachelor of Laws (LL.B.)"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Master of Comparative Laws (M.C.L.)"
+    }
+  ],
+  "memberOf": {
+    "@type": "Organization",
+    "name": "Nepal Bar Council"
+  },
+  "url": "https://karkiassociates.com.np/advocate.html",
+  "description": "Founder and director of Karki Associates Private Limited. Licensed advocate with Nepal Bar Council. Specializes in corporate, civil, criminal, and constitutional law."
+}
+</script>
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
@@ -307,7 +356,6 @@
     const hamburger = document.getElementById('hamburgerBtn');
     const slideMenu = document.getElementById('mobileSlideMenu');
     let isMenuOpen = false;
-
     function openMenu() {
         slideMenu.style.display = 'flex';
         hamburger.classList.add('open');
@@ -323,19 +371,11 @@
         document.body.style.overflow = '';
     }
     if (hamburger) {
-        hamburger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (isMenuOpen) closeMenu();
-            else openMenu();
-        });
+        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
     }
     const menuLinks = slideMenu.querySelectorAll('a');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => closeMenu());
-    });
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
-    });
+    menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
+    window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
 </script>
 </body>
 </html>
