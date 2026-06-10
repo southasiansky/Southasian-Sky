@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karki Associates - Contact</title>
+    <title>Contact Karki Associates – Law Firm in Pokhara & Kathmandu</title>
+    <meta name="description" content="Contact our law firm. Registered office at Rastra Bank Chowk, Pokhara. Branch office at Bagbazar, Kathmandu. Phone, email, and contact form for legal inquiries.">
+    <meta name="keywords" content="contact lawyer Nepal, law firm Pokhara, Kathmandu legal office, advocate contact, Karki Associates">
+    <meta name="author" content="Karki Associates Private Limited">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://karkiassociates.com.np/contact.html">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karkiassociates.com.np/contact.html">
+    <meta property="og:title" content="Contact Karki Associates – Law Firm in Pokhara & Kathmandu">
+    <meta property="og:description" content="Contact our law firm. Offices in Pokhara and Kathmandu. Phone, email, and contact form for legal inquiries.">
+    <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://karkiassociates.com.np/contact.html">
+    <meta property="twitter:title" content="Contact Karki Associates – Law Firm in Pokhara & Kathmandu">
+    <meta property="twitter:description" content="Contact our law firm. Offices in Pokhara and Kathmandu. Phone, email, and contact form for legal inquiries.">
+    <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
+        /* Same base styles as previous pages (unchanged) */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Arial', sans-serif;
@@ -391,6 +409,39 @@
         <div class="footer-copyright" id="footerCopyright">© 2026 Karki Associates Private Limited</div>
     </div>
 </footer>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Karki Associates",
+  "description": "Contact our law firm in Pokhara and Kathmandu. Get in touch via phone, email, or contact form.",
+  "url": "https://karkiassociates.com.np/contact.html",
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "name": "Karki Associates Private Limited",
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "Pokhara",
+        "addressRegion": "Gandaki Province",
+        "addressCountry": "NP",
+        "streetAddress": "Rastra Bank Chowk, Ward No. 7"
+      },
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "Kathmandu",
+        "addressRegion": "Bagmati Province",
+        "addressCountry": "NP",
+        "streetAddress": "Bagbazar, Ward No. 28"
+      }
+    ],
+    "telephone": "+9779851068714",
+    "email": "karkiassociates@asia.com",
+    "url": "https://karkiassociates.com.np",
+    "logo": "https://karkiassociates.com.np/images/logo.png"
+  }
+}
+</script>
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
@@ -430,7 +481,6 @@
     const hamburger = document.getElementById('hamburgerBtn');
     const slideMenu = document.getElementById('mobileSlideMenu');
     let isMenuOpen = false;
-
     function openMenu() {
         slideMenu.style.display = 'flex';
         hamburger.classList.add('open');
@@ -446,19 +496,11 @@
         document.body.style.overflow = '';
     }
     if (hamburger) {
-        hamburger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (isMenuOpen) closeMenu();
-            else openMenu();
-        });
+        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
     }
     const menuLinks = slideMenu.querySelectorAll('a');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => closeMenu());
-    });
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
-    });
+    menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
+    window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
 </script>
 </body>
 </html>
