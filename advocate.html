@@ -179,7 +179,7 @@
         p {
             margin-bottom: 1rem;
         }
-        /* Profile photo – floated right, no border, no shadow */
+        /* Profile photo – black circle */
         .profile-photo {
             float: right;
             margin: 0 0 1rem 1.5rem;
@@ -188,9 +188,10 @@
         .profile-photo img {
             width: 100%;
             height: auto;
-            border-radius: 0;      /* no rounded corners */
-            border: none;          /* no border */
-            box-shadow: none;      /* no shadow */
+            border-radius: 50%;       /* makes it a circle */
+            border: 3px solid #000;   /* black border */
+            box-shadow: none;         /* no shadow */
+            display: block;
         }
         .clearfix::after {
             content: "";
