@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karki Associates - Services</title>
+    <title>Legal, Tax & Corporate Services – Karki Associates | Law Firm Nepal</title>
+    <meta name="description" content="Explore our full range of legal services: litigation, corporate advisory, tax representation, legal research, documentation, and legal process outsourcing. Serving Pokhara and Kathmandu.">
+    <meta name="keywords" content="legal services Nepal, corporate law, tax consulting, litigation, legal research, law firm Pokhara, Kathmandu lawyer">
+    <meta name="author" content="Karki Associates Private Limited">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://karkiassociates.com.np/service.html">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karkiassociates.com.np/service.html">
+    <meta property="og:title" content="Our Services – Legal, Tax, Corporate Advisory | Karki Associates">
+    <meta property="og:description" content="Full range of legal services: litigation, corporate advisory, tax representation, legal research, documentation, and process outsourcing.">
+    <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://karkiassociates.com.np/service.html">
+    <meta property="twitter:title" content="Our Services – Legal, Tax, Corporate Advisory | Karki Associates">
+    <meta property="twitter:description" content="Full range of legal services: litigation, corporate advisory, tax representation, legal research, documentation, and process outsourcing.">
+    <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
+        /* Same base styles as previous pages (unchanged) */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Arial', sans-serif;
@@ -280,6 +298,76 @@
         <div class="footer-copyright" id="footerCopyright">© 2026 Karki Associates Private Limited</div>
     </div>
 </footer>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Legal Services",
+  "provider": {
+    "@type": "LegalService",
+    "name": "Karki Associates Private Limited",
+    "url": "https://karkiassociates.com.np"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Nepal"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Legal Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Litigation & Court Representation",
+          "description": "Representation in civil, criminal, constitutional, and administrative disputes before all levels of courts in Nepal."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Personal Legal Services & Documentation",
+          "description": "Assistance with property disputes, family law, succession, consumer complaints, and criminal defense, plus document drafting."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Corporate & Commercial Advisory",
+          "description": "Advice on statutory compliance, mergers, acquisitions, due diligence, and foreign investment laws."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tax Representation & Compliance",
+          "description": "Tax planning, return filing, representation before authorities and courts in tax disputes."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Legal Research & Policy Advisory",
+          "description": "Research, legal opinions, legislative impact assessments, and policy briefs."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Legal Process Outsourcing",
+          "description": "Legal research, drafting, paralegal support for law firms and advocates."
+        }
+      }
+    ]
+  }
+}
+</script>
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
@@ -319,7 +407,6 @@
     const hamburger = document.getElementById('hamburgerBtn');
     const slideMenu = document.getElementById('mobileSlideMenu');
     let isMenuOpen = false;
-
     function openMenu() {
         slideMenu.style.display = 'flex';
         hamburger.classList.add('open');
@@ -335,19 +422,11 @@
         document.body.style.overflow = '';
     }
     if (hamburger) {
-        hamburger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (isMenuOpen) closeMenu();
-            else openMenu();
-        });
+        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
     }
     const menuLinks = slideMenu.querySelectorAll('a');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => closeMenu());
-    });
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
-    });
+    menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
+    window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
 </script>
 </body>
 </html>
