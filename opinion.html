@@ -78,51 +78,44 @@
             cursor: pointer;
             color: #000;
             padding: 0;
-            transition: opacity 0.2s;
+            transition: all 0.3s ease;
+            width: 40px;
+            text-align: center;
         }
-        .hamburger:hover { opacity: 0.7; }
+        .hamburger.open {
+            transform: rotate(90deg);
+        }
         .mobile-right {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-        .mobile-overlay {
+        .mobile-slide-menu {
             display: none;
-            position: fixed;
-            top: 0;
+            position: absolute;
+            top: 100%;
             left: 0;
             width: 100%;
-            height: 100%;
             background-color: #fff;
-            z-index: 1000;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            z-index: 99;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            overflow-y: auto;
+            padding: 0.5rem 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         }
-        .mobile-overlay a {
+        .mobile-slide-menu a {
             display: block;
             color: #000;
             text-decoration: none;
-            font-size: 1.8rem;
+            font-size: 1.1rem;
             font-weight: 500;
-            padding: 1rem;
-            margin: 0.5rem 0;
+            padding: 0.8rem 1.5rem;
             transition: background 0.2s;
+            text-align: left;
         }
-        .mobile-overlay a:hover {
+        .mobile-slide-menu a:hover {
             background: #f5f5f5;
-        }
-        .close-overlay {
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #000;
-            background: none;
-            border: none;
         }
         @media (max-width: 768px) {
             .desktop-header { display: none; }
@@ -130,6 +123,10 @@
             .logo img { max-height: 60px; }
             body { font-size: 1rem; line-height: 1.6; }
             .container { padding: 0 16px; }
+            .mobile-slide-menu a {
+                font-size: 1rem;
+                padding: 0.6rem 1rem;
+            }
         }
         main {
             background: #fff;
@@ -137,7 +134,7 @@
             margin: 10rem auto 0 auto;
             border-radius: 0;
             box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-            transition: box-shadow 0.3s;
+            transition: margin-top 0.3s ease;
         }
         h2 {
             color: #000;
@@ -233,8 +230,7 @@
                 <button class="hamburger" id="hamburgerBtn">☰</button>
             </div>
         </div>
-        <div id="mobileOverlay" class="mobile-overlay">
-            <button class="close-overlay" id="closeOverlayBtn">&times;</button>
+        <div id="mobileSlideMenu" class="mobile-slide-menu">
             <a href="index.html" data-key="home">Home</a>
             <a href="about.html" data-key="about">About</a>
             <a href="advocate.html" data-key="advocate">Advocate</a>
@@ -250,28 +246,44 @@
     <div id="en-content">
         <h2>Opinion & Analysis</h2>
         <div class="opinion-post">
-            <div class="post-title"><a href="https://myrepublica.nagariknetwork.com/news/avoiding-nepals-fatf-grey-listing-59-64.html" target="_blank" rel="noopener noreferrer">Avoiding Nepal's FATF Grey-listing</a></div>
+            <div class="post-title">
+                <a href="https://myrepublica.nagariknetwork.com/news/avoiding-nepals-fatf-grey-listing-59-64.html" target="_blank" rel="noopener noreferrer">Avoiding Nepal's FATF Grey-listing</a>
+            </div>
             <div class="post-date">February 4, 2025</div>
-            <div class="post-excerpt">The critical inquiry, consequently, is whether Nepal has effectively employed this one-year timeframe or simply depended on superficial bureaucratic maneuverings and diplomatic strategies to delay its grey-listing. The answer is stark. Nepal has unequivocally failed to execute the structural, financial, and legal reforms required to adhere to global AML/CFT standards, consequently placing itself once more under international scrutiny.</div>
+            <div class="post-excerpt">
+                The critical inquiry, consequently, is whether Nepal has effectively employed this one-year timeframe or simply depended on superficial bureaucratic maneuverings and diplomatic strategies to delay its grey-listing. The answer is stark. Nepal has unequivocally failed to execute the structural, financial, and legal reforms required to adhere to global AML/CFT standards, consequently placing itself once more under international scrutiny.
+            </div>
         </div>
         <div class="opinion-post">
-            <div class="post-title"><a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">Combating money laundering in Nepal</a></div>
+            <div class="post-title">
+                <a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">Combating money laundering in Nepal</a>
+            </div>
             <div class="post-date">July 21, 2023</div>
-            <div class="post-excerpt">Stakeholders are concerned that Nepal could be blacklisted or placed on a greylist by the Financial Action Task Force (FATF) because of its failure to resolve several inadequacies in its laws against money laundering and terrorism financing. Even though it is certain that Nepal will be on the FATF greylist, it has an additional deadline of one year for reforms. The FATF provides an observation period before any country is directly monitored, and now Nepal has that time. The legal structures of Nepal are well-enacted, but enforcement has lagged behind. The FATF is not widely accepted, and its agenda needs further critical appraisal as it is better classified as a political organization.</div>
+            <div class="post-excerpt">
+                Stakeholders are concerned that Nepal could be blacklisted or placed on a greylist by the Financial Action Task Force (FATF) because of its failure to resolve several inadequacies in its laws against money laundering and terrorism financing. Even though it is certain that Nepal will be on the FATF greylist, it has an additional deadline of one year for reforms. The FATF provides an observation period before any country is directly monitored, and now Nepal has that time. The legal structures of Nepal are well-enacted, but enforcement has lagged behind. The FATF is not widely accepted, and its agenda needs further critical appraisal as it is better classified as a political organization.
+            </div>
         </div>
     </div>
-    <!-- Nepali Opinion Posts (translated) -->
+    <!-- Nepali Opinion Posts -->
     <div id="np-content" style="display:none;">
         <h2>विचार तथा विश्लेषण</h2>
         <div class="opinion-post">
-            <div class="post-title"><a href="https://myrepublica.nagariknetwork.com/news/avoiding-nepals-fatf-grey-listing-59-64.html" target="_blank" rel="noopener noreferrer">नेपाललाई FATF ग्रेलिस्टमा पर्नबाट जोगाउने</a></div>
+            <div class="post-title">
+                <a href="https://myrepublica.nagariknetwork.com/news/avoiding-nepals-fatf-grey-listing-59-64.html" target="_blank" rel="noopener noreferrer">नेपाललाई FATF ग्रेलिस्टमा पर्नबाट जोगाउने</a>
+            </div>
             <div class="post-date">फेब्रुअरी ४, २०२५</div>
-            <div class="post-excerpt">तसर्थ, महत्वपूर्ण प्रश्न यो हो कि नेपालले यो एक वर्षको समयावधिलाई प्रभावकारी रूपमा प्रयोग गरेको छ वा केवल सतही नोकरशाही चालबाजी र कूटनीतिक रणनीतिहरूमा निर्भर रहेर आफ्नो ग्रेलिस्टिङ ढिलाइ गरेको छ। उत्तर स्पष्ट छ। नेपालले विश्वव्यापी एएमएल/सीएफटी मापदण्डहरूको पालना गर्न आवश्यक संरचनात्मक, वित्तीय र कानूनी सुधारहरू लागू गर्न पूर्ण रूपमा असफल भएको छ, जसले गर्दा आफैलाई पुनः अन्तर्राष्ट्रिय निगरानीमा राखेको छ।</div>
+            <div class="post-excerpt">
+                तसर्थ, महत्वपूर्ण प्रश्न यो हो कि नेपालले यो एक वर्षको समयावधिलाई प्रभावकारी रूपमा प्रयोग गरेको छ वा केवल सतही नोकरशाही चालबाजी र कूटनीतिक रणनीतिहरूमा निर्भर रहेर आफ्नो ग्रेलिस्टिङ ढिलाइ गरेको छ। उत्तर स्पष्ट छ। नेपालले विश्वव्यापी एएमएल/सीएफटी मापदण्डहरूको पालना गर्न आवश्यक संरचनात्मक, वित्तीय र कानूनी सुधारहरू लागू गर्न पूर्ण रूपमा असफल भएको छ, जसले गर्दा आफैलाई पुनः अन्तर्राष्ट्रिय निगरानीमा राखेको छ।
+            </div>
         </div>
         <div class="opinion-post">
-            <div class="post-title"><a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">नेपालमा मनी लन्ड्रिङ नियन्त्रण</a></div>
+            <div class="post-title">
+                <a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">नेपालमा मनी लन्ड्रिङ नियन्त्रण</a>
+            </div>
             <div class="post-date">जुलाई २१, २०२३</div>
-            <div class="post-excerpt">नेपाल मनी लन्ड्रिङ तथा आतंककारी क्रियाकलापमा वित्तीय सहायता नियन्त्रणसम्बन्धी कानूनमा केही कमजोरीहरू सुधार गर्न नसकेको भन्दै यसलाई वित्तीय कार्य समूह (FATF) को ग्रेलिस्टमा राखिने सम्भावना रहेको छ। हितधारकहरूले नेपाल कालोसूची वा ग्रेलिस्टमा पर्न सक्ने चिन्ता व्यक्त गरेका छन्। नेपाल FATF को ग्रेलिस्टमा पर्ने निश्चित जस्तै भए पनि, सुधारका लागि एक वर्षको अतिरिक्त समय दिइएको छ। FATF ले कुनै पनि देशलाई प्रत्यक्ष निगरानीमा राख्नु अघि पर्यवेक्षण अवधि दिन्छ, र नेपालसँग अहिले त्यो समय छ। नेपालको कानूनी संरचना राम्रो छ तर कार्यान्वयन कमजोर छ। FATF व्यापक रूपमा स्वीकार गरिएको छैन, र यसको एजेन्डा थप गम्भीर समीक्षाको आवश्यकता छ किनकि यसलाई राजनीतिक संगठनको रूपमा वर्गीकृत गर्न सकिन्छ।</div>
+            <div class="post-excerpt">
+                नेपाल मनी लन्ड्रिङ तथा आतंककारी क्रियाकलापमा वित्तीय सहायता नियन्त्रणसम्बन्धी कानूनमा केही कमजोरीहरू सुधार गर्न नसकेको भन्दै यसलाई वित्तीय कार्य समूह (FATF) को ग्रेलिस्टमा राखिने सम्भावना रहेको छ। हितधारकहरूले नेपाल कालोसूची वा ग्रेलिस्टमा पर्न सक्ने चिन्ता व्यक्त गरेका छन्। नेपाल FATF को ग्रेलिस्टमा पर्ने निश्चित जस्तै भए पनि, सुधारका लागि एक वर्षको अतिरिक्त समय दिइएको छ। FATF ले कुनै पनि देशलाई प्रत्यक्ष निगरानीमा राख्नु अघि पर्यवेक्षण अवधि दिन्छ, र नेपालसँग अहिले त्यो समय छ। नेपालको कानूनी संरचना राम्रो छ तर कार्यान्वयन कमजोर छ। FATF व्यापक रूपमा स्वीकार गरिएको छैन, र यसको एजेन्डा थप गम्भीर समीक्षाको आवश्यकता छ किनकि यसलाई राजनीतिक संगठनको रूपमा वर्गीकृत गर्न सकिन्छ।
+            </div>
         </div>
     </div>
 </main>
@@ -307,6 +319,7 @@
         } else {
             copyrightEl.textContent = '© 2026 Karki Associates Private Limited';
         }
+        document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = (lang === 'en') ? 'ने' : 'E');
     }
     function setLanguage(lang) {
         currentLanguage = lang;
@@ -315,32 +328,40 @@
         if (lang === 'ne') { en.style.display = 'none'; np.style.display = 'block'; document.documentElement.lang = 'ne'; }
         else { np.style.display = 'none'; en.style.display = 'block'; document.documentElement.lang = 'en'; }
         updateUILanguage(lang);
-        document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = (lang === 'en') ? 'ने' : 'E');
     }
     function toggleLanguage() { setLanguage(currentLanguage === 'en' ? 'ne' : 'en'); }
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
 
     const hamburger = document.getElementById('hamburgerBtn');
-    const overlay = document.getElementById('mobileOverlay');
-    const closeBtn = document.getElementById('closeOverlayBtn');
+    const slideMenu = document.getElementById('mobileSlideMenu');
+    let isMenuOpen = false;
 
-    function openOverlay() {
-        overlay.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
+    function openMenu() {
+        slideMenu.style.display = 'flex';
+        hamburger.classList.add('open');
+        hamburger.textContent = '✕';
+        isMenuOpen = true;
     }
-    function closeOverlay() {
-        overlay.style.display = 'none';
-        document.body.style.overflow = '';
+    function closeMenu() {
+        slideMenu.style.display = 'none';
+        hamburger.classList.remove('open');
+        hamburger.textContent = '☰';
+        isMenuOpen = false;
     }
-    if (hamburger) hamburger.addEventListener('click', openOverlay);
-    if (closeBtn) closeBtn.addEventListener('click', closeOverlay);
-    const overlayLinks = overlay.querySelectorAll('a');
-    overlayLinks.forEach(link => {
-        link.addEventListener('click', () => closeOverlay());
+    if (hamburger) {
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (isMenuOpen) closeMenu();
+            else openMenu();
+        });
+    }
+    const menuLinks = slideMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => closeMenu());
     });
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && overlay.style.display === 'flex') closeOverlay();
+        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
     });
 </script>
 </body>
