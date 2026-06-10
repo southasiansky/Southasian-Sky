@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karki Associates - About</title>
+    <title>About Karki Associates – Law Firm Structure, Mission & Values</title>
+    <meta name="description" content="Learn about Karki Associates, a private limited law firm in Nepal. Discover our mission, core values, client‑centric legal approach, and offices in Pokhara and Kathmandu.">
+    <meta name="keywords" content="about law firm Nepal, Karki Associates, legal mission, core values, law firm structure, Pokhara law firm">
+    <meta name="author" content="Karki Associates Private Limited">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://karkiassociates.com.np/about.html">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karkiassociates.com.np/about.html">
+    <meta property="og:title" content="About Karki Associates – Law Firm in Nepal">
+    <meta property="og:description" content="Learn about our law firm's structure, mission, values and client‑first legal approach. Offices in Pokhara and Kathmandu.">
+    <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://karkiassociates.com.np/about.html">
+    <meta property="twitter:title" content="About Karki Associates – Law Firm in Nepal">
+    <meta property="twitter:description" content="Learn about our law firm's structure, mission, values and client‑first legal approach.">
+    <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -233,6 +250,7 @@
     </div>
 </header>
 <main class="container">
+    <!-- English content -->
     <div id="en-content">
         <h2>Karki Associates Private Limited</h2>
         <h3>Our Firm's Structure</h3>
@@ -248,6 +266,7 @@
         <p>"Karki Associates" reflects our founder's name and our collaborative approach to legal work. While Anil Karki is the principal advocate, we also work with a network of professionals including chartered accountants, and legal researchers to provide comprehensive support for complex matters. When you retain Karki Associates, you get the benefit of a team oriented mindset, even as you deal directly with Anil as your primary lawyer.</p>
         <p>Karki Associates is a young firm with deep roots in legal ethics and a forward looking vision. We are not the largest law firm, but we strive to be the most trusted one for every client we serve. We welcome you to reach out, discuss your legal needs, and experience the difference of working with a firm that puts people before paperwork.</p>
     </div>
+    <!-- Nepali content -->
     <div id="np-content" style="display:none;">
         <h2>कार्की एसोसिएट्स प्राइभेट लिमिटेड</h2>
         <h3>हाम्रो फर्मको संरचना</h3>
@@ -274,6 +293,19 @@
         <div class="footer-copyright" id="footerCopyright">© 2026 Karki Associates Private Limited</div>
     </div>
 </footer>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Karki Associates Private Limited",
+  "description": "Registered law firm in Nepal offering legal, tax, corporate advisory, and research services. Learn about our firm structure, mission, and core values.",
+  "url": "https://karkiassociates.com.np/about.html",
+  "isPartOf": {
+    "@type": "LegalService",
+    "name": "Karki Associates Private Limited"
+  }
+}
+</script>
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
@@ -313,7 +345,6 @@
     const hamburger = document.getElementById('hamburgerBtn');
     const slideMenu = document.getElementById('mobileSlideMenu');
     let isMenuOpen = false;
-
     function openMenu() {
         slideMenu.style.display = 'flex';
         hamburger.classList.add('open');
@@ -329,19 +360,11 @@
         document.body.style.overflow = '';
     }
     if (hamburger) {
-        hamburger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (isMenuOpen) closeMenu();
-            else openMenu();
-        });
+        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
     }
     const menuLinks = slideMenu.querySelectorAll('a');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => closeMenu());
-    });
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
-    });
+    menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
+    window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
 </script>
 </body>
 </html>
