@@ -78,14 +78,16 @@
             cursor: pointer;
             color: #000;
             padding: 0;
-            transition: opacity 0.2s;
+            transition: all 0.3s ease;
+            width: 40px;
+            text-align: center;
         }
-        .hamburger:hover { opacity: 0.7; }
         .mobile-right {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
+        /* Mobile overlay menu (full screen) */
         .mobile-overlay {
             display: none;
             position: fixed;
@@ -94,12 +96,13 @@
             width: 100%;
             height: 100%;
             background-color: #fff;
-            z-index: 1000;
+            z-index: 999;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             overflow-y: auto;
+            padding: 2rem 1rem;
         }
         .mobile-overlay a {
             display: block;
@@ -114,32 +117,16 @@
         .mobile-overlay a:hover {
             background: #f5f5f5;
         }
-        .close-overlay {
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #000;
-            background: none;
-            border: none;
-        }
         @media (max-width: 768px) {
             .desktop-header { display: none; }
             .mobile-header { display: flex; }
             .logo img { max-height: 60px; }
             body { font-size: 1rem; line-height: 1.6; }
             .container { padding: 0 16px; }
-            /* Reduced font size for mobile overlay menu items */
             .mobile-overlay a {
                 font-size: 1.2rem;
                 padding: 0.6rem;
                 margin: 0.2rem 0;
-            }
-            .close-overlay {
-                font-size: 1.5rem;
-                top: 0.8rem;
-                right: 1rem;
             }
         }
         main {
@@ -219,8 +206,8 @@
                 <button class="hamburger" id="hamburgerBtn">☰</button>
             </div>
         </div>
+        <!-- Mobile overlay menu - contains only navigation links -->
         <div id="mobileOverlay" class="mobile-overlay">
-            <button class="close-overlay" id="closeOverlayBtn">&times;</button>
             <a href="index.html" data-key="home">Home</a>
             <a href="about.html" data-key="about">About</a>
             <a href="advocate.html" data-key="advocate">Advocate</a>
@@ -281,6 +268,8 @@
         } else {
             copyrightEl.textContent = '© 2026 Karki Associates Private Limited';
         }
+        // Update language toggle buttons
+        document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = (lang === 'en') ? 'ने' : 'E');
     }
     function setLanguage(lang) {
         currentLanguage = lang;
@@ -289,32 +278,50 @@
         if (lang === 'ne') { en.style.display = 'none'; np.style.display = 'block'; document.documentElement.lang = 'ne'; }
         else { np.style.display = 'none'; en.style.display = 'block'; document.documentElement.lang = 'en'; }
         updateUILanguage(lang);
-        document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = (lang === 'en') ? 'ने' : 'E');
     }
     function toggleLanguage() { setLanguage(currentLanguage === 'en' ? 'ne' : 'en'); }
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
 
+    // Mobile overlay and hamburger transformation
     const hamburger = document.getElementById('hamburgerBtn');
     const overlay = document.getElementById('mobileOverlay');
-    const closeBtn = document.getElementById('closeOverlayBtn');
+    let isOverlayOpen = false;
 
     function openOverlay() {
         overlay.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+        hamburger.textContent = '✕';
+        isOverlayOpen = true;
     }
     function closeOverlay() {
         overlay.style.display = 'none';
         document.body.style.overflow = '';
+        hamburger.textContent = '☰';
+        isOverlayOpen = false;
     }
-    if (hamburger) hamburger.addEventListener('click', openOverlay);
-    if (closeBtn) closeBtn.addEventListener('click', closeOverlay);
+    if (hamburger) {
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (isOverlayOpen) {
+                closeOverlay();
+            } else {
+                openOverlay();
+            }
+        });
+    }
+    // Close overlay when any navigation link inside overlay is clicked
     const overlayLinks = overlay.querySelectorAll('a');
     overlayLinks.forEach(link => {
-        link.addEventListener('click', () => closeOverlay());
+        link.addEventListener('click', () => {
+            closeOverlay();
+        });
     });
+    // Close overlay on window resize if screen becomes desktop
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && overlay.style.display === 'flex') closeOverlay();
+        if (window.innerWidth > 768 && isOverlayOpen) {
+            closeOverlay();
+        }
     });
 </script>
 </body>
