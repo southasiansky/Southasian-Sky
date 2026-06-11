@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal, Tax & Corporate Services – Karki Associates | Law Firm Nepal</title>
-    <meta name="description" content="Explore our full range of legal services: litigation, corporate advisory, tax representation, legal research, documentation, and legal process outsourcing. Serving Pokhara and Kathmandu.">
-    <meta name="keywords" content="legal services Nepal, corporate law, tax consulting, litigation, legal research, law firm Pokhara, Kathmandu lawyer">
+    <title>Karki Associates – Law Firm in Pokhara & Kathmandu | Legal, Tax, Corporate Advisory</title>
+    <meta name="description" content="Karki Associates is a registered law firm in Nepal offering legal, tax, corporate advisory, and research services. Offices in Pokhara and Kathmandu. Led by Advocate Anil Karki.">
+    <meta name="keywords" content="law firm Nepal, advocate Pokhara, Kathmandu lawyer, legal services Nepal, tax consulting, corporate advisory, money laundering, FATF Nepal, Anil Karki">
     <meta name="author" content="Karki Associates Private Limited">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://karkiassociates.com.np/service.html">
+    <link rel="canonical" href="https://karkiassociates.com.np/index.html">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://karkiassociates.com.np/service.html">
-    <meta property="og:title" content="Our Services – Legal, Tax, Corporate Advisory | Karki Associates">
-    <meta property="og:description" content="Full range of legal services: litigation, corporate advisory, tax representation, legal research, documentation, and process outsourcing.">
+    <meta property="og:url" content="https://karkiassociates.com.np/">
+    <meta property="og:title" content="Karki Associates – Law Firm in Nepal">
+    <meta property="og:description" content="Legal, tax, and management consulting services. Offices in Pokhara and Kathmandu.">
     <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://karkiassociates.com.np/service.html">
-    <meta property="twitter:title" content="Our Services – Legal, Tax, Corporate Advisory | Karki Associates">
-    <meta property="twitter:description" content="Full range of legal services: litigation, corporate advisory, tax representation, legal research, documentation, and process outsourcing.">
+    <meta property="twitter:url" content="https://karkiassociates.com.np/">
+    <meta property="twitter:title" content="Karki Associates – Law Firm in Nepal">
+    <meta property="twitter:description" content="Legal, tax, and management consulting services. Offices in Pokhara and Kathmandu.">
     <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
@@ -27,12 +27,17 @@
             font-size: 1.125rem;
             line-height: 1.7;
             color: #111;
-            background: #f8f8f8;
+            background: #fff;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 24px;
+        }
+        @media (min-width: 769px) {
+            .container {
+                padding: 0 48px;
+            }
         }
         header {
             background: #fff;
@@ -41,7 +46,6 @@
             top: 0;
             z-index: 102;
             border-bottom: 1px solid #e0e0e0;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
         }
         .header-row {
             padding: 0.8rem 0;
@@ -50,11 +54,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
         .logo a { display: block; transition: opacity 0.2s; }
         .logo a:hover { opacity: 0.85; }
         .logo img { max-height: 95px; width: auto; display: block; }
+        /* Desktop margins */
+        @media (min-width: 769px) {
+            .logo {
+                margin-left: 30px;
+            }
+            .lang-switch {
+                margin-right: 30px;
+            }
+        }
         .lang-switch {
             background: #fff;
             color: #000;
@@ -64,11 +76,11 @@
             cursor: pointer;
             font-weight: bold;
             font-size: 0.9rem;
-            margin-left: 0.5rem;
             font-family: 'Arial', sans-serif;
             transition: all 0.2s;
         }
         .lang-switch:hover { background: #000; color: #fff; border-color: #000; }
+        /* Mobile header styles */
         .mobile-header {
             display: none;
             align-items: center;
@@ -94,15 +106,31 @@
             align-items: center;
             gap: 1rem;
         }
-        /* === NAVIGATION BAR – EXACT SAME AS INDEX === */
+        @media (max-width: 768px) {
+            .desktop-header { display: none; }
+            .mobile-header { display: flex; }
+            .logo img { max-height: 60px; }
+            body { font-size: 1rem; line-height: 1.6; }
+            .container {
+                padding: 0 16px;
+            }
+            .logo {
+                margin-left: 10px;
+            }
+            .mobile-right {
+                margin-right: 7px;
+            }
+            .header-row {
+                padding: 1rem 0;
+            }
+        }
+        /* Navigation row (desktop) */
         .nav-row {
             background: #fff;
             border-bottom: 1px solid #e0e0e0;
             position: sticky;
-            top: 79px;
             z-index: 101;
             transition: transform 0.3s ease, opacity 0.2s ease;
-            margin-top: 0.8rem;
         }
         .nav-row.hidden {
             transform: translateY(-100%);
@@ -158,18 +186,13 @@
             background: #f5f5f5;
         }
         @media (max-width: 768px) {
-            .desktop-header { display: none; }
-            .mobile-header { display: flex; }
-            .logo img { max-height: 60px; }
-            body { font-size: 1rem; line-height: 1.6; }
-            .container { padding: 0 16px; }
             .mobile-slide-menu a {
                 font-size: 1.2rem;
                 padding: 0.6rem;
             }
             .mobile-slide-menu {
-                top: 65px;
-                height: calc(100vh - 65px);
+                top: 45px;
+                height: calc(100vh - 45px);
             }
             .nav-row {
                 display: none;
@@ -177,10 +200,8 @@
         }
         main {
             background: #fff;
-            padding: 5rem 2.5rem 2.5rem 2.5rem;
-            margin: 2rem auto 0 auto;
-            border-radius: 0;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            padding: 5rem 0 2.5rem 0;
+            margin: 0 auto;
         }
         h1 {
             color: #000;
@@ -225,8 +246,7 @@
         }
         @media (max-width: 768px) {
             main {
-                margin: 2rem auto 0 auto;
-                padding: 3rem 1.5rem 1.5rem 1.5rem;
+                padding: 3rem 0 1.5rem 0;
             }
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             h3 { font-size: 1.3rem; }
@@ -256,13 +276,14 @@
             transform: translateY(0);
         }
         .cookie-consent-inner {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 1rem;
+            padding: 0 48px;
         }
         .cookie-consent p {
             margin: 0;
@@ -294,6 +315,7 @@
             .cookie-consent-inner {
                 flex-direction: column;
                 text-align: center;
+                padding: 0 16px;
             }
         }
     </style>
@@ -303,9 +325,7 @@
     <div class="container header-row">
         <div class="desktop-header">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
-            <div class="desktop-nav">
-                <button id="langToggleDesktop" class="lang-switch">ने</button>
-            </div>
+            <button id="langToggleDesktop" class="lang-switch">ने</button>
         </div>
         <div class="mobile-header">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
@@ -344,6 +364,7 @@
 </div>
 
 <main class="container">
+    <!-- English content (Services) -->
     <div id="en-content">
         <h1>Our Services</h1>
         <p>At Karki Associates, we offer a full range of legal services to individuals, businesses, non governmental organizations, and government bodies. Our practice is built on the principle that quality legal assistance should be accessible, transparent, and tailored to each client's unique situation. All our services are designed to be accessible. We explain the law in plain language, keep you informed at every stage, and work diligently to protect your rights and interests.</p>
@@ -360,6 +381,7 @@
         <h3>Legal Process Outsourcing & Support for Law Firms</h3>
         <p>We understand that legal practitioners often face heavy workloads and tight deadlines. Our legal process outsourcing services are designed to support other law firms and individual advocates. We offer legal research and case law analysis; drafting of plaints, written statements, petitions, appeals, and legal notices; paralegal support; and legal assistance. All work is handled confidentially and delivered on time, allowing you to focus on court appearances and client relationships. We operate as an extension of your practice, not as a competitor.</p>
     </div>
+    <!-- Nepali content (हाम्रा सेवाहरू) -->
     <div id="np-content" style="display:none;">
         <h1>हाम्रा सेवाहरू</h1>
         <p>कार्की एसोसिएट्समा, हामी व्यक्ति, व्यवसाय, गैरसरकारी संस्था तथा सरकारी निकायहरूलाई कानूनी सेवाको पूर्ण परिसर प्रदान गर्दछौँ। हाम्रो अभ्यास यस सिद्धान्तमा आधारित छ कि गुणस्तरीय कानूनी सहायता सुलभ, पारदर्शी र प्रत्येक ग्राहकको विशिष्ट परिस्थिति अनुरूप हुनुपर्दछ। हामी कानूनलाई सरल भाषामा व्याख्या गर्दछौँ। प्रत्येक चरणमा तपाईंलाई जानकारी राख्दछौँ, र तपाईंको अधिकार तथा हितको संरक्षणका लागि लगनशीलतापूर्वक काम गर्दछौँ।</p>
@@ -399,10 +421,36 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Legal Services",
-  "provider": { "@type": "LegalService", "name": "Karki Associates Private Limited", "url": "https://karkiassociates.com.np" },
-  "areaServed": { "@type": "Place", "name": "Nepal" }
+  "@type": "LegalService",
+  "name": "Karki Associates Private Limited",
+  "alternateName": "Karki Associates Law Firm",
+  "description": "Registered law firm in Nepal offering legal, tax, corporate advisory, and research services.",
+  "url": "https://karkiassociates.com.np",
+  "logo": "https://karkiassociates.com.np/images/logo.png",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Pokhara",
+      "addressRegion": "Gandaki Province",
+      "addressCountry": "NP",
+      "streetAddress": "Rastra Bank Chowk, Ward No. 7"
+    },
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Kathmandu",
+      "addressRegion": "Bagmati Province",
+      "addressCountry": "NP",
+      "streetAddress": "Bagbazar, Ward No. 28"
+    }
+  ],
+  "telephone": "+9779851068714",
+  "email": "contact@karkiassociates.com.np",
+  "foundingDate": "2026",
+  "founder": {
+    "@type": "Person",
+    "name": "Anil Karki",
+    "jobTitle": "Advocate & Director"
+  }
 }
 </script>
 <script>
@@ -437,15 +485,31 @@
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
 
+    function setNavRowTop() {
+        const navRow = document.getElementById('navRow');
+        if (!navRow) return;
+        const header = document.querySelector('header');
+        if (header) {
+            const headerHeight = header.offsetHeight;
+            navRow.style.top = headerHeight + 'px';
+        }
+    }
+    window.addEventListener('load', setNavRowTop);
+    window.addEventListener('resize', setNavRowTop);
+
     const navRow = document.getElementById('navRow');
     if (navRow && window.innerWidth > 768) {
-        let lastScrollY = window.scrollY, ticking = false;
+        let lastScrollY = window.scrollY;
+        let ticking = false;
         function onScroll() {
             if (!ticking) {
                 requestAnimationFrame(() => {
                     const currentScrollY = window.scrollY;
-                    if (currentScrollY > lastScrollY && currentScrollY > 100) navRow.classList.add('hidden');
-                    else if (currentScrollY < lastScrollY) navRow.classList.remove('hidden');
+                    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                        navRow.classList.add('hidden');
+                    } else if (currentScrollY < lastScrollY) {
+                        navRow.classList.remove('hidden');
+                    }
                     lastScrollY = currentScrollY;
                     ticking = false;
                 });
