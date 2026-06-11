@@ -114,7 +114,7 @@
         .desktop-nav ul {
             display: flex;
             list-style: none;
-            justify-content: flex-start; /* left‑aligned to match index */
+            justify-content: flex-start;
             gap: 2rem;
             padding: 0.6rem 0;
         }
@@ -199,6 +199,8 @@
             font-weight: 600;
         }
         p { margin-bottom: 1rem; }
+        ul { margin-left: 1.8rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.3rem; }
         .profile-photo {
             float: right;
             margin: 0 0 1rem 1.5rem;
@@ -234,7 +236,6 @@
             }
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             h3 { font-size: 1.3rem; }
-            .footer-copyright { font-size: 1rem; }
         }
         /* Dark mode fix for transparent logo */
         @media (prefers-color-scheme: dark) {
@@ -302,6 +303,34 @@
                 flex-direction: column;
                 text-align: center;
             }
+        }
+        /* Footer styling matching index */
+        footer {
+            background: #fff;
+            color: #000;
+            text-align: center;
+            padding: 1.2rem 0;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 0;
+        }
+        footer a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 0.4rem;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+        }
+        footer a:hover { text-decoration: underline; opacity: 0.8; }
+        .footer-policy { margin-bottom: 0.5rem; word-spacing: normal; }
+        .footer-copyright {
+            margin: 0.3rem 0;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: normal;
+        }
+        @media (max-width: 768px) {
+            .footer-copyright { font-size: 1rem; }
         }
     </style>
 </head>
@@ -386,6 +415,7 @@
     </div>
 </main>
 
+<!-- Footer exactly matching index page -->
 <footer>
     <div class="container">
         <div class="footer-policy" id="footerPolicyLinks">
@@ -397,7 +427,7 @@
     </div>
 </footer>
 
-<!-- Cookie Consent Banner HTML -->
+<!-- Cookie Consent Banner -->
 <div id="cookieConsent" class="cookie-consent">
     <div class="cookie-consent-inner">
         <p>We use cookies to remember your language preference and improve your experience on our website. By continuing to use our site, you consent to the use of cookies. For more information, please see our <a href="cookie.html">Cookie Policy</a>.</p>
@@ -527,13 +557,11 @@
         const consent = localStorage.getItem('cookieConsent');
         const banner = document.getElementById('cookieConsent');
         const acceptBtn = document.getElementById('acceptCookies');
-
         if (!consent && banner) {
             setTimeout(() => {
                 banner.classList.add('show');
             }, 500);
         }
-
         if (acceptBtn) {
             acceptBtn.addEventListener('click', function() {
                 localStorage.setItem('cookieConsent', 'accepted');
