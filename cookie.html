@@ -45,6 +45,7 @@
             position: sticky;
             top: 0;
             z-index: 102;
+            /* border-bottom: none – removed dividing line */
             box-shadow: none;
         }
         .header-row {
@@ -116,6 +117,7 @@
         }
         .nav-row {
             background: #fff;
+            /* border-bottom: none – removed dividing line */
             position: sticky;
             z-index: 101;
             transition: transform 0.3s ease, opacity 0.2s ease;
@@ -187,7 +189,7 @@
         }
         main {
             background: #fff;
-            padding: 3rem 0 2.5rem 0;
+            padding: 5rem 0 2.5rem 0;
             margin: 0 auto;
         }
         h1, h2, h3, h4, h5, h6 {
@@ -204,14 +206,7 @@
             font-weight: 600;
             letter-spacing: -0.01em;
         }
-        h2 {
-            font-size: 1.5rem;
-            margin: 1.5rem 0 0.8rem 0;
-            font-weight: 600;
-        }
         p { margin-bottom: 1rem; }
-        ul, ol { margin-left: 2rem; margin-bottom: 1rem; }
-        li { margin-bottom: 0.3rem; }
         .btn {
             display: inline-block;
             background: #000;
@@ -231,6 +226,7 @@
             color: #000;
             text-align: center;
             padding: 1.2rem 0;
+            /* border-top: none – removed dividing line */
         }
         footer a {
             color: #000;
@@ -249,10 +245,9 @@
         }
         @media (max-width: 768px) {
             main {
-                padding: 2rem 0 1.5rem 0;
+                padding: 3rem 0 1.5rem 0;
             }
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
-            h2 { font-size: 1.3rem; }
             .footer-copyright { font-size: 1rem; }
         }
         @media (prefers-color-scheme: dark) {
@@ -460,16 +455,56 @@
     </div>
 </div>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Karki Associates Private Limited",
+  "alternateName": "Karki Associates Law Firm",
+  "description": "Registered law firm in Nepal offering legal, tax, corporate advisory, and research services.",
+  "url": "https://karkiassociates.com.np",
+  "logo": "https://karkiassociates.com.np/images/logo.png",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Pokhara",
+      "addressRegion": "Gandaki Province",
+      "addressCountry": "NP",
+      "streetAddress": "Rastra Bank Chowk, Ward No. 7"
+    },
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Kathmandu",
+      "addressRegion": "Bagmati Province",
+      "addressCountry": "NP",
+      "streetAddress": "Bagbazar, Ward No. 28"
+    }
+  ],
+  "telephone": "+9779851068714",
+  "email": "contact@karkiassociates.com.np",
+  "foundingDate": "2026",
+  "founder": {
+    "@type": "Person",
+    "name": "Anil Karki",
+    "jobTitle": "Advocate & Director"
+  }
+}
+</script>
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
-        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", opinion: "Opinion", contact: "Contact", terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
-        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", opinion: "विचार", contact: "सम्पर्क", terms: "प्रयोगका सर्तहरू", privacy: "गोपनीयता नीति", cookie: "कुकी नीति" }
+        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", opinion: "Opinion", contact: "Contact" },
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", opinion: "विचार", contact: "सम्पर्क" }
+    };
+    const footerTranslations = {
+        en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
+        ne: { terms: "प्रयोगका सर्तहरू", privacy: "गोपनीयता नीति", cookie: "कुकी नीति" }
     };
     function updateUILanguage(lang) {
         document.querySelectorAll('[data-key]').forEach(el => {
             const key = el.getAttribute('data-key');
             if (navTranslations[lang] && navTranslations[lang][key]) el.textContent = navTranslations[lang][key];
+            else if (footerTranslations[lang] && footerTranslations[lang][key]) el.textContent = footerTranslations[lang][key];
         });
         const copyrightEl = document.getElementById('footerCopyright');
         copyrightEl.textContent = (lang === 'ne') ? '© २०८३ कार्की एसोसिएट्स प्राइभेट लिमिटेड' : '© 2026 Karki Associates Private Limited';
