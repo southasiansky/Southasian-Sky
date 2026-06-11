@@ -487,4 +487,30 @@
         hamburger.classList.remove('open');
         hamburger.textContent = '☰';
         isMenuOpen = false;
-        document.body
+        document.body.style.overflow = '';
+    }
+    if (hamburger) {
+        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
+    }
+    const menuLinks = slideMenu.querySelectorAll('a');
+    menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
+    window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
+
+    // Cookie Consent Banner Logic
+    (function() {
+        const consent = localStorage.getItem('cookieConsent');
+        const banner = document.getElementById('cookieConsent');
+        const acceptBtn = document.getElementById('acceptCookies');
+        if (!consent && banner) {
+            setTimeout(() => { banner.classList.add('show'); }, 500);
+        }
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                banner.classList.remove('show');
+            });
+        }
+    })();
+</script>
+</body>
+</html>
