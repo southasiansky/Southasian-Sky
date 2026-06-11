@@ -1,3 +1,6 @@
+Here is the privacy policy page made identical to the master HTML structure, styling, and functionality – only the page-specific content (title, meta, main text) has been changed.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +48,8 @@
             position: sticky;
             top: 0;
             z-index: 102;
-            border-bottom: 1px solid #e0e0e0;
+            /* border-bottom: none – removed dividing line */
+            box-shadow: none;
         }
         .header-row {
             padding: 0.8rem 0;
@@ -116,7 +120,7 @@
         }
         .nav-row {
             background: #fff;
-            border-bottom: 1px solid #e0e0e0;
+            /* border-bottom: none – removed dividing line */
             position: sticky;
             z-index: 101;
             transition: transform 0.3s ease, opacity 0.2s ease;
@@ -131,7 +135,7 @@
             list-style: none;
             justify-content: flex-start;
             gap: 2rem;
-            padding: 0.4rem 0;  /* reduced height */
+            padding: 0.4rem 0;
         }
         .desktop-nav a {
             color: #000;
@@ -205,21 +209,27 @@
             font-weight: 600;
             letter-spacing: -0.01em;
         }
-        h3 {
-            color: #000;
-            margin: 2rem 0 0.8rem 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
         p { margin-bottom: 1rem; }
-        ul { margin-left: 1.8rem; margin-bottom: 1rem; }
-        li { margin-bottom: 0.3rem; }
+        .btn {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 40px;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #000;
+        }
+        .btn:hover { background: #fff; color: #000; border-color: #000; }
         footer {
             background: #fff;
             color: #000;
             text-align: center;
             padding: 1.2rem 0;
-            border-top: 1px solid #e0e0e0;
+            /* border-top: none – removed dividing line */
         }
         footer a {
             color: #000;
@@ -241,7 +251,6 @@
                 padding: 3rem 0 1.5rem 0;
             }
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
-            h3 { font-size: 1.3rem; }
             .footer-copyright { font-size: 1rem; }
         }
         @media (prefers-color-scheme: dark) {
@@ -458,7 +467,7 @@
         <p>We use cookies to remember your language preference and improve your experience on our website. By continuing to use our site, you consent to the use of cookies. For more information, please see our <a href="cookie.html">Cookie Policy</a>.</p>
         <button id="acceptCookies" class="cookie-accept">Accept</button>
     </div>
-</footer>
+</div>
 
 <script type="application/ld+json">
 {
@@ -573,3 +582,4 @@
 </script>
 </body>
 </html>
+```
