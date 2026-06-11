@@ -54,11 +54,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
         .logo a { display: block; transition: opacity 0.2s; }
         .logo a:hover { opacity: 0.85; }
         .logo img { max-height: 95px; width: auto; display: block; }
+        /* Desktop margins as requested */
+        @media (min-width: 769px) {
+            .logo {
+                margin-left: 30px;
+            }
+            .lang-switch {
+                margin-right: 30px;
+            }
+        }
         .lang-switch {
             background: #fff;
             color: #000;
@@ -68,11 +76,11 @@
             cursor: pointer;
             font-weight: bold;
             font-size: 0.9rem;
-            margin-left: 0.5rem;
             font-family: 'Arial', sans-serif;
             transition: all 0.2s;
         }
         .lang-switch:hover { background: #000; color: #fff; border-color: #000; }
+        /* Mobile header styles */
         .mobile-header {
             display: none;
             align-items: center;
@@ -98,6 +106,27 @@
             align-items: center;
             gap: 1rem;
         }
+        @media (max-width: 768px) {
+            .desktop-header { display: none; }
+            .mobile-header { display: flex; }
+            .logo img { max-height: 60px; }
+            body { font-size: 1rem; line-height: 1.6; }
+            .container {
+                padding: 0 16px;
+            }
+            /* Mobile margins as requested */
+            .logo {
+                margin-left: 10px;
+            }
+            .mobile-right {
+                margin-right: 7px;
+            }
+            /* Increase header height slightly on mobile */
+            .header-row {
+                padding: 1rem 0;
+            }
+        }
+        /* Navigation row (desktop) */
         .nav-row {
             background: #fff;
             border-bottom: 1px solid #e0e0e0;
@@ -125,6 +154,7 @@
             transition: color 0.2s;
         }
         .desktop-nav a:hover { color: #444; text-decoration: underline; }
+        /* Mobile slide menu - appears from top:45px as requested */
         .mobile-slide-menu {
             display: none;
             position: fixed;
@@ -158,20 +188,14 @@
             background: #f5f5f5;
         }
         @media (max-width: 768px) {
-            .desktop-header { display: none; }
-            .mobile-header { display: flex; }
-            .logo img { max-height: 60px; }
-            body { font-size: 1rem; line-height: 1.6; }
-            .container {
-                padding: 0 16px;
-            }
             .mobile-slide-menu a {
                 font-size: 1.2rem;
                 padding: 0.6rem;
             }
+            /* Slide menu top offset set to 45px as requested */
             .mobile-slide-menu {
-                top: 65px;
-                height: calc(100vh - 65px);
+                top: 45px;
+                height: calc(100vh - 45px);
             }
             .nav-row {
                 display: none;
@@ -181,8 +205,6 @@
             background: #fff;
             padding: 5rem 0 2.5rem 0;
             margin: 0 auto;
-            border-radius: 0;
-            box-shadow: none;
         }
         h1 {
             color: #000;
@@ -201,6 +223,20 @@
         p { margin-bottom: 1rem; }
         ul { margin-left: 1.8rem; margin-bottom: 1rem; }
         li { margin-bottom: 0.3rem; }
+        .btn {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 40px;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #000;
+        }
+        .btn:hover { background: #fff; color: #000; border-color: #000; }
         footer {
             background: #fff;
             color: #000;
@@ -306,9 +342,7 @@
     <div class="container header-row">
         <div class="desktop-header">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
-            <div class="desktop-nav">
-                <button id="langToggleDesktop" class="lang-switch">ने</button>
-            </div>
+            <button id="langToggleDesktop" class="lang-switch">ने</button>
         </div>
         <div class="mobile-header">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
@@ -348,8 +382,8 @@
 
 <main class="container">
     <div id="en-content">
-        <h1>Karki Associates Private Limited</h1>
-        <h3>Our Firm's Structure</h3>
+        <h1>About Karki Associates</h1>
+        <h3>Our Structure</h3>
         <p>Karki Associates is incorporated as a private limited company under the registered name Karki Associates Private Limited. This corporate structure allows us to function professionally, maintain formal governance, and offer a wide range of legal services under one registered entity. Being a private limited company also means we follow strict standards of record keeping, financial transparency, and regulatory compliance. Every client matter is treated with confidentiality, and every fee transaction is properly accounted for. This structure gives our clients the confidence that they are engaging a well organized and accountable legal partner.</p>
         <h3>Our Mission</h3>
         <p>To provide high quality legal services that are accessible, understandable, and results driven. We aim to be the trusted legal advisor for our clients whether they need courtroom representation, business compliance, or a simple legal document. We also strive to contribute to the community through pro bono legal aid and legal literacy initiatives.</p>
@@ -363,8 +397,8 @@
         <p>Karki Associates is a young firm with deep roots in legal ethics and a forward looking vision. We are not the largest law firm, but we strive to be the most trusted one for every client we serve. We welcome you to reach out, discuss your legal needs, and experience the difference of working with a firm that puts people before paperwork.</p>
     </div>
     <div id="np-content" style="display:none;">
-        <h1>कार्की एसोसिएट्स प्राइभेट लिमिटेड</h1>
-        <h3>हाम्रो फर्मको संरचना</h3>
+        <h1>कार्की एसोसिएट्सको बारेमा</h1>
+        <h3>हाम्रो संरचना</h3>
         <p>कार्की एसोसिएट्स नेपालको कम्पनी ऐन, २०६३ अन्तर्गत प्राइभेट लिमिटेड कम्पनीको रूपमा कार्की एसोसिएट्स प्राइभेट लिमिटेडको नाममा दर्ता भएको छ। यो कर्पोरेट संरचनाले हामीलाई व्यावसायिक रूपमा कार्य गर्न, औपचारिक शासन प्रणाली कायम राख्न र एउटै दर्ता संस्था अन्तर्गत कानूनी सेवाको विस्तृत परिसर प्रदान गर्न सहज बनाएको छ। हामी अभिलेख संरक्षण, वित्तीय पारदर्शिता र नियामक अनुपालनको कडा मापदण्ड पालना गर्दछौँ। प्रत्येक ग्राहकको मुद्दालाई गोपनीयताको साथ व्यवहार गरिन्छ, र प्रत्येक शुल्क कारोबारको उचित लेखा राखिन्छ। यस संरचनाले ग्राहकलाई यो विश्वास दिलाउँछ कि उहाँहरूले एक सुव्यवस्थित, उत्तरदायी र विश्वसनीय कानूनी साझेदार सँग सम्झौता गरिरहनुभएको छ।</p>
         <h3>हाम्रो अभियान</h3>
         <p>उच्च गुणस्तरीय, सुलभ, बुझ्न सकिने र परिणाममुखी कानूनी सेवा प्रदान गर्नु हाम्रो अभियान हो। हामी ग्राहकको विश्वसनीय कानूनी सल्लाहकार बन्ने लक्ष्य राख्दछौँ, चाहे उहाँलाई अदालतमा प्रतिनिधित्व आवश्यक होस्, व्यावसायिक अनुपालनको सल्लाह होस्, वा एउटा साधारण कानूनी कागजातको मात्र आवश्यकता किन नहोस्। साथै, हामी प्रो बोनो कानूनी सहायता तथा कानूनी साक्षरता अभियान मार्फत समुदायमा योगदान गर्न प्रयत्नशील छौँ।</p>
