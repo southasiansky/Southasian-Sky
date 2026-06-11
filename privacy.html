@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karki Associates - Privacy Policy</title>
+    <title>Privacy Policy – Karki Associates</title>
+    <meta name="description" content="Read our privacy policy to understand how Karki Associates collects, uses, and protects your personal information when you visit our website.">
+    <meta name="keywords" content="privacy policy, data protection, personal information, Karki Associates">
+    <meta name="author" content="Karki Associates Private Limited">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://karkiassociates.com.np/privacy.html">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karkiassociates.com.np/privacy.html">
+    <meta property="og:title" content="Privacy Policy – Karki Associates">
+    <meta property="og:description" content="Read our privacy policy to understand how Karki Associates collects, uses, and protects your personal information.">
+    <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://karkiassociates.com.np/privacy.html">
+    <meta property="twitter:title" content="Privacy Policy – Karki Associates">
+    <meta property="twitter:description" content="Read our privacy policy to understand how Karki Associates collects, uses, and protects your personal information.">
+    <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -145,7 +162,7 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.05);
             transition: margin-top 0.3s ease;
         }
-        h2 {
+        h1 {
             color: #000;
             margin-top: 1rem;
             margin-bottom: 1.2rem;
@@ -192,9 +209,17 @@
                 padding: 3rem 1.5rem 1.5rem 1.5rem;
                 border-radius: 0;
             }
-            h2 { font-size: 1.6rem; margin-top: 0.5rem; }
+            h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             h3 { font-size: 1.3rem; }
             .footer-copyright { font-size: 1rem; }
+        }
+        /* Dark mode fix for transparent logo */
+        @media (prefers-color-scheme: dark) {
+            .logo img {
+                background-color: white;
+                border-radius: 4px;
+                padding: 2px;
+            }
         }
     </style>
 </head>
@@ -237,7 +262,7 @@
 <main class="container">
     <!-- English Privacy Policy -->
     <div id="en-content">
-        <h2>Privacy Policy</h2>
+        <h1>Privacy Policy</h1>
         <p><strong>Effective Date: January 1, 2026</strong></p>
         <p>Karki Associates Private Limited (“Company”, “we”, “us”, or “our”) respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (the “Site”). Please read this policy carefully. By using the Site, you consent to the practices described herein.</p>
         <h3>1. Information We Collect</h3>
@@ -279,12 +304,12 @@
         <p>If you have any questions about this Privacy Policy, please contact us at:</p>
         <p><strong>Karki Associates Private Limited</strong><br>
         Pokhara Metropolitan City, Ward No. 7, Kaski District, Nepal<br>
-        Email: karkiassociates@asia.com<br>
+        Email: <a href="mailto:contact@karkiassociates.com.np">contact@karkiassociates.com.np</a><br>
         Phone: +977‑9851068714</p>
     </div>
     <!-- Nepali Privacy Policy -->
     <div id="np-content" style="display:none;">
-        <h2>गोपनीयता नीति</h2>
+        <h1>गोपनीयता नीति</h1>
         <p><strong>प्रभावकारी मिति: २०८२ पुष १६ (जनवरी १, २०२६)</strong></p>
         <p>कार्की एसोसिएट्स प्राइभेट लिमिटेड (“कम्पनी”, “हामी”, “हाम्रो”) तपाईंको गोपनीयताको सम्मान गर्दछ र तपाईंको व्यक्तिगत डाटाको संरक्षण गर्न प्रतिबद्ध छ। यो गोपनीयता नीतिले हाम्रो वेबसाइट (“साइट”) मा तपाईंको भ्रमणको क्रममा हामी कसरी तपाईंको जानकारी सङ्कलन, प्रयोग, खुलासा र संरक्षण गर्दछौं भनी व्याख्या गर्दछ। कृपया यो नीति ध्यानपूर्वक पढ्नुहोस्। साइट प्रयोग गरेर, तपाईं यहाँ वर्णन गरिएका अभ्यासहरूमा सहमति जनाउनुहुन्छ।</p>
         <h3>१. हामीले सङ्कलन गर्ने जानकारी</h3>
@@ -326,7 +351,7 @@
         <p>यस गोपनीयता नीतिको बारेमा कुनै प्रश्न भए, कृपया हामीलाई निम्न ठेगानामा सम्पर्क गर्नुहोस्:</p>
         <p><strong>कार्की एसोसिएट्स प्राइभेट लिमिटेड</strong><br>
         पोखरा महानगरपालिका, वडा नं. ७, कास्की जिल्ला, नेपाल<br>
-        इमेल: karkiassociates@asia.com<br>
+        इमेल: <a href="mailto:contact@karkiassociates.com.np">contact@karkiassociates.com.np</a><br>
         फोन: +977‑9851068714</p>
     </div>
 </main>
@@ -379,7 +404,6 @@
     const hamburger = document.getElementById('hamburgerBtn');
     const slideMenu = document.getElementById('mobileSlideMenu');
     let isMenuOpen = false;
-
     function openMenu() {
         slideMenu.style.display = 'flex';
         hamburger.classList.add('open');
@@ -395,19 +419,11 @@
         document.body.style.overflow = '';
     }
     if (hamburger) {
-        hamburger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (isMenuOpen) closeMenu();
-            else openMenu();
-        });
+        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
     }
     const menuLinks = slideMenu.querySelectorAll('a');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => closeMenu());
-    });
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
-    });
+    menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
+    window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
 </script>
 </body>
 </html>
