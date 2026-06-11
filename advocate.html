@@ -94,6 +94,7 @@
             align-items: center;
             gap: 1rem;
         }
+        /* Desktop navigation row - sticky with gap from header */
         .nav-row {
             background: #fff;
             border-bottom: 1px solid #e0e0e0;
@@ -123,6 +124,7 @@
             transition: color 0.2s;
         }
         .desktop-nav a:hover { color: #444; text-decoration: underline; }
+        /* Mobile slide menu */
         .mobile-slide-menu {
             display: none;
             position: fixed;
@@ -170,7 +172,7 @@
                 height: calc(100vh - 65px);
             }
             .nav-row {
-                display: none;
+                display: none; /* hide separate nav row on mobile, use mobile menu instead */
             }
         }
         main {
@@ -343,6 +345,7 @@
     </div>
 </header>
 
+<!-- Desktop navigation row (exactly as index) -->
 <div class="nav-row" id="navRow">
     <div class="container">
         <div class="desktop-nav">
@@ -469,6 +472,7 @@
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
 
+    // Scroll direction detection for nav row (hide on down, show on up)
     const navRow = document.getElementById('navRow');
     if (navRow && window.innerWidth > 768) {
         let lastScrollY = window.scrollY, ticking = false;
@@ -476,8 +480,11 @@
             if (!ticking) {
                 requestAnimationFrame(() => {
                     const currentScrollY = window.scrollY;
-                    if (currentScrollY > lastScrollY && currentScrollY > 100) navRow.classList.add('hidden');
-                    else if (currentScrollY < lastScrollY) navRow.classList.remove('hidden');
+                    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                        navRow.classList.add('hidden');
+                    } else if (currentScrollY < lastScrollY) {
+                        navRow.classList.remove('hidden');
+                    }
                     lastScrollY = currentScrollY;
                     ticking = false;
                 });
@@ -506,12 +513,18 @@
         document.body.style.overflow = '';
     }
     if (hamburger) {
-        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (isMenuOpen) closeMenu();
+            else openMenu();
+        });
     }
     document.querySelectorAll('.mobile-slide-menu a').forEach(link => {
         link.addEventListener('click', () => closeMenu());
     });
-    window.addEventListener('resize', () => { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
+    });
 
     (function() {
         const consent = localStorage.getItem('cookieConsent');
