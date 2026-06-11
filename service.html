@@ -36,14 +36,18 @@
             margin: 0 auto;
             padding: 0 24px;
         }
+        /* Header row (logo + language + hamburger) - always sticky */
         header {
             background: #fff;
             color: #000;
-            padding: 0.8rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 102;
             border-bottom: 1px solid #e0e0e0;
-            position: relative;
-            z-index: 100;
             box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+        }
+        .header-row {
+            padding: 0.8rem 0;
         }
         .desktop-header {
             display: flex;
@@ -54,20 +58,6 @@
         .logo a { display: block; transition: opacity 0.2s; }
         .logo a:hover { opacity: 0.85; }
         .logo img { max-height: 95px; width: auto; display: block; }
-        .desktop-nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-        .desktop-nav a {
-            color: #000;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.125rem;
-            transition: color 0.2s;
-        }
-        .desktop-nav a:hover { color: #444; text-decoration: underline; }
         .lang-switch {
             background: #fff;
             color: #000;
@@ -107,6 +97,36 @@
             align-items: center;
             gap: 1rem;
         }
+        /* Desktop navigation row (separate) - sticky but hide/show on scroll */
+        .nav-row {
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 79px; /* adjust based on header height */
+            z-index: 101;
+            transition: transform 0.3s ease, opacity 0.2s ease;
+        }
+        .nav-row.hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+        .desktop-nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: flex-start; /* left‑aligned to match index */
+            gap: 2rem;
+            padding: 0.6rem 0;
+        }
+        .desktop-nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.125rem;
+            transition: color 0.2s;
+        }
+        .desktop-nav a:hover { color: #444; text-decoration: underline; }
+        /* Mobile slide menu */
         .mobile-slide-menu {
             display: none;
             position: fixed;
@@ -153,14 +173,16 @@
                 top: 65px;
                 height: calc(100vh - 65px);
             }
+            .nav-row {
+                display: none; /* hide separate nav row on mobile, use mobile menu instead */
+            }
         }
         main {
             background: #fff;
             padding: 5rem 2.5rem 2.5rem 2.5rem;
-            margin: 10rem auto 0 auto;
+            margin: 2rem auto 0 auto;
             border-radius: 0;
             box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-            transition: margin-top 0.3s ease;
         }
         h1 {
             color: #000;
@@ -205,7 +227,7 @@
         }
         @media (max-width: 768px) {
             main {
-                margin: 8rem auto 0 auto;
+                margin: 2rem auto 0 auto;
                 padding: 3rem 1.5rem 1.5rem 1.5rem;
                 border-radius: 0;
             }
@@ -284,20 +306,11 @@
 </head>
 <body>
 <header>
-    <div class="container">
+    <div class="container header-row">
         <div class="desktop-header">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
             <div class="desktop-nav">
-                <ul id="navMenuDesktop">
-                    <li><a href="index.html" data-key="home">Home</a></li>
-                    <li><a href="about.html" data-key="about">About</a></li>
-                    <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
-                    <li><a href="service.html" data-key="services">Services</a></li>
-                    <li><a href="blog.html" data-key="blog">Blog</a></li>
-                    <li><a href="opinion.html" data-key="opinion">Opinion</a></li>
-                    <li><a href="contact.html" data-key="contact">Contact</a></li>
-                    <li><button id="langToggleDesktop" class="lang-switch">ने</button></li>
-                </ul>
+                <button id="langToggleDesktop" class="lang-switch">ने</button>
             </div>
         </div>
         <div class="mobile-header">
@@ -307,17 +320,36 @@
                 <button class="hamburger" id="hamburgerBtn">☰</button>
             </div>
         </div>
-        <div id="mobileSlideMenu" class="mobile-slide-menu">
-            <a href="index.html" data-key="home">Home</a>
-            <a href="about.html" data-key="about">About</a>
-            <a href="advocate.html" data-key="advocate">Advocate</a>
-            <a href="service.html" data-key="services">Services</a>
-            <a href="blog.html" data-key="blog">Blog</a>
-            <a href="opinion.html" data-key="opinion">Opinion</a>
-            <a href="contact.html" data-key="contact">Contact</a>
-        </div>
     </div>
 </header>
+
+<!-- Desktop navigation row (separate, left‑aligned) -->
+<div class="nav-row" id="navRow">
+    <div class="container">
+        <div class="desktop-nav">
+            <ul id="navMenuDesktop">
+                <li><a href="index.html" data-key="home">Home</a></li>
+                <li><a href="about.html" data-key="about">About</a></li>
+                <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
+                <li><a href="service.html" data-key="services">Services</a></li>
+                <li><a href="blog.html" data-key="blog">Blog</a></li>
+                <li><a href="opinion.html" data-key="opinion">Opinion</a></li>
+                <li><a href="contact.html" data-key="contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="mobileSlideMenu" class="mobile-slide-menu">
+    <a href="index.html" data-key="home">Home</a>
+    <a href="about.html" data-key="about">About</a>
+    <a href="advocate.html" data-key="advocate">Advocate</a>
+    <a href="service.html" data-key="services">Services</a>
+    <a href="blog.html" data-key="blog">Blog</a>
+    <a href="opinion.html" data-key="opinion">Opinion</a>
+    <a href="contact.html" data-key="contact">Contact</a>
+</div>
+
 <main class="container">
     <!-- English content -->
     <div id="en-content">
@@ -351,9 +383,10 @@
         <h3>कानूनी अनुसन्धान तथा नीति सल्लाह</h3>
         <p>प्रभावकारी कानूनी सल्लाह गहन अनुसन्धानमा टिकेको हुन्छ। हामी संवैधानिक कानून, फौजदारी न्याय, भूमि अधिकार, लैङ्गिक न्याय, न्यायमा पहुँच, अदालतको ढिलासुस्ती, र नियामक सुधार लगायत विस्तृत विषयगत क्षेत्रमा सैद्धान्तिक तथा अनुभवजन्य कानूनी अनुसन्धान सञ्चालन गर्दछौँ। हाम्रो अनुसन्धान सेवा कानून फर्महरू, गैरसरकारी संस्थाहरू, सरकारी निकायहरू र अन्तर्राष्ट्रिय एजेन्सीहरू का लागि उपलब्ध छ। हामी कानूनी राय, विधेयकको प्रभाव मूल्याङ्कन, नीति संक्षिप्तिकरण तथा पृष्ठभूमि पत्र तयार गर्दछौँ। साथै, हामी ग्राहकहरूलाई अनुदान आवेदनको लागि अनुसन्धान प्रस्ताव तयार गर्न सहायता गर्दछौँ। यदि तपाईंलाई कुनै कानूनी प्रश्नमा विस्तृत ज्ञापन वा नयाँ कानूनको विश्लेषण चाहिन्छ भने, हामी सुसंरचित, उद्धरण-समृद्ध र कार्यान्वयनयोग्य परिणामहरू प्रदान गर्दछौँ।</p>
         <h3>कानूनी प्रक्रिया आउटसोर्सिङ तथा कानून फर्महरूका लागि सहायता</h3>
-        <p>हामी बुझ्दछौँ कि कानून व्यवसायीहरू प्रायः भारी कार्यभार र कडा समयसीमाको सामना गर्छन्। हाम्रो कानूनी प्रक्रिया आउटसोर्सिङ सेवा अन्य कानून फर्महरू र व्यक्तिगत अधिवक्ताहरूलाई सहायता गर्न डिजाइन गरिएको छ। हामी कानूनी अनुसन्धान तथा न्यायिक नजिर विश्लेषण, बहसपत्र (फिरादपत्र, लिखित जवाफ, निवेदन, पुनरावेदन) तथा कानूनी सूचनाको मस्यौदा, प्यारालिगल सहायता (कागजात व्यवस्थापन, प्रमाण सूचीकरण) प्रदान गर्दछौँ। सबै काम गोपनीय र समयमै गरिन्छ, जसले गर्दा तपाईं अदालत उपस्थिति र ग्राहक सम्बन्धमा केन्द्रित हुन सक्नुहुन्छ। हामी तपाईंको अभ्यासको विस्तारको रूपमा काम गर्दछौँ, प्रतिस्पर्धीको रूपमा होइन।</p>
+        <p>हामी बुझ्दछौँ कि कानून व्यवसायीहरू प्रायः भारी कार्यभार र कडा समयसीमाको सामना गर्छन्। हाम्रो कानूनी प्रक्रिया आउटसोर्सिङ सेवा अन्य कानून फर्महरू र व्यक्तिगत अधिवक्ताहरूलाई सहायता गर्न डिजाइन गरिएको छ। हामी कानूनी अनुसन्धान तथा न्यायिक नजिर विश्लेषण, बहसपत्र (फिरादपत्र, लिखित जवाफ, निवेदन, पुनरावेदन) तथा कानूनी सूचनाको मस्यौदा, प्यारालिगल सहायता प्रदान गर्दछौँ। सबै काम गोपनीय र समयमै गरिन्छ, जसले गर्दा तपाईं अदालत उपस्थिति र ग्राहक सम्बन्धमा केन्द्रित हुन सक्नुहुन्छ। हामी तपाईंको अभ्यासको विस्तारको रूपमा काम गर्दछौँ, प्रतिस्पर्धीको रूपमा होइन।</p>
     </div>
 </main>
+
 <footer>
     <div class="container">
         <div class="footer-policy" id="footerPolicyLinks">
@@ -478,6 +511,30 @@
     function toggleLanguage() { setLanguage(currentLanguage === 'en' ? 'ne' : 'en'); }
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
+
+    // Scroll direction detection for nav row
+    const navRow = document.getElementById('navRow');
+    if (navRow && window.innerWidth > 768) {
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+        function onScroll() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const currentScrollY = window.scrollY;
+                    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                        navRow.classList.add('hidden');
+                    } else if (currentScrollY < lastScrollY) {
+                        navRow.classList.remove('hidden');
+                    }
+                    lastScrollY = currentScrollY;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+        window.addEventListener('scroll', onScroll);
+        navRow.classList.remove('hidden');
+    }
 
     const hamburger = document.getElementById('hamburgerBtn');
     const slideMenu = document.getElementById('mobileSlideMenu');
