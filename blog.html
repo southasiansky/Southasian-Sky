@@ -229,6 +229,14 @@
             .post-title a { font-size: 1.2rem; }
             .footer-copyright { font-size: 1rem; }
         }
+        /* Dark mode fix for transparent logo */
+        @media (prefers-color-scheme: dark) {
+            .logo img {
+                background-color: white;
+                border-radius: 4px;
+                padding: 2px;
+            }
+        }
     </style>
 </head>
 <body>
