@@ -21,6 +21,7 @@
     <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
+        /* === EXACT SAME CSS AS INDEX.HTML === */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Arial', sans-serif;
@@ -94,6 +95,7 @@
             align-items: center;
             gap: 1rem;
         }
+        /* NAVIGATION BAR - EXACT SAME AS INDEX */
         .nav-row {
             background: #fff;
             border-bottom: 1px solid #e0e0e0;
@@ -101,7 +103,7 @@
             top: 79px;
             z-index: 101;
             transition: transform 0.3s ease, opacity 0.2s ease;
-            margin-top: 0.8rem;   /* gap between header and nav bar */
+            margin-top: 0.8rem;
         }
         .nav-row.hidden {
             transform: translateY(-100%);
@@ -123,6 +125,7 @@
             transition: color 0.2s;
         }
         .desktop-nav a:hover { color: #444; text-decoration: underline; }
+        /* Mobile slide menu */
         .mobile-slide-menu {
             display: none;
             position: fixed;
@@ -315,6 +318,7 @@
     </div>
 </header>
 
+<!-- EXACT NAVIGATION BAR AS INDEX -->
 <div class="nav-row" id="navRow">
     <div class="container">
         <div class="desktop-nav">
@@ -397,15 +401,13 @@
   "@context": "https://schema.org",
   "@type": "AboutPage",
   "name": "About Karki Associates Private Limited",
-  "description": "Registered law firm in Nepal offering legal, tax, corporate advisory, and research services. Learn about our firm structure, mission, and core values.",
+  "description": "Registered law firm in Nepal offering legal, tax, corporate advisory, and research services.",
   "url": "https://karkiassociates.com.np/about.html",
-  "isPartOf": {
-    "@type": "LegalService",
-    "name": "Karki Associates Private Limited"
-  }
+  "isPartOf": { "@type": "LegalService", "name": "Karki Associates Private Limited" }
 }
 </script>
 <script>
+    // === EXACT SAME SCRIPT AS INDEX.HTML ===
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
         en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", opinion: "Opinion", contact: "Contact" },
@@ -439,18 +441,13 @@
 
     const navRow = document.getElementById('navRow');
     if (navRow && window.innerWidth > 768) {
-        let lastScrollY = window.scrollY;
-        let ticking = false;
+        let lastScrollY = window.scrollY, ticking = false;
         function onScroll() {
             if (!ticking) {
                 requestAnimationFrame(() => {
                     const currentScrollY = window.scrollY;
-                    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                        navRow.classList.add('hidden');
-                    }
-                    else if (currentScrollY < lastScrollY) {
-                        navRow.classList.remove('hidden');
-                    }
+                    if (currentScrollY > lastScrollY && currentScrollY > 100) navRow.classList.add('hidden');
+                    else if (currentScrollY < lastScrollY) navRow.classList.remove('hidden');
                     lastScrollY = currentScrollY;
                     ticking = false;
                 });
@@ -485,26 +482,15 @@
             else openMenu();
         });
     }
-    document.querySelectorAll('.mobile-slide-menu a').forEach(link => {
-        link.addEventListener('click', () => closeMenu());
-    });
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
-    });
+    document.querySelectorAll('.mobile-slide-menu a').forEach(link => link.addEventListener('click', () => closeMenu()));
+    window.addEventListener('resize', () => { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
 
     (function() {
         const consent = localStorage.getItem('cookieConsent');
         const banner = document.getElementById('cookieConsent');
         const acceptBtn = document.getElementById('acceptCookies');
-        if (!consent && banner) {
-            setTimeout(() => banner.classList.add('show'), 500);
-        }
-        if (acceptBtn) {
-            acceptBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'accepted');
-                banner.classList.remove('show');
-            });
-        }
+        if (!consent && banner) setTimeout(() => banner.classList.add('show'), 500);
+        if (acceptBtn) acceptBtn.addEventListener('click', () => { localStorage.setItem('cookieConsent', 'accepted'); banner.classList.remove('show'); });
     })();
 </script>
 </body>
