@@ -9,13 +9,11 @@
     <meta name="author" content="Karki Associates Private Limited">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://karkiassociates.com.np/opinion.html">
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://karkiassociates.com.np/opinion.html">
     <meta property="og:title" content="Opinion & Analysis – Legal Commentary on FATF, Reforms in Nepal">
     <meta property="og:description" content="Expert legal opinions on Nepal’s anti‑money laundering framework, FATF grey‑listing, and regulatory reforms.">
     <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://karkiassociates.com.np/opinion.html">
     <meta property="twitter:title" content="Opinion & Analysis – Legal Commentary on FATF, Reforms in Nepal">
@@ -29,14 +27,18 @@
             font-size: 1.125rem;
             line-height: 1.7;
             color: #111;
-            background: #f8f8f8;
+            background: #fff;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 24px;
         }
-        /* Header row (logo + language + hamburger) - always sticky */
+        @media (min-width: 769px) {
+            .container {
+                padding: 0 48px;
+            }
+        }
         header {
             background: #fff;
             color: #000;
@@ -44,7 +46,6 @@
             top: 0;
             z-index: 102;
             border-bottom: 1px solid #e0e0e0;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
         }
         .header-row {
             padding: 0.8rem 0;
@@ -53,11 +54,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
         .logo a { display: block; transition: opacity 0.2s; }
         .logo a:hover { opacity: 0.85; }
         .logo img { max-height: 95px; width: auto; display: block; }
+        @media (min-width: 769px) {
+            .logo {
+                margin-left: 30px;
+            }
+            .lang-switch {
+                margin-right: 30px;
+            }
+        }
         .lang-switch {
             background: #fff;
             color: #000;
@@ -67,7 +75,6 @@
             cursor: pointer;
             font-weight: bold;
             font-size: 0.9rem;
-            margin-left: 0.5rem;
             font-family: 'Arial', sans-serif;
             transition: all 0.2s;
         }
@@ -97,12 +104,20 @@
             align-items: center;
             gap: 1rem;
         }
-        /* Desktop navigation row (separate) - sticky but hide/show on scroll */
+        @media (max-width: 768px) {
+            .desktop-header { display: none; }
+            .mobile-header { display: flex; }
+            .logo img { max-height: 60px; }
+            body { font-size: 1rem; line-height: 1.6; }
+            .container { padding: 0 16px; }
+            .logo { margin-left: 10px; }
+            .mobile-right { margin-right: 7px; }
+            .header-row { padding: 1rem 0; }
+        }
         .nav-row {
             background: #fff;
             border-bottom: 1px solid #e0e0e0;
             position: sticky;
-            top: 79px; /* adjust based on header height */
             z-index: 101;
             transition: transform 0.3s ease, opacity 0.2s ease;
         }
@@ -114,7 +129,7 @@
         .desktop-nav ul {
             display: flex;
             list-style: none;
-            justify-content: flex-start; /* left‑aligned to match index */
+            justify-content: flex-start;
             gap: 2rem;
             padding: 0.6rem 0;
         }
@@ -126,7 +141,6 @@
             transition: color 0.2s;
         }
         .desktop-nav a:hover { color: #444; text-decoration: underline; }
-        /* Mobile slide menu */
         .mobile-slide-menu {
             display: none;
             position: fixed;
@@ -160,29 +174,22 @@
             background: #f5f5f5;
         }
         @media (max-width: 768px) {
-            .desktop-header { display: none; }
-            .mobile-header { display: flex; }
-            .logo img { max-height: 60px; }
-            body { font-size: 1rem; line-height: 1.6; }
-            .container { padding: 0 16px; }
             .mobile-slide-menu a {
                 font-size: 1.2rem;
                 padding: 0.6rem;
             }
             .mobile-slide-menu {
-                top: 65px;
-                height: calc(100vh - 65px);
+                top: 45px;
+                height: calc(100vh - 45px);
             }
             .nav-row {
-                display: none; /* hide separate nav row on mobile, use mobile menu instead */
+                display: none;
             }
         }
         main {
             background: #fff;
-            padding: 5rem 2.5rem 2.5rem 2.5rem;
-            margin: 2rem auto 0 auto;
-            border-radius: 0;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            padding: 5rem 0 2.5rem 0;
+            margin: 0 auto;
         }
         h1 {
             color: #000;
@@ -195,7 +202,7 @@
         .opinion-post {
             margin-bottom: 2rem;
             padding-bottom: 1.5rem;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #e0e0e0;
         }
         .post-title {
             margin-bottom: 0.3rem;
@@ -223,7 +230,6 @@
             text-align: center;
             padding: 1.2rem 0;
             border-top: 1px solid #e0e0e0;
-            margin-top: 0;
         }
         footer a {
             color: #000;
@@ -239,19 +245,15 @@
             margin: 0.3rem 0;
             font-size: 1rem;
             font-weight: 500;
-            letter-spacing: normal;
         }
         @media (max-width: 768px) {
             main {
-                margin: 2rem auto 0 auto;
-                padding: 3rem 1.5rem 1.5rem 1.5rem;
-                border-radius: 0;
+                padding: 3rem 0 1.5rem 0;
             }
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             .post-title a { font-size: 1.2rem; }
             .footer-copyright { font-size: 1rem; }
         }
-        /* Dark mode fix for transparent logo */
         @media (prefers-color-scheme: dark) {
             .logo img {
                 background-color: white;
@@ -259,7 +261,6 @@
                 padding: 2px;
             }
         }
-        /* Cookie Consent Banner Styles */
         .cookie-consent {
             position: fixed;
             bottom: 0;
@@ -277,13 +278,14 @@
             transform: translateY(0);
         }
         .cookie-consent-inner {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 1rem;
+            padding: 0 48px;
         }
         .cookie-consent p {
             margin: 0;
@@ -307,7 +309,6 @@
             cursor: pointer;
             font-weight: bold;
             font-size: 0.9rem;
-            transition: background 0.2s;
         }
         .cookie-accept:hover {
             background: #ffc107;
@@ -316,6 +317,7 @@
             .cookie-consent-inner {
                 flex-direction: column;
                 text-align: center;
+                padding: 0 16px;
             }
         }
     </style>
@@ -325,9 +327,7 @@
     <div class="container header-row">
         <div class="desktop-header">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
-            <div class="desktop-nav">
-                <button id="langToggleDesktop" class="lang-switch">ने</button>
-            </div>
+            <button id="langToggleDesktop" class="lang-switch">ने</button>
         </div>
         <div class="mobile-header">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
@@ -339,7 +339,6 @@
     </div>
 </header>
 
-<!-- Desktop navigation row (separate, left‑aligned) -->
 <div class="nav-row" id="navRow">
     <div class="container">
         <div class="desktop-nav">
@@ -367,7 +366,6 @@
 </div>
 
 <main class="container">
-    <!-- English Opinion Posts -->
     <div id="en-content">
         <h1>Opinion & Analysis</h1>
         <div class="opinion-post">
@@ -389,7 +387,7 @@
             </div>
         </div>
     </div>
-    <!-- Nepali Opinion Posts -->
+
     <div id="np-content" style="display:none;">
         <h1>विचार तथा विश्लेषण</h1>
         <div class="opinion-post">
@@ -424,7 +422,6 @@
     </div>
 </footer>
 
-<!-- Cookie Consent Banner HTML -->
 <div id="cookieConsent" class="cookie-consent">
     <div class="cookie-consent-inner">
         <p>We use cookies to remember your language preference and improve your experience on our website. By continuing to use our site, you consent to the use of cookies. For more information, please see our <a href="cookie.html">Cookie Policy</a>.</p>
@@ -444,19 +441,8 @@
         "@type": "BlogPosting",
         "headline": "Avoiding Nepal's FATF Grey-listing",
         "datePublished": "2025-02-04",
-        "dateModified": "2025-02-04",
-        "author": {
-          "@type": "Organization",
-          "name": "Karki Associates Private Limited"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Karki Associates Private Limited",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://karkiassociates.com.np/images/logo.png"
-          }
-        },
+        "author": { "@type": "Organization", "name": "Karki Associates Private Limited" },
+        "publisher": { "@type": "Organization", "name": "Karki Associates Private Limited" },
         "url": "https://myrepublica.nagariknetwork.com/news/avoiding-nepals-fatf-grey-listing-59-64.html",
         "description": "Analysis of Nepal's failure to implement AML/CFT reforms and its continued risk of FATF grey-listing."
       }
@@ -468,19 +454,8 @@
         "@type": "BlogPosting",
         "headline": "Combating money laundering in Nepal",
         "datePublished": "2023-07-21",
-        "dateModified": "2023-07-21",
-        "author": {
-          "@type": "Organization",
-          "name": "Karki Associates Private Limited"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Karki Associates Private Limited",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://karkiassociates.com.np/images/logo.png"
-          }
-        },
+        "author": { "@type": "Organization", "name": "Karki Associates Private Limited" },
+        "publisher": { "@type": "Organization", "name": "Karki Associates Private Limited" },
         "url": "https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal",
         "description": "Stakeholder concerns about Nepal's potential FATF blacklisting due to deficiencies in anti-money laundering laws."
       }
@@ -508,11 +483,7 @@
             else if (footerTranslations[lang] && footerTranslations[lang][key]) el.textContent = footerTranslations[lang][key];
         });
         const copyrightEl = document.getElementById('footerCopyright');
-        if (lang === 'ne') {
-            copyrightEl.textContent = '© २०८३ कार्की एसोसिएट्स प्राइभेट लिमिटेड';
-        } else {
-            copyrightEl.textContent = '© 2026 Karki Associates Private Limited';
-        }
+        copyrightEl.textContent = (lang === 'ne') ? '© २०८३ कार्की एसोसिएट्स प्राइभेट लिमिटेड' : '© 2026 Karki Associates Private Limited';
         document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = (lang === 'en') ? 'ने' : 'E');
     }
     function setLanguage(lang) {
@@ -527,7 +498,18 @@
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
 
-    // Scroll direction detection for nav row
+    function setNavRowTop() {
+        const navRow = document.getElementById('navRow');
+        if (!navRow) return;
+        const header = document.querySelector('header');
+        if (header) {
+            const headerHeight = header.offsetHeight;
+            navRow.style.top = headerHeight + 'px';
+        }
+    }
+    window.addEventListener('load', setNavRowTop);
+    window.addEventListener('resize', setNavRowTop);
+
     const navRow = document.getElementById('navRow');
     if (navRow && window.innerWidth > 768) {
         let lastScrollY = window.scrollY;
@@ -569,30 +551,21 @@
         document.body.style.overflow = '';
     }
     if (hamburger) {
-        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (isMenuOpen) closeMenu();
+            else openMenu();
+        });
     }
-    const menuLinks = slideMenu.querySelectorAll('a');
-    menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
-    window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
+    document.querySelectorAll('.mobile-slide-menu a').forEach(link => link.addEventListener('click', () => closeMenu()));
+    window.addEventListener('resize', () => { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
 
-    // Cookie Consent Banner Logic
     (function() {
         const consent = localStorage.getItem('cookieConsent');
         const banner = document.getElementById('cookieConsent');
         const acceptBtn = document.getElementById('acceptCookies');
-
-        if (!consent && banner) {
-            setTimeout(() => {
-                banner.classList.add('show');
-            }, 500);
-        }
-
-        if (acceptBtn) {
-            acceptBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'accepted');
-                banner.classList.remove('show');
-            });
-        }
+        if (!consent && banner) setTimeout(() => banner.classList.add('show'), 500);
+        if (acceptBtn) acceptBtn.addEventListener('click', () => { localStorage.setItem('cookieConsent', 'accepted'); banner.classList.remove('show'); });
     })();
 </script>
 </body>
