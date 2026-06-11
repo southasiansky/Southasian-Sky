@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Karki Associates – Law Firm in Pokhara & Kathmandu</title>
-    <meta name="description" content="Contact our law firm. Registered office at Rastra Bank Chowk, Pokhara. Branch office at Bagbazar, Kathmandu. Phone, email, and contact form for legal inquiries.">
+    <meta name="description" content="Contact our law firm. Registered office at Rastra Bank Chowk, Pokhara. Branch office at Bagbazar, Kathmandu. Phone and email for legal inquiries.">
     <meta name="keywords" content="contact lawyer Nepal, law firm Pokhara, Kathmandu legal office, advocate contact, Karki Associates">
     <meta name="author" content="Karki Associates Private Limited">
     <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://karkiassociates.com.np/contact.html">
     <meta property="og:title" content="Contact Karki Associates – Law Firm in Pokhara & Kathmandu">
-    <meta property="og:description" content="Contact our law firm. Offices in Pokhara and Kathmandu. Phone, email, and contact form for legal inquiries.">
+    <meta property="og:description" content="Contact our law firm. Offices in Pokhara and Kathmandu. Phone and email for legal inquiries.">
     <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://karkiassociates.com.np/contact.html">
     <meta property="twitter:title" content="Contact Karki Associates – Law Firm in Pokhara & Kathmandu">
-    <meta property="twitter:description" content="Contact our law firm. Offices in Pokhara and Kathmandu. Phone, email, and contact form for legal inquiries.">
+    <meta property="twitter:description" content="Contact our law firm. Offices in Pokhara and Kathmandu. Phone and email for legal inquiries.">
     <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
@@ -175,41 +175,30 @@
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
-        .contact-info, .contact-form {
+        .contact-info, .contact-email-section {
             background: #f8f8f8;
             padding: 1.5rem;
             border-radius: 8px;
         }
         .contact-info p { margin-bottom: 1rem; }
         .contact-info strong { color: #000; }
-        .form-group { margin-bottom: 1rem; }
-        .form-group label {
-            display: block;
-            margin-bottom: 0.3rem;
-            font-weight: 500;
-            color: #000;
-        }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 0.7rem;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-family: 'Arial', sans-serif;
-            font-size: 1rem;
-        }
-        .btn-submit {
+        .email-link {
+            display: inline-block;
             background: #000;
             color: #fff;
-            border: none;
+            text-decoration: none;
             padding: 0.7rem 1.5rem;
             border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1rem;
+            margin-top: 1rem;
             transition: background 0.3s;
-            font-family: 'Arial', sans-serif;
+            font-weight: bold;
         }
-        .btn-submit:hover { background: #333; }
+        .email-link:hover {
+            background: #333;
+        }
+        .direct-email {
+            word-break: break-all;
+        }
         footer {
             background: #fff;
             color: #000;
@@ -243,6 +232,14 @@
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
             .footer-copyright { font-size: 1rem; }
+        }
+        /* Dark mode fix for logo */
+        @media (prefers-color-scheme: dark) {
+            .logo img {
+                background-color: white;
+                border-radius: 4px;
+                padding: 2px;
+            }
         }
     </style>
 </head>
@@ -299,46 +296,17 @@
                 Kathmandu Metropolitan City, Ward No. 28<br>
                 Kathmandu District, Bagmati Province, Nepal</p>
                 <p><strong>Phone</strong><br>
-                +977‑9851068714</p>
+                <a href="tel:+9779851068714">+977‑9851068714</a></p>
                 <p><strong>Official Email</strong><br>
-                contact@karkiassociates.com.np</p>
+                <a href="mailto:contact@karkiassociates.com.np?subject=Legal%20Inquiry%20via%20Website" class="direct-email">contact@karkiassociates.com.np</a></p>
                 <p><strong>Advocate Email</strong><br>
-                anil@karkiassociates.com.np</p>
+                <a href="mailto:anil@karkiassociates.com.np?subject=Legal%20Consultation%20Request" class="direct-email">anil@karkiassociates.com.np</a></p>
             </div>
-            <div class="contact-form">
-                <form id="contactFormEn" action="https://formsubmit.co/contact@karkiassociates.com.np" method="POST">
-                    <input type="hidden" name="_subject" value="New Contact Form Submission - Karki Associates">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="thankyou.html">
-                    <div class="form-group">
-                        <label for="nameEn">Full Name *</label>
-                        <input type="text" id="nameEn" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="emailEn">Email Address *</label>
-                        <input type="email" id="emailEn" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phoneEn">Phone Number</label>
-                        <input type="tel" id="phoneEn" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="subjectEn">Subject *</label>
-                        <select id="subjectEn" name="subject" required>
-                            <option value="">-- Select --</option>
-                            <option value="Legal Consultation">Legal Consultation</option>
-                            <option value="Management Consulting">Management Consulting</option>
-                            <option value="Research Support">Research Support</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="messageEn">Message *</label>
-                        <textarea id="messageEn" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Send Message</button>
-                    <p style="font-size:0.8rem; margin-top:1rem; color:#555;">We will respond within 1‑2 business days. Do not share confidential information.</p>
-                </form>
+            <div class="contact-email-section">
+                <p><strong>Send us an email</strong></p>
+                <p>Click the button below to open your default email client. Please include your name, contact number, and a brief description of your legal matter. We will respond within 1‑2 business days.</p>
+                <a href="mailto:contact@karkiassociates.com.np?subject=Legal%20Inquiry%20via%20Website&body=Dear%20Karki%20Associates%2C%0A%0APlease%20find%20my%20inquiry%20below%3A%0A%0AName%3A%0APhone%3A%0AMessage%3A%0A%0AThank%20you." class="email-link">Send Email</a>
+                <p style="font-size:0.8rem; margin-top:1rem; color:#555;">Your email client will open. After sending, we will get back to you promptly. Do not share confidential information via unencrypted email.</p>
             </div>
         </div>
     </div>
@@ -358,46 +326,17 @@
                 काठमाडौं महानगरपालिका, वडा नं. २८<br>
                 काठमाडौं जिल्ला, बागमती प्रदेश, नेपाल</p>
                 <p><strong>फोन</strong><br>
-                +977‑9851068714</p>
+                <a href="tel:+9779851068714">+977‑9851068714</a></p>
                 <p><strong>आधिकारिक इमेल</strong><br>
-                contact@karkiassociates.com.np</p>
+                <a href="mailto:contact@karkiassociates.com.np?subject=कानूनी%20जानकारी%20वेबसाइट%20बाट" class="direct-email">contact@karkiassociates.com.np</a></p>
                 <p><strong>अधिवक्ताको इमेल</strong><br>
-                anil@karkiassociates.com.np</p>
+                <a href="mailto:anil@karkiassociates.com.np?subject=कानूनी%20परामर्श%20अनुरोध" class="direct-email">anil@karkiassociates.com.np</a></p>
             </div>
-            <div class="contact-form">
-                <form id="contactFormNp" action="https://formsubmit.co/contact@karkiassociates.com.np" method="POST">
-                    <input type="hidden" name="_subject" value="नयाँ सम्पर्क फारम - कार्की एसोसिएट्स">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="thankyou.html">
-                    <div class="form-group">
-                        <label for="nameNp">पूरा नाम *</label>
-                        <input type="text" id="nameNp" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="emailNp">इमेल ठेगाना *</label>
-                        <input type="email" id="emailNp" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phoneNp">फोन नम्बर</label>
-                        <input type="tel" id="phoneNp" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="subjectNp">विषय *</label>
-                        <select id="subjectNp" name="subject" required>
-                            <option value="">-- चयन गर्नुहोस् --</option>
-                            <option value="Legal Consultation">कानूनी परामर्श</option>
-                            <option value="Management Consulting">व्यवस्थापन परामर्श</option>
-                            <option value="Research Support">अनुसन्धान सहायता</option>
-                            <option value="Other">अन्य</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="messageNp">सन्देश *</label>
-                        <textarea id="messageNp" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">सन्देश पठाउनुहोस्</button>
-                    <p style="font-size:0.8rem; margin-top:1rem; color:#555;">हामी १-२ व्यावसायिक दिनभित्र जवाफ दिनेछौं। गोप्य जानकारी नपठाउनुहोस्।</p>
-                </form>
+            <div class="contact-email-section">
+                <p><strong>हामीलाई इमेल पठाउनुहोस्</strong></p>
+                <p>तपाईंको इमेल क्लाइन्ट खोल्न तलको बटनमा क्लिक गर्नुहोस्। कृपया आफ्नो नाम, सम्पर्क नम्बर र कानूनी विषयको संक्षिप्त विवरण लेख्नुहोस्। हामी १-२ व्यावसायिक दिनभित्र जवाफ दिनेछौं।</p>
+                <a href="mailto:contact@karkiassociates.com.np?subject=कानूनी%20जानकारी%20वेबसाइट%20बाट&body=प्रिय%20कार्की%20एसोसिएट्स%2C%0A%0Aमेरो%20प्रश्न%20तल%20उल्लेख%20गरेको%20छु%3A%0A%0Aनाम%3A%0Aफोन%3A%0Aसन्देश%3A%0A%0Aधन्यवाद%20।" class="email-link">इमेल पठाउनुहोस्</a>
+                <p style="font-size:0.8rem; margin-top:1rem; color:#555;">तपाईंको इमेल क्लाइन्ट खुल्नेछ। पठाएपछि हामी छिटो प्रतिक्रिया दिनेछौं। कृपया असुरक्षित इमेलमा गोप्य जानकारी नपठाउनुहोस्।</p>
             </div>
         </div>
     </div>
@@ -417,7 +356,7 @@
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "name": "Contact Karki Associates",
-  "description": "Contact our law firm in Pokhara and Kathmandu. Get in touch via phone, email, or contact form.",
+  "description": "Contact our law firm in Pokhara and Kathmandu. Get in touch via phone or email.",
   "url": "https://karkiassociates.com.np/contact.html",
   "mainEntity": {
     "@type": "LocalBusiness",
