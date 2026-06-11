@@ -191,6 +191,12 @@
             padding: 5rem 0 2.5rem 0;
             margin: 0 auto;
         }
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left;
+        }
+        p, li, .contact-info p, .form-group label, .form-group input, .form-group select, .form-group textarea, .btn-submit {
+            text-align: justify;
+        }
         h1 {
             color: #000;
             margin-top: 1rem;
@@ -199,14 +205,56 @@
             font-weight: 600;
             letter-spacing: -0.01em;
         }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .contact-info, .contact-form {
+            background: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
         .contact-info p {
             margin-bottom: 1rem;
+            text-align: left;
         }
         .contact-info strong {
             color: #000;
         }
         .direct-email {
             word-break: break-all;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+            color: #000;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: 'Arial', sans-serif;
+            font-size: 1rem;
+        }
+        .btn-submit {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .btn-submit:hover {
+            background: #333;
         }
         footer {
             background: #fff;
@@ -235,6 +283,10 @@
                 padding: 3rem 0 1.5rem 0;
             }
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
             .footer-copyright { font-size: 1rem; }
         }
         @media (prefers-color-scheme: dark) {
@@ -351,44 +403,114 @@
 <main class="container">
     <div id="en-content">
         <h1>Contact Us</h1>
-        <div class="contact-info">
-            <p><strong>Registered Office</strong><br>
-            Karki Associates Private Limited<br>
-            Rastra Bank Chowk (In the building of Juice Box)<br>
-            Pokhara Metropolitan City, Ward No. 7<br>
-            Kaski District, Gandaki Province, Nepal</p>
-            <p><strong>Branch Office</strong><br>
-            Karki Associates Private Limited<br>
-            Bagbazar (Opposite of GEFONT Office)<br>
-            Kathmandu Metropolitan City, Ward No. 28<br>
-            Kathmandu District, Bagmati Province, Nepal</p>
-            <p><strong>Phone</strong><br>
-            <a href="tel:+9779851068714">+977‑9851068714</a></p>
-            <p><strong>Official Email</strong><br>
-            <a href="mailto:contact@karkiassociates.com.np" class="direct-email">contact@karkiassociates.com.np</a></p>
-            <p><strong>Advocate Email</strong><br>
-            <a href="mailto:anil@karkiassociates.com.np" class="direct-email">anil@karkiassociates.com.np</a></p>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>Registered Office</strong><br>
+                Karki Associates Private Limited<br>
+                Rastra Bank Chowk (In the building of Juice Box)<br>
+                Pokhara Metropolitan City, Ward No. 7<br>
+                Kaski District, Gandaki Province, Nepal</p>
+                <p><strong>Branch Office</strong><br>
+                Karki Associates Private Limited<br>
+                Bagbazar (In building infront of GEFONT office)<br>
+                Kathmandu Metropolitan City, Ward No. 28<br>
+                Kathmandu District, Bagmati Province, Nepal</p>
+                <p><strong>Phone</strong><br>
+                <a href="tel:+9779851068714">+977‑9851068714</a></p>
+                <p><strong>Official Email</strong><br>
+                <a href="mailto:contact@karkiassociates.com.np" class="direct-email">contact@karkiassociates.com.np</a></p>
+                <p><strong>Advocate Email</strong><br>
+                <a href="mailto:anil@karkiassociates.com.np" class="direct-email">anil@karkiassociates.com.np</a></p>
+            </div>
+            <div class="contact-form">
+                <form id="contactFormEn" action="#" method="post">
+                    <div class="form-group">
+                        <label for="nameEn">Full Name *</label>
+                        <input type="text" id="nameEn" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailEn">Email Address *</label>
+                        <input type="email" id="emailEn" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneEn">Phone Number</label>
+                        <input type="tel" id="phoneEn" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subjectEn">Subject *</label>
+                        <select id="subjectEn" name="subject" required>
+                            <option value="">-- Select --</option>
+                            <option value="Legal Consultation">Legal Consultation</option>
+                            <option value="Accounting/Tax">Accounting & Tax</option>
+                            <option value="Management Consulting">Management Consulting</option>
+                            <option value="Research Support">Research Support</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="messageEn">Message *</label>
+                        <textarea id="messageEn" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                    <p style="font-size:0.8rem; margin-top:1rem; color:#555;">We will respond within 1‑2 business days. Do not share confidential information.</p>
+                </form>
+            </div>
         </div>
     </div>
     <div id="np-content" style="display:none;">
         <h1>सम्पर्क गर्नुहोस्</h1>
-        <div class="contact-info">
-            <p><strong>रजिस्टर्ड कार्यालय</strong><br>
-            कार्की एसोसिएट्स प्राइभेट लिमिटेड<br>
-            राष्ट्र बैंक चोक (जुस बक्सको भवनमा)<br>
-            पोखरा महानगरपालिका, वडा नं. ७<br>
-            कास्की जिल्ला, गण्डकी प्रदेश, नेपाल</p>
-            <p><strong>शाखा कार्यालय</strong><br>
-            कार्की एसोसिएट्स प्राइभेट लिमिटेड<br>
-            बागबजार (GEFONT कार्यालयको विपरीत)<br>
-            काठमाडौं महानगरपालिका, वडा नं. २८<br>
-            काठमाडौं जिल्ला, बागमती प्रदेश, नेपाल</p>
-            <p><strong>फोन</strong><br>
-            <a href="tel:+9779851068714">+977‑9851068714</a></p>
-            <p><strong>आधिकारिक इमेल</strong><br>
-            <a href="mailto:contact@karkiassociates.com.np" class="direct-email">contact@karkiassociates.com.np</a></p>
-            <p><strong>अधिवक्ताको इमेल</strong><br>
-            <a href="mailto:anil@karkiassociates.com.np" class="direct-email">anil@karkiassociates.com.np</a></p>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>रजिस्टर्ड कार्यालय</strong><br>
+                कार्की एसोसिएट्स प्राइभेट लिमिटेड<br>
+                राष्ट्र बैंक चोक (जुस बक्सको भवनमा)<br>
+                पोखरा महानगरपालिका, वडा नं. ७<br>
+                कास्की जिल्ला, गण्डकी प्रदेश, नेपाल</p>
+                <p><strong>शाखा कार्यालय</strong><br>
+                कार्की एसोसिएट्स प्राइभेट लिमिटेड<br>
+                बागबजार (जिफन्ट कार्यालय अगाडिको भवनमा)<br>
+                काठमाडौं महानगरपालिका, वडा नं. २८<br>
+                काठमाडौं जिल्ला, बागमती प्रदेश, नेपाल</p>
+                <p><strong>फोन</strong><br>
+                <a href="tel:+9779851068714">+977‑9851068714</a></p>
+                <p><strong>आधिकारिक इमेल</strong><br>
+                <a href="mailto:contact@karkiassociates.com.np" class="direct-email">contact@karkiassociates.com.np</a></p>
+                <p><strong>अधिवक्ताको इमेल</strong><br>
+                <a href="mailto:anil@karkiassociates.com.np" class="direct-email">anil@karkiassociates.com.np</a></p>
+            </div>
+            <div class="contact-form">
+                <form id="contactFormNp" action="#" method="post">
+                    <div class="form-group">
+                        <label for="nameNp">पूरा नाम *</label>
+                        <input type="text" id="nameNp" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailNp">इमेल ठेगाना *</label>
+                        <input type="email" id="emailNp" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNp">फोन नम्बर</label>
+                        <input type="tel" id="phoneNp" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subjectNp">विषय *</label>
+                        <select id="subjectNp" name="subject" required>
+                            <option value="">-- चयन गर्नुहोस् --</option>
+                            <option value="Legal Consultation">कानूनी परामर्श</option>
+                            <option value="Accounting/Tax">लेखा तथा कर</option>
+                            <option value="Management Consulting">व्यवस्थापन परामर्श</option>
+                            <option value="Research Support">अनुसन्धान सहायता</option>
+                            <option value="Other">अन्य</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="messageNp">सन्देश *</label>
+                        <textarea id="messageNp" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">सन्देश पठाउनुहोस्</button>
+                    <p style="font-size:0.8rem; margin-top:1rem; color:#555;">हामी १-२ व्यावसायिक दिनभित्र जवाफ दिनेछौं। गोप्य जानकारी नपठाउनुहोस्।</p>
+                </form>
+            </div>
         </div>
     </div>
 </main>
@@ -434,7 +556,7 @@
         "addressLocality": "Kathmandu",
         "addressRegion": "Bagmati Province",
         "addressCountry": "NP",
-        "streetAddress": "Bagbazar, Ward No. 28"
+        "streetAddress": "Bagbazar, In building infront of GEFONT office, Ward No. 28"
       }
     ],
     "telephone": "+9779851068714",
@@ -545,6 +667,14 @@
         if (!consent && banner) setTimeout(() => banner.classList.add('show'), 500);
         if (acceptBtn) acceptBtn.addEventListener('click', () => { localStorage.setItem('cookieConsent', 'accepted'); banner.classList.remove('show'); });
     })();
+
+    // Demo form submission handler
+    document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('This is a demo. In a real website, this form would send an email. Thank you for reaching out!');
+        });
+    });
 </script>
 </body>
 </html>
