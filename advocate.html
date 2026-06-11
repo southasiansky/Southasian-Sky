@@ -313,39 +313,76 @@
                 padding: 0 16px;
             }
         }
-        /* Profile image style: thin black circle */
+
+        /* Profile image styling */
         .profile-img {
             width: 200px;
             height: 200px;
             object-fit: cover;
             border-radius: 50%;
-            border: 2px solid #000;
-            float: right;
-            margin-left: 25px;
-            margin-bottom: 15px;
+            border: 1px solid #000;
         }
-        @media (max-width: 768px) {
+
+        /* Desktop view: image floated right, with extra top margin to shift it more below */
+        @media (min-width: 769px) {
             .profile-img {
-                float: none;
-                display: block;
-                margin: 0 auto 20px auto;
-                width: 160px;
-                height: 160px;
+                float: right;
+                margin-left: 25px;
+                margin-bottom: 15px;
+                margin-top: 20px;   /* shifted more below */
+            }
+            .advocate-section {
+                overflow: auto; /* clearfix */
             }
         }
-        .advocate-section h2 {
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-        }
-        .advocate-section h3 {
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-            font-size: 1.4rem;
-        }
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
+
+        /* Mobile view: use flexbox to reorder elements */
+        @media (max-width: 768px) {
+            .advocate-section {
+                display: flex;
+                flex-direction: column;
+            }
+            .advocate-section h2 {
+                order: 1;
+            }
+            .advocate-section .profile-img {
+                order: 2;
+                align-self: center;
+                margin: 20px auto;
+                width: 160px;
+                height: 160px;
+                float: none;
+            }
+            .advocate-section h3:first-of-type {
+                order: 3;
+            }
+            .advocate-section p:first-of-type {
+                order: 4;
+            }
+            /* keep subsequent headings and paragraphs in natural order */
+            .advocate-section h3:nth-of-type(2),
+            .advocate-section h3:nth-of-type(3),
+            .advocate-section h3:nth-of-type(4),
+            .advocate-section p:nth-of-type(2),
+            .advocate-section p:nth-of-type(3),
+            .advocate-section p:nth-of-type(4) {
+                order: 5; /* they will follow sequentially */
+            }
+            /* ensure all remaining elements stay in order */
+            .advocate-section > * {
+                order: 10; /* default high number, but specific orders above will override */
+            }
+            /* finer control: set order for all children */
+            .advocate-section > h2 { order: 1; }
+            .advocate-section > .profile-img { order: 2; }
+            .advocate-section > h3:nth-of-type(1) { order: 3; }
+            .advocate-section > p:nth-of-type(1) { order: 4; }
+            .advocate-section > h3:nth-of-type(2) { order: 5; }
+            .advocate-section > p:nth-of-type(2) { order: 6; }
+            .advocate-section > h3:nth-of-type(3) { order: 7; }
+            .advocate-section > p:nth-of-type(3) { order: 8; }
+            .advocate-section > h3:nth-of-type(4) { order: 9; }
+            .advocate-section > p:nth-of-type(4) { order: 10; }
         }
     </style>
 </head>
@@ -393,13 +430,13 @@
 </div>
 
 <main class="container">
-    <!-- English content with profile image -->
+    <!-- English content -->
     <div id="en-content">
-        <div class="advocate-section clearfix">
-            <img src="images/anil-karki-profile.jpg" alt="Advocate Anil Karki profile photo" class="profile-img">
+        <div class="advocate-section">
             <h2>Advocate Anil Karki</h2>
+            <img src="images/anil-karki-profile.jpg" alt="Advocate Anil Karki profile photo" class="profile-img">
             <h3>Academic Credentials and Professional Standing</h3>
-            <p>Anil Karki is the founder and director of Karki Associates Private Limited. He is a licensed advocate duly enrolled with the Nepal Bar Council. He holds a Bachelor of Laws (LL.B.) degree from the University of Delhi. He subsequently earned a Master of Comparative Laws (M.C.L.), also from the University of Delhi, which provided him with advanced training in comparative legal methodologies and cross jurisdictional analysis. He has successfully completed the advocate licensing examination conducted by the Nepal Bar Council.</p>
+            <p>Anil Karki is the founder and director of Karki Associates Private Limited. He holds a Bachelor of Laws (LL.B.) degree from the University of Delhi. He subsequently earned a Master of Comparative Laws (M.C.L.), also from the University of Delhi, which provided him with advanced research in comparative legal methodologies and cross jurisdictional analysis. He has successfully completed the advocate licensing examination conducted by the Nepal Bar Council.</p>
             
             <h3>Professional Experience & Foundational Journey</h3>
             <p>Before establishing Karki Associates, Advocate Karki gained substantial practical experience in legal research, documentation, and court proceedings. He studied on a range of civil, criminal, and constitutional matters, developing a thorough understanding of Nepal's substantive and procedural laws. This foundation enabled him to identify gaps in the delivery of legal services, particularly the need for a firm that combines rigorous legal analysis with transparent client communication and affordable professional fees. In response to that need, he founded Karki Associates. As the sole promoter and director of the company, he has built an institution that offers integrated legal solutions.</p>
@@ -412,13 +449,13 @@
         </div>
     </div>
     
-    <!-- Nepali content with same profile image -->
+    <!-- Nepali content (same structure) -->
     <div id="np-content" style="display:none;">
-        <div class="advocate-section clearfix">
-            <img src="images/anil-karki-profile.jpg" alt="अधिवक्ता अनिल कार्कीको तस्वीर" class="profile-img">
+        <div class="advocate-section">
             <h2>अधिवक्ता अनिल कार्की</h2>
+            <img src="images/anil-karki-profile.jpg" alt="अधिवक्ता अनिल कार्कीको तस्वीर" class="profile-img">
             <h3>शैक्षिक योग्यता तथा व्यावसायिक हैसियत</h3>
-            <p>अधिवक्ता अनिल कार्की यस कार्की एसोसिएट्स प्राइभेट लिमिटेडका संस्थापक तथा सञ्चालक हुनुहुन्छ। उहाँ नेपाल कानून व्यवसायी परिषदमा सूचीकृत एक सक्रिय अधिवक्ता हुनुहुन्छ। उहाँले दिल्ली विश्वविद्यालय (भारत) बाट कानूनमा स्नातक हासिल गर्नुभएको छ। त्यसपछि उहाँले सोही विश्वविद्यालयबाट तुलनात्मक कानूनमा स्नातकोत्तर समेत गर्नुभएको छ। उहाँले नेपाल कानून व्यवसायी परिषदद्वारा सञ्चालित अधिवक्ता तहको परीक्षा पनि सफलतापूर्वक उत्तीर्ण गर्नुभएको छ।</p>
+            <p>अधिवक्ता अनिल कार्की यस कार्की एसोसिएट्स प्राइभेट लिमिटेडका संस्थापक तथा सञ्चालक हुनुहुन्छ। उहाँले दिल्ली विश्वविद्यालय (भारत) बाट कानूनमा स्नातक हासिल गर्नुभएको छ। त्यसपछि उहाँले सोही विश्वविद्यालयबाट तुलनात्मक कानूनमा स्नातकोत्तर समेत गर्नुभएको छ। उहाँले नेपाल कानून व्यवसायी परिषदद्वारा सञ्चालित अधिवक्ता तहको परीक्षा पनि सफलतापूर्वक उत्तीर्ण गर्नुभएको छ।</p>
             
             <h3>व्यावसायिक अनुभव तथा संस्थापन यात्रा</h3>
             <p>कार्की एसोसिएट्सको स्थापना गर्नुभन्दा पहिले, अधिवक्ता कार्कीले कानूनी अनुसन्धान, कागजात तर्जुमा र अदालती कार्यवाहीमा पर्याप्त व्यावहारिक अनुभव हासिल गर्नुभयो। उहाँले देवानी, फौजदारी र संवैधानिक विषयका विविध मुद्दाहरू अध्ययन गर्दै नेपालको भौतिक तथा प्रक्रियागत कानूनको गहन बुझाइ विकास गर्नुभयो। यस आधारले उहाँलाई कानूनी सेवा प्रदायकमा रहेका खाडलहरू, विशेष गरी गहन कानूनी विश्लेषणलाई पारदर्शी ग्राहक संवाद र किफायती व्यावसायिक शुल्कसँग जोड्ने फर्मको आवश्यकताको पहिचान गर्न सहायता गर्यो। उक्त आवश्यकताको प्रतिक्रियामा उहाँले कार्की एसोसिएट्स प्राइभेट लिमिटेड को स्थापना गर्नुभयो।</p>
