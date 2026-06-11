@@ -21,7 +21,6 @@
     <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
-        /* Same CSS as index.html (exactly the same) */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Arial', sans-serif;
@@ -102,6 +101,7 @@
             top: 79px;
             z-index: 101;
             transition: transform 0.3s ease, opacity 0.2s ease;
+            margin-top: 0.8rem;   /* gap between header and nav bar */
         }
         .nav-row.hidden {
             transform: translateY(-100%);
@@ -471,16 +471,27 @@
         isMenuOpen = false;
         document.body.style.overflow = '';
     }
-    if (hamburger) hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
-    document.querySelectorAll('.mobile-slide-menu a').forEach(link => link.addEventListener('click', () => closeMenu()));
+    if (hamburger) {
+        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
+    }
+    document.querySelectorAll('.mobile-slide-menu a').forEach(link => {
+        link.addEventListener('click', () => closeMenu());
+    });
     window.addEventListener('resize', () => { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
 
     (function() {
         const consent = localStorage.getItem('cookieConsent');
         const banner = document.getElementById('cookieConsent');
         const acceptBtn = document.getElementById('acceptCookies');
-        if (!consent && banner) setTimeout(() => banner.classList.add('show'), 500);
-        if (acceptBtn) acceptBtn.addEventListener('click', () => { localStorage.setItem('cookieConsent', 'accepted'); banner.classList.remove('show'); });
+        if (!consent && banner) {
+            setTimeout(() => banner.classList.add('show'), 500);
+        }
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                banner.classList.remove('show');
+            });
+        }
     })();
 </script>
 </body>
