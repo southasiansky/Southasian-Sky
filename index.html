@@ -39,19 +39,20 @@
         header {
             background: #fff;
             color: #000;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e0e0e0;
             position: sticky;
             top: 0;
             z-index: 100;
             box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-            border-bottom: 1px solid #e0e0e0;
         }
-        /* Top row: logo + language toggle (and hamburger on mobile) */
+        /* Top row: logo left, language toggle right */
         .header-top {
-            padding: 0.8rem 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            gap: 1rem;
         }
         .logo a { display: block; transition: opacity 0.2s; }
         .logo a:hover { opacity: 0.85; }
@@ -69,26 +70,19 @@
             transition: all 0.2s;
         }
         .lang-switch:hover { background: #000; color: #fff; border-color: #000; }
-        /* Second row: desktop navigation (left aligned) */
-        .desktop-nav-row {
-            padding: 0.5rem 0;
-            border-top: 1px solid #e0e0e0;
+        /* Desktop navigation row – separate below, left aligned */
+        .desktop-nav-wrapper {
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
-        .desktop-nav-row.hide-nav {
-            transform: translateY(-100%);
-            opacity: 0;
-            pointer-events: none;
-        }
         .desktop-nav {
-            display: flex;
-            justify-content: flex-start;
+            margin-top: 0.8rem;
         }
         .desktop-nav ul {
             display: flex;
             list-style: none;
             gap: 2rem;
             flex-wrap: wrap;
+            justify-content: flex-start; /* left aligned */
         }
         .desktop-nav a {
             color: #000;
@@ -98,7 +92,13 @@
             transition: color 0.2s;
         }
         .desktop-nav a:hover { color: #444; text-decoration: underline; }
-        /* Mobile elements */
+        /* Hide navigation row when scrolling down */
+        .desktop-nav-wrapper.hide {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+        /* Mobile header (unchanged, always visible) */
         .mobile-header {
             display: none;
             align-items: center;
@@ -157,8 +157,8 @@
             background: #f5f5f5;
         }
         @media (max-width: 768px) {
-            .desktop-nav-row {
-                display: none; /* hide desktop nav row entirely on mobile */
+            .desktop-nav-wrapper {
+                display: none;
             }
             .mobile-header {
                 display: flex;
@@ -166,13 +166,8 @@
             .logo img {
                 max-height: 60px;
             }
-            body {
-                font-size: 1rem;
-                line-height: 1.6;
-            }
-            .container {
-                padding: 0 16px;
-            }
+            body { font-size: 1rem; line-height: 1.6; }
+            .container { padding: 0 16px; }
             .mobile-slide-menu a {
                 font-size: 1.2rem;
                 padding: 0.6rem;
@@ -240,7 +235,7 @@
                 padding: 2px;
             }
         }
-        /* Cookie Consent Banner Styles */
+        /* Cookie Consent Banner Styles (unchanged) */
         .cookie-consent {
             position: fixed;
             bottom: 0;
@@ -304,23 +299,14 @@
 <body>
 <header>
     <div class="container">
-        <!-- Top row: logo + language toggle (and hamburger on mobile) -->
+        <!-- Top row: logo + language toggle -->
         <div class="header-top">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
-            <!-- Desktop top row shows language toggle here -->
-            <div class="desktop-lang">
-                <button id="langToggleDesktop" class="lang-switch">ने</button>
-            </div>
-            <!-- Mobile header (hamburger + language toggle) -->
-            <div class="mobile-header">
-                <div class="mobile-right">
-                    <button id="langToggleMobile" class="lang-switch">ने</button>
-                    <button class="hamburger" id="hamburgerBtn">☰</button>
-                </div>
-            </div>
+            <div class="lang-switch" id="langToggleDesktop">ने</div>
         </div>
-        <!-- Second row: desktop navigation (left aligned) -->
-        <div class="desktop-nav-row" id="desktopNavRow">
+
+        <!-- Desktop navigation row (separate, left aligned) -->
+        <div class="desktop-nav-wrapper" id="desktopNavWrapper">
             <div class="desktop-nav">
                 <ul id="navMenuDesktop">
                     <li><a href="index.html" data-key="home">Home</a></li>
@@ -333,16 +319,24 @@
                 </ul>
             </div>
         </div>
-    </div>
-    <!-- Mobile slide menu (remains unchanged) -->
-    <div id="mobileSlideMenu" class="mobile-slide-menu">
-        <a href="index.html" data-key="home">Home</a>
-        <a href="about.html" data-key="about">About</a>
-        <a href="advocate.html" data-key="advocate">Advocate</a>
-        <a href="service.html" data-key="services">Services</a>
-        <a href="blog.html" data-key="blog">Blog</a>
-        <a href="opinion.html" data-key="opinion">Opinion</a>
-        <a href="contact.html" data-key="contact">Contact</a>
+
+        <!-- Mobile header (hamburger, logo, language toggle) -->
+        <div class="mobile-header">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
+            <div class="mobile-right">
+                <div class="lang-switch" id="langToggleMobile">ने</div>
+                <button class="hamburger" id="hamburgerBtn">☰</button>
+            </div>
+        </div>
+        <div id="mobileSlideMenu" class="mobile-slide-menu">
+            <a href="index.html" data-key="home">Home</a>
+            <a href="about.html" data-key="about">About</a>
+            <a href="advocate.html" data-key="advocate">Advocate</a>
+            <a href="service.html" data-key="services">Services</a>
+            <a href="blog.html" data-key="blog">Blog</a>
+            <a href="opinion.html" data-key="opinion">Opinion</a>
+            <a href="contact.html" data-key="contact">Contact</a>
+        </div>
     </div>
 </header>
 <main class="container">
@@ -458,24 +452,26 @@
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
 
-    // Scroll behavior: hide desktop nav row on scroll down, show on scroll up
+    // Scroll behavior: hide desktop nav when scrolling down, show when scrolling up
     let lastScrollTop = 0;
-    const navRow = document.getElementById('desktopNavRow');
-    if (navRow) {
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // Scrolling down - hide nav row
-                navRow.classList.add('hide-nav');
-            } else if (scrollTop < lastScrollTop) {
-                // Scrolling up - show nav row
-                navRow.classList.remove('hide-nav');
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        });
-    }
+    const navWrapper = document.getElementById('desktopNavWrapper');
+    const scrollThreshold = 30;
 
-    // Mobile slide menu
+    window.addEventListener('scroll', function() {
+        if (window.innerWidth <= 768) return; // only for desktop
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (Math.abs(scrollTop - lastScrollTop) < scrollThreshold) return;
+        if (scrollTop > lastScrollTop && scrollTop > 50) {
+            // scrolling down
+            navWrapper.classList.add('hide');
+        } else {
+            // scrolling up
+            navWrapper.classList.remove('hide');
+        }
+        lastScrollTop = scrollTop;
+    });
+
+    // Mobile menu and hamburger
     const hamburger = document.getElementById('hamburgerBtn');
     const slideMenu = document.getElementById('mobileSlideMenu');
     let isMenuOpen = false;
@@ -491,30 +487,4 @@
         hamburger.classList.remove('open');
         hamburger.textContent = '☰';
         isMenuOpen = false;
-        document.body.style.overflow = '';
-    }
-    if (hamburger) {
-        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
-    }
-    const menuLinks = slideMenu.querySelectorAll('a');
-    menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
-    window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
-
-    // Cookie Consent Banner Logic
-    (function() {
-        const consent = localStorage.getItem('cookieConsent');
-        const banner = document.getElementById('cookieConsent');
-        const acceptBtn = document.getElementById('acceptCookies');
-        if (!consent && banner) {
-            setTimeout(() => { banner.classList.add('show'); }, 500);
-        }
-        if (acceptBtn) {
-            acceptBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'accepted');
-                banner.classList.remove('show');
-            });
-        }
-    })();
-</script>
-</body>
-</html>
+        document.body
