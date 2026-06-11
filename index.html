@@ -45,7 +45,8 @@
             position: sticky;
             top: 0;
             z-index: 102;
-            border-bottom: 1px solid #e0e0e0;
+            /* border-bottom: none – removed dividing line */
+            box-shadow: none;
         }
         .header-row {
             padding: 0.8rem 0;
@@ -116,7 +117,7 @@
         }
         .nav-row {
             background: #fff;
-            border-bottom: 1px solid #e0e0e0;
+            /* border-bottom: none – removed dividing line */
             position: sticky;
             z-index: 101;
             transition: transform 0.3s ease, opacity 0.2s ease;
@@ -131,7 +132,7 @@
             list-style: none;
             justify-content: flex-start;
             gap: 2rem;
-            padding: 0.4rem 0;  /* reduced height */
+            padding: 0.4rem 0;
         }
         .desktop-nav a {
             color: #000;
@@ -225,7 +226,7 @@
             color: #000;
             text-align: center;
             padding: 1.2rem 0;
-            border-top: 1px solid #e0e0e0;
+            /* border-top: none – removed dividing line */
         }
         footer a {
             color: #000;
