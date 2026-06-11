@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advocate Anil Karki – Education & Legal Expertise | Karki Associates</title>
-    <meta name="description" content="Advocate Anil Karki, founder of Karki Associates. Holds LL.B. and M.C.L. from University of Delhi. Registered with Nepal Bar Council. Committed to ethical, client‑focused legal practice in Nepal.">
-    <meta name="keywords" content="advocate Pokhara, Kathmandu lawyer, Anil Karki, Nepal Bar Council, legal ethics, corporate lawyer Nepal, University of Delhi">
+    <title>Karki Associates – Law Firm in Pokhara & Kathmandu | Legal, Tax, Corporate Advisory</title>
+    <meta name="description" content="Karki Associates is a registered law firm in Nepal offering legal, tax, corporate advisory, and research services. Offices in Pokhara and Kathmandu. Led by Advocate Anil Karki.">
+    <meta name="keywords" content="law firm Nepal, advocate Pokhara, Kathmandu lawyer, legal services Nepal, tax consulting, corporate advisory, money laundering, FATF Nepal, Anil Karki">
     <meta name="author" content="Karki Associates Private Limited">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://karkiassociates.com.np/advocate.html">
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://karkiassociates.com.np/advocate.html">
-    <meta property="og:title" content="Advocate Anil Karki – Founder & Director, Karki Associates">
-    <meta property="og:description" content="Advocate Anil Karki: LL.B. and M.C.L. from University of Delhi, registered with Nepal Bar Council. Ethical, client‑centered legal practice.">
+    <link rel="canonical" href="https://karkiassociates.com.np/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karkiassociates.com.np/">
+    <meta property="og:title" content="Karki Associates – Law Firm in Nepal">
+    <meta property="og:description" content="Legal, tax, and management consulting services. Offices in Pokhara and Kathmandu.">
     <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://karkiassociates.com.np/advocate.html">
-    <meta property="twitter:title" content="Advocate Anil Karki – Founder & Director, Karki Associates">
-    <meta property="twitter:description" content="Advocate Anil Karki: LL.B. and M.C.L. from University of Delhi, registered with Nepal Bar Council.">
+    <meta property="twitter:url" content="https://karkiassociates.com.np/">
+    <meta property="twitter:title" content="Karki Associates – Law Firm in Nepal">
+    <meta property="twitter:description" content="Legal, tax, and management consulting services. Offices in Pokhara and Kathmandu.">
     <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
@@ -27,12 +27,17 @@
             font-size: 1.125rem;
             line-height: 1.7;
             color: #111;
-            background: #f8f8f8;
+            background: #fff;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 24px;
+        }
+        @media (min-width: 769px) {
+            .container {
+                padding: 0 48px;
+            }
         }
         header {
             background: #fff;
@@ -41,7 +46,6 @@
             top: 0;
             z-index: 102;
             border-bottom: 1px solid #e0e0e0;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
         }
         .header-row {
             padding: 0.8rem 0;
@@ -50,11 +54,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
         .logo a { display: block; transition: opacity 0.2s; }
         .logo a:hover { opacity: 0.85; }
         .logo img { max-height: 95px; width: auto; display: block; }
+        /* Desktop margins */
+        @media (min-width: 769px) {
+            .logo {
+                margin-left: 30px;
+            }
+            .lang-switch {
+                margin-right: 30px;
+            }
+        }
         .lang-switch {
             background: #fff;
             color: #000;
@@ -64,11 +76,11 @@
             cursor: pointer;
             font-weight: bold;
             font-size: 0.9rem;
-            margin-left: 0.5rem;
             font-family: 'Arial', sans-serif;
             transition: all 0.2s;
         }
         .lang-switch:hover { background: #000; color: #fff; border-color: #000; }
+        /* Mobile header styles */
         .mobile-header {
             display: none;
             align-items: center;
@@ -94,15 +106,31 @@
             align-items: center;
             gap: 1rem;
         }
-        /* === NAVIGATION BAR – EXACT SAME AS INDEX === */
+        @media (max-width: 768px) {
+            .desktop-header { display: none; }
+            .mobile-header { display: flex; }
+            .logo img { max-height: 60px; }
+            body { font-size: 1rem; line-height: 1.6; }
+            .container {
+                padding: 0 16px;
+            }
+            .logo {
+                margin-left: 10px;
+            }
+            .mobile-right {
+                margin-right: 7px;
+            }
+            .header-row {
+                padding: 1rem 0;
+            }
+        }
+        /* Navigation row (desktop) */
         .nav-row {
             background: #fff;
             border-bottom: 1px solid #e0e0e0;
             position: sticky;
-            top: 79px;
             z-index: 101;
             transition: transform 0.3s ease, opacity 0.2s ease;
-            margin-top: 0.8rem;
         }
         .nav-row.hidden {
             transform: translateY(-100%);
@@ -158,18 +186,13 @@
             background: #f5f5f5;
         }
         @media (max-width: 768px) {
-            .desktop-header { display: none; }
-            .mobile-header { display: flex; }
-            .logo img { max-height: 60px; }
-            body { font-size: 1rem; line-height: 1.6; }
-            .container { padding: 0 16px; }
             .mobile-slide-menu a {
                 font-size: 1.2rem;
                 padding: 0.6rem;
             }
             .mobile-slide-menu {
-                top: 65px;
-                height: calc(100vh - 65px);
+                top: 45px;
+                height: calc(100vh - 45px);
             }
             .nav-row {
                 display: none;
@@ -177,10 +200,8 @@
         }
         main {
             background: #fff;
-            padding: 5rem 2.5rem 2.5rem 2.5rem;
-            margin: 2rem auto 0 auto;
-            border-radius: 0;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            padding: 5rem 0 2.5rem 0;
+            margin: 0 auto;
         }
         h1 {
             color: #000;
@@ -197,18 +218,17 @@
             font-weight: 600;
         }
         p { margin-bottom: 1rem; }
-        ul { margin-left: 1.8rem; margin-bottom: 1rem; }
-        li { margin-bottom: 0.3rem; }
+        /* Profile photo styling */
         .profile-photo {
             float: right;
             margin: 0 0 1rem 1.5rem;
-            width: 200px;
+            width: 180px;
         }
         .profile-photo img {
             width: 100%;
             height: auto;
             border-radius: 50%;
-            border: 3px solid #000;
+            border: 2px solid #000;  /* thin black circle */
             display: block;
         }
         .clearfix::after {
@@ -220,19 +240,24 @@
             .profile-photo {
                 float: none;
                 margin: 0 auto 1rem auto;
-                width: 150px;
+                width: 140px;
                 text-align: center;
             }
-            .profile-photo img {
-                width: 150px;
-            }
-            main {
-                margin: 2rem auto 0 auto;
-                padding: 3rem 1.5rem 1.5rem 1.5rem;
-            }
-            h1 { font-size: 1.6rem; margin-top: 0.5rem; }
-            h3 { font-size: 1.3rem; }
         }
+        .btn {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 40px;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #000;
+        }
+        .btn:hover { background: #fff; color: #000; border-color: #000; }
         footer {
             background: #fff;
             color: #000;
@@ -258,6 +283,11 @@
             letter-spacing: normal;
         }
         @media (max-width: 768px) {
+            main {
+                padding: 3rem 0 1.5rem 0;
+            }
+            h1 { font-size: 1.6rem; margin-top: 0.5rem; }
+            h3 { font-size: 1.3rem; }
             .footer-copyright { font-size: 1rem; }
         }
         @media (prefers-color-scheme: dark) {
@@ -284,13 +314,14 @@
             transform: translateY(0);
         }
         .cookie-consent-inner {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 1rem;
+            padding: 0 48px;
         }
         .cookie-consent p {
             margin: 0;
@@ -322,6 +353,7 @@
             .cookie-consent-inner {
                 flex-direction: column;
                 text-align: center;
+                padding: 0 16px;
             }
         }
     </style>
@@ -331,9 +363,7 @@
     <div class="container header-row">
         <div class="desktop-header">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
-            <div class="desktop-nav">
-                <button id="langToggleDesktop" class="lang-switch">ने</button>
-            </div>
+            <button id="langToggleDesktop" class="lang-switch">ने</button>
         </div>
         <div class="mobile-header">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
@@ -372,6 +402,7 @@
 </div>
 
 <main class="container">
+    <!-- English content (Advocate) -->
     <div id="en-content">
         <h1>Advocate Anil Karki</h1>
         <div class="profile-photo">
@@ -387,6 +418,7 @@
         <h3>Legal Philosophy & Vision</h3>
         <p>Advocate Karki believes that a good lawyer does more than argue skilfully in court. A good lawyer advises honestly, communicates clearly, respects the client's time and financial constraints, and works diligently to achieve fair outcomes. His approach combines rigorous legal analysis with genuine concern for the client's situation – a philosophy that informs every case, consultation, and document drafted by the firm. His long term vision for Karki Associates is to build a law practice that is accessible, transparent, and reliable – where high quality legal services are not reserved for the wealthy but are available to individuals, small businesses, non profit organisations, and public bodies alike. He is also committed to contributing to the legal community through continuing legal education, legal literacy programs, and pro bono assistance for marginalised groups.</p>
     </div>
+    <!-- Nepali content (अधिवक्ता अनिल कार्की) -->
     <div id="np-content" style="display:none;">
         <h1>अधिवक्ता अनिल कार्की</h1>
         <div class="profile-photo">
@@ -425,18 +457,36 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Anil Karki",
-  "jobTitle": "Advocate & Director",
-  "worksFor": { "@type": "Organization", "name": "Karki Associates Private Limited" },
-  "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Delhi" },
-  "hasCredential": [
-    { "@type": "EducationalOccupationalCredential", "name": "Bachelor of Laws (LL.B.)" },
-    { "@type": "EducationalOccupationalCredential", "name": "Master of Comparative Laws (M.C.L.)" }
+  "@type": "LegalService",
+  "name": "Karki Associates Private Limited",
+  "alternateName": "Karki Associates Law Firm",
+  "description": "Registered law firm in Nepal offering legal, tax, corporate advisory, and research services.",
+  "url": "https://karkiassociates.com.np",
+  "logo": "https://karkiassociates.com.np/images/logo.png",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Pokhara",
+      "addressRegion": "Gandaki Province",
+      "addressCountry": "NP",
+      "streetAddress": "Rastra Bank Chowk, Ward No. 7"
+    },
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Kathmandu",
+      "addressRegion": "Bagmati Province",
+      "addressCountry": "NP",
+      "streetAddress": "Bagbazar, Ward No. 28"
+    }
   ],
-  "memberOf": { "@type": "Organization", "name": "Nepal Bar Council" },
-  "image": "https://karkiassociates.com.np/images/anil-karki-profile.jpg",
-  "url": "https://karkiassociates.com.np/advocate.html"
+  "telephone": "+9779851068714",
+  "email": "contact@karkiassociates.com.np",
+  "foundingDate": "2026",
+  "founder": {
+    "@type": "Person",
+    "name": "Anil Karki",
+    "jobTitle": "Advocate & Director"
+  }
 }
 </script>
 <script>
@@ -471,15 +521,31 @@
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
 
+    function setNavRowTop() {
+        const navRow = document.getElementById('navRow');
+        if (!navRow) return;
+        const header = document.querySelector('header');
+        if (header) {
+            const headerHeight = header.offsetHeight;
+            navRow.style.top = headerHeight + 'px';
+        }
+    }
+    window.addEventListener('load', setNavRowTop);
+    window.addEventListener('resize', setNavRowTop);
+
     const navRow = document.getElementById('navRow');
     if (navRow && window.innerWidth > 768) {
-        let lastScrollY = window.scrollY, ticking = false;
+        let lastScrollY = window.scrollY;
+        let ticking = false;
         function onScroll() {
             if (!ticking) {
                 requestAnimationFrame(() => {
                     const currentScrollY = window.scrollY;
-                    if (currentScrollY > lastScrollY && currentScrollY > 100) navRow.classList.add('hidden');
-                    else if (currentScrollY < lastScrollY) navRow.classList.remove('hidden');
+                    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                        navRow.classList.add('hidden');
+                    } else if (currentScrollY < lastScrollY) {
+                        navRow.classList.remove('hidden');
+                    }
                     lastScrollY = currentScrollY;
                     ticking = false;
                 });
