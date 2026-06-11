@@ -9,13 +9,11 @@
     <meta name="author" content="Karki Associates Private Limited">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://karkiassociates.com.np/index.html">
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://karkiassociates.com.np/">
     <meta property="og:title" content="Karki Associates – Law Firm in Nepal">
     <meta property="og:description" content="Legal, tax, and management consulting services. Offices in Pokhara and Kathmandu.">
     <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://karkiassociates.com.np/">
     <meta property="twitter:title" content="Karki Associates – Law Firm in Nepal">
@@ -97,14 +95,15 @@
             align-items: center;
             gap: 1rem;
         }
-        /* Desktop navigation row (separate) - sticky but hide/show on scroll */
+        /* Desktop navigation row - sticky with gap from header */
         .nav-row {
             background: #fff;
             border-bottom: 1px solid #e0e0e0;
             position: sticky;
-            top: 79px; /* adjust based on header height */
+            top: 79px;
             z-index: 101;
             transition: transform 0.3s ease, opacity 0.2s ease;
+            margin-top: 0.8rem;   /* gap between header and nav bar */
         }
         .nav-row.hidden {
             transform: translateY(-100%);
@@ -114,7 +113,7 @@
         .desktop-nav ul {
             display: flex;
             list-style: none;
-            justify-content: flex-start; /* changed from center to left align */
+            justify-content: flex-start;
             gap: 2rem;
             padding: 0.6rem 0;
         }
@@ -193,6 +192,20 @@
             letter-spacing: -0.01em;
         }
         p { margin-bottom: 1rem; }
+        .btn {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 40px;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #000;
+        }
+        .btn:hover { background: #fff; color: #000; border-color: #000; }
         footer {
             background: #fff;
             color: #000;
@@ -234,7 +247,7 @@
                 padding: 2px;
             }
         }
-        /* Cookie Consent Banner Styles */
+        /* Cookie Consent Banner */
         .cookie-consent {
             position: fixed;
             bottom: 0;
@@ -282,7 +295,6 @@
             cursor: pointer;
             font-weight: bold;
             font-size: 0.9rem;
-            transition: background 0.2s;
         }
         .cookie-accept:hover {
             background: #ffc107;
@@ -314,7 +326,7 @@
     </div>
 </header>
 
-<!-- Desktop navigation row (separate, left‑aligned) -->
+<!-- Desktop navigation row (separate, left‑aligned) with margin-top gap -->
 <div class="nav-row" id="navRow">
     <div class="container">
         <div class="desktop-nav">
@@ -371,7 +383,6 @@
     </div>
 </footer>
 
-<!-- Cookie Consent Banner HTML -->
 <div id="cookieConsent" class="cookie-consent">
     <div class="cookie-consent-inner">
         <p>We use cookies to remember your language preference and improve your experience on our website. By continuing to use our site, you consent to the use of cookies. For more information, please see our <a href="cookie.html">Cookie Policy</a>.</p>
@@ -388,7 +399,6 @@
   "description": "Registered law firm in Nepal offering legal, tax, corporate advisory, and research services. Offices in Pokhara and Kathmandu.",
   "url": "https://karkiassociates.com.np",
   "logo": "https://karkiassociates.com.np/images/logo.png",
-  "image": "https://karkiassociates.com.np/images/logo.png",
   "address": [
     {
       "@type": "PostalAddress",
@@ -412,11 +422,7 @@
     "@type": "Person",
     "name": "Anil Karki",
     "jobTitle": "Advocate & Director"
-  },
-  "sameAs": [
-    "https://www.facebook.com/karkiassociates",
-    "https://www.linkedin.com/company/karki-associates"
-  ]
+  }
 }
 </script>
 <script>
@@ -436,11 +442,7 @@
             else if (footerTranslations[lang] && footerTranslations[lang][key]) el.textContent = footerTranslations[lang][key];
         });
         const copyrightEl = document.getElementById('footerCopyright');
-        if (lang === 'ne') {
-            copyrightEl.textContent = '© २०८३ कार्की एसोसिएट्स प्राइभेट लिमिटेड';
-        } else {
-            copyrightEl.textContent = '© 2026 Karki Associates Private Limited';
-        }
+        copyrightEl.textContent = (lang === 'ne') ? '© २०८३ कार्की एसोसिएट्स प्राइभेट लिमिटेड' : '© 2026 Karki Associates Private Limited';
         document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = (lang === 'en') ? 'ने' : 'E');
     }
     function setLanguage(lang) {
@@ -455,7 +457,7 @@
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
 
-    // Scroll direction detection for nav row
+    // Improved scroll detection: hide on scroll down, show on scroll up
     const navRow = document.getElementById('navRow');
     if (navRow && window.innerWidth > 768) {
         let lastScrollY = window.scrollY;
@@ -479,6 +481,7 @@
         navRow.classList.remove('hidden');
     }
 
+    // Mobile hamburger menu
     const hamburger = document.getElementById('hamburgerBtn');
     const slideMenu = document.getElementById('mobileSlideMenu');
     let isMenuOpen = false;
@@ -499,22 +502,19 @@
     if (hamburger) {
         hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
     }
-    const menuLinks = slideMenu.querySelectorAll('a');
-    menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
-    window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
+    document.querySelectorAll('.mobile-slide-menu a').forEach(link => {
+        link.addEventListener('click', () => closeMenu());
+    });
+    window.addEventListener('resize', () => { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
 
-    // Cookie Consent Banner Logic
+    // Cookie consent logic
     (function() {
         const consent = localStorage.getItem('cookieConsent');
         const banner = document.getElementById('cookieConsent');
         const acceptBtn = document.getElementById('acceptCookies');
-
         if (!consent && banner) {
-            setTimeout(() => {
-                banner.classList.add('show');
-            }, 500);
+            setTimeout(() => banner.classList.add('show'), 500);
         }
-
         if (acceptBtn) {
             acceptBtn.addEventListener('click', function() {
                 localStorage.setItem('cookieConsent', 'accepted');
