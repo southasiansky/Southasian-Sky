@@ -175,27 +175,13 @@
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
-        .contact-info, .contact-email-section {
+        .contact-info {
             background: #f8f8f8;
             padding: 1.5rem;
             border-radius: 8px;
         }
         .contact-info p { margin-bottom: 1rem; }
         .contact-info strong { color: #000; }
-        .email-link {
-            display: inline-block;
-            background: #000;
-            color: #fff;
-            text-decoration: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 30px;
-            margin-top: 1rem;
-            transition: background 0.3s;
-            font-weight: bold;
-        }
-        .email-link:hover {
-            background: #333;
-        }
         .direct-email {
             word-break: break-all;
         }
@@ -233,12 +219,71 @@
             .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
             .footer-copyright { font-size: 1rem; }
         }
-        /* Dark mode fix for logo */
+        /* Dark mode fix for transparent logo */
         @media (prefers-color-scheme: dark) {
             .logo img {
                 background-color: white;
                 border-radius: 4px;
                 padding: 2px;
+            }
+        }
+        /* Cookie Consent Banner Styles */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #1a3e6f;
+            color: #fff;
+            padding: 1rem;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .cookie-consent.show {
+            transform: translateY(0);
+        }
+        .cookie-consent-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .cookie-consent p {
+            margin: 0;
+            font-size: 0.9rem;
+            flex: 1;
+            color: #fff;
+        }
+        .cookie-consent a {
+            color: #ffd966;
+            text-decoration: underline;
+        }
+        .cookie-consent a:hover {
+            color: #fff;
+        }
+        .cookie-accept {
+            background: #ffd966;
+            border: none;
+            color: #1a3e6f;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .cookie-accept:hover {
+            background: #ffc107;
+        }
+        @media (max-width: 768px) {
+            .cookie-consent-inner {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
@@ -298,15 +343,9 @@
                 <p><strong>Phone</strong><br>
                 <a href="tel:+9779851068714">+977‑9851068714</a></p>
                 <p><strong>Official Email</strong><br>
-                <a href="mailto:contact@karkiassociates.com.np?subject=Legal%20Inquiry%20via%20Website" class="direct-email">contact@karkiassociates.com.np</a></p>
+                <a href="mailto:contact@karkiassociates.com.np" class="direct-email">contact@karkiassociates.com.np</a></p>
                 <p><strong>Advocate Email</strong><br>
-                <a href="mailto:anil@karkiassociates.com.np?subject=Legal%20Consultation%20Request" class="direct-email">anil@karkiassociates.com.np</a></p>
-            </div>
-            <div class="contact-email-section">
-                <p><strong>Send us an email</strong></p>
-                <p>Click the button below to open your default email client. Please include your name, contact number, and a brief description of your legal matter. We will respond within 1‑2 business days.</p>
-                <a href="mailto:contact@karkiassociates.com.np?subject=Legal%20Inquiry%20via%20Website&body=Dear%20Karki%20Associates%2C%0A%0APlease%20find%20my%20inquiry%20below%3A%0A%0AName%3A%0APhone%3A%0AMessage%3A%0A%0AThank%20you." class="email-link">Send Email</a>
-                <p style="font-size:0.8rem; margin-top:1rem; color:#555;">Your email client will open. After sending, we will get back to you promptly. Do not share confidential information via unencrypted email.</p>
+                <a href="mailto:anil@karkiassociates.com.np" class="direct-email">anil@karkiassociates.com.np</a></p>
             </div>
         </div>
     </div>
@@ -328,15 +367,9 @@
                 <p><strong>फोन</strong><br>
                 <a href="tel:+9779851068714">+977‑9851068714</a></p>
                 <p><strong>आधिकारिक इमेल</strong><br>
-                <a href="mailto:contact@karkiassociates.com.np?subject=कानूनी%20जानकारी%20वेबसाइट%20बाट" class="direct-email">contact@karkiassociates.com.np</a></p>
+                <a href="mailto:contact@karkiassociates.com.np" class="direct-email">contact@karkiassociates.com.np</a></p>
                 <p><strong>अधिवक्ताको इमेल</strong><br>
-                <a href="mailto:anil@karkiassociates.com.np?subject=कानूनी%20परामर्श%20अनुरोध" class="direct-email">anil@karkiassociates.com.np</a></p>
-            </div>
-            <div class="contact-email-section">
-                <p><strong>हामीलाई इमेल पठाउनुहोस्</strong></p>
-                <p>तपाईंको इमेल क्लाइन्ट खोल्न तलको बटनमा क्लिक गर्नुहोस्। कृपया आफ्नो नाम, सम्पर्क नम्बर र कानूनी विषयको संक्षिप्त विवरण लेख्नुहोस्। हामी १-२ व्यावसायिक दिनभित्र जवाफ दिनेछौं।</p>
-                <a href="mailto:contact@karkiassociates.com.np?subject=कानूनी%20जानकारी%20वेबसाइट%20बाट&body=प्रिय%20कार्की%20एसोसिएट्स%2C%0A%0Aमेरो%20प्रश्न%20तल%20उल्लेख%20गरेको%20छु%3A%0A%0Aनाम%3A%0Aफोन%3A%0Aसन्देश%3A%0A%0Aधन्यवाद%20।" class="email-link">इमेल पठाउनुहोस्</a>
-                <p style="font-size:0.8rem; margin-top:1rem; color:#555;">तपाईंको इमेल क्लाइन्ट खुल्नेछ। पठाएपछि हामी छिटो प्रतिक्रिया दिनेछौं। कृपया असुरक्षित इमेलमा गोप्य जानकारी नपठाउनुहोस्।</p>
+                <a href="mailto:anil@karkiassociates.com.np" class="direct-email">anil@karkiassociates.com.np</a></p>
             </div>
         </div>
     </div>
@@ -351,6 +384,15 @@
         <div class="footer-copyright" id="footerCopyright">© 2026 Karki Associates Private Limited</div>
     </div>
 </footer>
+
+<!-- Cookie Consent Banner HTML -->
+<div id="cookieConsent" class="cookie-consent">
+    <div class="cookie-consent-inner">
+        <p>We use cookies to remember your language preference and improve your experience on our website. By continuing to use our site, you consent to the use of cookies. For more information, please see our <a href="cookie.html">Cookie Policy</a>.</p>
+        <button id="acceptCookies" class="cookie-accept">Accept</button>
+    </div>
+</div>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -443,6 +485,26 @@
     const menuLinks = slideMenu.querySelectorAll('a');
     menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
     window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
+
+    // Cookie Consent Banner Logic
+    (function() {
+        const consent = localStorage.getItem('cookieConsent');
+        const banner = document.getElementById('cookieConsent');
+        const acceptBtn = document.getElementById('acceptCookies');
+
+        if (!consent && banner) {
+            setTimeout(() => {
+                banner.classList.add('show');
+            }, 500);
+        }
+
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                banner.classList.remove('show');
+            });
+        }
+    })();
 </script>
 </body>
 </html>
