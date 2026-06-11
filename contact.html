@@ -39,13 +39,15 @@
         header {
             background: #fff;
             color: #000;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #e0e0e0;
-            position: relative;
+            position: sticky;
+            top: 0;
             z-index: 100;
             box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+            border-bottom: 1px solid #e0e0e0;
         }
-        .desktop-header {
+        /* Top row: logo + language toggle (and hamburger on mobile) */
+        .header-top {
+            padding: 0.8rem 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -54,20 +56,6 @@
         .logo a { display: block; transition: opacity 0.2s; }
         .logo a:hover { opacity: 0.85; }
         .logo img { max-height: 95px; width: auto; display: block; }
-        .desktop-nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-        .desktop-nav a {
-            color: #000;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.125rem;
-            transition: color 0.2s;
-        }
-        .desktop-nav a:hover { color: #444; text-decoration: underline; }
         .lang-switch {
             background: #fff;
             color: #000;
@@ -77,11 +65,40 @@
             cursor: pointer;
             font-weight: bold;
             font-size: 0.9rem;
-            margin-left: 0.5rem;
             font-family: 'Arial', sans-serif;
             transition: all 0.2s;
         }
         .lang-switch:hover { background: #000; color: #fff; border-color: #000; }
+        /* Second row: desktop navigation (left aligned) */
+        .desktop-nav-row {
+            padding: 0.5rem 0;
+            border-top: 1px solid #e0e0e0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .desktop-nav-row.hide-nav {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+        .desktop-nav {
+            display: flex;
+            justify-content: flex-start;
+        }
+        .desktop-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .desktop-nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.125rem;
+            transition: color 0.2s;
+        }
+        .desktop-nav a:hover { color: #444; text-decoration: underline; }
+        /* Mobile elements */
         .mobile-header {
             display: none;
             align-items: center;
@@ -140,11 +157,22 @@
             background: #f5f5f5;
         }
         @media (max-width: 768px) {
-            .desktop-header { display: none; }
-            .mobile-header { display: flex; }
-            .logo img { max-height: 60px; }
-            body { font-size: 1rem; line-height: 1.6; }
-            .container { padding: 0 16px; }
+            .desktop-nav-row {
+                display: none;
+            }
+            .mobile-header {
+                display: flex;
+            }
+            .logo img {
+                max-height: 60px;
+            }
+            body {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            .container {
+                padding: 0 16px;
+            }
             .mobile-slide-menu a {
                 font-size: 1.2rem;
                 padding: 0.6rem;
@@ -170,18 +198,18 @@
             font-weight: 600;
             letter-spacing: -0.01em;
         }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
         .contact-info {
-            background: #f8f8f8;
+            background: #fff;
             padding: 1.5rem;
             border-radius: 8px;
+            border: 1px solid #e0e0e0;
         }
-        .contact-info p { margin-bottom: 1rem; }
-        .contact-info strong { color: #000; }
+        .contact-info p {
+            margin-bottom: 1rem;
+        }
+        .contact-info strong {
+            color: #000;
+        }
         .direct-email {
             word-break: break-all;
         }
@@ -216,7 +244,6 @@
                 border-radius: 0;
             }
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
-            .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
             .footer-copyright { font-size: 1rem; }
         }
         /* Dark mode fix for transparent logo */
@@ -291,8 +318,21 @@
 <body>
 <header>
     <div class="container">
-        <div class="desktop-header">
+        <!-- Top row: logo + language toggle (and hamburger on mobile) -->
+        <div class="header-top">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
+            <div class="desktop-lang">
+                <button id="langToggleDesktop" class="lang-switch">ने</button>
+            </div>
+            <div class="mobile-header">
+                <div class="mobile-right">
+                    <button id="langToggleMobile" class="lang-switch">ने</button>
+                    <button class="hamburger" id="hamburgerBtn">☰</button>
+                </div>
+            </div>
+        </div>
+        <!-- Second row: desktop navigation -->
+        <div class="desktop-nav-row" id="desktopNavRow">
             <div class="desktop-nav">
                 <ul id="navMenuDesktop">
                     <li><a href="index.html" data-key="home">Home</a></li>
@@ -302,75 +342,64 @@
                     <li><a href="blog.html" data-key="blog">Blog</a></li>
                     <li><a href="opinion.html" data-key="opinion">Opinion</a></li>
                     <li><a href="contact.html" data-key="contact">Contact</a></li>
-                    <li><button id="langToggleDesktop" class="lang-switch">ने</button></li>
                 </ul>
             </div>
         </div>
-        <div class="mobile-header">
-            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
-            <div class="mobile-right">
-                <button id="langToggleMobile" class="lang-switch">ने</button>
-                <button class="hamburger" id="hamburgerBtn">☰</button>
-            </div>
-        </div>
-        <div id="mobileSlideMenu" class="mobile-slide-menu">
-            <a href="index.html" data-key="home">Home</a>
-            <a href="about.html" data-key="about">About</a>
-            <a href="advocate.html" data-key="advocate">Advocate</a>
-            <a href="service.html" data-key="services">Services</a>
-            <a href="blog.html" data-key="blog">Blog</a>
-            <a href="opinion.html" data-key="opinion">Opinion</a>
-            <a href="contact.html" data-key="contact">Contact</a>
-        </div>
+    </div>
+    <!-- Mobile slide menu -->
+    <div id="mobileSlideMenu" class="mobile-slide-menu">
+        <a href="index.html" data-key="home">Home</a>
+        <a href="about.html" data-key="about">About</a>
+        <a href="advocate.html" data-key="advocate">Advocate</a>
+        <a href="service.html" data-key="services">Services</a>
+        <a href="blog.html" data-key="blog">Blog</a>
+        <a href="opinion.html" data-key="opinion">Opinion</a>
+        <a href="contact.html" data-key="contact">Contact</a>
     </div>
 </header>
 <main class="container">
     <!-- English content -->
     <div id="en-content">
         <h1>Contact Us</h1>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <p><strong>Registered Office</strong><br>
-                Karki Associates Private Limited<br>
-                Rastra Bank Chowk (In the building of Juice Box)<br>
-                Pokhara Metropolitan City, Ward No. 7<br>
-                Kaski District, Gandaki Province, Nepal</p>
-                <p><strong>Branch Office</strong><br>
-                Karki Associates Private Limited<br>
-                Bagbazar (Opposite of GEFONT Office)<br>
-                Kathmandu Metropolitan City, Ward No. 28<br>
-                Kathmandu District, Bagmati Province, Nepal</p>
-                <p><strong>Phone</strong><br>
-                <a href="tel:+9779851068714">+977‑9851068714</a></p>
-                <p><strong>Official Email</strong><br>
-                <a href="mailto:contact@karkiassociates.com.np" class="direct-email">contact@karkiassociates.com.np</a></p>
-                <p><strong>Advocate Email</strong><br>
-                <a href="mailto:anil@karkiassociates.com.np" class="direct-email">anil@karkiassociates.com.np</a></p>
-            </div>
+        <div class="contact-info">
+            <p><strong>Registered Office</strong><br>
+            Karki Associates Private Limited<br>
+            Rastra Bank Chowk (In the building of Juice Box)<br>
+            Pokhara Metropolitan City, Ward No. 7<br>
+            Kaski District, Gandaki Province, Nepal</p>
+            <p><strong>Branch Office</strong><br>
+            Karki Associates Private Limited<br>
+            Bagbazar (Opposite of GEFONT Office)<br>
+            Kathmandu Metropolitan City, Ward No. 28<br>
+            Kathmandu District, Bagmati Province, Nepal</p>
+            <p><strong>Phone</strong><br>
+            <a href="tel:+9779851068714">+977‑9851068714</a></p>
+            <p><strong>Official Email</strong><br>
+            <a href="mailto:contact@karkiassociates.com.np" class="direct-email">contact@karkiassociates.com.np</a></p>
+            <p><strong>Advocate Email</strong><br>
+            <a href="mailto:anil@karkiassociates.com.np" class="direct-email">anil@karkiassociates.com.np</a></p>
         </div>
     </div>
     <!-- Nepali content -->
     <div id="np-content" style="display:none;">
         <h1>सम्पर्क गर्नुहोस्</h1>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <p><strong>रजिस्टर्ड कार्यालय</strong><br>
-                कार्की एसोसिएट्स प्राइभेट लिमिटेड<br>
-                राष्ट्र बैंक चोक (जुस बक्सको भवनमा)<br>
-                पोखरा महानगरपालिका, वडा नं. ७<br>
-                कास्की जिल्ला, गण्डकी प्रदेश, नेपाल</p>
-                <p><strong>शाखा कार्यालय</strong><br>
-                कार्की एसोसिएट्स प्राइभेट लिमिटेड<br>
-                बागबजार (GEFONT कार्यालयको विपरीत)<br>
-                काठमाडौं महानगरपालिका, वडा नं. २८<br>
-                काठमाडौं जिल्ला, बागमती प्रदेश, नेपाल</p>
-                <p><strong>फोन</strong><br>
-                <a href="tel:+9779851068714">+977‑9851068714</a></p>
-                <p><strong>आधिकारिक इमेल</strong><br>
-                <a href="mailto:contact@karkiassociates.com.np" class="direct-email">contact@karkiassociates.com.np</a></p>
-                <p><strong>अधिवक्ताको इमेल</strong><br>
-                <a href="mailto:anil@karkiassociates.com.np" class="direct-email">anil@karkiassociates.com.np</a></p>
-            </div>
+        <div class="contact-info">
+            <p><strong>रजिस्टर्ड कार्यालय</strong><br>
+            कार्की एसोसिएट्स प्राइभेट लिमिटेड<br>
+            राष्ट्र बैंक चोक (जुस बक्सको भवनमा)<br>
+            पोखरा महानगरपालिका, वडा नं. ७<br>
+            कास्की जिल्ला, गण्डकी प्रदेश, नेपाल</p>
+            <p><strong>शाखा कार्यालय</strong><br>
+            कार्की एसोसिएट्स प्राइभेट लिमिटेड<br>
+            बागबजार (GEFONT कार्यालयको विपरीत)<br>
+            काठमाडौं महानगरपालिका, वडा नं. २८<br>
+            काठमाडौं जिल्ला, बागमती प्रदेश, नेपाल</p>
+            <p><strong>फोन</strong><br>
+            <a href="tel:+9779851068714">+977‑9851068714</a></p>
+            <p><strong>आधिकारिक इमेल</strong><br>
+            <a href="mailto:contact@karkiassociates.com.np" class="direct-email">contact@karkiassociates.com.np</a></p>
+            <p><strong>अधिवक्ताको इमेल</strong><br>
+            <a href="mailto:anil@karkiassociates.com.np" class="direct-email">anil@karkiassociates.com.np</a></p>
         </div>
     </div>
 </main>
@@ -385,7 +414,7 @@
     </div>
 </footer>
 
-<!-- Cookie Consent Banner HTML -->
+<!-- Cookie Consent Banner -->
 <div id="cookieConsent" class="cookie-consent">
     <div class="cookie-consent-inner">
         <p>We use cookies to remember your language preference and improve your experience on our website. By continuing to use our site, you consent to the use of cookies. For more information, please see our <a href="cookie.html">Cookie Policy</a>.</p>
@@ -462,6 +491,22 @@
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
 
+    // Scroll behavior: hide desktop nav row on scroll down, show on scroll up
+    let lastScrollTop = 0;
+    const navRow = document.getElementById('desktopNavRow');
+    if (navRow) {
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                navRow.classList.add('hide-nav');
+            } else if (scrollTop < lastScrollTop) {
+                navRow.classList.remove('hide-nav');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    }
+
+    // Mobile slide menu
     const hamburger = document.getElementById('hamburgerBtn');
     const slideMenu = document.getElementById('mobileSlideMenu');
     let isMenuOpen = false;
@@ -486,18 +531,14 @@
     menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
     window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
 
-    // Cookie Consent Banner Logic
+    // Cookie Consent
     (function() {
         const consent = localStorage.getItem('cookieConsent');
         const banner = document.getElementById('cookieConsent');
         const acceptBtn = document.getElementById('acceptCookies');
-
         if (!consent && banner) {
-            setTimeout(() => {
-                banner.classList.add('show');
-            }, 500);
+            setTimeout(() => { banner.classList.add('show'); }, 500);
         }
-
         if (acceptBtn) {
             acceptBtn.addEventListener('click', function() {
                 localStorage.setItem('cookieConsent', 'accepted');
