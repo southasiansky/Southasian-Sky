@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /thankyou.html
 Sitemap: https://karkiassociates.com.np/sitemap.xml
