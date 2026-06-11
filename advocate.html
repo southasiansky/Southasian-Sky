@@ -20,7 +20,6 @@
     <meta property="twitter:description" content="Credentials, experience, ethics and vision of Advocate Anil Karki.">
     <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <!-- exact same style block as main HTML (no extra h2 styles, identical to homepage) -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -317,6 +316,50 @@
                 padding: 0 16px;
             }
         }
+
+        /* Profile picture styles */
+        .profile-img-mobile {
+            display: none;
+        }
+        .profile-img-desktop {
+            display: none;
+        }
+        .profile-img-mobile img,
+        .profile-img-desktop img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 2px solid #000;  /* thin black circle */
+            object-fit: cover;
+            background: #fff;
+        }
+        /* Desktop: image floated right after first subheading */
+        @media (min-width: 769px) {
+            .profile-img-desktop {
+                display: block;
+                float: right;
+                width: 200px;
+                margin: 1rem 0 1rem 1.5rem;
+            }
+            .profile-img-mobile {
+                display: none;
+            }
+        }
+        /* Mobile: centered below h1, before first subheading */
+        @media (max-width: 768px) {
+            .profile-img-mobile {
+                display: block;
+                text-align: center;
+                margin: 1rem 0 1rem 0;
+            }
+            .profile-img-mobile img {
+                width: 160px;
+                max-width: 60%;
+            }
+            .profile-img-desktop {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -366,7 +409,15 @@
     <!-- ENGLISH CONTENT (Advocate Anil Karki) -->
     <div id="en-content">
         <h1>Advocate Anil Karki</h1>
+        <!-- Mobile profile image (visible only on mobile, below heading) -->
+        <div class="profile-img-mobile">
+            <img src="images/anil-karki-profile.jpg" alt="Advocate Anil Karki - profile photo">
+        </div>
         <h2 style="font-size:1.5rem; margin:1.5rem 0 0.8rem 0; font-weight:600;">Academic Credentials and Professional Standing</h2>
+        <!-- Desktop profile image (visible only on desktop, floated right below the first subheading) -->
+        <div class="profile-img-desktop">
+            <img src="images/anil-karki-profile.jpg" alt="Advocate Anil Karki - profile photo">
+        </div>
         <p>Anil Karki is the founder and director of Karki Associates Private Limited. He holds a Bachelor of Laws (LL.B.) degree from the University of Delhi. He subsequently earned a Master of Comparative Laws (M.C.L.), also from the University of Delhi, which provided him with advanced research in comparative legal methodologies and cross‑jurisdictional analysis. He has successfully completed the advocate licensing examination conducted by the Nepal Bar Council.</p>
         
         <h2 style="font-size:1.5rem; margin:1.5rem 0 0.8rem 0; font-weight:600;">Professional Experience & Foundational Journey</h2>
@@ -379,10 +430,18 @@
         <p>Advocate Karki believes that a good lawyer does more than argue skilfully in court. A good lawyer advises honestly, communicates clearly, respects the client's time and financial constraints, and works diligently to achieve fair outcomes. His approach combines rigorous legal analysis with genuine concern for the client's situation – a philosophy that informs every case, consultation, and document drafted by the firm. His long‑term vision for Karki Associates is to build a law practice that is accessible, transparent, and reliable – where high quality legal services are not reserved for the wealthy but are available to individuals, small businesses, non‑profit organisations, and public bodies alike. He is also committed to contributing to the legal community through continuing legal education, legal literacy programs, and pro bono assistance for marginalised groups.</p>
     </div>
 
-    <!-- NEPALI CONTENT (identical structure) -->
+    <!-- NEPALI CONTENT (identical structure with profile image placement) -->
     <div id="np-content" style="display:none;">
         <h1>अधिवक्ता अनिल कार्की</h1>
+        <!-- Mobile profile image (visible only on mobile, below heading) -->
+        <div class="profile-img-mobile">
+            <img src="images/anil-karki-profile.jpg" alt="अधिवक्ता अनिल कार्की - तस्वीर">
+        </div>
         <h2 style="font-size:1.5rem; margin:1.5rem 0 0.8rem 0; font-weight:600;">शैक्षिक योग्यता तथा व्यावसायिक हैसियत</h2>
+        <!-- Desktop profile image (visible only on desktop, floated right below the first subheading) -->
+        <div class="profile-img-desktop">
+            <img src="images/anil-karki-profile.jpg" alt="अधिवक्ता अनिल कार्की - तस्वीर">
+        </div>
         <p>अधिवक्ता अनिल कार्की यस कार्की एसोसिएट्स प्राइभेट लिमिटेडका संस्थापक तथा सञ्चालक हुनुहुन्छ। उहाँले दिल्ली विश्वविद्यालय (भारत) बाट कानूनमा स्नातक हासिल गर्नुभएको छ। त्यसपछि उहाँले सोही विश्वविद्यालयबाट तुलनात्मक कानूनमा स्नातकोत्तर समेत गर्नुभएको छ। उहाँले नेपाल कानून व्यवसायी परिषदद्वारा सञ्चालित अधिवक्ता तहको परीक्षा पनि सफलतापूर्वक उत्तीर्ण गर्नुभएको छ।</p>
         
         <h2 style="font-size:1.5rem; margin:1.5rem 0 0.8rem 0; font-weight:600;">व्यावसायिक अनुभव तथा संस्थापन यात्रा</h2>
