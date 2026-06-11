@@ -114,7 +114,7 @@
         .desktop-nav ul {
             display: flex;
             list-style: none;
-            justify-content: center;
+            justify-content: flex-start; /* changed from center to left align */
             gap: 2rem;
             padding: 0.6rem 0;
         }
@@ -126,7 +126,7 @@
             transition: color 0.2s;
         }
         .desktop-nav a:hover { color: #444; text-decoration: underline; }
-        /* Mobile slide menu (unchanged) */
+        /* Mobile slide menu */
         .mobile-slide-menu {
             display: none;
             position: fixed;
@@ -301,7 +301,6 @@
         <div class="desktop-header">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
             <div class="desktop-nav">
-                <!-- Desktop navigation is now in separate row, but we keep the language toggle here -->
                 <button id="langToggleDesktop" class="lang-switch">ने</button>
             </div>
         </div>
@@ -315,7 +314,7 @@
     </div>
 </header>
 
-<!-- Desktop navigation row (separate, hide on scroll down) -->
+<!-- Desktop navigation row (separate, left‑aligned) -->
 <div class="nav-row" id="navRow">
     <div class="container">
         <div class="desktop-nav">
@@ -461,16 +460,13 @@
     if (navRow && window.innerWidth > 768) {
         let lastScrollY = window.scrollY;
         let ticking = false;
-
         function onScroll() {
             if (!ticking) {
                 requestAnimationFrame(() => {
                     const currentScrollY = window.scrollY;
                     if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                        // Scrolling down: hide nav row
                         navRow.classList.add('hidden');
                     } else if (currentScrollY < lastScrollY) {
-                        // Scrolling up: show nav row
                         navRow.classList.remove('hidden');
                     }
                     lastScrollY = currentScrollY;
@@ -480,7 +476,6 @@
             }
         }
         window.addEventListener('scroll', onScroll);
-        // Ensure nav row is visible on initial load (if scrolled, maybe hidden? we want visible)
         navRow.classList.remove('hidden');
     }
 
