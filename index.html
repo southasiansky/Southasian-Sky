@@ -58,13 +58,13 @@
         .logo a { display: block; transition: opacity 0.2s; }
         .logo a:hover { opacity: 0.85; }
         .logo img { max-height: 95px; width: auto; display: block; }
-        /* Desktop: logo flush left, toggle flush right (no extra margins) */
+        /* Desktop margins as requested */
         @media (min-width: 769px) {
             .logo {
-                margin-left: 0;
+                margin-left: 30px;
             }
             .lang-switch {
-                margin-right: 0;
+                margin-right: 30px;
             }
         }
         .lang-switch {
@@ -114,12 +114,12 @@
             .container {
                 padding: 0 16px;
             }
-            /* Mobile adjustments: logo slight left, toggle+hamburger slight right */
+            /* Mobile margins as requested */
             .logo {
-                margin-left: 5px;
+                margin-left: 10px;
             }
             .mobile-right {
-                margin-right: 5px;
+                margin-right: 7px;
             }
             /* Increase header height slightly on mobile */
             .header-row {
@@ -154,7 +154,7 @@
             transition: color 0.2s;
         }
         .desktop-nav a:hover { color: #444; text-decoration: underline; }
-        /* Mobile slide menu - appears from little upper */
+        /* Mobile slide menu - appears from top:45px as requested */
         .mobile-slide-menu {
             display: none;
             position: fixed;
@@ -192,10 +192,10 @@
                 font-size: 1.2rem;
                 padding: 0.6rem;
             }
-            /* Reduce top offset so menu appears closer to header */
+            /* Slide menu top offset set to 45px as requested */
             .mobile-slide-menu {
-                top: 55px;
-                height: calc(100vh - 55px);
+                top: 45px;
+                height: calc(100vh - 45px);
             }
             .nav-row {
                 display: none;
@@ -336,7 +336,7 @@
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
             <button id="langToggleDesktop" class="lang-switch">ने</button>
         </div>
-        <!-- Mobile header (logo left with slight margin, hamburger + toggle right with slight margin) -->
+        <!-- Mobile header -->
         <div class="mobile-header">
             <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
             <div class="mobile-right">
@@ -408,7 +408,7 @@
         <p>We use cookies to remember your language preference and improve your experience on our website. By continuing to use our site, you consent to the use of cookies. For more information, please see our <a href="cookie.html">Cookie Policy</a>.</p>
         <button id="acceptCookies" class="cookie-accept">Accept</button>
     </div>
-</footer>
+</div>
 
 <script type="application/ld+json">
 {
