@@ -34,7 +34,6 @@
             margin: 0 auto;
             padding: 0 24px;
         }
-        /* Header row (logo + language + hamburger) - always sticky */
         header {
             background: #fff;
             color: #000;
@@ -95,7 +94,6 @@
             align-items: center;
             gap: 1rem;
         }
-        /* Desktop navigation row - sticky with gap from header */
         .nav-row {
             background: #fff;
             border-bottom: 1px solid #e0e0e0;
@@ -125,7 +123,6 @@
             transition: color 0.2s;
         }
         .desktop-nav a:hover { color: #444; text-decoration: underline; }
-        /* Mobile slide menu */
         .mobile-slide-menu {
             display: none;
             position: fixed;
@@ -239,7 +236,6 @@
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             .footer-copyright { font-size: 1rem; }
         }
-        /* Dark mode fix for transparent logo */
         @media (prefers-color-scheme: dark) {
             .logo img {
                 background-color: white;
@@ -247,7 +243,6 @@
                 padding: 2px;
             }
         }
-        /* Cookie Consent Banner */
         .cookie-consent {
             position: fixed;
             bottom: 0;
@@ -326,7 +321,7 @@
     </div>
 </header>
 
-<!-- Desktop navigation row (separate, left‑aligned) with margin-top gap -->
+<!-- Desktop navigation row (separate, left‑aligned) -->
 <div class="nav-row" id="navRow">
     <div class="container">
         <div class="desktop-nav">
@@ -457,7 +452,7 @@
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
 
-    // Improved scroll detection: hide on scroll down, show on scroll up
+    // Scroll behaviour: hide nav row when scrolling down, show when scrolling up
     const navRow = document.getElementById('navRow');
     if (navRow && window.innerWidth > 768) {
         let lastScrollY = window.scrollY;
@@ -466,9 +461,12 @@
             if (!ticking) {
                 requestAnimationFrame(() => {
                     const currentScrollY = window.scrollY;
+                    // Hide only when scrolling DOWN and past 100px
                     if (currentScrollY > lastScrollY && currentScrollY > 100) {
                         navRow.classList.add('hidden');
-                    } else if (currentScrollY < lastScrollY) {
+                    }
+                    // Show when scrolling UP (any amount)
+                    else if (currentScrollY < lastScrollY) {
                         navRow.classList.remove('hidden');
                     }
                     lastScrollY = currentScrollY;
@@ -481,7 +479,6 @@
         navRow.classList.remove('hidden');
     }
 
-    // Mobile hamburger menu
     const hamburger = document.getElementById('hamburgerBtn');
     const slideMenu = document.getElementById('mobileSlideMenu');
     let isMenuOpen = false;
@@ -500,14 +497,19 @@
         document.body.style.overflow = '';
     }
     if (hamburger) {
-        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (isMenuOpen) closeMenu();
+            else openMenu();
+        });
     }
     document.querySelectorAll('.mobile-slide-menu a').forEach(link => {
         link.addEventListener('click', () => closeMenu());
     });
-    window.addEventListener('resize', () => { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
+    });
 
-    // Cookie consent logic
     (function() {
         const consent = localStorage.getItem('cookieConsent');
         const banner = document.getElementById('cookieConsent');
