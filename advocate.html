@@ -176,10 +176,7 @@
             font-size: 1.5rem;
             font-weight: 600;
         }
-        p {
-            margin-bottom: 1rem;
-        }
-        /* Profile photo – black circle */
+        p { margin-bottom: 1rem; }
         .profile-photo {
             float: right;
             margin: 0 0 1rem 1.5rem;
@@ -188,9 +185,9 @@
         .profile-photo img {
             width: 100%;
             height: auto;
-            border-radius: 50%;       /* makes it a circle */
-            border: 3px solid #000;   /* black border */
-            box-shadow: none;         /* no shadow */
+            border-radius: 50%;
+            border: 3px solid #000;
+            box-shadow: none;
             display: block;
         }
         .clearfix::after {
@@ -242,6 +239,14 @@
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             h3 { font-size: 1.3rem; }
             .footer-copyright { font-size: 1rem; }
+        }
+        /* Dark mode fix for transparent logo */
+        @media (prefers-color-scheme: dark) {
+            .logo img {
+                background-color: white;
+                border-radius: 4px;
+                padding: 2px;
+            }
         }
     </style>
 </head>
