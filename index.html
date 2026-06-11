@@ -117,6 +117,10 @@
             /* No extra margins on mobile */
             .logo { margin-left: 0; }
             .lang-switch { margin-right: 0; }
+            /* Increase header height slightly on mobile */
+            .header-row {
+                padding: 1rem 0;
+            }
         }
         /* Navigation row (desktop) */
         .nav-row {
@@ -146,7 +150,7 @@
             transition: color 0.2s;
         }
         .desktop-nav a:hover { color: #444; text-decoration: underline; }
-        /* Mobile slide menu */
+        /* Mobile slide menu - appears from little upper */
         .mobile-slide-menu {
             display: none;
             position: fixed;
@@ -184,9 +188,10 @@
                 font-size: 1.2rem;
                 padding: 0.6rem;
             }
+            /* Reduce top offset so menu appears closer to header */
             .mobile-slide-menu {
-                top: 65px;
-                height: calc(100vh - 65px);
+                top: 55px;
+                height: calc(100vh - 55px);
             }
             .nav-row {
                 display: none;
