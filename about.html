@@ -9,13 +9,11 @@
     <meta name="author" content="Karki Associates Private Limited">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://karkiassociates.com.np/about.html">
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://karkiassociates.com.np/about.html">
     <meta property="og:title" content="About Karki Associates – Law Firm in Nepal">
     <meta property="og:description" content="Learn about our law firm's structure, mission, values and client‑first legal approach. Offices in Pokhara and Kathmandu.">
     <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://karkiassociates.com.np/about.html">
     <meta property="twitter:title" content="About Karki Associates – Law Firm in Nepal">
@@ -36,7 +34,6 @@
             margin: 0 auto;
             padding: 0 24px;
         }
-        /* Header row (logo + language + hamburger) - always sticky */
         header {
             background: #fff;
             color: #000;
@@ -97,14 +94,14 @@
             align-items: center;
             gap: 1rem;
         }
-        /* Desktop navigation row (separate) - sticky but hide/show on scroll */
         .nav-row {
             background: #fff;
             border-bottom: 1px solid #e0e0e0;
             position: sticky;
-            top: 79px; /* adjust based on header height */
+            top: 79px;
             z-index: 101;
             transition: transform 0.3s ease, opacity 0.2s ease;
+            margin-top: 0.8rem;   /* gap between header and nav bar */
         }
         .nav-row.hidden {
             transform: translateY(-100%);
@@ -114,7 +111,7 @@
         .desktop-nav ul {
             display: flex;
             list-style: none;
-            justify-content: flex-start; /* left‑aligned to match index */
+            justify-content: flex-start;
             gap: 2rem;
             padding: 0.6rem 0;
         }
@@ -126,7 +123,6 @@
             transition: color 0.2s;
         }
         .desktop-nav a:hover { color: #444; text-decoration: underline; }
-        /* Mobile slide menu */
         .mobile-slide-menu {
             display: none;
             position: fixed;
@@ -174,7 +170,7 @@
                 height: calc(100vh - 65px);
             }
             .nav-row {
-                display: none; /* hide separate nav row on mobile, use mobile menu instead */
+                display: none;
             }
         }
         main {
@@ -199,6 +195,8 @@
             font-weight: 600;
         }
         p { margin-bottom: 1rem; }
+        ul { margin-left: 1.8rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.3rem; }
         footer {
             background: #fff;
             color: #000;
@@ -227,13 +225,11 @@
             main {
                 margin: 2rem auto 0 auto;
                 padding: 3rem 1.5rem 1.5rem 1.5rem;
-                border-radius: 0;
             }
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             h3 { font-size: 1.3rem; }
             .footer-copyright { font-size: 1rem; }
         }
-        /* Dark mode fix for transparent logo */
         @media (prefers-color-scheme: dark) {
             .logo img {
                 background-color: white;
@@ -241,7 +237,6 @@
                 padding: 2px;
             }
         }
-        /* Cookie Consent Banner Styles */
         .cookie-consent {
             position: fixed;
             bottom: 0;
@@ -289,7 +284,6 @@
             cursor: pointer;
             font-weight: bold;
             font-size: 0.9rem;
-            transition: background 0.2s;
         }
         .cookie-accept:hover {
             background: #ffc107;
@@ -321,7 +315,6 @@
     </div>
 </header>
 
-<!-- Desktop navigation row (separate, left‑aligned) -->
 <div class="nav-row" id="navRow">
     <div class="container">
         <div class="desktop-nav">
@@ -392,7 +385,6 @@
     </div>
 </footer>
 
-<!-- Cookie Consent Banner HTML -->
 <div id="cookieConsent" class="cookie-consent">
     <div class="cookie-consent-inner">
         <p>We use cookies to remember your language preference and improve your experience on our website. By continuing to use our site, you consent to the use of cookies. For more information, please see our <a href="cookie.html">Cookie Policy</a>.</p>
@@ -430,11 +422,7 @@
             else if (footerTranslations[lang] && footerTranslations[lang][key]) el.textContent = footerTranslations[lang][key];
         });
         const copyrightEl = document.getElementById('footerCopyright');
-        if (lang === 'ne') {
-            copyrightEl.textContent = '© २०८३ कार्की एसोसिएट्स प्राइभेट लिमिटेड';
-        } else {
-            copyrightEl.textContent = '© 2026 Karki Associates Private Limited';
-        }
+        copyrightEl.textContent = (lang === 'ne') ? '© २०८३ कार्की एसोसिएट्स प्राइभेट लिमिटेड' : '© 2026 Karki Associates Private Limited';
         document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = (lang === 'en') ? 'ने' : 'E');
     }
     function setLanguage(lang) {
@@ -449,7 +437,6 @@
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
 
-    // Scroll direction detection for nav row
     const navRow = document.getElementById('navRow');
     if (navRow && window.innerWidth > 768) {
         let lastScrollY = window.scrollY;
@@ -460,7 +447,8 @@
                     const currentScrollY = window.scrollY;
                     if (currentScrollY > lastScrollY && currentScrollY > 100) {
                         navRow.classList.add('hidden');
-                    } else if (currentScrollY < lastScrollY) {
+                    }
+                    else if (currentScrollY < lastScrollY) {
                         navRow.classList.remove('hidden');
                     }
                     lastScrollY = currentScrollY;
@@ -491,24 +479,26 @@
         document.body.style.overflow = '';
     }
     if (hamburger) {
-        hamburger.addEventListener('click', (e) => { e.stopPropagation(); if (isMenuOpen) closeMenu(); else openMenu(); });
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (isMenuOpen) closeMenu();
+            else openMenu();
+        });
     }
-    const menuLinks = slideMenu.querySelectorAll('a');
-    menuLinks.forEach(link => { link.addEventListener('click', () => closeMenu()); });
-    window.addEventListener('resize', function() { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
+    document.querySelectorAll('.mobile-slide-menu a').forEach(link => {
+        link.addEventListener('click', () => closeMenu());
+    });
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
+    });
 
-    // Cookie Consent Banner Logic
     (function() {
         const consent = localStorage.getItem('cookieConsent');
         const banner = document.getElementById('cookieConsent');
         const acceptBtn = document.getElementById('acceptCookies');
-
         if (!consent && banner) {
-            setTimeout(() => {
-                banner.classList.add('show');
-            }, 500);
+            setTimeout(() => banner.classList.add('show'), 500);
         }
-
         if (acceptBtn) {
             acceptBtn.addEventListener('click', function() {
                 localStorage.setItem('cookieConsent', 'accepted');
