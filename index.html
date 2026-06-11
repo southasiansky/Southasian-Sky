@@ -204,6 +204,14 @@
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             .footer-copyright { font-size: 1rem; }
         }
+        /* Fix for transparent logo in dark mode */
+        @media (prefers-color-scheme: dark) {
+            .logo img {
+                background-color: white;
+                border-radius: 4px;
+                padding: 2px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -297,7 +305,7 @@
     }
   ],
   "telephone": "+9779851068714",
-  "email": "karkiassociates@asia.com",
+  "email": "contact@karkiassociates.com.np",
   "foundingDate": "2026",
   "founder": {
     "@type": "Person",
