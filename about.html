@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Karki Associates – Law Firm in Pokhara & Kathmandu | Legal, Tax, Corporate Advisory</title>
-    <meta name="description" content="Karki Associates is a registered law firm in Nepal offering legal, tax, corporate advisory, and research services. Learn about our firm’s structure, mission, values, and approach to legal practice.">
-    <meta name="keywords" content="about Karki Associates, law firm Nepal, advocate Pokhara, Kathmandu lawyer, legal services Nepal, corporate advisory, Anil Karki">
+    <title>About Karki Associates – Law Firm Structure, Mission & Values</title>
+    <meta name="description" content="Learn about Karki Associates, a private limited law firm in Nepal. Discover our mission, core values, client‑centric legal approach, and offices in Pokhara and Kathmandu.">
+    <meta name="keywords" content="about law firm Nepal, Karki Associates, legal mission, core values, law firm structure, Pokhara law firm">
     <meta name="author" content="Karki Associates Private Limited">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://karkiassociates.com.np/about.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://karkiassociates.com.np/about.html">
     <meta property="og:title" content="About Karki Associates – Law Firm in Nepal">
-    <meta property="og:description" content="Learn about our firm’s structure, mission, values, and approach to legal practice. Offices in Pokhara and Kathmandu.">
+    <meta property="og:description" content="Learn about our law firm's structure, mission, values and client‑first legal approach. Offices in Pokhara and Kathmandu.">
     <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://karkiassociates.com.np/about.html">
     <meta property="twitter:title" content="About Karki Associates – Law Firm in Nepal">
-    <meta property="twitter:description" content="Learn about our firm’s structure, mission, values, and approach to legal practice.">
+    <meta property="twitter:description" content="Learn about our law firm's structure, mission, values and client‑first legal approach.">
     <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
@@ -27,12 +27,17 @@
             font-size: 1.125rem;
             line-height: 1.7;
             color: #111;
-            background: #f8f8f8;
+            background: #fff;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 24px;
+        }
+        @media (min-width: 769px) {
+            .container {
+                padding: 0 48px;
+            }
         }
         header {
             background: #fff;
@@ -41,7 +46,6 @@
             top: 0;
             z-index: 102;
             border-bottom: 1px solid #e0e0e0;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
         }
         .header-row {
             padding: 0.8rem 0;
@@ -98,10 +102,8 @@
             background: #fff;
             border-bottom: 1px solid #e0e0e0;
             position: sticky;
-            top: 79px;
             z-index: 101;
             transition: transform 0.3s ease, opacity 0.2s ease;
-            margin-top: 0.8rem;   /* gap between header and nav bar */
         }
         .nav-row.hidden {
             transform: translateY(-100%);
@@ -160,7 +162,9 @@
             .mobile-header { display: flex; }
             .logo img { max-height: 60px; }
             body { font-size: 1rem; line-height: 1.6; }
-            .container { padding: 0 16px; }
+            .container {
+                padding: 0 16px;
+            }
             .mobile-slide-menu a {
                 font-size: 1.2rem;
                 padding: 0.6rem;
@@ -170,15 +174,15 @@
                 height: calc(100vh - 65px);
             }
             .nav-row {
-                display: none; /* hide separate nav row on mobile, use mobile menu instead */
+                display: none;
             }
         }
         main {
             background: #fff;
-            padding: 5rem 2.5rem 2.5rem 2.5rem;
-            margin: 2rem auto 0 auto;
+            padding: 5rem 0 2.5rem 0;
+            margin: 0 auto;
             border-radius: 0;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            box-shadow: none;
         }
         h1 {
             color: #000;
@@ -188,27 +192,15 @@
             font-weight: 600;
             letter-spacing: -0.01em;
         }
-        h2 {
+        h3 {
             color: #000;
-            margin: 1.5rem 0 0.8rem 0;
-            font-size: 1.6rem;
+            margin: 2rem 0 0.8rem 0;
+            font-size: 1.5rem;
             font-weight: 600;
         }
         p { margin-bottom: 1rem; }
-        .btn {
-            display: inline-block;
-            background: #000;
-            color: #fff;
-            padding: 0.8rem 2rem;
-            text-decoration: none;
-            border-radius: 40px;
-            margin-top: 1rem;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            border: 1px solid #000;
-        }
-        .btn:hover { background: #fff; color: #000; border-color: #000; }
+        ul { margin-left: 1.8rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.3rem; }
         footer {
             background: #fff;
             color: #000;
@@ -235,12 +227,10 @@
         }
         @media (max-width: 768px) {
             main {
-                margin: 2rem auto 0 auto;
-                padding: 3rem 1.5rem 1.5rem 1.5rem;
-                border-radius: 0;
+                padding: 3rem 0 1.5rem 0;
             }
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
-            h2 { font-size: 1.4rem; }
+            h3 { font-size: 1.3rem; }
             .footer-copyright { font-size: 1rem; }
         }
         @media (prefers-color-scheme: dark) {
@@ -267,13 +257,14 @@
             transform: translateY(0);
         }
         .cookie-consent-inner {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 1rem;
+            padding: 0 48px;
         }
         .cookie-consent p {
             margin: 0;
@@ -305,6 +296,7 @@
             .cookie-consent-inner {
                 flex-direction: column;
                 text-align: center;
+                padding: 0 16px;
             }
         }
     </style>
@@ -328,7 +320,6 @@
     </div>
 </header>
 
-<!-- Desktop navigation row (separate, left‑aligned) -->
 <div class="nav-row" id="navRow">
     <div class="container">
         <div class="desktop-nav">
@@ -358,41 +349,32 @@
 <main class="container">
     <div id="en-content">
         <h1>Karki Associates Private Limited</h1>
-        <h2>Our Firm's Structure</h2>
+        <h3>Our Firm's Structure</h3>
         <p>Karki Associates is incorporated as a private limited company under the registered name Karki Associates Private Limited. This corporate structure allows us to function professionally, maintain formal governance, and offer a wide range of legal services under one registered entity. Being a private limited company also means we follow strict standards of record keeping, financial transparency, and regulatory compliance. Every client matter is treated with confidentiality, and every fee transaction is properly accounted for. This structure gives our clients the confidence that they are engaging a well organized and accountable legal partner.</p>
-
-        <h2>Our Mission</h2>
+        <h3>Our Mission</h3>
         <p>To provide high quality legal services that are accessible, understandable, and results driven. We aim to be the trusted legal advisor for our clients whether they need courtroom representation, business compliance, or a simple legal document. We also strive to contribute to the community through pro bono legal aid and legal literacy initiatives.</p>
-
-        <h2>Our Core Values</h2>
+        <h3>Our Core Values</h3>
         <p>We never mislead clients or cut corners. Our advice is honest, even when the news is difficult. We translate complex legal language into plain terms. You will always know what is happening, why, and what it means for you. We prepare thoroughly for every case, document, and consultation. No detail is too small. We offer flexible consultation options and transparent fee structures. Justice should not be blocked by geography or affordability. We dedicate time and resources to pro bono work and legal awareness programs. We believe that a law firm has a duty to serve society beyond billable hours.</p>
-
-        <h2>Our Approach to Legal Practice</h2>
+        <h3>Our Approach to Legal Practice</h3>
         <p>At Karki Associates, we treat each client as a partner. We begin by listening to your goals, your concerns, and your constraints. We then research the relevant laws, analyse the facts, and propose a clear course of action. Whether the solution is a court filing, a negotiated settlement, a legal opinion, or a drafted document, we explain your options and the likely outcomes.</p>
         <p>We also believe in continuous learning. Nepali laws evolve, courts issue new precedents, and business environments change. We stay updated through regular legal research, participation in continuing legal education, and engagement with the wider legal community. This ensures that the advice we give today is based on the law as it stands now.</p>
-
-        <h2>A Word About Our Name</h2>
+        <h3>A Word About Our Name</h3>
         <p>"Karki Associates" reflects our founder's name and our collaborative approach to legal work. While Anil Karki is the principal advocate, we also work with a network of professionals including chartered accountants, and legal researchers to provide comprehensive support for complex matters. When you retain Karki Associates, you get the benefit of a team oriented mindset, even as you deal directly with Anil as your primary lawyer.</p>
         <p>Karki Associates is a young firm with deep roots in legal ethics and a forward looking vision. We are not the largest law firm, but we strive to be the most trusted one for every client we serve. We welcome you to reach out, discuss your legal needs, and experience the difference of working with a firm that puts people before paperwork.</p>
     </div>
-
     <div id="np-content" style="display:none;">
         <h1>कार्की एसोसिएट्स प्राइभेट लिमिटेड</h1>
-        <h2>हाम्रो फर्मको संरचना</h2>
+        <h3>हाम्रो फर्मको संरचना</h3>
         <p>कार्की एसोसिएट्स नेपालको कम्पनी ऐन, २०६३ अन्तर्गत प्राइभेट लिमिटेड कम्पनीको रूपमा कार्की एसोसिएट्स प्राइभेट लिमिटेडको नाममा दर्ता भएको छ। यो कर्पोरेट संरचनाले हामीलाई व्यावसायिक रूपमा कार्य गर्न, औपचारिक शासन प्रणाली कायम राख्न र एउटै दर्ता संस्था अन्तर्गत कानूनी सेवाको विस्तृत परिसर प्रदान गर्न सहज बनाएको छ। हामी अभिलेख संरक्षण, वित्तीय पारदर्शिता र नियामक अनुपालनको कडा मापदण्ड पालना गर्दछौँ। प्रत्येक ग्राहकको मुद्दालाई गोपनीयताको साथ व्यवहार गरिन्छ, र प्रत्येक शुल्क कारोबारको उचित लेखा राखिन्छ। यस संरचनाले ग्राहकलाई यो विश्वास दिलाउँछ कि उहाँहरूले एक सुव्यवस्थित, उत्तरदायी र विश्वसनीय कानूनी साझेदार सँग सम्झौता गरिरहनुभएको छ।</p>
-
-        <h2>हाम्रो अभियान</h2>
+        <h3>हाम्रो अभियान</h3>
         <p>उच्च गुणस्तरीय, सुलभ, बुझ्न सकिने र परिणाममुखी कानूनी सेवा प्रदान गर्नु हाम्रो अभियान हो। हामी ग्राहकको विश्वसनीय कानूनी सल्लाहकार बन्ने लक्ष्य राख्दछौँ, चाहे उहाँलाई अदालतमा प्रतिनिधित्व आवश्यक होस्, व्यावसायिक अनुपालनको सल्लाह होस्, वा एउटा साधारण कानूनी कागजातको मात्र आवश्यकता किन नहोस्। साथै, हामी प्रो बोनो कानूनी सहायता तथा कानूनी साक्षरता अभियान मार्फत समुदायमा योगदान गर्न प्रयत्नशील छौँ।</p>
-
-        <h2>हाम्रा मूल मान्यता</h2>
+        <h3>हाम्रा मूल मान्यता</h3>
         <p>हामी ग्राहकलाई कहिल्यै गुमराहमा पार्दैनौँ न त कुनै काममा लापरबाही गर्दछौँ। हाम्रो सल्लाह सत्यतामा आधारित हुन्छ, कठिन सन्देश दिनुपर्दा पनि। हामी जटिल कानूनी भाषालाई सरल शब्दमा रूपान्तरण गर्दछौँ। तपाईंलाई सधैँ थाहा हुनेछ: के भइरहेको छ, किन भइरहेको छ र यसको अर्थ तपाईंको लागि के हो। हामी हरेक मुद्दा, कागजात र परामर्शको गहन तयारी गर्दछौँ। कुनै पनि विवरण सानो छैन। हामी लचिलो परामर्श विकल्प र पारदर्शी शुल्क संरचना प्रदान गर्दछौँ। न्याय भूगोल वा आर्थिक क्षमताले अवरुद्ध हुनु हुँदैन। हामी प्रो बोनो कार्य र कानूनी जनचेतना कार्यक्रम मा समय र स्रोत समर्पित गर्दछौँ। हाम्रो विश्वास छ कि एक कानून फर्मको कर्तव्य बिल योग्य घण्टाभन्दा पर समाजको सेवा गर्नु पनि हो।</p>
-
-        <h2>कानूनी अभ्यासप्रति हाम्रो दृष्टिकोण</h2>
+        <h3>कानूनी अभ्यासप्रति हाम्रो दृष्टिकोण</h3>
         <p>कार्की एसोसिएट्समा, हामी प्रत्येक ग्राहकलाई साझेदार जस्तै व्यवहार गर्दछौँ। हामी तपाईंका लक्ष्य, चिन्ता र सीमितताहरू सुनेर सुरु गर्दछौँ। त्यसपछि हामी सान्दर्भिक कानुनहरूको अनुसन्धान गर्दछौँ, तथ्यहरूको विश्लेषण गर्दछौँ, र कार्यको स्पष्ट मार्गचित्र प्रस्ताव गर्दछौँ। समाधान चाहे अदालतमा निवेदन दिनु होस्, वार्ता सम्झौता गर्नु होस्, कानूनी राय प्रस्तुत गर्नु होस्, वा कागजात तर्जुमा गर्नुहोस्। हामी तपाईंलाई तपाईंका विकल्प र सम्भावित परिणामहरू स्पष्ट रूपमा व्याख्या गर्दछौँ।</p>
         <p>हामी निरन्तर सिकाइमा विश्वास गर्दछौँ। नेपाली कानूनको विकास हुन्छ, अदालतले नयाँ नजिर स्थापित गर्दछन्, र व्यावसायिक वातावरण परिवर्तन हुन्छ। हामी नियमित कानूनी अनुसन्धान, निरन्तर कानूनी शिक्षामा सहभागिता, र व्यापक कानूनी समुदायसँगको संलग्नता मार्फत अद्यावधिक रहन्छौँ। यसले सुनिश्चित गर्दछ कि हामीले आज दिइरहेको सल्लाह भर्खरको कानूनमा आधारित छ।</p>
-
-        <h2>हाम्रो नामको अर्थ</h2>
-        <p>"कार्की एसोसिएट्स" नामले हाम्रो संस्थापकको नाम झल्काउँदछ र कानूनी कार्यप्रति हाम्रो सहकार्यात्मक दृष्टिकोणलाई प्रतिविम्बित गर्दछ। अनिल कार्की मूल अधिवक्ता हुनुहुन्छ, तर हामी चार्टर्ड एकाउन्टेन्ट, कानूनी अनुसन्धानकर्ता लगायत व्यावसायिकहरूको सञ्जालसँग समेत काम गर्दछौँ, ताकि जटिल विषयहरूमा व्यापक सहायता प्रदान गर्न सकियोस्। तपाईंले कार्की एसोसिएट्स लाई आफ्नो कानूनी साझेदार बनाउँदा, तपाईंले टोली-उन्मुख मानसिकता को लाभ प्राप्त गर्नुहुन्छ, जहाँ तपाईं प्रत्यक्ष रूपमा मुख्य अधिवक्ता अनिल कार्कीसँग व्यवहार गर्नुहुन्छ तर सम्पूर्ण टोलीको क्षमता तपाईंको पक्षमा रहन्छ।</p>
+        <h3>हाम्रो नामको अर्थ</h3>
+        <p>कार्की एसोसिएट्स नामले हाम्रो संस्थापकको नाम झल्काउँदछ र कानूनी कार्यप्रति हाम्रो सहकार्यात्मक दृष्टिकोणलाई प्रतिविम्बित गर्दछ। अनिल कार्की मूल अधिवक्ता हुनुहुन्छ, तर हामी चार्टर्ड एकाउन्टेन्ट, कानूनी अनुसन्धानकर्ता लगायत व्यावसायिकहरूको सञ्जालसँग समेत काम गर्दछौँ, ताकि जटिल विषयहरूमा व्यापक सहायता प्रदान गर्न सकियोस्। तपाईंले कार्की एसोसिएट्स लाई आफ्नो कानूनी साझेदार बनाउँदा, तपाईंले टोली-उन्मुख मानसिकता को लाभ प्राप्त गर्नुहुन्छ, जहाँ तपाईं प्रत्यक्ष रूपमा मुख्य अधिवक्ता अनिल कार्कीसँग व्यवहार गर्नुहुन्छ तर सम्पूर्ण टोलीको क्षमता तपाईंको पक्षमा रहन्छ।</p>
         <p>कार्की एसोसिएट्स कानूनी नैतिकताको गहिरो जरा र दूरदर्शी दृष्टिकोण सहितको एउटा नवस्थापित फर्म हो। हामी सबैभन्दा ठूलो कानून फर्म होइनौँ, तर हामी आफूले सेवा गर्ने प्रत्येक ग्राहकको लागि सबैभन्दा विश्वसनीय बन्न प्रयासरत छौँ। हामी तपाईंलाई सम्पर्क गर्न, आफ्नो कानूनी आवश्यकताबारे छलफल गर्न, र एउटा यस्तो फर्मसँग काम गर्ने सहज अनुभूति लिन आमन्त्रण गर्दछौँ जसले कागजातभन्दा मानिसलाई प्राथमिकता दिन्छ।</p>
     </div>
 </main>
@@ -418,39 +400,16 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Karki Associates Private Limited",
-  "alternateName": "Karki Associates Law Firm",
-  "description": "Registered law firm in Nepal offering legal, tax, corporate advisory, and research services. Offices in Pokhara and Kathmandu.",
-  "url": "https://karkiassociates.com.np",
-  "logo": "https://karkiassociates.com.np/images/logo.png",
-  "address": [
-    {
-      "@type": "PostalAddress",
-      "addressLocality": "Pokhara",
-      "addressRegion": "Gandaki Province",
-      "addressCountry": "NP",
-      "streetAddress": "Rastra Bank Chowk, Ward No. 7"
-    },
-    {
-      "@type": "PostalAddress",
-      "addressLocality": "Kathmandu",
-      "addressRegion": "Bagmati Province",
-      "addressCountry": "NP",
-      "streetAddress": "Bagbazar, Ward No. 28"
-    }
-  ],
-  "telephone": "+9779851068714",
-  "email": "contact@karkiassociates.com.np",
-  "foundingDate": "2026",
-  "founder": {
-    "@type": "Person",
-    "name": "Anil Karki",
-    "jobTitle": "Advocate & Director"
+  "@type": "AboutPage",
+  "name": "About Karki Associates Private Limited",
+  "description": "Registered law firm in Nepal offering legal, tax, corporate advisory, and research services. Learn about our firm structure, mission, and core values.",
+  "url": "https://karkiassociates.com.np/about.html",
+  "isPartOf": {
+    "@type": "LegalService",
+    "name": "Karki Associates Private Limited"
   }
 }
 </script>
-
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
@@ -483,7 +442,18 @@
     setLanguage(currentLanguage);
     document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
 
-    // Scroll behaviour: hide nav row when scrolling down, show when scrolling up
+    function setNavRowTop() {
+        const navRow = document.getElementById('navRow');
+        if (!navRow) return;
+        const header = document.querySelector('header');
+        if (header) {
+            const headerHeight = header.offsetHeight;
+            navRow.style.top = headerHeight + 'px';
+        }
+    }
+    window.addEventListener('load', setNavRowTop);
+    window.addEventListener('resize', setNavRowTop);
+
     const navRow = document.getElementById('navRow');
     if (navRow && window.innerWidth > 768) {
         let lastScrollY = window.scrollY;
@@ -531,26 +501,15 @@
             else openMenu();
         });
     }
-    document.querySelectorAll('.mobile-slide-menu a').forEach(link => {
-        link.addEventListener('click', () => closeMenu());
-    });
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && isMenuOpen) closeMenu();
-    });
+    document.querySelectorAll('.mobile-slide-menu a').forEach(link => link.addEventListener('click', () => closeMenu()));
+    window.addEventListener('resize', () => { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
 
     (function() {
         const consent = localStorage.getItem('cookieConsent');
         const banner = document.getElementById('cookieConsent');
         const acceptBtn = document.getElementById('acceptCookies');
-        if (!consent && banner) {
-            setTimeout(() => banner.classList.add('show'), 500);
-        }
-        if (acceptBtn) {
-            acceptBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'accepted');
-                banner.classList.remove('show');
-            });
-        }
+        if (!consent && banner) setTimeout(() => banner.classList.add('show'), 500);
+        if (acceptBtn) acceptBtn.addEventListener('click', () => { localStorage.setItem('cookieConsent', 'accepted'); banner.classList.remove('show'); });
     })();
 </script>
 </body>
