@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use – Karki Associates Law Firm, Pokhara & Kathmandu</title>
-    <meta name="description" content="Terms of Use for Karki Associates Private Limited website. Read our legal terms, governing law, and limitations of liability.">
-    <meta name="keywords" content="terms of use, legal terms, Karki Associates, law firm Nepal, website terms">
+    <title>Terms of Use – Karki Associates Law Firm | Legal Information</title>
+    <meta name="description" content="Read the Terms of Use for Karki Associates website. Learn about permitted use, intellectual property, disclaimers, limitation of liability, and governing law.">
+    <meta name="keywords" content="terms of use, legal terms, website terms, Karki Associates, law firm Nepal, disclaimer, user agreement">
     <meta name="author" content="Karki Associates Private Limited">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://karkiassociates.com.np/terms.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://karkiassociates.com.np/terms.html">
     <meta property="og:title" content="Terms of Use – Karki Associates">
-    <meta property="og:description" content="Read the terms and conditions for using the Karki Associates website.">
+    <meta property="og:description" content="Official Terms of Use for Karki Associates website. Please read carefully before using our site.">
     <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://karkiassociates.com.np/terms.html">
     <meta property="twitter:title" content="Terms of Use – Karki Associates">
-    <meta property="twitter:description" content="Legal terms for website use.">
+    <meta property="twitter:description" content="Official Terms of Use for Karki Associates website.">
     <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* reset & base – identical to original */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             font-size: 1.125rem;
@@ -29,36 +35,52 @@
             color: #111;
             background: #fff;
         }
+
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 0 24px;
         }
+
         @media (min-width: 769px) {
             .container {
                 padding: 0 48px;
             }
         }
+
         header {
             background: #fff;
             color: #000;
             position: sticky;
             top: 0;
             z-index: 102;
-            /* border-bottom: none – removed dividing line */
-            box-shadow: none;
         }
+
         .header-row {
             padding: 0.8rem 0;
         }
+
         .desktop-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .logo a { display: block; transition: opacity 0.2s; }
-        .logo a:hover { opacity: 0.85; }
-        .logo img { max-height: 95px; width: auto; display: block; }
+
+        .logo a {
+            display: block;
+            transition: opacity 0.2s;
+        }
+
+        .logo a:hover {
+            opacity: 0.85;
+        }
+
+        .logo img {
+            max-height: 95px;
+            width: auto;
+            display: block;
+        }
+
         @media (min-width: 769px) {
             .logo {
                 margin-left: 30px;
@@ -67,6 +89,7 @@
                 margin-right: 30px;
             }
         }
+
         .lang-switch {
             background: #fff;
             color: #000;
@@ -79,13 +102,20 @@
             font-family: 'Arial', sans-serif;
             transition: all 0.2s;
         }
-        .lang-switch:hover { background: #000; color: #fff; border-color: #000; }
+
+        .lang-switch:hover {
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+
         .mobile-header {
             display: none;
             align-items: center;
             justify-content: space-between;
             width: 100%;
         }
+
         .hamburger {
             background: none;
             border: none;
@@ -93,40 +123,62 @@
             cursor: pointer;
             color: #000;
             padding: 0;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
             width: 40px;
             text-align: center;
         }
+
         .hamburger.open {
             transform: rotate(90deg);
         }
+
         .mobile-right {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
+
         @media (max-width: 768px) {
-            .desktop-header { display: none; }
-            .mobile-header { display: flex; }
-            .logo img { max-height: 60px; }
-            body { font-size: 1rem; line-height: 1.6; }
-            .container { padding: 0 16px; }
-            .logo { margin-left: 10px; }
-            .mobile-right { margin-right: 7px; }
-            .header-row { padding: 1rem 0; }
+            .desktop-header {
+                display: none;
+            }
+            .mobile-header {
+                display: flex;
+            }
+            .logo img {
+                max-height: 60px;
+            }
+            body {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            .container {
+                padding: 0 16px;
+            }
+            .logo {
+                margin-left: 10px;
+            }
+            .mobile-right {
+                margin-right: 7px;
+            }
+            .header-row {
+                padding: 1rem 0;
+            }
         }
+
         .nav-row {
             background: #fff;
-            /* border-bottom: none – removed dividing line */
             position: sticky;
             z-index: 101;
             transition: transform 0.3s ease, opacity 0.2s ease;
         }
+
         .nav-row.hidden {
             transform: translateY(-100%);
             opacity: 0;
             pointer-events: none;
         }
+
         .desktop-nav ul {
             display: flex;
             list-style: none;
@@ -134,6 +186,7 @@
             gap: 2rem;
             padding: 0.4rem 0;
         }
+
         .desktop-nav a {
             color: #000;
             text-decoration: none;
@@ -141,7 +194,12 @@
             font-size: 1.125rem;
             transition: color 0.2s;
         }
-        .desktop-nav a:hover { color: #444; text-decoration: underline; }
+
+        .desktop-nav a:hover {
+            color: #444;
+            text-decoration: underline;
+        }
+
         .mobile-slide-menu {
             display: none;
             position: fixed;
@@ -160,6 +218,7 @@
             top: 80px;
             height: calc(100vh - 80px);
         }
+
         .mobile-slide-menu a {
             display: block;
             color: #000;
@@ -171,9 +230,11 @@
             transition: background 0.2s;
             width: 100%;
         }
+
         .mobile-slide-menu a:hover {
             background: #f5f5f5;
         }
+
         @media (max-width: 768px) {
             .mobile-slide-menu a {
                 font-size: 1.2rem;
@@ -187,17 +248,21 @@
                 display: none;
             }
         }
+
         main {
             background: #fff;
             padding: 5rem 0 2.5rem 0;
             margin: 0 auto;
         }
+
         h1, h2, h3, h4, h5, h6 {
             text-align: left;
         }
+
         p, li {
             text-align: justify;
         }
+
         h1 {
             color: #000;
             margin-top: 1rem;
@@ -206,7 +271,28 @@
             font-weight: 600;
             letter-spacing: -0.01em;
         }
-        p { margin-bottom: 1rem; }
+
+        h2 {
+            margin-top: 1.8rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 0.25rem;
+        }
+
+        h3 {
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a3e6f;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
         .btn {
             display: inline-block;
             background: #000;
@@ -220,14 +306,20 @@
             transition: all 0.2s;
             border: 1px solid #000;
         }
-        .btn:hover { background: #fff; color: #000; border-color: #000; }
+
+        .btn:hover {
+            background: #fff;
+            color: #000;
+            border-color: #000;
+        }
+
         footer {
             background: #fff;
             color: #000;
             text-align: center;
             padding: 1.2rem 0;
-            /* border-top: none – removed dividing line */
         }
+
         footer a {
             color: #000;
             text-decoration: none;
@@ -236,20 +328,39 @@
             font-size: 1rem;
             transition: opacity 0.2s;
         }
-        footer a:hover { text-decoration: underline; opacity: 0.8; }
-        .footer-policy { margin-bottom: 0.5rem; word-spacing: normal; }
+
+        footer a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+
+        .footer-policy {
+            margin-bottom: 0.5rem;
+            word-spacing: normal;
+        }
+
         .footer-copyright {
             margin: 0.3rem 0;
             font-size: 1rem;
             font-weight: 500;
         }
+
         @media (max-width: 768px) {
             main {
                 padding: 3rem 0 1.5rem 0;
             }
-            h1 { font-size: 1.6rem; margin-top: 0.5rem; }
-            .footer-copyright { font-size: 1rem; }
+            h1 {
+                font-size: 1.6rem;
+                margin-top: 0.5rem;
+            }
+            h2 {
+                font-size: 1.35rem;
+            }
+            .footer-copyright {
+                font-size: 1rem;
+            }
         }
+
         @media (prefers-color-scheme: dark) {
             .logo img {
                 background-color: white;
@@ -257,6 +368,7 @@
                 padding: 2px;
             }
         }
+
         .cookie-consent {
             position: fixed;
             bottom: 0;
@@ -270,9 +382,11 @@
             transform: translateY(100%);
             transition: transform 0.3s ease-in-out;
         }
+
         .cookie-consent.show {
             transform: translateY(0);
         }
+
         .cookie-consent-inner {
             max-width: 1000px;
             margin: 0 auto;
@@ -283,19 +397,23 @@
             gap: 1rem;
             padding: 0 48px;
         }
+
         .cookie-consent p {
             margin: 0;
             font-size: 0.9rem;
             flex: 1;
             color: #fff;
         }
+
         .cookie-consent a {
             color: #ffd966;
             text-decoration: underline;
         }
+
         .cookie-consent a:hover {
             color: #fff;
         }
+
         .cookie-accept {
             background: #ffd966;
             border: none;
@@ -305,10 +423,13 @@
             cursor: pointer;
             font-weight: bold;
             font-size: 0.9rem;
+            transition: background 0.2s;
         }
+
         .cookie-accept:hover {
             background: #ffc107;
         }
+
         @media (max-width: 768px) {
             .cookie-consent-inner {
                 flex-direction: column;
@@ -316,20 +437,25 @@
                 padding: 0 16px;
             }
         }
+
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #1a3e6f;
+            outline-offset: 2px;
+        }
     </style>
 </head>
 <body>
-<header>
+<header role="banner">
     <div class="container header-row">
         <div class="desktop-header">
-            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
-            <button id="langToggleDesktop" class="lang-switch">ने</button>
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates law firm logo" width="200" height="95" style="max-height:95px; width:auto;"></a></div>
+            <button id="langToggleDesktop" class="lang-switch" aria-label="Switch to Nepali language">ने</button>
         </div>
         <div class="mobile-header">
-            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates Logo"></a></div>
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Karki Associates logo" width="160" height="60" style="max-height:60px; width:auto;" loading="lazy"></a></div>
             <div class="mobile-right">
-                <button id="langToggleMobile" class="lang-switch">ने</button>
-                <button class="hamburger" id="hamburgerBtn">☰</button>
+                <button id="langToggleMobile" class="lang-switch" aria-label="Switch to Nepali language">ने</button>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileSlideMenu">☰</button>
             </div>
         </div>
     </div>
@@ -337,7 +463,7 @@
 
 <div class="nav-row" id="navRow">
     <div class="container">
-        <div class="desktop-nav">
+        <nav class="desktop-nav" aria-label="Main navigation">
             <ul id="navMenuDesktop">
                 <li><a href="index.html" data-key="home">Home</a></li>
                 <li><a href="about.html" data-key="about">About</a></li>
@@ -347,11 +473,11 @@
                 <li><a href="opinion.html" data-key="opinion">Opinion</a></li>
                 <li><a href="contact.html" data-key="contact">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
 </div>
 
-<div id="mobileSlideMenu" class="mobile-slide-menu">
+<nav id="mobileSlideMenu" class="mobile-slide-menu" aria-label="Mobile navigation" aria-hidden="true">
     <a href="index.html" data-key="home">Home</a>
     <a href="about.html" data-key="about">About</a>
     <a href="advocate.html" data-key="advocate">Advocate</a>
@@ -359,83 +485,187 @@
     <a href="blog.html" data-key="blog">Blog</a>
     <a href="opinion.html" data-key="opinion">Opinion</a>
     <a href="contact.html" data-key="contact">Contact</a>
-</div>
+</nav>
 
-<main class="container">
+<main role="main" class="container" id="main-content">
+    <!-- English Terms of Use -->
     <div id="en-content">
         <h1>Terms of Use</h1>
         <p><strong>Effective Date: May 5, 2026</strong></p>
-        <p>Welcome to the website of Karki Associates Private Limited (“Company”, “we”, “us”, or “our”). By accessing or using our website (the “Site”), you agree to comply with and be bound by the following terms and conditions (the “Terms”). If you do not agree to these Terms, please do not use the Site.</p>
 
-        <h2>1. Use of Website</h2>
-        <p>You may use the Site for lawful purposes only. You agree not to:</p>
-        <ul>
-            <li>Use the Site in any way that violates any applicable local, national, or international law or regulation.</li>
-            <li>Attempt to gain unauthorized access to any portion of the Site, or any other systems or networks connected to the Site.</li>
-            <li>Transmit any viruses, malware, or other harmful code.</li>
-            <li>Scrape, copy, or distribute any content from the Site without our prior written consent.</li>
-        </ul>
+        <h2>1. SCOPE AND ACCEPTANCE</h2>
+        <p>1.1 These Terms of Use (“Terms”) govern your access to and use of the website operated by Karki Associates Private Limited (“Company”, “we”, “us”, “our”), including all subdomains, features, content, and functionalities (collectively, the “Site”).</p>
+        <p>1.2 By accessing, browsing, or using the Site in any manner, you (“you” or “User”) acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree, you must immediately cease using the Site.</p>
+        <p>1.3 The Company reserves the right to change, modify, add, or remove portions of these Terms at any time. Changes are effective upon posting, and your continued use of the Site constitutes acceptance of the revised Terms.</p>
 
-        <h2>2. Intellectual Property</h2>
-        <p>All content on this Site, including text, graphics, logos, images, and software, is the property of Karki Associates Private Limited or its licensors and is protected by Nepali and international copyright, trademark, and other intellectual property laws. You may not reproduce, modify, distribute, or republish any content without our express written permission.</p>
+        <h2>2. ELIGIBILITY AND LAWFUL USE</h2>
+        <p>2.1 You represent that you are at least 18 years of age or, if under 18, are accessing the Site under the supervision of a parent or legal guardian who agrees to these Terms.</p>
+        <p>2.2 You agree to use the Site only for lawful purposes and in compliance with all applicable laws, regulations, and ordinances of Nepal and any other relevant jurisdiction.</p>
+        <p>2.3 You shall not: (a) Use the Site in any manner that could disable, overburden, damage, or impair the Site or interfere with another party’s use; (b) Attempt to gain unauthorised access to any portion of the Site, user accounts, computer systems, or networks connected to the Site through hacking, password mining, or any other means; (c) Transmit, upload, or distribute any viruses, worms, Trojan horses, time bombs, cancelbots, ransomware, or any other harmful or destructive code; (d) Use any robot, spider, scraper, or other automated means to access the Site for any purpose without our express written permission; (e) Reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code of any software forming part of the Site; (f) Use the Site to send unsolicited commercial communications or to harass, threaten, or defraud any person.</p>
 
-        <h2>3. No Attorney-Client Relationship</h2>
-        <p>Information provided on this Site is for general informational purposes only and does not constitute legal advice. Use of the Site does not create an attorney-client relationship between you and Karki Associates Private Limited or any of its advocates. You should consult a qualified legal professional for advice regarding your individual situation.</p>
+        <h2>3. INTELLECTUAL PROPERTY RIGHTS</h2>
+        <p>3.1 All content on the Site, including but not limited to text, articles, case summaries, legal updates, graphics, logos, icons, images, audio clips, video clips, data compilations, software, meta tags, digital downloads, and documentation (“Content”) is the exclusive property of the Company or its licensors and is protected under the Copyright Act, 2059 (2002), the Patent, Design and Trade Mark Act, 2022 (1965), and other applicable intellectual property laws of Nepal and international treaties.</p>
+        <p>3.2 The Company’s name, logo, and all related product and service names, designs, and slogans are trademarks of the Company. You may not use such marks without the Company’s prior written consent.</p>
+        <p>3.3 You are granted a limited, non-exclusive, non-transferable, revocable license to access and view the Content for your personal, non-commercial informational purposes only. You shall not: (a) Reproduce, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any Content without our express written consent; (b) Remove, obscure, or alter any copyright, trademark, or other proprietary notices appearing on the Content.</p>
+        <p>3.4 Any unauthorised use of the Content automatically terminates the license granted herein and may violate intellectual property laws.</p>
 
-        <h2>4. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law, Karki Associates Private Limited shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising out of your access to or use of the Site, even if advised of the possibility of such damages. This limitation applies to all claims, whether based on warranty, contract, tort, or any other legal theory.</p>
+        <h2>4. NO ATTORNEY-CLIENT RELATIONSHIP</h2>
+        <p>4.1 The Content on this Site is provided solely for general informational purposes. It does not constitute legal advice, legal opinion, or any other form of professional advice.</p>
+        <p>4.2 Neither your receipt of information from the Site nor your submission of any information to the Company through the Site creates an attorney-client relationship or any other fiduciary relationship between you and the Company or any of its advocates, employees, or agents.</p>
+        <p>4.3 You acknowledge that legal information is not a substitute for personalised legal advice from a qualified advocate licensed in your jurisdiction. You should consult a competent legal professional regarding your specific factual situation.</p>
+        <p>4.4 The Company expressly disclaims any intention to practice law in any jurisdiction where it is not authorised to do so. The Site is not intended as advertising or solicitation in any jurisdiction where the Site would be prohibited by law.</p>
 
-        <h2>5. Third-Party Links</h2>
-        <p>The Site may contain links to third-party websites. These links are provided for your convenience only, and we do not endorse or assume any responsibility for the content, privacy policies, or practices of any third-party sites. Access them at your own risk.</p>
+        <h2>5. USER SUBMISSIONS AND CONFIDENTIALITY</h2>
+        <p>5.1 The Site may enable you to contact the Company via forms, email, or chat. Any information you send through the Site (other than information that is subject to a separate written confidentiality agreement) shall not be treated as confidential or protected by attorney-client privilege.</p>
+        <p>5.2 You agree not to send any confidential, proprietary, or sensitive information to the Company through the Site unless the Company has expressly agreed in writing to treat such information as confidential.</p>
+        <p>5.3 By submitting any non-confidential information, you grant the Company a perpetual, irrevocable, royalty-free, worldwide license to use, reproduce, modify, adapt, publish, and distribute such information for any lawful purpose, subject to applicable privacy laws and the Company’s Privacy Policy.</p>
 
-        <h2>6. Governing Law and Dispute Resolution</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws of Nepal. Any dispute arising out of or relating to these Terms or your use of the Site shall be submitted to the exclusive jurisdiction of the courts of Pokhara, Kaski District, Nepal.</p>
+        <h2>6. DISCLAIMER OF WARRANTIES</h2>
+        <p>6.1 THE SITE AND ALL CONTENT, FUNCTIONS, AND MATERIALS PROVIDED THROUGH THE SITE ARE PROVIDED “AS IS” AND “AS AVAILABLE”, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</p>
+        <p>6.2 TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE COMPANY DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, AND ANY WARRANTIES ARISING FROM COURSE OF DEALING OR USAGE OF TRADE.</p>
+        <p>6.3 THE COMPANY DOES NOT WARRANT THAT: (a) THE SITE WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE; (b) ANY DEFECTS OR ERRORS WILL BE CORRECTED; (c) THE SITE OR THE SERVERS THAT MAKE IT AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS; (d) THE CONTENT IS ACCURATE, COMPLETE, CURRENT, OR RELIABLE.</p>
+        <p>6.4 YOU ASSUME ALL RISK OF USE OF THE SITE. YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM YOUR USE OF THE SITE.</p>
 
-        <h2>7. Changes to Terms</h2>
-        <p>We reserve the right to modify or update these Terms at any time without prior notice. The “Effective Date” at the top of this page indicates when the latest changes were made. Your continued use of the Site after any changes constitutes acceptance of the revised Terms.</p>
+        <h2>7. LIMITATION OF LIABILITY</h2>
+        <p>7.1 TO THE FULLEST EXTENT PERMITTED BY THE LAWS OF NEPAL, IN NO EVENT SHALL THE COMPANY, ITS AFFILIATES, PARTNERS, ADVOCATES, EMPLOYEES, DIRECTORS, OR AGENTS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES (INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, REVENUE, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES) ARISING OUT OF OR IN CONNECTION WITH: (a) YOUR ACCESS TO OR USE OF, OR INABILITY TO ACCESS OR USE, THE SITE; (b) ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SITE; (c) ANY CONTENT OBTAINED FROM THE SITE; (d) UNAUTHORISED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR DATA.</p>
+        <p>7.2 THIS LIMITATION APPLIES WHETHER THE CLAIM IS BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, OR ANY OTHER LEGAL THEORY, EVEN IF THE COMPANY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+        <p>7.3 IF YOU ARE DISSATISFIED WITH ANY PORTION OF THE SITE OR WITH THESE TERMS, YOUR SOLE AND EXCLUSIVE REMEDY IS TO DISCONTINUE USING THE SITE.</p>
+        <p>7.4 TO THE EXTENT THAT ANY JURISDICTION DOES NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES, THE COMPANY’S LIABILITY SHALL BE LIMITED TO THE MAXIMUM EXTENT PERMITTED BY LAW.</p>
 
-        <h2>8. Contact</h2>
-        <p>If you have any questions about these Terms, please contact us.</p>
+        <h2>8. INDEMNIFICATION</h2>
+        <p>You agree to indemnify, defend, and hold harmless the Company and its affiliates, officers, directors, employees, agents, licensors, and service providers from and against any and all claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys’ fees) arising out of or relating to: (a) Your violation of these Terms; (b) Your use of the Site, including any data or content transmitted or received by you; (c) Your violation of any rights of another person or entity; (d) Any negligent or wrongful act or omission by you in connection with the Site.</p>
+
+        <h2>9. THIRD-PARTY LINKS AND RESOURCES</h2>
+        <p>9.1 The Site may contain links to third-party websites, applications, or resources (“Third-Party Sites”) for your convenience. The Company does not control, endorse, sponsor, or guarantee any Third-Party Sites.</p>
+        <p>9.2 The Company is not responsible for the availability, accuracy, content, privacy policies, or practices of any Third-Party Sites. You access such sites at your own risk.</p>
+        <p>9.3 You agree that the Company shall have no liability arising from your use of or reliance on any Third-Party Sites. We encourage you to read the terms and privacy policies of any third-party website you visit.</p>
+
+        <h2>10. DATA PRIVACY</h2>
+        <p>10.1 Any personal information you provide to the Company through the Site is subject to the Company’s Privacy Policy, which is incorporated into these Terms by reference.</p>
+        <p>10.2 By using the Site, you consent to the collection, use, and processing of your personal information as described in the Privacy Policy.</p>
+
+        <h2>11. GOVERNING LAW AND DISPUTE RESOLUTION</h2>
+        <p>11.1 These Terms and any dispute arising out of or relating to these Terms, your use of the Site, or any matter relating to the Company shall be governed by and construed in accordance with the laws of Nepal, without regard to its conflict of laws principles.</p>
+        <p>11.2 Any legal suit, action, or proceeding arising out of or related to these Terms or the Site shall be instituted exclusively in the courts of Pokhara, Kaski District, Nepal. You waive any objection to jurisdiction and venue in such courts.</p>
+        <p>11.3 You agree that any claim or cause of action arising under these Terms must be filed within one (1) year after such claim or cause of action arose, or it shall be forever barred.</p>
+
+        <h2>12. FORCE MAJEURE</h2>
+        <p>The Company shall not be liable for any delay or failure to perform resulting from causes outside its reasonable control, including but not limited to acts of God, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, earthquakes, pandemics, epidemics, power outages, cyberattacks, or failure of internet service providers.</p>
+
+        <h2>13. SEVERABILITY</h2>
+        <p>If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such provision shall be modified to the minimum extent necessary to make it enforceable, or if not possible, severed from these Terms. The remaining provisions shall continue in full force and effect.</p>
+
+        <h2>14. WAIVER</h2>
+        <p>No waiver by the Company of any term or condition set forth in these Terms shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of the Company to assert a right or provision under these Terms shall not constitute a waiver of such right or provision.</p>
+
+        <h2>15. ENTIRE AGREEMENT</h2>
+        <p>These Terms, together with the Privacy Policy and any other legal notices published by the Company on the Site, constitute the sole and entire agreement between you and the Company with respect to the Site and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, with respect to the Site.</p>
+
+        <h2>16. ASSIGNMENT</h2>
+        <p>You may not assign or transfer any of your rights or obligations under these Terms without the Company’s prior written consent. The Company may freely assign these Terms without restriction to any successor in interest or affiliate.</p>
+
+        <h2>17. SURVIVAL</h2>
+        <p>Sections 3 (Intellectual Property), 4 (No Attorney-Client Relationship), 5 (User Submissions), 6 (Disclaimer), 7 (Limitation of Liability), 8 (Indemnification), 11 (Governing Law), and any other provisions that by their nature should survive, shall survive any termination of these Terms or your use of the Site.</p>
+
+        <h2>18. CONTACT</h2>
+        <p>If you have any questions, comments, or complaints regarding these Terms, please contact us:</p>
+        <p>Karki Associates Private Limited<br>
+        Email: contact@karkiassociates.com.np<br>
+        Address: Rastra Bank Chowk, Pokhara-7, Nepal / Bagbazar, Kathmandu-28, Nepal</p>
     </div>
 
-    <div id="np-content" style="display:none;">
+    <!-- Nepali Terms of Use -->
+    <div id="np-content" style="display:none;" lang="ne">
         <h1>प्रयोगका सर्तहरू</h1>
-        <p><strong>प्रभावकारी मिति: बैशाख २२, २०८३</strong></p>
-        <p>कार्की एसोसिएट्स प्राइभेट लिमिटेड (“कम्पनी”, “हामी”, “हाम्रो”) को वेबसाइटमा पहुँच गर्नु वा प्रयोग गर्नुभएको छ भने, तपाईं निम्न सर्तहरू (यसलाई “सर्तहरू” भनिन्छ) बाट बाधित हुन सहमत हुनुहुन्छ। यदि तपाईं यी सर्तहरूसँग सहमत नहुनुहुन्छ भने, कृपया यो साइट प्रयोग नगर्नुहोस्।</p>
+        <p><strong>प्रभावकारी मिति: २०८३ वैशाख २२ (May 5, 2026)</strong></p>
 
-        <h2>१. वेबसाइटको प्रयोग</h2>
-        <p>तपाईंले साइटको प्रयोग केवल वैधानिक उद्देश्यका लागि मात्र गर्न सक्नुहुन्छ। तपाईं निम्न कार्यहरू गर्न सहमत हुनुहुन्न:</p>
-        <ul>
-            <li>लागू हुने कुनै पनि स्थानीय, राष्ट्रिय वा अन्तर्राष्ट्रिय कानून वा नियमको विपरीत साइट प्रयोग गर्ने।</li>
-            <li>साइटको कुनै भाग, वा साइटसँग जडित अन्य प्रणाली वा सञ्जालहरूमा अनधिकृत पहुँच प्राप्त गर्ने प्रयास गर्ने।</li>
-            <li>कम्प्युटर भाइरस, मालवेर वा अन्य हानिकारक कोड प्रसारण गर्ने।</li>
-            <li>हाम्रो पूर्व लिखित सहमति बिना साइटको कुनै सामग्री स्क्र्याप गर्ने, प्रतिलिपि गर्ने वा वितरण गर्ने।</li>
-        </ul>
+        <h2>१. कार्यक्षेत्र र स्वीकारोक्ति</h2>
+        <p>१.१ यी प्रयोगका सर्तहरू (“सर्तहरू”) कार्की एसोसिएट्स प्राइभेट लिमिटेड (“कम्पनी”, “हामी”, “हाम्रो”) द्वारा सञ्चालित वेबसाइट – जसमा सम्पूर्ण उपडोमेन, सुविधाहरू, सामग्री, तथा कार्यात्मकताहरू (सामूहिक रूपमा “साइट”) समावेश छन् – मा तपाईंको पहुँच र प्रयोगलाई नियमन गर्दछ।</p>
+        <p>१.२ साइटमा पहुँच गरेर, ब्राउज गरेर, वा कुनै पनि प्रकारले प्रयोग गरेर तपाईंले (“तपाईं” वा “प्रयोगकर्ता”) यी सर्तहरू पढेको, बुझेको, र यसबाट बाधित हुन सहमत भएको स्वीकार गर्नुहुन्छ। यदि सहमत हुनुहुन्न भने, तपाईंले तुरुन्त साइट प्रयोग गर्न बन्द गर्नुपर्छ।</p>
+        <p>१.३ कम्पनीलाई कुनै पनि समयमा यी सर्तहरू परिवर्तन, संशोधन, थप, वा केही भाग हटाउने अधिकार सुरक्षित छ। परिवर्तनहरू पोस्ट गरेपश्चात् प्रभावकारी हुन्छन्, र साइटको तपाईंको निरन्तर प्रयोगले परिवर्तित सर्तहरू स्वीकार गरेको मानिनेछ।</p>
 
-        <h2>२. बौद्धिक सम्पत्ति</h2>
-        <p>यस साइटको सबै सामग्री (पाठ, ग्राफिक्स, लोगो, छविहरू, तथा सफ्टवेर) कार्की एसोसिएट्स प्राइभेट लिमिटेड वा यसको इजाजतपत्रदाताको सम्पत्ति हो र नेपाली तथा अन्तर्राष्ट्रिय प्रतिलिपि अधिकार, ट्रेडमार्क, र अन्य बौद्धिक सम्पत्ति कानूनहरूद्वारा संरक्षित छ। हाम्रो स्पष्ट लिखित अनुमति बिना कुनै पनि सामग्री पुनरुत्पादन, परिमार्जन, वितरण वा पुन: प्रकाशित गर्न सकिँदैन।</p>
+        <h2>२. योग्यता र वैधानिक प्रयोग</h2>
+        <p>२.१ तपाईंले प्रतिनिधित्व गर्नुहुन्छ कि तपाईंको उमेर कम्तीमा १८ वर्ष छ, वा यदि १८ वर्षभन्दा कम उमेरको हुनुहुन्छ भने, तपाईंले आफ्नो अभिभावक वा कानुनी संरक्षकको देखरेखमा साइट प्रयोग गर्दै हुनुहुन्छ र ती अभिभावक यी सर्तहरूसँग सहमत छन्।</p>
+        <p>२.२ तपाईं साइटको प्रयोग केवल वैधानिक उद्देश्यका लागि मात्र गर्न सहमत हुनुहुन्छ, र नेपाल तथा कुनै अन्य सान्दर्भिक क्षेत्राधिकारका लागू कानून, नियम तथा विनियमहरूको पालना गर्नुपर्छ।</p>
+        <p>२.३ तपाईंले निम्न कार्यहरू गर्नुहुँदैन: (क) साइटलाई असक्षम पार्ने, अत्यधिक भार दिने, क्षति पुर्याउने, वा अर्को पक्षको प्रयोगमा बाधा पुग्ने कुनै पनि तरिकाले प्रयोग गर्ने; (ख) ह्याकिङ, पासवर्ड माइनिङ, वा अन्य कुनै माध्यमबाट साइटको कुनै भाग, प्रयोगकर्ता खाता, कम्प्युटर प्रणाली, वा साइटसँग जडित सञ्जालहरूमा अनधिकृत पहुँच प्राप्त गर्ने प्रयास गर्ने; (ग) कुनै पनि भाइरस, वर्म, ट्रोजन हर्स, टाइम बम, क्यान्सलबोट, र्यान्समवेयर, वा अन्य हानिकारक वा विध्वंशक कोड प्रसारण, अपलोड, वा वितरण गर्ने; (घ) हाम्रो पूर्व लिखित अनुमति बिना साइटको कुनै भाग पहुँच गर्न रोबोट, स्पाइडर, स्क्रैपर, वा अन्य स्वचालित माध्यमको प्रयोग गर्ने; (ङ) साइटको कुनै पनि सफ्टवेरको स्रोत कोड निकाल्ने, रिभर्स इन्जिनियर, डिकम्पाइल, वा डिसअस्सेम्बल गर्ने; (च) अवांछित व्यावसायिक सन्देश पठाउन वा कुनै व्यक्तिलाई दुःख, धम्की वा ठगी गर्न साइट प्रयोग गर्ने।</p>
 
-        <h2>३. वकील-ग्राहक सम्बन्धको अभाव</h2>
-        <p>यस साइटमा प्रदान गरिएको जानकारी केवल सामान्य सूचनात्मक उद्देश्यका लागि हो र यसले कानूनी सल्लाह गठन गर्दैन। साइटको प्रयोगले तपाईं र कार्की एसोसिएट्स प्राइभेट लिमिटेड वा यसका कुनै अधिवक्ता बीच वकील-ग्राहक सम्बन्ध सिर्जना गर्दैन। तपाईंले आफ्नो व्यक्तिगत परिस्थितिको बारेमा सल्लाहको लागि योग्य कानूनी पेशेवरसँग परामर्श गर्नुपर्छ।</p>
+        <h2>३. बौद्धिक सम्पत्ति अधिकार</h2>
+        <p>३.१ साइटमा रहेका सम्पूर्ण सामग्री (जसमा पाठ, लेख, मुद्दा सारांश, कानूनी अपडेट, ग्राफिक्स, लोगो, आइकन, छविहरू, अडियो क्लिप, भिडियो क्लिप, डाटा सङ्कलन, सफ्टवेर, मेटा ट्याग, डिजिटल डाउनलोड, र कागजातहरू समावेश छन् तर यिनैमा सीमित छैन) (“सामग्री”) कम्पनीको वा यसका इजाजतपत्रदाताको अनन्य सम्पत्ति हो, र प्रतिलिपि अधिकार ऐन, २०५९, प्रतिकोष, नमुना तथा डिजाइन ऐन, २०२२, र नेपालका अन्य लागू बौद्धिक सम्पत्ति कानून तथा अन्तर्राष्ट्रिय सन्धिहरूद्वारा संरक्षित छ।</p>
+        <p>३.२ कम्पनीको नाम, लोगो, र सबै सम्बन्धित उत्पादन तथा सेवाका नाम, डिजाइन, र नाराहरू कम्पनीको ट्रेडमार्क हुन्। कम्पनीको पूर्व लिखित सहमति बिना तपाईंले यी चिह्नहरू प्रयोग गर्न पाउनुहुने छैन।</p>
+        <p>३.३ तपाईंलाई सामग्री केवल व्यक्तिगत, गैर-व्यावसायिक सूचनात्मक प्रयोजनका लागि पहुँच गर्न र हेर्नको लागि सीमित, गैर-अनन्य, अनुसरणीय नहुने, र खारेज गर्न सकिने अनुमति प्रदान गरिन्छ। तपाईंले: (क) हाम्रो स्पष्ट लिखित सहमति बिना कुनै पनि सामग्री पुनरुत्पादन, परिमार्जन, व्युत्पन्न कार्यहरू सिर्जना, सार्वजनिक प्रदर्शन, सार्वजनिक प्रदर्शन, पुनः प्रकाशन, डाउनलोड, भण्डारण, वा प्रसारण गर्न हुँदैन; (ख) सामग्रीमा देखिने कुनै प्रतिलिपि अधिकार, ट्रेडमार्क, वा अन्य स्वामित्व सूचनाहरू हटाउन, अस्पष्ट पार्न, वा परिवर्तन गर्न हुँदैन।</p>
+        <p>३.४ सामग्रीको कुनै पनि अनधिकृत प्रयोगले यहाँ प्रदान गरिएको अनुमति स्वतः समाप्त गर्दछ र बौद्धिक सम्पत्ति कानूनको उल्लङ्घन हुन सक्छ।</p>
 
-        <h2>४. दायित्वको सीमा</h2>
-        <p>कानूनले अनुमति दिएको अधिकतम सीमासम्म, कार्की एसोसिएट्स प्राइभेट लिमिटेड साइटमा तपाईंको पहुँच वा प्रयोगबाट उत्पन्न हुने कुनै पनि प्रत्यक्ष, अप्रत्यक्ष, आकस्मिक, परिणामात्मक, वा दण्डात्मक क्षतिहरूको लागि उत्तरदायी हुनेछैन, भले पनि त्यस्तो क्षतिको सम्भावनाको बारेमा सल्लाह दिइएको भए तापनि। यो सीमा वारेन्टी, करार, क्षति, वा कुनै अन्य कानूनी सिद्धान्तमा आधारित सबै दाबीहरूमा लागू हुन्छ।</p>
+        <h2>४. वकील-ग्राहक सम्बन्धको अभाव</h2>
+        <p>४.१ यस साइटमा प्रदान गरिएको सामग्री केवल साधारण सूचनात्मक उद्देश्यका लागि हो। यसले कानूनी सल्लाह, कानूनी राय, वा व्यावसायिक सल्लाहको कुनै अन्य रूप गठन गर्दैन।</p>
+        <p>४.२ साइटबाट जानकारी प्राप्त गर्नु वा कम्पनीलाई साइटमार्फत कुनै जानकारी पेश गर्नुले तपाईं र कम्पनी वा यसका कुनै अधिवक्ता, कर्मचारी, वा एजेन्टहरू बीच वकील-ग्राहक सम्बन्ध वा कुनै अन्य विश्वासको सम्बन्ध सिर्जना गर्दैन।</p>
+        <p>४.३ तपाईं स्वीकार गर्नुहुन्छ कि कानूनी जानकारी तपाईंको क्षेत्राधिकारमा इजाजतपत्र प्राप्त योग्य अधिवक्ताबाट व्यक्तिगत कानूनी सल्लाहको विकल्प होइन। आफ्नो विशिष्ट तथ्यगत अवस्थाको सम्बन्धमा तपाईंले सक्षम कानूनी पेशेवरसँग परामर्श लिनुपर्छ।</p>
+        <p>४.४ कम्पनी स्पष्ट रूपमा कुनै पनि क्षेत्राधिकारमा कानूनको अभ्यास गर्ने कुनै पनि इरादालाई अस्वीकार गर्दछ जहाँ उक्त साइटले कानूनद्वारा त्यसो गर्न निषेध गरेको छ। यो साइट कुनै पनि क्षेत्राधिकारमा विज्ञापन वा मौखिक अनुरोधको रूपमा अभिप्रेत छैन जहाँ यो निषेधित हुनेछ।</p>
 
-        <h2>५. तेस्रो-पक्ष लिङ्कहरू</h2>
-        <p>साइटमा तेस्रो-पक्षको वेबसाइटहरूको लिङ्क हुन सक्छ। यी लिङ्कहरू केवल तपाईंको सुविधाको लागि प्रदान गरिएका हुन्, र हामी कुनै पनि तेस्रो-पक्ष साइटको सामग्री, गोपनीयता नीति, वा अभ्यासहरूको लागि समर्थन वा जिम्मेवारी लिँदैनौं। तपाईं आफ्नै जोखिममा ती साइटहरूमा पहुँच गर्नुहोस्।</p>
+        <!-- For brevity and completeness, the remaining Nepali clauses mirror the English structure. 
+             Due to character limits but fulfilling the requirement, the full Nepali translation of sections 5-18 is included in the final delivered code. 
+             In the actual output, I will include all Nepali sections exactly as provided in the user content. -->
+        <h2>५. प्रयोगकर्ताको पेशकश र गोपनीयता</h2>
+        <p>५.१ साइटले तपाईंलाई फारम, इमेल, वा च्याट मार्फत कम्पनीलाई सम्पर्क गर्न सक्षम बनाउन सक्छ। तपाईंले साइटमार्फत पठाउनुभएको कुनै पनि जानकारी (पृथक लिखित गोपनीयता सम्झौताको अधीनमा रहेको जानकारी बाहेक) गोपनीय वा वकील-ग्राहक विशेषाधिकारद्वारा संरक्षित मानिने छैन।</p>
+        <p>५.२ तपाईं सहमत हुनुहुन्छ कि कम्पनीले लिखित रूपमा त्यस्तो जानकारी गोपनीय रूपमा व्यवहार गर्न सहमति नजनाएसम्म, तपाईंले साइटमार्फत कुनै पनि गोपनीय, व्यावसायिक गोप्य, वा संवेदनशील जानकारी पठाउनु हुँदैन।</p>
+        <p>५.३ कुनै पनि गैर-गोपनीय जानकारी पेश गरेर, तपाईंले कम्पनीलाई त्यस्तो जानकारी कुनै पनि वैधानिक उद्देश्यका लागि प्रयोग, पुनरुत्पादन, परिमार्जन, अनुकूलन, प्रकाशन, र वितरण गर्नको लागि स्थायी, अपरिवर्तनीय, रोयल्टी-मुक्त, विश्वव्यापी अनुमति प्रदान गर्नुहुन्छ, लागू गोपनीयता कानून र कम्पनीको गोपनीयता नीति अन्तर्गत।</p>
 
-        <h2>६. विनियामक कानून र विवाद समाधान</h2>
-        <p>यी सर्तहरू नेपालको कानूनद्वारा शासित र व्याख्या गरिनेछ। यी सर्तहरू वा साइटको तपाईंको प्रयोगसँग सम्बन्धित कुनै पनि विवाद पोखरा, कास्की जिल्ला, नेपालको अदालतको विशेष अधिकारक्षेत्रमा पेश गरिनेछ।</p>
+        <h2>६. जिम्मेवारीको अस्वीकरण</h2>
+        <p>६.१ साइट र यस मार्फत प्रदान गरिएका सबै सामग्री, कार्यहरू, र सामग्रीहरू “जस्तो छ” र “जस्तो उपलब्ध” को आधारमा प्रदान गरिन्छन्, कुनै पनि प्रकारको वारेन्टी, व्यक्त वा अनुमानित, बिना।</p>
+        <p>६.२ कानूनले अनुमति दिएको अधिकतम सीमासम्म, कम्पनीले स्पष्ट वा अनुमानित सबै वारेन्टीहरू अस्वीकार गर्दछ, जसमा व्यापारिकता, कुनै विशेष प्रयोजनको लागि उपयुक्तता, स्वामित्व, गैर-अतिक्रमण, र व्यापारको नियमितता वा प्रयोगको आधारमा उत्पन्न हुने कुनै पनि वारेन्टीहरू समावेश छन् तर यिनैमा सीमित छैनन्।</p>
+        <p>६.३ कम्पनीले यसको प्रतिनिधित्व गर्दैन कि: (क) साइट निरन्तर, सुरक्षित, वा त्रुटि-रहित रहनेछ; (ख) कुनै पनि दोष वा त्रुटिहरू सच्याइनेछन्; (ग) साइट वा यसलाई उपलब्ध गराउने सर्भरहरू भाइरस वा अन्य हानिकारक तत्वहरूबाट मुक्त छन्; (घ) सामग्री सही, पूर्ण, हालको, वा विश्वसनीय छ।</p>
+        <p>६.४ तपाईंले साइट प्रयोगको सम्पूर्ण जोखिम आफ्नो गर्नुहुन्छ। तपाईंको कम्प्युटर प्रणालीलाई कुनै पनि क्षति वा डाटाको हानीको लागि तपाईं एक्लै जिम्मेवार हुनुहुन्छ जुन साइटको प्रयोगको परिणामस्वरूप हुन सक्छ।</p>
 
-        <h2>७. सर्तहरूमा परिवर्तन</h2>
-        <p>हामी कुनै पनि समयमा बिना सूचना यी सर्तहरू परिमार्जन वा अद्यावधिक गर्ने अधिकार सुरक्षित राख्छौं। यस पृष्ठको शीर्षमा रहेको “प्रभावकारी मिति” ले पछिल्लो परिवर्तन कहिले गरियो भनी देखाउँछ। कुनै पनि परिवर्तन पछि साइटको तपाईंको निरन्तर प्रयोगले संशोधित सर्तहरू स्वीकार गरेको मानिनेछ।</p>
+        <h2>७. दायित्वको सीमा</h2>
+        <p>७.१ नेपालको कानूनले अनुमति दिएको पूर्णतम सीमासम्म, कम्पनी, यसका सहयोगी, साझेदार, अधिवक्ता, कर्मचारी, निर्देशक, वा एजेन्टहरू निम्न कारणले उत्पन्न हुने कुनै पनि प्रत्यक्ष, अप्रत्यक्ष, आकस्मिक, विशेष, परिणामात्मक, उदाहरणात्मक, वा दण्डात्मक क्षतिहरूको लागि उत्तरदायी हुनेछैनन् (जसमा नाफा, राजस्व, डाटा, सद्भावना, वा अन्य अमूर्त हानिहरू समावेश छन् तर यिनैमा सीमित छैनन्): (क) साइटमा तपाईंको पहुँच वा प्रयोग, वा पहुँच वा प्रयोग गर्न असमर्थता; (ख) साइटमा रहेको कुनै तेस्रो पक्षको व्यवहार वा सामग्री; (ग) साइटबाट प्राप्त कुनै पनि सामग्री; (घ) तपाईंको प्रसारण वा डाटामा अनधिकृत पहुँच, प्रयोग, वा परिवर्तन।</p>
+        <p>७.२ यो सीमा वारेन्टी, करार, क्षति (लापरवाहीसहित), कठोर दायित्व, वा कुनै अन्य कानूनी सिद्धान्तमा आधारित भए तापनि लागू हुन्छ, र कम्पनीलाई त्यस्तो क्षतिको सम्भावनाको बारेमा सल्लाह दिइएको भए तापनि लागू हुन्छ।</p>
+        <p>७.३ यदि तपाईं साइटको कुनै भाग वा यी सर्तहरूसँग असन्तुष्ट हुनुहुन्छ भने, तपाईंको एकमात्र र अनन्य उपाय साइट प्रयोग गर्न बन्द गर्नु हो।</p>
+        <p>७.४ कुनै पनि क्षेत्राधिकारले केही क्षतिहरूको बहिष्कार वा सीमालाई अनुमति नदिएको हदसम्म, कम्पनीको दायित्व कानूनले अनुमति दिएको अधिकतम सीमामा सीमित हुनेछ।</p>
+        
+        <!-- Remainder sections (8-18) follow same pattern; included in final code but truncated here for readability. Full version will be delivered. -->
+        <h2>८. क्षतिपूर्ति</h2>
+        <p>तपाईं कम्पनी र यसका सहयोगी, अधिकारी, निर्देशक, कर्मचारी, एजेन्ट, इजाजतपत्रदाता, र सेवा प्रदायकहरूलाई निम्न कारणबाट वा सम्बन्धमा उत्पन्न हुने सबै दाबीहरू, दायित्वहरू, क्षतिहरू, निर्णयहरू, पुरस्कारहरू, हानिहरू, लागतहरू, खर्चहरू, वा शुल्कहरू (उचित वकील शुल्क सहित) विरुद्ध क्षतिपूर्ति, बचाउ, र हानिरहित राख्न सहमत हुनुहुन्छ: (क) तपाईंको यी सर्तहरूको उल्लङ्घन; (ख) साइटको तपाईंको प्रयोग, जसमा तपाईंले प्रसारण वा प्राप्त गर्नुभएको कुनै पनि डाटा वा सामग्री; (ग) अर्को व्यक्ति वा संस्थाको अधिकारको तपाईंको उल्लङ्घन; (घ) साइटको सम्बन्धमा तपाईंको कुनै पनि लापरवाही वा गलत कार्य वा भूल।</p>
 
-        <h2>८. सम्पर्क</h2>
-        <p>यी सर्तहरूको बारेमा कुनै प्रश्न भए, कृपया हामीलाई सम्पर्क गर्नुहोस्।</p>
+        <h2>९. तेस्रो-पक्ष लिङ्क र स्रोतहरू</h2>
+        <p>९.१ साइटमा तपाईंको सुविधाको लागि तेस्रो-पक्षको वेबसाइट, अनुप्रयोग, वा स्रोतहरूको लिङ्क (“तेस्रो-पक्ष साइटहरू”) हुन सक्छ। कम्पनीले कुनै पनि तेस्रो-पक्ष साइटलाई नियन्त्रण, समर्थन, प्रायोजन, वा ग्यारेन्टी गर्दैन।</p>
+        <p>९.२ कम्पनी कुनै पनि तेस्रो-पक्ष साइटको उपलब्धता, शुद्धता, सामग्री, गोपनीयता नीति, वा अभ्यासहरूको लागि उत्तरदायी छैन। तपाईं आफ्नै जोखिममा त्यस्ता साइटहरू पहुँच गर्नुहुन्छ।</p>
+        <p>९.३ तपाईं सहमत हुनुहुन्छ कि कम्पनी कुनै पनि तेस्रो-पक्ष साइटको तपाईंको प्रयोग वा त्यसमा भर पर्नुबाट उत्पन्न कुनै पनि दायित्वको लागि उत्तरदायी हुनेछैन। तपाईंले भ्रमण गर्ने कुनै पनि तेस्रो-पक्ष वेबसाइटको सर्तहरू र गोपनीयता नीति पढ्न हामी प्रोत्साहित गर्दछौं।</p>
+
+        <h2>१०. डाटा गोपनीयता</h2>
+        <p>१०.१ तपाईंले साइटमार्फत कम्पनीलाई प्रदान गर्नुभएको कुनै पनि व्यक्तिगत जानकारी कम्पनीको गोपनीयता नीतिको अधीनमा हुनेछ, जुन यी सर्तहरूमा सन्दर्भद्वारा समावेश गरिएको छ।</p>
+        <p>१०.२ साइट प्रयोग गरेर, तपाईं गोपनीयता नीतिमा वर्णन गरिए अनुसार तपाईंको व्यक्तिगत जानकारीको सङ्कलन, प्रयोग, र प्रशोधनमा सहमति दिनुहुन्छ।</p>
+
+        <h2>११. विनियामक कानून र विवाद समाधान</h2>
+        <p>११.१ यी सर्तहरू र यी सर्तहरूबाट वा सम्बन्धमा उत्पन्न हुने कुनै पनि विवाद, साइटको तपाईंको प्रयोग, वा कम्पनीसँग सम्बन्धित कुनै पनि विषय नेपालको कानूनद्वारा शासित र व्याख्या गरिनेछ, यसको कानूनको द्वन्द्व सिद्धान्तहरूको पर्वाह नगरी।</p>
+        <p>११.२ यी सर्तहरू वा साइटसँग सम्बन्धित वा त्यसबाट उत्पन्न कुनै पनि कानूनी मुद्दा, कार्य, वा कार्यवाही अनन्य रूपमा पोखरा, कास्की जिल्ला, नेपालको अदालतमा दायर गरिनेछ। तपाईं यस्तो अदालतको क्षेत्राधिकार र स्थानको विरुद्ध कुनै पनि आपत्ति त्याग गर्नुहुन्छ।</p>
+        <p>११.३ तपाईं सहमत हुनुहुन्छ कि यी सर्तहरू अन्तर्गत उत्पन्न कुनै पनि दाबी वा कारण यस्तो दाबी वा कारण उत्पन्न भएको एक (१) वर्ष भित्र दायर गरिनुपर्छ, नत्र यो सदाको लागि बाधित हुनेछ।</p>
+
+        <h2>१२. अप्रत्याशित घटना</h2>
+        <p>कम्पनी आफ्नो उचित नियन्त्रण बाहिरका कारणहरूले गर्दा हुने कुनै पनि ढिलाइ वा कार्य गर्न असफलताको लागि उत्तरदायी हुनेछैन, जसमा प्राकृतिक प्रकोप, युद्ध, आतंकवाद, दंगा, नाकाबन्दी, नागरिक वा सैन्य अधिकारीहरूको कार्य, आगो, बाढी, भूकम्प, महामारी, विश्वव्यापी महामारी, पावर आउटेज, साइबर आक्रमण, वा इन्टरनेट सेवा प्रदायकको विफलता समावेश छ तर यिनैमा सीमित छैन।</p>
+
+        <h2>१३. पृथकीकरण</h2>
+        <p>यदि यी सर्तहरूको कुनै प्रावधान सक्षम क्षेत्राधिकारको अदालतद्वारा अवैध, अवैधानिक, वा अप्रवर्तनीय ठहरियो भने, त्यस्तो प्रावधानलाई प्रवर्तनीय बनाउनको लागि न्यूनतम आवश्यक हदसम्म संशोधन गरिनेछ, वा सम्भव नभएमा यी सर्तहरूबाट हटाइनेछ। बाँकी प्रावधानहरू पूर्ण रूपमा प्रभावकारी रहनेछन्।</p>
+
+        <h2>१४. त्याग</h2>
+        <p>कम्पनीद्वारा यी सर्तहरूमा उल्लेखित कुनै पनि सर्त वा प्रावधानको त्याग त्यस्तो सर्त वा प्रावधानको थप वा निरन्तर त्याग वा कुनै अन्य सर्त वा प्रावधानको त्याग मानिने छैन, र कम्पनीले यी सर्तहरू अन्तर्गत कुनै अधिकार वा प्रावधान प्रयोग गर्न असफल भएमा त्यस्तो अधिकार वा प्रावधानको त्याग गरेको मानिने छैन।</p>
+
+        <h2>१५. सम्पूर्ण सम्झौता</h2>
+        <p>यी सर्तहरू, गोपनीयता नीति, र कम्पनीद्वारा साइटमा प्रकाशित अन्य कानूनी सूचनाहरू मिलेर साइटको सम्बन्धमा तपाईं र कम्पनी बीचको एकमात्र र सम्पूर्ण सम्झौता हो, र साइटको सम्बन्धमा अगाडि वा एकै समयमा भएका सबी लिखित र मौखिक समझदारी, सम्झौता, प्रतिनिधित्व, र वारेन्टीहरूलाई प्रतिस्थापन गर्दछ।</p>
+
+        <h2>१६. हस्तान्तरण</h2>
+        <p>कम्पनीको पूर्व लिखित सहमति बिना तपाईंले यी सर्तहरू अन्तर्गत आफ्ना कुनै पनि अधिकार वा दायित्वहरू अर्को पक्षलाई हस्तान्तरण गर्न सक्नुहुने छैन। कम्पनी कुनै पनि उत्तराधिकारी वा सहयोगीलाई बिना रोक यी सर्तहरू हस्तान्तरण गर्न सक्छ।</p>
+
+        <h2>१७. निरन्तरता</h2>
+        <p>धारा ३ (बौद्धिक सम्पत्ति), ४ (वकील-ग्राहक सम्बन्धको अभाव), ५ (प्रयोगकर्ताको पेशकश), ६ (जिम्मेवारीको अस्वीकरण), ७ (दायित्वको सीमा), ८ (क्षतिपूर्ति), ११ (विनियामक कानून), र जुन प्रावधानहरू प्रकृतिले जोगिनुपर्छ, ती यी सर्तहरू वा साइटको तपाईंको प्रयोगको कुनै पनि समाप्ति पछि पनि जारी रहनेछन्।</p>
+
+        <h2>१८. सम्पर्क</h2>
+        <p>यदि यी सर्तहरूको बारेमा तपाईंको कुनै प्रश्न, टिप्पणी, वा उजुरी भए, कृपया हामीलाई सम्पर्क गर्नुहोस्:</p>
+        <p>कार्की एसोसिएट्स प्राइभेट लिमिटेड<br>
+        इमेल: contact@karkiassociates.com.np<br>
+        ठेगाना: राष्ट्र बैंक चोक, पोखरा-७, नेपाल / बागबजार, काठमाडौं-२८, नेपाल</p>
     </div>
 </main>
 
-<footer>
+<footer role="contentinfo">
     <div class="container">
         <div class="footer-policy" id="footerPolicyLinks">
             <a href="terms.html" data-key="terms">Terms of Use</a>
@@ -446,148 +676,170 @@
     </div>
 </footer>
 
-<div id="cookieConsent" class="cookie-consent">
+<div id="cookieConsent" class="cookie-consent" role="dialog" aria-label="Cookie consent banner" aria-modal="true">
     <div class="cookie-consent-inner">
         <p>We use cookies to remember your language preference and improve your experience on our website. By continuing to use our site, you consent to the use of cookies. For more information, please see our <a href="cookie.html">Cookie Policy</a>.</p>
-        <button id="acceptCookies" class="cookie-accept">Accept</button>
+        <button id="acceptCookies" class="cookie-accept" aria-label="Accept cookies">Accept</button>
     </div>
 </div>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Karki Associates Private Limited",
-  "alternateName": "Karki Associates Law Firm",
-  "description": "Registered law firm in Nepal offering legal, tax, corporate advisory, and research services.",
-  "url": "https://karkiassociates.com.np",
-  "logo": "https://karkiassociates.com.np/images/logo.png",
-  "address": [
-    {
-      "@type": "PostalAddress",
-      "addressLocality": "Pokhara",
-      "addressRegion": "Gandaki Province",
-      "addressCountry": "NP",
-      "streetAddress": "Rastra Bank Chowk, Ward No. 7"
-    },
-    {
-      "@type": "PostalAddress",
-      "addressLocality": "Kathmandu",
-      "addressRegion": "Bagmati Province",
-      "addressCountry": "NP",
-      "streetAddress": "Bagbazar, Ward No. 28"
-    }
-  ],
-  "telephone": "+9779851068714",
-  "email": "contact@karkiassociates.com.np",
-  "foundingDate": "2026",
-  "founder": {
-    "@type": "Person",
-    "name": "Anil Karki",
-    "jobTitle": "Advocate & Director"
+  "@type": "WebPage",
+  "name": "Terms of Use",
+  "description": "Terms of Use for Karki Associates website. Governs access, intellectual property, disclaimers, and user obligations.",
+  "url": "https://karkiassociates.com.np/terms.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Karki Associates",
+    "url": "https://karkiassociates.com.np"
   }
 }
 </script>
+
 <script>
-    let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
-    const navTranslations = {
-        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", opinion: "Opinion", contact: "Contact" },
-        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", opinion: "विचार", contact: "सम्पर्क" }
-    };
-    const footerTranslations = {
-        en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
-        ne: { terms: "प्रयोगका सर्तहरू", privacy: "गोपनीयता नीति", cookie: "कुकी नीति" }
-    };
-    function updateUILanguage(lang) {
-        document.querySelectorAll('[data-key]').forEach(el => {
-            const key = el.getAttribute('data-key');
-            if (navTranslations[lang] && navTranslations[lang][key]) el.textContent = navTranslations[lang][key];
-            else if (footerTranslations[lang] && footerTranslations[lang][key]) el.textContent = footerTranslations[lang][key];
-        });
-        const copyrightEl = document.getElementById('footerCopyright');
-        copyrightEl.textContent = (lang === 'ne') ? '© २०८३ कार्की एसोसिएट्स प्राइभेट लिमिटेड' : '© 2026 Karki Associates Private Limited';
-        document.querySelectorAll('.lang-switch').forEach(btn => btn.textContent = (lang === 'en') ? 'ने' : 'E');
-    }
-    function setLanguage(lang) {
-        currentLanguage = lang;
-        localStorage.setItem('selectedLanguage', lang);
-        const en = document.getElementById('en-content'), np = document.getElementById('np-content');
-        if (lang === 'ne') { en.style.display = 'none'; np.style.display = 'block'; document.documentElement.lang = 'ne'; }
-        else { np.style.display = 'none'; en.style.display = 'block'; document.documentElement.lang = 'en'; }
-        updateUILanguage(lang);
-    }
-    function toggleLanguage() { setLanguage(currentLanguage === 'en' ? 'ne' : 'en'); }
-    setLanguage(currentLanguage);
-    document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
+    (function() {
+        let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
+        const navTranslations = {
+            en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", opinion: "Opinion", contact: "Contact" },
+            ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", opinion: "विचार", contact: "सम्पर्क" }
+        };
+        const footerTranslations = {
+            en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
+            ne: { terms: "प्रयोगका सर्तहरू", privacy: "गोपनीयता नीति", cookie: "कुकी नीति" }
+        };
 
-    function setNavRowTop() {
-        const navRow = document.getElementById('navRow');
-        if (!navRow) return;
-        const header = document.querySelector('header');
-        if (header) {
-            const headerHeight = header.offsetHeight;
-            navRow.style.top = headerHeight + 'px';
+        function updateUILanguage(lang) {
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (navTranslations[lang] && navTranslations[lang][key]) {
+                    el.textContent = navTranslations[lang][key];
+                } else if (footerTranslations[lang] && footerTranslations[lang][key]) {
+                    el.textContent = footerTranslations[lang][key];
+                }
+            });
+            const copyrightEl = document.getElementById('footerCopyright');
+            if (copyrightEl) {
+                copyrightEl.textContent = (lang === 'ne') ? '© २०८३ कार्की एसोसिएट्स प्राइभेट लिमिटेड' : '© 2026 Karki Associates Private Limited';
+            }
+            document.querySelectorAll('.lang-switch').forEach(btn => {
+                btn.textContent = (lang === 'en') ? 'ने' : 'E';
+                btn.setAttribute('aria-label', (lang === 'en') ? 'Switch to Nepali language' : 'Switch to English language');
+            });
         }
-    }
-    window.addEventListener('load', setNavRowTop);
-    window.addEventListener('resize', setNavRowTop);
 
-    const navRow = document.getElementById('navRow');
-    if (navRow && window.innerWidth > 768) {
-        let lastScrollY = window.scrollY;
-        let ticking = false;
-        function onScroll() {
-            if (!ticking) {
-                requestAnimationFrame(() => {
-                    const currentScrollY = window.scrollY;
-                    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                        navRow.classList.add('hidden');
-                    } else if (currentScrollY < lastScrollY) {
-                        navRow.classList.remove('hidden');
-                    }
-                    lastScrollY = currentScrollY;
-                    ticking = false;
-                });
-                ticking = true;
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('selectedLanguage', lang);
+            const enDiv = document.getElementById('en-content');
+            const npDiv = document.getElementById('np-content');
+            if (lang === 'ne') {
+                if (enDiv) enDiv.style.display = 'none';
+                if (npDiv) npDiv.style.display = 'block';
+                document.documentElement.lang = 'ne';
+            } else {
+                if (npDiv) npDiv.style.display = 'none';
+                if (enDiv) enDiv.style.display = 'block';
+                document.documentElement.lang = 'en';
+            }
+            updateUILanguage(lang);
+        }
+
+        function toggleLanguage() {
+            setLanguage(currentLanguage === 'en' ? 'ne' : 'en');
+        }
+
+        setLanguage(currentLanguage);
+        document.querySelectorAll('.lang-switch').forEach(btn => btn.addEventListener('click', toggleLanguage));
+
+        function setNavRowTop() {
+            const navRow = document.getElementById('navRow');
+            const header = document.querySelector('header');
+            if (navRow && header && window.innerWidth > 768) {
+                navRow.style.top = header.offsetHeight + 'px';
             }
         }
-        window.addEventListener('scroll', onScroll);
-        navRow.classList.remove('hidden');
-    }
+        window.addEventListener('load', setNavRowTop);
+        window.addEventListener('resize', setNavRowTop);
 
-    const hamburger = document.getElementById('hamburgerBtn');
-    const slideMenu = document.getElementById('mobileSlideMenu');
-    let isMenuOpen = false;
-    function openMenu() {
-        slideMenu.style.display = 'flex';
-        hamburger.classList.add('open');
-        hamburger.textContent = '✕';
-        isMenuOpen = true;
-        document.body.style.overflow = 'hidden';
-    }
-    function closeMenu() {
-        slideMenu.style.display = 'none';
-        hamburger.classList.remove('open');
-        hamburger.textContent = '☰';
-        isMenuOpen = false;
-        document.body.style.overflow = '';
-    }
-    if (hamburger) {
-        hamburger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (isMenuOpen) closeMenu();
-            else openMenu();
-        });
-    }
-    document.querySelectorAll('.mobile-slide-menu a').forEach(link => link.addEventListener('click', () => closeMenu()));
-    window.addEventListener('resize', () => { if (window.innerWidth > 768 && isMenuOpen) closeMenu(); });
+        const navRow = document.getElementById('navRow');
+        if (navRow && window.innerWidth > 768) {
+            let lastScrollY = window.scrollY;
+            let ticking = false;
+            function onScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const currentScrollY = window.scrollY;
+                        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                            navRow.classList.add('hidden');
+                        } else if (currentScrollY < lastScrollY) {
+                            navRow.classList.remove('hidden');
+                        }
+                        lastScrollY = currentScrollY;
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+        }
 
-    (function() {
+        const hamburger = document.getElementById('hamburgerBtn');
+        const slideMenu = document.getElementById('mobileSlideMenu');
+        let isMenuOpen = false;
+
+        function openMenu() {
+            if (slideMenu) {
+                slideMenu.style.display = 'flex';
+                slideMenu.setAttribute('aria-hidden', 'false');
+                hamburger?.classList.add('open');
+                hamburger.textContent = '✕';
+                hamburger?.setAttribute('aria-label', 'Close menu');
+                hamburger?.setAttribute('aria-expanded', 'true');
+                isMenuOpen = true;
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMenu() {
+            if (slideMenu) {
+                slideMenu.style.display = 'none';
+                slideMenu.setAttribute('aria-hidden', 'true');
+                hamburger?.classList.remove('open');
+                hamburger.textContent = '☰';
+                hamburger?.setAttribute('aria-label', 'Menu');
+                hamburger?.setAttribute('aria-expanded', 'false');
+                isMenuOpen = false;
+                document.body.style.overflow = '';
+            }
+        }
+
+        if (hamburger && slideMenu) {
+            hamburger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (isMenuOpen) closeMenu();
+                else openMenu();
+            });
+            slideMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768 && isMenuOpen) closeMenu();
+            });
+            slideMenu.setAttribute('aria-hidden', 'true');
+        }
+
         const consent = localStorage.getItem('cookieConsent');
         const banner = document.getElementById('cookieConsent');
         const acceptBtn = document.getElementById('acceptCookies');
-        if (!consent && banner) setTimeout(() => banner.classList.add('show'), 500);
-        if (acceptBtn) acceptBtn.addEventListener('click', () => { localStorage.setItem('cookieConsent', 'accepted'); banner.classList.remove('show'); });
+        if (!consent && banner) {
+            setTimeout(() => banner.classList.add('show'), 500);
+        }
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem('cookieConsent', 'accepted');
+                banner?.classList.remove('show');
+            });
+        }
     })();
 </script>
 </body>
