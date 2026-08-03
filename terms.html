@@ -261,11 +261,21 @@
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             .footer-copyright { font-size: 1rem; }
         }
+        /* Dark mode overrides – force header banner white always */
         @media (prefers-color-scheme: dark) {
+            /* Entire header and navigation banner forced to plain white */
+            header,
+            .nav-row,
+            .mobile-slide-menu {
+                background: #ffffff !important;
+            }
+            /* Keep logo crisp with a white background underneath it */
             .logo img {
-                background-color: white;
-                border-radius: 4px;
-                padding: 2px;
+                background: #ffffff;
+                padding: 4px 8px;
+                border-radius: 6px;
+                display: inline-block;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.2);
             }
         }
         .cookie-consent {
@@ -355,7 +365,7 @@
                 <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
                 <li><a href="service.html" data-key="services">Services</a></li>
                 <li><a href="blog.html" data-key="blog">Blog</a></li>
-                <li><a href="opinion.html" data-key="opinion">Opinion</a></li>
+                <!-- Opinion link removed -->
                 <li><a href="contact.html" data-key="contact">Contact</a></li>
             </ul>
         </div>
@@ -368,7 +378,7 @@
     <a href="advocate.html" data-key="advocate">Advocate</a>
     <a href="service.html" data-key="services">Services</a>
     <a href="blog.html" data-key="blog">Blog</a>
-    <a href="opinion.html" data-key="opinion">Opinion</a>
+    <!-- Opinion link removed -->
     <a href="contact.html" data-key="contact">Contact</a>
 </div>
 
@@ -386,7 +396,7 @@
         <p>2.1 You represent that you are at least 18 years of age or, if under 18, are accessing the Site under the supervision of a parent or legal guardian who agrees to these Terms.</p>
         <p>2.2 You agree to use the Site only for lawful purposes and in compliance with all applicable laws, regulations, and ordinances of Nepal and any other relevant jurisdiction.</p>
         <p>2.3 You shall not:<br>
-        (a) Use the Site in any manner that could disable, overburden, damage, or impair the Site or interfere with another party’s use;<br>
+        (a) Use the Site in any manner that could disable, overburden, damage, or impair the Site or interfere with another party's use;<br>
         (b) Attempt to gain unauthorised access to any portion of the Site, user accounts, computer systems, or networks connected to the Site through hacking, password mining, or any other means;<br>
         (c) Transmit, upload, or distribute any viruses, worms, Trojan horses, time bombs, cancelbots, ransomware, or any other harmful or destructive code;<br>
         (d) Use any robot, spider, scraper, or other automated means to access the Site for any purpose without our express written permission;<br>
@@ -395,7 +405,7 @@
 
         <h2>3. INTELLECTUAL PROPERTY RIGHTS</h2>
         <p>3.1 All content on the Site, including but not limited to text, articles, case summaries, legal updates, graphics, logos, icons, images, audio clips, video clips, data compilations, software, meta tags, digital downloads, and documentation (“Content”) is the exclusive property of the Company or its licensors and is protected under the Copyright Act, 2002, the Patent, Design and Trade Mark Act, 1965, and other applicable intellectual property laws of Nepal and international treaties.</p>
-        <p>3.2 The Company’s name, logo, and all related product and service names, designs, and slogans are trademarks of the Company. You may not use such marks without the Company’s prior written consent.</p>
+        <p>3.2 The Company's name, logo, and all related product and service names, designs, and slogans are trademarks of the Company. You may not use such marks without the Company's prior written consent.</p>
         <p>3.3 You are granted a limited, non-exclusive, non-transferable, revocable license to access and view the Content for your personal, non-commercial informational purposes only. You shall not:<br>
         (a) Reproduce, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any Content without our express written consent;<br>
         (b) Remove, obscure, or alter any copyright, trademark, or other proprietary notices appearing on the Content.</p>
@@ -410,7 +420,7 @@
         <h2>5. USER SUBMISSIONS AND CONFIDENTIALITY</h2>
         <p>5.1 The Site may enable you to contact the Company via forms, email, or chat. Any information you send through the Site (other than information that is subject to a separate written confidentiality agreement) shall not be treated as confidential or protected by attorney-client privilege.</p>
         <p>5.2 You agree not to send any confidential, proprietary, or sensitive information to the Company through the Site unless the Company has expressly agreed in writing to treat such information as confidential.</p>
-        <p>5.3 By submitting any non-confidential information, you grant the Company a perpetual, irrevocable, royalty-free, worldwide license to use, reproduce, modify, adapt, publish, and distribute such information for any lawful purpose, subject to applicable privacy laws and the Company’s Privacy Policy.</p>
+        <p>5.3 By submitting any non-confidential information, you grant the Company a perpetual, irrevocable, royalty-free, worldwide license to use, reproduce, modify, adapt, publish, and distribute such information for any lawful purpose, subject to applicable privacy laws and the Company's Privacy Policy.</p>
 
         <h2>6. DISCLAIMER OF WARRANTIES</h2>
         <p>6.1 THE SITE AND ALL CONTENT, FUNCTIONS, AND MATERIALS PROVIDED THROUGH THE SITE ARE PROVIDED “AS IS” AND “AS AVAILABLE”, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</p>
@@ -430,10 +440,10 @@
         (d) UNAUTHORISED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR DATA.</p>
         <p>7.2 THIS LIMITATION APPLIES WHETHER THE CLAIM IS BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, OR ANY OTHER LEGAL THEORY, EVEN IF THE COMPANY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
         <p>7.3 IF YOU ARE DISSATISFIED WITH ANY PORTION OF THE SITE OR WITH THESE TERMS, YOUR SOLE AND EXCLUSIVE REMEDY IS TO DISCONTINUE USING THE SITE.</p>
-        <p>7.4 TO THE EXTENT THAT ANY JURISDICTION DOES NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES, THE COMPANY’S LIABILITY SHALL BE LIMITED TO THE MAXIMUM EXTENT PERMITTED BY LAW.</p>
+        <p>7.4 TO THE EXTENT THAT ANY JURISDICTION DOES NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES, THE COMPANY'S LIABILITY SHALL BE LIMITED TO THE MAXIMUM EXTENT PERMITTED BY LAW.</p>
 
         <h2>8. INDEMNIFICATION</h2>
-        <p>You agree to indemnify, defend, and hold harmless the Company and its affiliates, officers, directors, employees, agents, licensors, and service providers from and against any and all claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys’ fees) arising out of or relating to:<br>
+        <p>You agree to indemnify, defend, and hold harmless the Company and its affiliates, officers, directors, employees, agents, licensors, and service providers from and against any and all claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:<br>
         (a) Your violation of these Terms;<br>
         (b) Your use of the Site, including any data or content transmitted or received by you;<br>
         (c) Your violation of any rights of another person or entity;<br>
@@ -445,7 +455,7 @@
         <p>9.3 You agree that the Company shall have no liability arising from your use of or reliance on any Third-Party Sites. We encourage you to read the terms and privacy policies of any third-party website you visit.</p>
 
         <h2>10. DATA PRIVACY</h2>
-        <p>10.1 Any personal information you provide to the Company through the Site is subject to the Company’s Privacy Policy, which is incorporated into these Terms by reference.</p>
+        <p>10.1 Any personal information you provide to the Company through the Site is subject to the Company's Privacy Policy, which is incorporated into these Terms by reference.</p>
         <p>10.2 By using the Site, you consent to the collection, use, and processing of your personal information as described in the Privacy Policy.</p>
 
         <h2>11. GOVERNING LAW AND DISPUTE RESOLUTION</h2>
@@ -466,7 +476,7 @@
         <p>These Terms, together with the Privacy Policy and any other legal notices published by the Company on the Site, constitute the sole and entire agreement between you and the Company with respect to the Site and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, with respect to the Site.</p>
 
         <h2>16. ASSIGNMENT</h2>
-        <p>You may not assign or transfer any of your rights or obligations under these Terms without the Company’s prior written consent. The Company may freely assign these Terms without restriction to any successor in interest or affiliate.</p>
+        <p>You may not assign or transfer any of your rights or obligations under these Terms without the Company's prior written consent. The Company may freely assign these Terms without restriction to any successor in interest or affiliate.</p>
 
         <h2>17. SURVIVAL</h2>
         <p>Sections 3 (Intellectual Property), 4 (No Attorney-Client Relationship), 5 (User Submissions), 6 (Disclaimer), 7 (Limitation of Liability), 8 (Indemnification), 11 (Governing Law), and any other provisions that by their nature should survive, shall survive any termination of these Terms or your use of the Site.</p>
@@ -615,8 +625,9 @@
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
-        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", opinion: "Opinion", contact: "Contact" },
-        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", opinion: "विचार", contact: "सम्पर्क" }
+        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", contact: "Contact" },
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", contact: "सम्पर्क" }
+        // 'opinion' key removed
     };
     const footerTranslations = {
         en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
