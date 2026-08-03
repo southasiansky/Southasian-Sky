@@ -253,8 +253,15 @@
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             .footer-copyright { font-size: 1rem; }
         }
-        /* Enhanced dark mode logo – crisp, non-blurry white background */
+        /* Dark mode overrides – force header banner white always */
         @media (prefers-color-scheme: dark) {
+            /* Entire header and navigation banner forced to plain white */
+            header,
+            .nav-row,
+            .mobile-slide-menu {
+                background: #ffffff !important;
+            }
+            /* Keep logo crisp with a white background underneath it */
             .logo img {
                 background: #ffffff;
                 padding: 4px 8px;
