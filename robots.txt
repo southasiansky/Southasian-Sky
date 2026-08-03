@@ -1,3 +1,19 @@
+# robots.txt for Karki Associates Private Limited
+# Website: https://karkiassociates.com.np
+# Last updated: 2026-08-03
+
+# Allow all search engine bots to crawl the entire site
 User-agent: *
 Allow: /
+
+# Disallow: no pages are currently blocked from crawling
+# (If you need to block specific directories in the future, add them here)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location - points to the updated sitemap.xml
 Sitemap: https://karkiassociates.com.np/sitemap.xml
+
+# Optional: Specify a crawl delay to prevent overloading the server
+# (Uncomment if you experience high bot traffic)
+# Crawl-delay: 2
