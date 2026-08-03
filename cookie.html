@@ -253,11 +253,21 @@
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             .footer-copyright { font-size: 1rem; }
         }
+        /* Dark mode overrides – force header banner white always */
         @media (prefers-color-scheme: dark) {
+            /* Entire header and navigation banner forced to plain white */
+            header,
+            .nav-row,
+            .mobile-slide-menu {
+                background: #ffffff !important;
+            }
+            /* Keep logo crisp with a white background underneath it */
             .logo img {
-                background-color: white;
-                border-radius: 4px;
-                padding: 2px;
+                background: #ffffff;
+                padding: 4px 8px;
+                border-radius: 6px;
+                display: inline-block;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.2);
             }
         }
         .cookie-consent {
@@ -354,7 +364,7 @@
                 <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
                 <li><a href="service.html" data-key="services">Services</a></li>
                 <li><a href="blog.html" data-key="blog">Blog</a></li>
-                <li><a href="opinion.html" data-key="opinion">Opinion</a></li>
+                <!-- Opinion link removed -->
                 <li><a href="contact.html" data-key="contact">Contact</a></li>
             </ul>
         </div>
@@ -367,7 +377,7 @@
     <a href="advocate.html" data-key="advocate">Advocate</a>
     <a href="service.html" data-key="services">Services</a>
     <a href="blog.html" data-key="blog">Blog</a>
-    <a href="opinion.html" data-key="opinion">Opinion</a>
+    <!-- Opinion link removed -->
     <a href="contact.html" data-key="contact">Contact</a>
 </div>
 
@@ -400,13 +410,13 @@
         <h2>4. TYPES OF COOKIES WE USE</h2>
         <p><strong>4.1 Strictly Necessary Cookies:</strong> These Cookies are essential for the Site to function properly. They enable basic features such as page navigation, security, load balancing, and accessibility. Without these Cookies, the Site cannot operate correctly. Examples: Session identifiers, authentication tokens, security anti-forgery tokens, cookie consent preference. Retention: Session or up to 24 hours, except for consent preference (usually 12 months).</p>
         <p><strong>4.2 Preference Cookies:</strong> These Cookies allow the Site to remember choices you make (such as language preference, region, or font size) to provide a more personalised experience. Examples: Language selection, display settings. Retention: Up to 12 months or until you clear your browser cache.</p>
-        <p><strong>4.3 Analytics / Performance Cookies:</strong> These Cookies help us understand how visitors interact with the Site by collecting and reporting anonymous information. We use this data to improve the Site’s performance, content, and user experience. We may use third-party services such as Google Analytics. Examples: Google Analytics (_ga, _gid), page visit counts, bounce rate tracking, time on site. Retention: Typically 14 months for Google Analytics; see service provider’s policy. Data collected: Aggregated and anonymised – no personally identifiable information is shared unless you provide it separately.</p>
+        <p><strong>4.3 Analytics / Performance Cookies:</strong> These Cookies help us understand how visitors interact with the Site by collecting and reporting anonymous information. We use this data to improve the Site's performance, content, and user experience. We may use third-party services such as Google Analytics. Examples: Google Analytics (_ga, _gid), page visit counts, bounce rate tracking, time on site. Retention: Typically 14 months for Google Analytics; see service provider's policy. Data collected: Aggregated and anonymised – no personally identifiable information is shared unless you provide it separately.</p>
         <p><strong>4.4 Functionality Cookies:</strong> These Cookies enable enhanced features, such as remembering form submissions, chat session continuity, or video player preferences. Examples: Remembering partially completed forms, chat widget session. Retention: Session or up to 30 days.</p>
         <p><strong>4.5 Marketing / Targeting Cookies (Not currently used, but disclosed for transparency):</strong> We do not currently serve third-party advertisements on the Site. However, if we implement marketing cookies in the future, we will obtain your explicit consent before placing them. Such cookies would track your browsing habits to deliver relevant advertisements.</p>
 
         <h2>5. THIRD-PARTY COOKIES</h2>
         <p>5.1 We may allow selected third-party service providers to place Cookies on your device for analytics, performance monitoring, or functionality purposes. These third parties include:<br>
-        (a) Google LLC (Google Analytics) to analyse Site traffic and user behaviour. Google’s privacy policy and cookie policy apply;<br>
+        (a) Google LLC (Google Analytics) to analyse Site traffic and user behaviour. Google's privacy policy and cookie policy apply;<br>
         (b) Hosting and security service providers who may use Cookies for security and performance monitoring.</p>
         <p>5.2 These third parties have their own privacy and cookie policies, and we do not control the placement or use of third-party Cookies. You should review the relevant third-party policies for more information.</p>
         <p>5.3 A list of specific third-party Cookies, their purposes, retention periods, and opt-out mechanisms are available in our detailed Cookie Schedule (available upon request or through our cookie consent tool).</p>
@@ -550,8 +560,9 @@
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
-        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", opinion: "Opinion", contact: "Contact" },
-        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", opinion: "विचार", contact: "सम्पर्क" }
+        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", contact: "Contact" },
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", contact: "सम्पर्क" }
+        // 'opinion' key removed
     };
     const footerTranslations = {
         en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
