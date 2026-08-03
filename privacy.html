@@ -255,11 +255,21 @@
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             .footer-copyright { font-size: 1rem; }
         }
+        /* Dark mode overrides – force header banner white always */
         @media (prefers-color-scheme: dark) {
+            /* Entire header and navigation banner forced to plain white */
+            header,
+            .nav-row,
+            .mobile-slide-menu {
+                background: #ffffff !important;
+            }
+            /* Keep logo crisp with a white background underneath it */
             .logo img {
-                background-color: white;
-                border-radius: 4px;
-                padding: 2px;
+                background: #ffffff;
+                padding: 4px 8px;
+                border-radius: 6px;
+                display: inline-block;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.2);
             }
         }
         .cookie-consent {
@@ -349,7 +359,7 @@
                 <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
                 <li><a href="service.html" data-key="services">Services</a></li>
                 <li><a href="blog.html" data-key="blog">Blog</a></li>
-                <li><a href="opinion.html" data-key="opinion">Opinion</a></li>
+                <!-- Opinion link removed -->
                 <li><a href="contact.html" data-key="contact">Contact</a></li>
             </ul>
         </div>
@@ -362,7 +372,7 @@
     <a href="advocate.html" data-key="advocate">Advocate</a>
     <a href="service.html" data-key="services">Services</a>
     <a href="blog.html" data-key="blog">Blog</a>
-    <a href="opinion.html" data-key="opinion">Opinion</a>
+    <!-- Opinion link removed -->
     <a href="contact.html" data-key="contact">Contact</a>
 </div>
 
@@ -618,8 +628,9 @@
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
-        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", opinion: "Opinion", contact: "Contact" },
-        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", opinion: "विचार", contact: "सम्पर्क" }
+        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", contact: "Contact" },
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", contact: "सम्पर्क" }
+        // 'opinion' key removed
     };
     const footerTranslations = {
         en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
