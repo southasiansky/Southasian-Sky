@@ -250,11 +250,14 @@
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             .footer-copyright { font-size: 1rem; }
         }
+        /* Enhanced dark mode logo – crisp, non-blurry white background */
         @media (prefers-color-scheme: dark) {
             .logo img {
-                background-color: white;
-                border-radius: 4px;
-                padding: 2px;
+                background: #ffffff;
+                padding: 4px 8px;
+                border-radius: 6px;
+                display: inline-block;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.2);
             }
         }
         .cookie-consent {
@@ -388,7 +391,7 @@
                 <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
                 <li><a href="service.html" data-key="services">Services</a></li>
                 <li><a href="blog.html" data-key="blog">Blog</a></li>
-                <li><a href="opinion.html" data-key="opinion">Opinion</a></li>
+                <!-- Opinion link removed -->
                 <li><a href="contact.html" data-key="contact">Contact</a></li>
             </ul>
         </div>
@@ -401,7 +404,7 @@
     <a href="advocate.html" data-key="advocate">Advocate</a>
     <a href="service.html" data-key="services">Services</a>
     <a href="blog.html" data-key="blog">Blog</a>
-    <a href="opinion.html" data-key="opinion">Opinion</a>
+    <!-- Opinion link removed -->
     <a href="contact.html" data-key="contact">Contact</a>
 </div>
 
@@ -422,18 +425,18 @@
             <img src="images/anil-karki-profile.jpg" alt="Advocate Anil Karki" class="profile-img">
         </div>
 
-        <p>Anil Karki is the founder and director of Karki Associates Private Limited. He holds a Bachelor of Laws from the University of Delhi. He subsequently earned a Master of Comparative Laws, also from the University of Delhi, which provided him with advanced research in comparative legal methodologies and cross‑jurisdictional analysis. He has successfully completed the advocate licensing examination conducted by the Nepal Bar Council.</p>
+        <p>Anil Karki is the founder and director of Karki Associates Private Limited, a professional services company offering integrated audit, consulting, financial advisory, risk, tax, and legal services. He holds a Bachelor of Laws from the University of Delhi. He subsequently earned a Master of Comparative Laws, also from the University of Delhi, which provided him with advanced research in comparative legal methodologies and cross‑jurisdictional analysis. He has successfully completed the advocate licensing examination conducted by the Nepal Bar Council.</p>
         
         <div class="clearfix"></div>
 
         <h2 style="font-size:1.5rem; margin:1.5rem 0 0.8rem 0; font-weight:600;">Professional Experience & Foundational Journey</h2>
-        <p>Before establishing Karki Associates, Advocate Karki gained substantial practical experience in legal research, documentation, and court proceedings. He studied a range of civil, criminal, and constitutional matters, developing a thorough understanding of Nepal's substantive and procedural laws. This foundation enabled him to identify gaps in the delivery of legal services, particularly the need for a firm that combines rigorous legal analysis with transparent client communication and affordable professional fees. In response to that need, he founded Karki Associates. As the sole promoter and director of the company, he has built an institution that offers integrated legal solutions.</p>
+        <p>Before establishing Karki Associates, Advocate Karki gained substantial practical experience in legal research, documentation, and court proceedings. He studied a range of civil, criminal, and constitutional matters, developing a thorough understanding of Nepal's substantive and procedural laws. This foundation enabled him to identify gaps in the delivery of professional services, particularly the need for a firm that combines rigorous legal analysis, tax expertise, financial advisory, management consultancy, and legal process outsourcing with transparent client communication and affordable professional fees. In response to that need, he founded Karki Associates as a one‑stop professional services firm. As the sole promoter and director of the company, he has built an institution that offers integrated solutions spanning litigation, compliance, tax planning, risk management, and corporate advisory.</p>
         
         <h2 style="font-size:1.5rem; margin:1.5rem 0 0.8rem 0; font-weight:600;">Legal Ethics & Professional Conduct</h2>
         <p>Advocate Karki is committed to upholding the highest standards of the legal profession. He strictly adheres to the professional ethics and rules of conduct prescribed by the Nepal Bar Council, including the fundamental duties of confidentiality, diligence, loyalty to clients, and avoidance of conflicts of interest. Every legal service provided by Karki Associates is preceded by a proper client engagement agreement, which clearly defines the scope of work, fee arrangement, and responsibilities of both parties. Advocate Karki considers this written agreement not merely a contractual formality but a cornerstone of professional accountability. He is bound by the professional code of conduct applicable to all legal practitioners in Nepal, which includes the duty to act with integrity, to maintain the honour of the legal profession, and to avoid any conduct that would bring the administration of justice into disrepute.</p>
         
         <h2 style="font-size:1.5rem; margin:1.5rem 0 0.8rem 0; font-weight:600;">Legal Philosophy & Vision</h2>
-        <p>Advocate Karki believes that a good lawyer does more than argue skilfully in court. A good lawyer advises honestly, communicates clearly, respects the client's time and financial constraints, and works diligently to achieve fair outcomes. His approach combines rigorous legal analysis with genuine concern for the client's situation – a philosophy that informs every case, consultation, and document drafted by the firm. His long‑term vision for Karki Associates is to build a law practice that is accessible, transparent, and reliable – where high quality legal services are not reserved for the wealthy but are available to individuals, small businesses, non‑profit organisations, and public bodies alike. He is also committed to contributing to the legal community through continuing legal education, legal literacy programs, and pro bono assistance for marginalised groups.</p>
+        <p>Advocate Karki believes that a good professional does more than argue skilfully in court. A good advisor advises honestly, communicates clearly, respects the client's time and financial constraints, and works diligently to achieve fair outcomes. His approach combines rigorous analysis with genuine concern for the client's situation – a philosophy that informs every case, consultation, audit, tax strategy, and document drafted by the firm. His long‑term vision for Karki Associates is to build a practice that is accessible, transparent, and reliable – where high quality legal, tax, and advisory services are not reserved for the wealthy but are available to individuals, small businesses, non‑profit organisations, and public bodies alike. He is also committed to contributing to the professional community through continuing education, legal literacy programs, and pro bono assistance for marginalised groups.</p>
     </div>
 
     <!-- NEPALI CONTENT -->
@@ -450,18 +453,18 @@
             <img src="images/anil-karki-profile.jpg" alt="अधिवक्ता अनिल कार्की" class="profile-img">
         </div>
 
-        <p>अधिवक्ता अनिल कार्की यस कार्की एसोसिएट्स प्राइभेट लिमिटेडका संस्थापक तथा सञ्चालक हुनुहुन्छ। उहाँले दिल्ली विश्वविद्यालय (भारत) बाट कानूनमा स्नातक हासिल गर्नुभएको छ। त्यसपछि उहाँले सोही विश्वविद्यालयबाट तुलनात्मक कानूनमा स्नातकोत्तर समेत गर्नुभएको छ। उहाँले नेपाल कानून व्यवसायी परिषदद्वारा सञ्चालित अधिवक्ता तहको परीक्षा पनि सफलतापूर्वक उत्तीर्ण गर्नुभएको छ।</p>
+        <p>अधिवक्ता अनिल कार्की यस कार्की एसोसिएट्स प्राइभेट लिमिटेडका संस्थापक तथा सञ्चालक हुनुहुन्छ, जो लेखापरीक्षण, परामर्श, वित्तीय सल्लाह, जोखिम व्यवस्थापन, कर, र कानूनी सेवाहरूको एकीकृत प्रदायक हो। उहाँले दिल्ली विश्वविद्यालय (भारत) बाट कानूनमा स्नातक हासिल गर्नुभएको छ। त्यसपछि उहाँले सोही विश्वविद्यालयबाट तुलनात्मक कानूनमा स्नातकोत्तर समेत गर्नुभएको छ। उहाँले नेपाल कानून व्यवसायी परिषदद्वारा सञ्चालित अधिवक्ता तहको परीक्षा पनि सफलतापूर्वक उत्तीर्ण गर्नुभएको छ।</p>
         
         <div class="clearfix"></div>
 
         <h2 style="font-size:1.5rem; margin:1.5rem 0 0.8rem 0; font-weight:600;">व्यावसायिक अनुभव तथा संस्थापन यात्रा</h2>
-        <p>कार्की एसोसिएट्सको स्थापना गर्नुभन्दा पहिले, अधिवक्ता कार्कीले कानूनी अनुसन्धान, कागजात तर्जुमा र अदालती कार्यवाहीमा पर्याप्त व्यावहारिक अनुभव हासिल गर्नुभयो। उहाँले देवानी, फौजदारी र संवैधानिक विषयका विविध मुद्दाहरू अध्ययन गर्दै नेपालको भौतिक तथा प्रक्रियागत कानूनको गहन बुझाइ विकास गर्नुभयो। यस आधारले उहाँलाई कानूनी सेवा प्रदायकमा रहेका खाडलहरू, विशेष गरी गहन कानूनी विश्लेषणलाई पारदर्शी ग्राहक संवाद र किफायती व्यावसायिक शुल्कसँग जोड्ने फर्मको आवश्यकताको पहिचान गर्न सहायता गर्यो। उक्त आवश्यकताको प्रतिक्रियामा उहाँले कार्की एसोसिएट्स प्राइभेट लिमिटेडको स्थापना गर्नुभयो।</p>
+        <p>कार्की एसोसिएट्सको स्थापना गर्नुभन्दा पहिले, अधिवक्ता कार्कीले कानूनी अनुसन्धान, कागजात तर्जुमा र अदालती कार्यवाहीमा पर्याप्त व्यावहारिक अनुभव हासिल गर्नुभयो। उहाँले देवानी, फौजदारी र संवैधानिक विषयका विविध मुद्दाहरू अध्ययन गर्दै नेपालको भौतिक तथा प्रक्रियागत कानूनको गहन बुझाइ विकास गर्नुभयो। यस आधारले उहाँलाई व्यावसायिक सेवा प्रदायकमा रहेका खाडलहरू, विशेष गरी गहन कानूनी विश्लेषण, कर विशेषज्ञता, वित्तीय सल्लाह, व्यवस्थापन परामर्श, र कानूनी प्रक्रिया आउटसोर्सिङलाई पारदर्शी ग्राहक संवाद र किफायती शुल्कसँग जोड्ने फर्मको आवश्यकताको पहिचान गर्न सहायता गर्यो। उक्त आवश्यकताको प्रतिक्रियामा उहाँले एकीकृत व्यावसायिक सेवा फर्मको रूपमा कार्की एसोसिएट्स प्राइभेट लिमिटेडको स्थापना गर्नुभयो।</p>
         
         <h2 style="font-size:1.5rem; margin:1.5rem 0 0.8rem 0; font-weight:600;">कानूनी नैतिकता तथा व्यावसायिक आचरण</h2>
         <p>अधिवक्ता कार्की कानूनी पेशाको उच्चतम मापदण्डलाई आत्मसात गर्न प्रतिबद्ध हुनुहुन्छ। उहाँ नेपाल कानून व्यवसायी परिषदले निर्धारण गरेको व्यावसायिक नैतिकता तथा आचारसंहिता (गोपनीयता, इमानदारी, ग्राहकप्रति वफादारी र हितको द्वन्द्वबाट बच्ने कर्तव्य) को कडाईका साथ पालना गर्नुहुन्छ। कार्की एसोसिएट्सले प्रदान गर्ने प्रत्येक कानूनी सेवा लिखित ग्राहक सम्झौताबाट मात्र अगाडि बढाइन्छ। अधिवक्ता कार्की यस्तो लिखित सम्झौतालाई व्यावसायिक उत्तरदायित्वको आधारशिला मान्दछन्। उहाँ नेपालका सबै कानूनी व्यवसायीहरूमा लागू हुने आचारसंहिताबाट बाधित हुनुहुन्छ, जसमा इमानदारीपूर्वक कार्य गर्ने, कानूनी पेशाको सम्मान कायम राख्ने, र न्याय प्रशासनलाई बदनाम हुने कुनै आचरणबाट बच्ने कर्तव्य समावेश छ।</p>
         
         <h2 style="font-size:1.5rem; margin:1.5rem 0 0.8rem 0; font-weight:600;">कानूनी दर्शन तथा दीर्घकालीन सोच</h2>
-        <p>अधिवक्ता कार्कीको विचारमा असल वकिलले अदालतमा कुशलतापूर्वक बहस मात्र गर्दैन। असल वकिलले इमानदारीपूर्वक सल्लाह दिन्छ, स्पष्ट रूपमा संवाद गर्दछ, ग्राहकको समय तथा आर्थिक सीमितताको सम्मान गर्दछ र न्यायोचित परिणामका लागि लगनशीलतापूर्वक काम गर्दछ। उहाँको दीर्घकालीन दृष्टिकोण सुलभ, पारदर्शी र विश्वसनीय कानूनी अभ्यास निर्माण गर्ने रहेको छ, जहाँ उच्च गुणस्तरीय कानूनी सेवाहरू व्यक्ति, साना व्यवसाय, गैरनाफामुखी संस्था र सार्वजनिक निकायहरूका लागि समान रूपमा उपलब्ध छन्। उहाँ निरन्तर कानूनी शिक्षा, कानूनी साक्षरता कार्यक्रम र सीमान्तकृत समूहका लागि प्रो बोनो सहायता मार्फत कानूनी समुदायमा योगदान गर्न पनि प्रतिबद्ध हुनुहुन्छ।</p>
+        <p>अधिवक्ता कार्कीको विचारमा असल व्यावसायिकले अदालतमा कुशलतापूर्वक बहस मात्र गर्दैन। असल सल्लाहकारले इमानदारीपूर्वक सल्लाह दिन्छ, स्पष्ट रूपमा संवाद गर्दछ, ग्राहकको समय तथा आर्थिक सीमितताको सम्मान गर्दछ र न्यायोचित परिणामका लागि लगनशीलतापूर्वक काम गर्दछ। उहाँको दीर्घकालीन दृष्टिकोण सुलभ, पारदर्शी र विश्वसनीय अभ्यास निर्माण गर्ने रहेको छ, जहाँ उच्च गुणस्तरीय कानूनी, कर र सल्लाहकार सेवाहरू व्यक्ति, साना व्यवसाय, गैरनाफामुखी संस्था र सार्वजनिक निकायहरूका लागि समान रूपमा उपलब्ध छन्। उहाँ निरन्तर व्यावसायिक शिक्षा, कानूनी साक्षरता कार्यक्रम र सीमान्तकृत समूहका लागि प्रो बोनो सहायता मार्फत व्यावसायिक समुदायमा योगदान गर्न पनि प्रतिबद्ध हुनुहुन्छ।</p>
     </div>
 </main>
 
@@ -540,8 +543,9 @@
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
-        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", opinion: "Opinion", contact: "Contact" },
-        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", opinion: "विचार", contact: "सम्पर्क" }
+        en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", contact: "Contact" },
+        ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", contact: "सम्पर्क" }
+        // 'opinion' key removed
     };
     const footerTranslations = {
         en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
