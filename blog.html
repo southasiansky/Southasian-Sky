@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Insights & News – Karki Associates Professional Services Blog</title>
-    <meta name="description" content="Read the latest legal insights, analysis of Nepal’s anti‑money laundering laws, FATF greylist updates, and more. Karki Associates – audit, consulting, tax, legal, and advisory services.">
-    <meta name="keywords" content="legal blog Nepal, money laundering, FATF greylist, Nepal law updates, Karki Associates blog, professional services">
-    <meta name="author" content="Karki Associates Private Limited">
+    <title>Legal Insights & Knowledge – Karki Associates Blog</title>
+    <meta name="description" content="Read informative legal articles on litigation, tax, compliance, corporate advisory, property law, and more. Karki Associates – professional legal services in Nepal.">
+    <meta name="keywords" content="legal blog Nepal, litigation guide, tax compliance Nepal, corporate advisory, property law, employment law, AML compliance">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://karkiassociates.com.np/blog.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://karkiassociates.com.np/blog.html">
-    <meta property="og:title" content="Legal Insights & News – Karki Associates Professional Services Blog">
-    <meta property="og:description" content="Read the latest legal insights, analysis of Nepal’s anti‑money laundering laws, FATF greylist updates, and more.">
+    <meta property="og:title" content="Legal Insights & Knowledge – Karki Associates Blog">
+    <meta property="og:description" content="Read informative legal articles on litigation, tax, compliance, corporate advisory, property law, and more.">
     <meta property="og:image" content="https://karkiassociates.com.np/images/logo.png">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://karkiassociates.com.np/blog.html">
-    <meta property="twitter:title" content="Legal Insights & News – Karki Associates Professional Services Blog">
-    <meta property="twitter:description" content="Read the latest legal insights, analysis of Nepal’s anti‑money laundering laws, FATF greylist updates, and more.">
+    <meta property="twitter:title" content="Legal Insights & Knowledge – Karki Associates Blog">
+    <meta property="twitter:description" content="Read informative legal articles on litigation, tax, compliance, corporate advisory, property law, and more.">
     <meta property="twitter:image" content="https://karkiassociates.com.np/images/logo.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
@@ -45,7 +44,6 @@
             position: sticky;
             top: 0;
             z-index: 102;
-            /* border-bottom: none – removed dividing line to match main page */
             box-shadow: none;
         }
         .header-row {
@@ -117,7 +115,6 @@
         }
         .nav-row {
             background: #fff;
-            /* border-bottom: none – removed dividing line to match main page */
             position: sticky;
             z-index: 101;
             transition: transform 0.3s ease, opacity 0.2s ease;
@@ -189,13 +186,13 @@
         }
         main {
             background: #fff;
-            padding: 5rem 0 2.5rem 0;
+            padding: 3rem 0 2.5rem 0;
             margin: 0 auto;
         }
         h1, h2, h3, h4, h5, h6 {
             text-align: left;
         }
-        p, li, .post-excerpt {
+        p, li {
             text-align: justify;
         }
         h1 {
@@ -206,10 +203,23 @@
             font-weight: 600;
             letter-spacing: -0.01em;
         }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        h3 {
+            font-size: 1.25rem;
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        p { margin-bottom: 1rem; }
         .blog-post {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e5e5;
         }
         .post-title {
             margin-bottom: 0.3rem;
@@ -218,25 +228,70 @@
             color: #000;
             text-decoration: none;
             font-size: 1.4rem;
-            font-weight: 500;
+            font-weight: 600;
+            transition: color 0.2s;
         }
-        .post-title a:hover { text-decoration: underline; }
-        .post-date {
-            color: #555;
+        .post-title a:hover {
+            color: #1a3e6f;
+            text-decoration: underline;
+        }
+        .post-meta {
+            color: #666;
             font-size: 0.85rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.8rem;
         }
-        .post-excerpt {
-            margin-bottom: 0.5rem;
-            line-height: 1.5;
+        .post-summary {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
             color: #333;
+        }
+        .read-more-link {
+            display: inline-block;
+            color: #1a3e6f;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .read-more-link:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+        .full-content {
+            display: none;
+            margin-top: 1.2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #eee;
+        }
+        .full-content.show {
+            display: block;
+        }
+        .full-content h2 {
+            font-size: 1.3rem;
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .full-content h3 {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            margin-bottom: 0.4rem;
+        }
+        .full-content ul, .full-content ol {
+            margin-left: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .full-content li {
+            margin-bottom: 0.3rem;
+        }
+        .full-content p {
+            margin-bottom: 0.8rem;
         }
         footer {
             background: #fff;
             color: #000;
             text-align: center;
             padding: 1.2rem 0;
-            /* border-top: none – removed dividing line to match main page */
         }
         footer a {
             color: #000;
@@ -255,14 +310,18 @@
         }
         @media (max-width: 768px) {
             main {
-                padding: 3rem 0 1.5rem 0;
+                padding: 2rem 0 1.5rem 0;
             }
             h1 { font-size: 1.6rem; margin-top: 0.5rem; }
             .post-title a { font-size: 1.2rem; }
             .footer-copyright { font-size: 1rem; }
         }
-        /* Enhanced dark mode logo – crisp, non-blurry white background */
         @media (prefers-color-scheme: dark) {
+            header,
+            .nav-row,
+            .mobile-slide-menu {
+                background: #ffffff !important;
+            }
             .logo img {
                 background: #ffffff;
                 padding: 4px 8px;
@@ -358,7 +417,6 @@
                 <li><a href="advocate.html" data-key="advocate">Advocate</a></li>
                 <li><a href="service.html" data-key="services">Services</a></li>
                 <li><a href="blog.html" data-key="blog">Blog</a></li>
-                <!-- Opinion link removed -->
                 <li><a href="contact.html" data-key="contact">Contact</a></li>
             </ul>
         </div>
@@ -371,90 +429,2458 @@
     <a href="advocate.html" data-key="advocate">Advocate</a>
     <a href="service.html" data-key="services">Services</a>
     <a href="blog.html" data-key="blog">Blog</a>
-    <!-- Opinion link removed -->
     <a href="contact.html" data-key="contact">Contact</a>
 </div>
 
 <main class="container">
     <div id="en-content">
-        <h1>Latest Insights from Karki Associates</h1>
+        <h1>Legal Insights and Knowledge</h1>
 
-        <div class="blog-post">
-            <div class="post-title"><a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">Combating money laundering in Nepal</a></div>
-            <div class="post-date">July 21, 2023</div>
-            <div class="post-excerpt">Stakeholders are concerned that Nepal could be blacklisted or placed on a greylist by the Financial Action Task Force (FATF) because of its failure to resolve several inadequacies in its laws against money laundering and terrorism financing. Even though it is certain that Nepal will be on the FATF greylist, it has an additional deadline of one year for reforms. The FATF provides an observation period before any country is directly monitored, and now Nepal has that time. The legal structures of Nepal are well-enacted, but enforcement has lagged behind. The FATF is not widely accepted, and its agenda needs further critical appraisal as it is better classified as a political organization.</div>
-        </div>
+        <!-- ===================== BLOG POST 1 ===================== -->
+        <article class="blog-post" id="post1">
+            <div class="post-title"><a href="#" onclick="togglePost('post1'); return false;">Understanding Your Rights: A Guide to Civil Litigation in Nepal</a></div>
+            <div class="post-meta">Legal Advocacy and Litigation</div>
+            <div class="post-summary">
+                <p>Civil litigation is the process of resolving disputes between individuals, businesses, or organisations through the court system. This guide walks you through the stages of civil litigation in Nepal—from filing a plaint to final judgment—explaining what to expect at each step and how to prepare.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post1'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>Civil litigation is the legal process through which individuals, businesses, and organisations resolve disputes that do not involve criminal charges. In Nepal, civil litigation is governed by the Civil Procedure Code, 2017 and the Civil Procedure Rules, 2018. Understanding the process is essential for anyone involved in a civil dispute.</p>
 
-        <div class="blog-post">
-            <div class="post-title"><a href="https://kathmandupost.com/national/2024/02/08/nepal-takes-big-step-to-avoid-money-laundering-greylist" target="_blank" rel="noopener noreferrer">Nepal takes big step to avoid money laundering greylist</a></div>
-            <div class="post-date">February 8, 2024</div>
-            <div class="post-excerpt">Nepal has taken a major step towards minimizing the threat of being greylisted by the Financial Action Task Force (FATF). The country's lower house endorsed a bill on money laundering, amending the Money Laundering Prevention Act-2020. This bill addresses legislative deficiencies highlighted by the Asia-Pacific Group on Money Laundering (APG). Following the endorsement, the bill still needs to be passed by the National Assembly and receive presidential authentication to become law. The bill aims to revise 20 laws to control money laundering and terrorist financing. The FATF is an international anti-money laundering body which decides whether to blacklist or greylist a country.</div>
-        </div>
+                <h2>What is a Civil Dispute?</h2>
+                <p>A civil dispute arises when one party believes that another party has failed to fulfil a legal obligation, causing harm or loss. Common civil disputes include:</p>
+                <ul>
+                    <li>Contractual disagreements (e.g., breach of contract, non-payment)</li>
+                    <li>Property and land disputes</li>
+                    <li>Family law matters (divorce, custody, inheritance)</li>
+                    <li>Tort claims (negligence, defamation, personal injury)</li>
+                    <li>Employment and labour disputes</li>
+                    <li>Debt recovery and financial claims</li>
+                </ul>
 
-        <div class="blog-post">
-            <div class="post-title"><a href="https://myrepublica.nagariknetwork.com/news/a-tougher-law-a-bigger-test" target="_blank" rel="noopener noreferrer">A Tougher Law, A Bigger Test</a></div>
-            <div class="post-date">May 6, 2026</div>
-            <div class="post-excerpt">The government has taken steps to tighten control over financial crime by granting the Department of Money Laundering Investigation (DoMLI) additional jurisdiction under a new regulation, altering how investigations are conducted. One of the most significant changes is the removal of the previous requirement that money laundering charges be linked to a specific underlying offense. The new law re-centralizes authority under DoMLI while broadening the range of offenses that may trigger investigations, including smuggling, tax evasion, financial market misconduct, and insider trading. While this move is both timely and necessary, the expanded authority of DoMLI must be matched with transparency, independent oversight, and clear procedural safeguards to prevent misuse.</div>
-        </div>
+                <h2>Stages of Civil Litigation in Nepal</h2>
 
-        <div class="blog-post">
-            <div class="post-title"><a href="https://kathmandupost.com/national/2025/08/12/nepal-orders-payment-service-providers-to-freeze-terrorist-linked-assets-to-exit-fatf-grey-list" target="_blank" rel="noopener noreferrer">Nepal orders payment service providers to freeze terrorist-linked assets to exit FATF grey list</a></div>
-            <div class="post-date">August 12, 2025</div>
-            <div class="post-excerpt">New central bank guidelines require payment service providers (PSPs) to block funds of individuals and groups listed by the United Nations or the home ministry. This move, part of a broader strategy to exit the Financial Action Task Force's (FATF) 'grey list', comes amid rising cyber-enabled fraud targeting youth and students. The guidelines aim to strengthen Nepal's anti-money laundering and counter-terrorist financing (AML/CFT) regime. The FATF had placed Nepal on the grey list in February 2025, citing failures to fully implement necessary legal and structural reforms. The central bank's directive is seen as a critical step to address these deficiencies and demonstrate progress to the FATF.</div>
-        </div>
+                <h3>1. Pre-Litigation Stage</h3>
+                <p>Before filing a lawsuit, parties are generally expected to attempt settlement through negotiation or mediation. Courts in Nepal encourage alternative dispute resolution to reduce case backlogs. If settlement fails, the plaintiff may proceed to file a claim.</p>
 
-        <div class="blog-post">
-            <div class="post-title"><a href="https://kathmandupost.com/national/2025/08/11/government-tightens-screws-on-cooperatives-to-exit-fatf-grey-list" target="_blank" rel="noopener noreferrer">Government tightens screws on cooperatives to exit FATF grey list</a></div>
-            <div class="post-date">August 11, 2025</div>
-            <div class="post-excerpt">Nepal's placement on the Financial Action Task Force (FATF) grey list in February 2025, due to its failure to meet several obligations, has triggered intensified regulatory scrutiny on cooperatives. In response, the government is introducing stricter compliance measures, including mandatory reporting of suspicious transactions, enhanced customer due diligence, and regular audits by the central bank. The move reflects a broader push to strengthen the country's anti-money laundering and counter-terrorist financing (AML/CFT) framework. The FATF has given Nepal a deadline to address these deficiencies, with a review expected in 2026. Failure to comply could lead to further sanctions, including blacklisting.</div>
-        </div>
+                <h3>2. Filing the Plaint</h3>
+                <p>The plaintiff files a written statement of claim (plaint) with the appropriate court. The plaint must include:</p>
+                <ul>
+                    <li>Names and addresses of the parties</li>
+                    <li>Clear statement of facts and legal grounds</li>
+                    <li>The relief or remedy sought</li>
+                    <li>Supporting documents and evidence</li>
+                </ul>
+                <p>The court examines the plaint and may issue a summons to the defendant.</p>
 
-        <div class="blog-post">
-            <div class="post-title"><a href="https://www.tribuneindia.com/news/nation/nepal-continue-to-remain-in-fatfs-greylist" target="_blank" rel="noopener noreferrer">Nepal continue to remain in FATF's greylist</a></div>
-            <div class="post-date">October 25, 2025</div>
-            <div class="post-excerpt">Since February 2025, Nepal has made a high-level political commitment to work with the FATF and the Asia Pacific Group (APG) to strengthen the effectiveness of its Anti-Money Laundering and Combating the Financing of Terrorism (AML/CFT) regime. Despite these efforts, the FATF's plenary meeting in October 2025 decided that Nepal will continue to remain on the grey list, citing insufficient progress in implementing its action plan. The FATF noted that while Nepal has taken some steps, it needs to demonstrate sustained progress in prosecuting money laundering cases, confiscating criminal assets, and effectively regulating non-financial sectors.</div>
-        </div>
+                <h3>3. Written Statement and Defence</h3>
+                <p>The defendant is required to file a written statement responding to the plaintiff's claims within the prescribed time. The written statement must address each allegation and may raise counterclaims or preliminary objections.</p>
+
+                <h3>4. Discovery and Evidence</h3>
+                <p>Both parties exchange relevant documents and information. Witnesses may be examined, and expert testimony may be presented. The court may also order inspection of property or documents.</p>
+
+                <h3>5. Trial</h3>
+                <p>The trial involves examination of witnesses, presentation of evidence, and arguments from both sides. The court hears all submissions and examines the facts and law.</p>
+
+                <h3>6. Judgment and Decree</h3>
+                <p>After the trial, the court issues a judgment and decree, which is the final decision determining the rights and liabilities of the parties. The decree is executable, meaning the winning party may enforce it through court processes.</p>
+
+                <h3>7. Appeals</h3>
+                <p>Either party may appeal to a higher court if they believe the judgment contains legal or factual errors. In Nepal, cases may be appealed from District Courts to the High Court, and subsequently to the Supreme Court on points of law.</p>
+
+                <h2>Limitation Periods</h2>
+                <p>Civil claims in Nepal are subject to limitation periods. The Limitation Act, 2018 prescribes specific timeframes within which claims must be filed. Generally:</p>
+                <ul>
+                    <li>Contractual claims: 6 years</li>
+                    <li>Property disputes: 10 years</li>
+                    <li>Tort claims: 2 years</li>
+                    <li>Debt recovery: 3 years</li>
+                </ul>
+                <p>Failing to file within the limitation period may bar the claim entirely.</p>
+
+                <h2>Costs and Time</h2>
+                <p>Civil litigation can be time-consuming and expensive. Costs include court fees, lawyer fees, expert fees, and other incidentals. Litigation may take months or years depending on the complexity and backlog. However, settlement and alternative dispute resolution can significantly reduce costs and time.</p>
+
+                <h2>Key Considerations</h2>
+                <p>Before initiating or defending a civil lawsuit, consider:</p>
+                <ul>
+                    <li>The strength of your legal position</li>
+                    <li>The cost-benefit analysis of litigation</li>
+                    <li>Availability of evidence and witnesses</li>
+                    <li>Limitation periods and deadlines</li>
+                    <li>The possibility of settlement</li>
+                </ul>
+
+                <p><strong>Legal Assistance</strong></p>
+                <p>Civil litigation requires specialised legal knowledge and procedural expertise. Engaging an experienced advocate significantly improves your chances of a favourable outcome. At Karki Associates, we provide skilled representation throughout all stages of civil litigation, from filing to appeal. Contact us for expert legal guidance.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified lawyer regarding your specific legal matter.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 2 ===================== -->
+        <article class="blog-post" id="post2">
+            <div class="post-title"><a href="#" onclick="togglePost('post2'); return false;">Criminal Defence in Nepal: What to Do When You Are Charged</a></div>
+            <div class="post-meta">Legal Advocacy and Litigation</div>
+            <div class="post-summary">
+                <p>Being charged with a criminal offence is a serious and stressful experience. This article explains the criminal justice process in Nepal, your rights as an accused person, and what steps you should take to protect your freedom and reputation.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post2'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>Criminal charges can arise from various situations—from traffic violations and minor offences to serious crimes such as theft, fraud, assault, or corruption. In Nepal, the criminal justice system is governed by the Criminal Procedure Code, 2017 and the Criminal Offences Act, 2017. When you are charged, your immediate response and the quality of your legal representation can significantly impact the outcome.</p>
+
+                <h2>Your Rights When Charged</h2>
+                <p>The Constitution of Nepal guarantees fundamental rights to every accused person, including:</p>
+                <ul>
+                    <li><strong>Presumption of Innocence:</strong> You are presumed innocent until proven guilty beyond reasonable doubt.</li>
+                    <li><strong>Right to Legal Representation:</strong> You have the right to be represented by an advocate of your choice. If you cannot afford one, the state must provide legal aid.</li>
+                    <li><strong>Right to Silence:</strong> You are not obliged to confess or incriminate yourself.</li>
+                    <li><strong>Right to Information:</strong> You must be informed of the charges against you and the grounds for your arrest.</li>
+                    <li><strong>Right to a Fair Trial:</strong> You are entitled to a public hearing by an independent and impartial court, with the opportunity to present evidence and cross-examine witnesses.</li>
+                    <li><strong>Right to Bail:</strong> You have the right to apply for bail, and the court must grant bail unless there are compelling reasons to deny it.</li>
+                </ul>
+
+                <h2>Steps to Take When You Are Charged</h2>
+
+                <h3>1. Contact a Lawyer Immediately</h3>
+                <p>Do not speak to police or any authority without legal representation. Your lawyer will advise you on what to say, what not to say, and how to protect your rights.</p>
+
+                <h3>2. Exercise Your Right to Silence</h3>
+                <p>You are not required to answer questions that may incriminate you. Politely inform the authorities that you wish to speak with your lawyer before answering questions.</p>
+
+                <h3>3. Understand the Charges</h3>
+                <p>Ask for a clear explanation of the charges against you. Your lawyer will review the allegations and advise on the strength of the case against you.</p>
+
+                <h3>4. Preserve Evidence</h3>
+                <p>Keep any documents, communications, or evidence that may support your defence. Your lawyer can guide you on what is relevant.</p>
+
+                <h3>5. Apply for Bail</h3>
+                <p>If arrested, your lawyer will apply for bail. Bail may be granted with or without conditions, depending on the nature of the offence and the risk of flight or further offending.</p>
+
+                <h2>The Criminal Trial Process</h2>
+
+                <h3>Stage 1: Investigation</h3>
+                <p>Police conduct an investigation to collect evidence. You have the right to be present during key proceedings and to have your lawyer present.</p>
+
+                <h3>Stage 2: Filing of Charges</h3>
+                <p>If the investigation reveals sufficient evidence, charges are filed in the competent court. The charges must clearly state the offence and the facts constituting it.</p>
+
+                <h3>Stage 3: Preliminary Hearing</h3>
+                <p>The court examines the charges and may hold a preliminary hearing to determine if there is sufficient evidence to proceed to trial.</p>
+
+                <h3>Stage 4: Trial</h3>
+                <p>The trial involves the presentation of evidence, examination of witnesses, and arguments from both the prosecution and the defence. The prosecution must prove guilt beyond reasonable doubt.</p>
+
+                <h3>Stage 5: Judgment and Sentencing</h3>
+                <p>If convicted, the court delivers its judgment and imposes a sentence. Sentences may include imprisonment, fines, community service, or other penalties.</p>
+
+                <h3>Stage 6: Appeal</h3>
+                <p>You have the right to appeal a conviction or sentence to a higher court. Your lawyer will advise on the grounds for appeal and the likelihood of success.</p>
+
+                <h2>Penalties and Sentencing</h2>
+                <p>Penalties for criminal offences in Nepal vary depending on the nature and severity of the crime. The Criminal Offences Act, 2017 prescribes sentences ranging from fines to life imprisonment. Some offences also carry additional penalties such as confiscation of property or disqualification from holding public office.</p>
+
+                <h2>Why Legal Representation Matters</h2>
+                <p>Criminal defence requires thorough knowledge of criminal law, court procedures, and evidentiary rules. An experienced advocate can:</p>
+                <ul>
+                    <li>Advise you on your rights and options</li>
+                    <li>Challenge the prosecution's evidence and arguments</li>
+                    <li>Present a compelling defence</li>
+                    <li>Negotiate plea bargains where appropriate</li>
+                    <li>Represent you effectively at trial and on appeal</li>
+                </ul>
+
+                <p><strong>Get Professional Help</strong></p>
+                <p>If you or someone you know is facing criminal charges, it is essential to seek expert legal advice without delay. At Karki Associates, we provide skilled criminal defence representation, protecting your rights and fighting for the best possible outcome. Contact us for a confidential consultation.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified lawyer regarding your specific criminal matter.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 3 ===================== -->
+        <article class="blog-post" id="post3">
+            <div class="post-title"><a href="#" onclick="togglePost('post3'); return false;">Navigating Regulatory Compliance: A Checklist for Nepali Businesses</a></div>
+            <div class="post-meta">Legal Consultancy and Advisory</div>
+            <div class="post-summary">
+                <p>Regulatory compliance is essential for every business in Nepal. This checklist covers key compliance areas—company registration, tax registration, labour law, and sectoral licensing—to help you stay on the right side of the law.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post3'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>Running a business in Nepal requires compliance with a wide range of laws and regulations. Failure to comply can result in penalties, fines, legal disputes, and reputational damage. This guide provides a practical compliance checklist for businesses of all sizes operating in Nepal.</p>
+
+                <h2>Corporate Registration and Structure</h2>
+                <ul>
+                    <li><strong>Company Registration:</strong> Every business must be registered with the Office of the Company Registrar under the Companies Act, 2006. Choose an appropriate structure: private limited company, public limited company, sole proprietorship, or partnership.</li>
+                    <li><strong>PAN Registration:</strong> Obtain a Permanent Account Number (PAN) from the Inland Revenue Department for tax purposes.</li>
+                    <li><strong>VAT Registration:</strong> If your annual turnover exceeds the prescribed threshold (currently NPR 5 million), you must register for Value Added Tax (VAT).</li>
+                    <li><strong>Business License:</strong> Obtain a business license from the local municipality or relevant authority based on your business activity.</li>
+                </ul>
+
+                <h2>Tax Compliance</h2>
+                <ul>
+                    <li><strong>File Annual Tax Returns:</strong> All businesses must file annual income tax returns. Tax rates vary depending on business type and income.</li>
+                    <li><strong>VAT Returns:</strong> VAT-registered businesses must file periodic VAT returns and pay VAT to the government.</li>
+                    <li><strong>Tax Deducted at Source (TDS):</strong> Businesses must deduct TDS on payments such as salaries, rent, and professional fees, and remit it to the government.</li>
+                    <li><strong>Maintain Proper Records:</strong> Keep accurate financial records, invoices, receipts, and accounting books for at least 5 years.</li>
+                </ul>
+
+                <h2>Labour Law Compliance</h2>
+                <ul>
+                    <li><strong>Employment Contracts:</strong> Provide written employment contracts to all employees as required under the Labour Act, 2017.</li>
+                    <li><strong>Minimum Wages:</strong> Ensure that employees are paid at least the government-prescribed minimum wage.</li>
+                    <li><strong>Social Security:</strong> Register employees with the Social Security Fund (SSF) and contribute to the fund.</li>
+                    <li><strong>Working Hours and Overtime:</strong> Comply with laws on working hours (8 hours per day, 48 hours per week) and overtime provisions.</li>
+                    <li><strong>Health and Safety:</strong> Provide a safe working environment and comply with occupational health and safety standards.</li>
+                    <li><strong>Termination Procedures:</strong> Follow proper procedures for termination, including notice periods, severance pay, and documentation.</li>
+                </ul>
+
+                <h2>Sector-Specific Licenses and Approvals</h2>
+                <p>Depending on your business activity, you may require specific licenses or approvals from regulatory authorities. Examples include:</p>
+                <ul>
+                    <li>Financial institutions: Nepal Rastra Bank</li>
+                    <li>Insurance companies: Insurance Board</li>
+                    <li>Telecommunications: Nepal Telecommunications Authority</li>
+                    <li>Educational institutions: Ministry of Education</li>
+                    <li>Healthcare: Ministry of Health</li>
+                    <li>Tourism and hospitality: Ministry of Culture, Tourism and Civil Aviation</li>
+                    <li>Mining and extraction: Ministry of Industry, Commerce and Supplies</li>
+                </ul>
+
+                <h2>Annual Filings and Reporting</h2>
+                <ul>
+                    <li><strong>Annual General Meeting (AGM):</strong> Hold an AGM within prescribed timelines.</li>
+                    <li><strong>Financial Statements:</strong> Prepare and file annual financial statements with the Office of the Company Registrar.</li>
+                    <li><strong>Audit:</strong> Have your financial statements audited by a qualified auditor if required by law.</li>
+                    <li><strong>Compliance Certificates:</strong> File compliance certificates with relevant authorities.</li>
+                </ul>
+
+                <h2>Data Protection and Privacy</h2>
+                <p>With the enactment of the Individual Privacy Act, 2075 and the Information Technology Act, businesses must comply with data protection obligations. Key requirements include:</p>
+                <ul>
+                    <li>Obtaining consent before collecting personal data</li>
+                    <li>Protecting personal data from unauthorised access and breaches</li>
+                    <li>Providing individuals with access to their data</li>
+                    <li>Data breach notification to the competent authority</li>
+                </ul>
+
+                <h2>Anti-Money Laundering (AML) Compliance</h2>
+                <p>Under the Money Laundering Prevention Act, 2008, businesses in designated sectors (e.g., financial institutions, real estate, casinos) must establish AML policies and procedures. This includes:</p>
+                <ul>
+                    <li>Customer due diligence</li>
+                    <li>Suspicious transaction reporting</li>
+                    <li>Record keeping</li>
+                    <li>Staff training</li>
+                </ul>
+
+                <h2>Common Compliance Pitfalls</h2>
+                <ul>
+                    <li>Failing to file returns on time</li>
+                    <li>Not updating registrations after changes</li>
+                    <li>Non-compliance with labour laws</li>
+                    <li>Ignoring sectoral licensing requirements</li>
+                    <li>Poor record keeping</li>
+                </ul>
+
+                <p><strong>Get Expert Guidance</strong></p>
+                <p>Compliance is an ongoing obligation. At Karki Associates, we provide comprehensive compliance advisory to help businesses meet their legal obligations and minimise risks. Contact us for a compliance review of your business.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified lawyer regarding your specific compliance obligations.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 4 ===================== -->
+        <article class="blog-post" id="post4">
+            <div class="post-title"><a href="#" onclick="togglePost('post4'); return false;">Understanding Contract Law in Nepal: Key Clauses Every Business Should Know</a></div>
+            <div class="post-meta">Legal Consultancy and Advisory</div>
+            <div class="post-summary">
+                <p>Contracts are the backbone of commercial transactions. This article explains the essential clauses every business contract should include, common pitfalls, and how to draft agreements that protect your interests.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post4'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>Contracts are legally binding agreements that govern relationships and transactions between parties. In Nepal, contract law is primarily governed by the Contract Act, 2000 and the general principles of contract law derived from English common law. Understanding key contractual clauses is essential for any business.</p>
+
+                <h2>Essential Elements of a Valid Contract</h2>
+                <p>For a contract to be legally enforceable in Nepal, it must contain:</p>
+                <ul>
+                    <li><strong>Offer and Acceptance:</strong> One party makes an offer, and the other party accepts it unequivocally.</li>
+                    <li><strong>Consideration:</strong> Something of value must be exchanged between the parties (money, goods, services).</li>
+                    <li><strong>Intention to Create Legal Relations:</strong> The parties must intend their agreement to have legal effect.</li>
+                    <li><strong>Capacity:</strong> Both parties must have the legal capacity to contract (age, mental capacity).</li>
+                    <li><strong>Legality:</strong> The purpose of the contract must be lawful.</li>
+                    <li><strong>Certainty:</strong> The terms of the contract must be clear and certain.</li>
+                </ul>
+
+                <h2>Key Clauses Every Business Contract Should Include</h2>
+
+                <h3>1. Parties Clause</h3>
+                <p>Clearly identify all parties to the contract, including their full legal names, addresses, and registration numbers (if applicable).</p>
+
+                <h3>2. Scope of Work (Performance Obligations)</h3>
+                <p>Describe in detail the goods, services, or work to be provided. This clause should be specific to avoid disputes over what is expected.</p>
+
+                <h3>3. Price and Payment Terms</h3>
+                <p>Specify the total price, payment schedule, method of payment, currency, and consequences of late payment (e.g., interest, penalties).</p>
+
+                <h3>4. Delivery and Performance Schedule</h3>
+                <p>Set out when goods will be delivered or services completed. Include provisions for delays and extensions.</p>
+
+                <h3>5. Warranties and Representations</h3>
+                <p>Include assurances that the goods or services meet certain standards. Warranties may be express or implied.</p>
+
+                <h3>6. Limitation of Liability</h3>
+                <p>This clause limits the amount and scope of liability that each party can claim from the other. It may cap damages or exclude certain types of losses (e.g., consequential damages).</p>
+
+                <h3>7. Indemnification</h3>
+                <p>Requires one party to compensate the other for certain losses or damages. This is common in contracts involving third-party claims.</p>
+
+                <h3>8. Confidentiality</h3>
+                <p>Protects proprietary or sensitive information exchanged during the contract term. This is essential for business agreements involving trade secrets, customer data, or strategic plans.</p>
+
+                <h3>9. Termination and Renewal</h3>
+                <p>Specifies the conditions under which the contract can be terminated, notice periods, and whether the contract automatically renews.</p>
+
+                <h3>10. Dispute Resolution</h3>
+                <p>Choose a mechanism for resolving disputes (negotiation, mediation, arbitration, or court litigation). In Nepal, it is common to designate a specific court or arbitration body.</p>
+
+                <h3>11. Governing Law</h3>
+                <p>Specify which jurisdiction's laws will govern the contract. In Nepal, the law of Nepal will apply unless otherwise agreed.</p>
+
+                <h3>12. Force Majeure</h3>
+                <p>Excuses performance if an extraordinary event (e.g., natural disaster, war, pandemic) prevents performance. This clause has become increasingly important in recent years.</p>
+
+                <h3>13. Amendments</h3>
+                <p>Specify that changes to the contract must be in writing and signed by both parties.</p>
+
+                <h2>Common Contract Pitfalls</h2>
+                <ul>
+                    <li><strong>Ambiguous Language:</strong> Vague terms lead to disputes. Use precise language.</li>
+                    <li><strong>Unreasonable Terms:</strong> Terms that are too one-sided may be challenged in court.</li>
+                    <li><strong>Failure to Address Risks:</strong> Contracts should identify and allocate risks appropriately.</li>
+                    <li><strong>Insufficient Due Diligence:</strong> Failing to check the other party's legal standing or financial capability.</li>
+                    <li><strong>Ignoring Local Law:</strong> Ensure compliance with Nepali laws and regulations.</li>
+                </ul>
+
+                <h2>Oral Contracts vs. Written Contracts</h2>
+                <p>While oral contracts can be legally binding in Nepal, written contracts are strongly preferred. Written agreements provide clear evidence of the terms, reduce disputes, and are easier to enforce in court.</p>
+
+                <p><strong>Get Professional Contract Drafting</strong></p>
+                <p>Well-drafted contracts protect your business and prevent disputes. At Karki Associates, we draft, review, and negotiate contracts for businesses across all sectors. Contact us for professional contract advisory.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified lawyer regarding your specific contractual needs.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 5 ===================== -->
+        <article class="blog-post" id="post5">
+            <div class="post-title"><a href="#" onclick="togglePost('post5'); return false;">Corporate Governance Best Practices for Nepali Companies</a></div>
+            <div class="post-meta">Management Consultancy</div>
+            <div class="post-summary">
+                <p>Strong corporate governance builds trust, attracts investment, and ensures long-term sustainability. This article outlines best practices for boards, directors, and management in Nepal.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post5'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>Corporate governance refers to the system of rules, practices, and processes by which companies are directed and controlled. Effective governance ensures accountability, transparency, and fairness in a company's relationship with shareholders, management, and other stakeholders.</p>
+
+                <h2>The Corporate Governance Framework in Nepal</h2>
+                <p>In Nepal, corporate governance is governed by the Companies Act, 2006, the Securities Act, 2007 (for listed companies), and regulations issued by the Securities Board of Nepal (SEBON). The Nepal Stock Exchange (NEPSE) also imposes governance requirements on listed companies.</p>
+
+                <h2>Key Principles of Good Corporate Governance</h2>
+
+                <h3>1. Board Composition and Independence</h3>
+                <p>The board of directors should include a balance of executive and non-executive directors. Independent directors bring objective perspectives and help prevent conflicts of interest.</p>
+
+                <h3>2. Board Committees</h3>
+                <p>Establish committees to oversee specific areas such as audit, remuneration, and governance. Audit committees, in particular, play a critical role in financial oversight and compliance.</p>
+
+                <h3>3. Transparency and Disclosure</h3>
+                <p>Companies should disclose accurate and timely information about financial performance, governance practices, and material risks. This builds trust with shareholders and the public.</p>
+
+                <h3>4. Shareholder Rights</h3>
+                <p>Protecting shareholder rights is fundamental to good governance. Shareholders should be able to vote, access information, and participate in shareholder meetings.</p>
+
+                <h3>5. Ethical Conduct and Integrity</h3>
+                <p>Companies should adopt codes of conduct, anti-corruption policies, and whistleblower mechanisms to promote ethical behaviour.</p>
+
+                <h3>6. Risk Management</h3>
+                <p>Effective governance includes identifying, assessing, and managing risks. Companies should have robust internal controls and risk management frameworks.</p>
+
+                <h2>Recent Amendments to the Companies Act, 2006</h2>
+                <p>The Companies (Amendment) Act, 2025 introduced several governance-related changes:</p>
+                <ul>
+                    <li><strong>Sweat Equity:</strong> Companies may now issue sweat equity to employees, enabling employee participation in the company's growth.</li>
+                    <li><strong>Employee Share Schemes:</strong> Provisions for issuing shares to employees have been simplified.</li>
+                    <li><strong>Transparency Requirements:</strong> Enhanced disclosure obligations for board composition and related-party transactions.</li>
+                </ul>
+
+                <h2>Best Practices for Boards and Directors</h2>
+                <ul>
+                    <li>Hold regular board meetings and maintain proper minutes.</li>
+                    <li>Ensure directors are qualified and fulfil their fiduciary duties.</li>
+                    <li>Disclose director interests and related-party transactions.</li>
+                    <li>Engage independent auditors for financial oversight.</li>
+                    <li>Promote a speak-up culture where concerns can be raised without fear.</li>
+                </ul>
+
+                <h2>Why Corporate Governance Matters</h2>
+                <ul>
+                    <li><strong>Investor Confidence:</strong> Strong governance attracts domestic and foreign investment.</li>
+                    <li><strong>Legal Compliance:</strong> Reduces legal risks and penalties.</li>
+                    <li><strong>Reputation:</strong> Enhances the company's standing with stakeholders.</li>
+                    <li><strong>Long-term Sustainability:</strong> Promotes responsible decision-making and business continuity.</li>
+                </ul>
+
+                <p><strong>Expert Corporate Governance Advisory</strong></p>
+                <p>At Karki Associates, we advise companies on corporate governance structures, board procedures, and compliance with Nepali law. Contact us for tailored governance solutions.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified professional regarding your specific governance needs.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 6 ===================== -->
+        <article class="blog-post" id="post6">
+            <div class="post-title"><a href="#" onclick="togglePost('post6'); return false;">Risk Management Strategies for Small and Medium Enterprises in Nepal</a></div>
+            <div class="post-meta">Management Consultancy</div>
+            <div class="post-summary">
+                <p>SMEs face unique legal and operational risks. This article provides practical strategies for identifying, assessing, and managing risks to protect your business and ensure long-term growth.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post6'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>Small and Medium Enterprises (SMEs) are the backbone of Nepal's economy, contributing significantly to employment and GDP. However, SMEs face unique risks due to limited resources, capacity constraints, and regulatory complexities. Effective risk management is essential for survival and growth.</p>
+
+                <h2>Understanding Business Risks</h2>
+                <p>Business risks can be categorised into several types:</p>
+                <ul>
+                    <li><strong>Legal Risks:</strong> Non-compliance, lawsuits, contract disputes, regulatory fines.</li>
+                    <li><strong>Financial Risks:</strong> Cash flow problems, bad debts, currency fluctuations.</li>
+                    <li><strong>Operational Risks:</strong> Supply chain disruptions, employee turnover, equipment failure.</li>
+                    <li><strong>Strategic Risks:</strong> Competition, market shifts, changing customer preferences.</li>
+                    <li><strong>Compliance Risks:</strong> Failure to meet regulatory requirements.</li>
+                    <li><strong>Reputational Risks:</strong> Negative public perception, media scrutiny.</li>
+                </ul>
+
+                <h2>Step 1: Identify Risks</h2>
+                <p>Conduct a comprehensive risk assessment of your business. Ask yourself:</p>
+                <ul>
+                    <li>What could go wrong in our operations?</li>
+                    <li>Are we complying with all applicable laws?</li>
+                    <li>What legal liabilities do we face?</li>
+                    <li>Do we have contracts that protect our interests?</li>
+                    <li>What would happen if a key employee left?</li>
+                </ul>
+
+                <h2>Step 2: Assess and Prioritise Risks</h2>
+                <p>Evaluate the likelihood and potential impact of each risk. Prioritise risks that are both likely and severe. Use a risk matrix to visualise your exposure.</p>
+
+                <h2>Step 3: Implement Mitigation Strategies</h2>
+
+                <h3>Legal Risk Mitigation</h3>
+                <ul>
+                    <li>Engage a legal advisor for compliance checks and contract reviews.</li>
+                    <li>Use written contracts for all business relationships.</li>
+                    <li>Ensure proper licensing and registration.</li>
+                    <li>Stay updated on regulatory changes.</li>
+                </ul>
+
+                <h3>Financial Risk Mitigation</h3>
+                <ul>
+                    <li>Maintain proper financial records and accounting systems.</li>
+                    <li>Build cash reserves for emergencies.</li>
+                    <li>Diversify income streams.</li>
+                    <li>Insure key assets and liabilities.</li>
+                </ul>
+
+                <h3>Operational Risk Mitigation</h3>
+                <ul>
+                    <li>Develop standard operating procedures.</li>
+                    <li>Cross-train employees to cover key roles.</li>
+                    <li>Maintain relationships with multiple suppliers.</li>
+                    <li>Invest in security and data protection.</li>
+                </ul>
+
+                <h3>Compliance Risk Mitigation</h3>
+                <ul>
+                    <li>Maintain a compliance calendar with key filing dates.</li>
+                    <li>Regularly review tax and regulatory obligations.</li>
+                    <li>Engage professionals for compliance support.</li>
+                </ul>
+
+                <h2>Step 4: Monitor and Review</h2>
+                <p>Risk management is not a one-time exercise. Conduct periodic reviews, update your risk register, and adjust strategies as circumstances change. Regular monitoring helps you stay ahead of emerging risks.</p>
+
+                <h2>Common Risk Management Mistakes</h2>
+                <ul>
+                    <li>Ignoring risks until they materialise</li>
+                    <li>Over-relying on informal agreements</li>
+                    <li>Failing to insure against key risks</li>
+                    <li>Not involving legal professionals in decision-making</li>
+                    <li>Neglecting regulatory compliance</li>
+                </ul>
+
+                <p><strong>Build a Resilient Business</strong></p>
+                <p>At Karki Associates, we help SMEs develop robust legal and risk management frameworks tailored to their specific needs. Contact us for a risk assessment and strategic advisory.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified professional regarding your specific risk management needs.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 7 ===================== -->
+        <article class="blog-post" id="post7">
+            <div class="post-title"><a href="#" onclick="togglePost('post7'); return false;">Nepal's Evolving Legal Landscape: Key Legislative Changes in 2025–2026</a></div>
+            <div class="post-meta">Legal Research and Development</div>
+            <div class="post-summary">
+                <p>Several significant legislative changes have been enacted in Nepal in 2025–2026. This article summarises the key amendments and explains what they mean for businesses, individuals, and the legal community.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post7'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>The period 2025–2026 has seen a flurry of legislative activity in Nepal, reflecting the government's commitment to economic reform, regulatory modernisation, and international compliance. This article provides an overview of the most significant legal developments and their practical implications.</p>
+
+                <h2>1. Budget 2025/26 and Tax Reforms</h2>
+                <p>The budget for fiscal year 2025/26 introduced significant changes to Nepal's tax regime:</p>
+                <ul>
+                    <li><strong>Reduction of Income Tax Brackets:</strong> The number of individual income tax brackets was reduced from six to five.</li>
+                    <li><strong>Maximum Tax Rate Reduced:</strong> The maximum tax rate for individuals was reduced from 39% to 29%.</li>
+                    <li><strong>Tax on Super Rich:</strong> A new 10% tax was introduced on the super-rich (individuals with annual income exceeding NPR 100 million).</li>
+                    <li><strong>IT Sector Incentives:</strong> Tax incentives were introduced for the Information Technology (IT) sector to promote digitalisation.</li>
+                    <li><strong>Tax on Club and Casino Licences:</strong> Reduced from NPR 25 million to NPR 10 million to encourage tourism.</li>
+                    <li><strong>VAT Changes:</strong> VAT on electricity increased from 5% to 13%.</li>
+                </ul>
+
+                <h2>2. Companies (Amendment) Act, 2025</h2>
+                <p>The Companies Act was amended to address emerging needs in the corporate sector:</p>
+                <ul>
+                    <li><strong>Sweat Equity:</strong> Companies may issue sweat equity to employees, facilitating employee participation.</li>
+                    <li><strong>Employee Share Schemes:</strong> Simplified provisions for issuing shares to employees.</li>
+                    <li><strong>Gender Representation:</strong> Listed companies are required to have at least one female director.</li>
+                    <li><strong>Transparency Enhancements:</strong> Enhanced disclosure obligations for board composition and related-party transactions.</li>
+                </ul>
+
+                <h2>3. Customs Act, 2082</h2>
+                <p>The new Customs Act aims to modernise Nepal's customs procedures and align them with international standards. Key features include:</p>
+                <ul>
+                    <li><strong>Simplified Procedures:</strong> Streamlined customs clearance for importers and exporters.</li>
+                    <li><strong>Enhanced Enforcement:</strong> Strengthened enforcement mechanisms to combat smuggling and customs fraud.</li>
+                    <li><strong>Digitalisation:</strong> Promotion of electronic filing and payment systems.</li>
+                    <li><strong>Risk-Based Inspection:</strong> A risk-based approach to customs inspections, prioritising high-risk shipments.</li>
+                </ul>
+
+                <h2>4. Public Procurement (Amendment) Act, 2025</h2>
+                <p>Significant amendments to the Public Procurement Act include:</p>
+                <ul>
+                    <li><strong>Criminal Liability for Contractors:</strong> Contractors may face criminal liability for procurement irregularities.</li>
+                    <li><strong>Enhanced Scrutiny:</strong> Increased scrutiny of procurement processes and documentation.</li>
+                    <li><strong>E-Procurement:</strong> Expanded use of electronic procurement systems.</li>
+                </ul>
+
+                <h2>5. Media Council Bill</h2>
+                <p>The Media Council Bill proposes the establishment of a council to regulate media content and ethics. Provisions include:</p>
+                <ul>
+                    <li><strong>Registration of Media Houses:</strong> Mandatory registration of all media houses.</li>
+                    <li><strong>Ethical Guidelines:</strong> Establishment of ethical guidelines for media content.</li>
+                    <li><strong>Complaint Mechanism:</strong> A mechanism for handling complaints against media outlets.</li>
+                </ul>
+
+                <h2>6. E-Commerce Act, 2025</h2>
+                <p>With the rapid growth of e-commerce, the E-Commerce Act introduces a regulatory framework for online businesses. Key provisions include:</p>
+                <ul>
+                    <li><strong>Registration:</strong> Mandatory registration of e-commerce platforms.</li>
+                    <li><strong>Consumer Protection:</strong> Enhanced consumer protection provisions, including refund rights and dispute resolution mechanisms.</li>
+                    <li><strong>Data Protection:</strong> Data privacy obligations for e-commerce platforms.</li>
+                    <li><strong>Tax Collection:</strong> Mechanisms for collecting taxes on e-commerce transactions.</li>
+                </ul>
+
+                <h2>7. Information Technology and Cybersecurity Act, 2082</h2>
+                <p>This Act addresses cybersecurity challenges and regulates IT-related activities. Key features include:</p>
+                <ul>
+                    <li><strong>Cybersecurity Standards:</strong> Minimum cybersecurity standards for businesses.</li>
+                    <li><strong>Data Breach Notification:</strong> Mandatory reporting of data breaches to the competent authority.</li>
+                    <li><strong>Cyber Offences:</strong> Penalties for cybercrimes, including hacking, identity theft, and online fraud.</li>
+                    <li><strong>Digital Governance:</strong> Promotion of digital governance and online service delivery.</li>
+                </ul>
+
+                <h2>8. Land Law Amendments</h2>
+                <p>Recent amendments to land laws include:</p>
+                <ul>
+                    <li><strong>Removal of Land Ceiling:</strong> The land ceiling for housing and residential real estate development has been removed.</li>
+                    <li><strong>Land Revenue Act:</strong> Amendments to the Land Revenue Act to improve land valuation and taxation.</li>
+                    <li><strong>Land Information System:</strong> Expansion of the land information system (भू-सूचना प्रणाली).</li>
+                </ul>
+
+                <h2>9. Monetary Policy 2025/26</h2>
+                <p>The central bank's monetary policy introduced measures to support economic growth and financial stability:</p>
+                <ul>
+                    <li><strong>Lending Rates:</strong> Reduced lending rates to promote business investment.</li>
+                    <li><strong>Credit Flow:</strong> Measures to ensure credit flow to productive sectors.</li>
+                    <li><strong>Financial Inclusion:</strong> Initiatives to enhance financial inclusion and access to banking.</li>
+                </ul>
+
+                <h2>10. Labour Law Amendments</h2>
+                <p>Proposed amendments to labour laws aim to enhance worker protection and improve the business environment:</p>
+                <ul>
+                    <li><strong>Flexible Work Arrangements:</strong> Provisions for flexible work arrangements, including remote work.</li>
+                    <li><strong>Skill Development:</strong> Increased emphasis on skill development and vocational training.</li>
+                    <li><strong>Social Security:</strong> Expansion of social security coverage to informal sector workers.</li>
+                </ul>
+
+                <h2>What These Changes Mean for You</h2>
+                <ul>
+                    <li><strong>For Businesses:</strong> New compliance obligations but also new opportunities, especially for the IT sector, e-commerce, and foreign investment.</li>
+                    <li><strong>For Individuals:</strong> Changes in tax obligations, but also enhanced consumer protection and data privacy.</li>
+                    <li><strong>For Legal Professionals:</strong> A dynamic legal environment requiring continuous learning and adaptation.</li>
+                </ul>
+
+                <p><strong>Stay Informed with Karki Associates</strong></p>
+                <p>At Karki Associates, we monitor legal developments closely to provide timely, accurate advice to our clients. Contact us for expert analysis and guidance on navigating Nepal's evolving legal landscape.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified lawyer regarding your specific legal matters.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 8 ===================== -->
+        <article class="blog-post" id="post8">
+            <div class="post-title"><a href="#" onclick="togglePost('post8'); return false;">Nepal's New Tax Regime: What the 2025/26 Budget Means for You</a></div>
+            <div class="post-meta">Tax Consultancy and Advisory</div>
+            <div class="post-summary">
+                <p>The 2025/26 budget introduced major tax reforms, including reduced income tax brackets, a lower maximum tax rate, and new incentives for the IT sector. This article breaks down the changes and their practical implications.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post8'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>The budget for the fiscal year 2025/26 introduced sweeping changes to Nepal's tax regime. These reforms are designed to simplify the tax system, stimulate economic growth, and encourage investment. This article provides a detailed breakdown of the key changes and their implications for taxpayers.</p>
+
+                <h2>Key Tax Reforms in the 2025/26 Budget</h2>
+
+                <h3>1. Personal Income Tax Restructuring</h3>
+                <ul>
+                    <li><strong>Reduced Number of Brackets:</strong> The number of individual income tax brackets was reduced from six to five.</li>
+                    <li><strong>Lower Maximum Tax Rate:</strong> The maximum tax rate for individuals was reduced from 39% to 29%. This is a significant reduction that will benefit high-income earners.</li>
+                    <li><strong>Super Rich Tax:</strong> A new 10% tax was introduced on individuals with annual income exceeding NPR 100 million. This is intended to ensure that the wealthiest contribute proportionately.</li>
+                </ul>
+
+                <h3>2. Corporate Tax Changes</h3>
+                <ul>
+                    <li><strong>IT Sector Incentives:</strong> Tax incentives were introduced for the Information Technology (IT) sector to promote digitalisation and innovation.</li>
+                    <li><strong>Startup Support:</strong> Tax exemptions and incentives for startups in identified sectors.</li>
+                    <li><strong>Consistent Rates:</strong> Corporate tax rates for most sectors remain stable, providing certainty for businesses.</li>
+                </ul>
+
+                <h3>3. Value Added Tax (VAT)</h3>
+                <ul>
+                    <li><strong>VAT on Electricity:</strong> The VAT rate on electricity was increased from 5% to 13%, impacting households and businesses.</li>
+                    <li><strong>VAT Registration Threshold:</strong> The VAT registration threshold was reviewed to ensure proper compliance.</li>
+                    <li><strong>Simplified Compliance:</strong> Measures were introduced to simplify VAT filing and payment procedures.</li>
+                </ul>
+
+                <h3>4. Customs and Excise</h3>
+                <ul>
+                    <li><strong>Customs Act 2082:</strong> The new Customs Act modernises customs procedures, promoting digitalisation and risk-based inspections.</li>
+                    <li><strong>Excise Duty:</strong> Adjustments to excise duty on certain goods to align with government policy objectives.</li>
+                    <li><strong>Simplified Tariffs:</strong> Efforts to simplify the customs tariff structure.</li>
+                </ul>
+
+                <h3>5. Other Key Measures</h3>
+                <ul>
+                    <li><strong>Club and Casino Licences:</strong> The tax on club and casino licences was reduced from NPR 25 million to NPR 10 million to encourage tourism.</li>
+                    <li><strong>Property Tax:</strong> Changes to property tax valuation and collection mechanisms.</li>
+                    <li><strong>Tax on Sugar and Oil:</strong> Specific tax adjustments on sugar and oil to promote healthier and more sustainable consumption.</li>
+                </ul>
+
+                <h2>Implications for Individuals</h2>
+                <ul>
+                    <li><strong>Lower Tax Burden:</strong> Most individuals will benefit from the reduced maximum tax rate and simplified brackets.</li>
+                    <li><strong>Super Rich Obligations:</strong> High-income earners should plan for the new 10% super-rich tax.</li>
+                    <li><strong>Increased Disposable Income:</strong> Lower taxes mean higher disposable income for consumption and savings.</li>
+                </ul>
+
+                <h2>Implications for Businesses</h2>
+                <ul>
+                    <li><strong>IT Sector Growth:</strong> The IT sector will benefit from new tax incentives, making Nepal more competitive in technology and digital services.</li>
+                    <li><strong>Tourism:</strong> Reduced tax on club and casino licences is expected to boost the tourism sector.</li>
+                    <li><strong>Higher Electricity Costs:</strong> Increased VAT on electricity will raise operational costs for businesses, particularly in energy-intensive sectors.</li>
+                </ul>
+
+                <h2>Compliance Considerations</h2>
+                <ul>
+                    <li><strong>Update Tax Records:</strong> Ensure your tax registration and records are up to date with the new provisions.</li>
+                    <li><strong>Consult a Professional:</strong> Seek professional tax advice to understand how the changes affect you and to ensure compliance.</li>
+                    <li><strong>Plan for the Super Rich Tax:</strong> If you fall into the super-rich category, plan your finances to meet the new tax obligations.</li>
+                </ul>
+
+                <h2>Penalties for Non-Compliance</h2>
+                <p>Nepal's tax laws impose penalties for non-compliance, including:</p>
+                <ul>
+                    <li>Fines and interest on late payments</li>
+                    <li>Penalties for incorrect filings</li>
+                    <li>Prosecution for tax evasion</li>
+                </ul>
+
+                <p><strong>Expert Tax Advisory at Karki Associates</strong></p>
+                <p>Navigating the new tax regime requires professional expertise. At Karki Associates, we provide tax planning and compliance services to individuals and businesses. Contact us to ensure your tax obligations are met efficiently.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal or tax advice. You should consult a qualified professional regarding your specific tax situation.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 9 ===================== -->
+        <article class="blog-post" id="post9">
+            <div class="post-title"><a href="#" onclick="togglePost('post9'); return false;">A Guide to Tax Compliance for Nepali Businesses</a></div>
+            <div class="post-meta">Tax Consultancy and Advisory</div>
+            <div class="post-summary">
+                <p>Tax compliance is a legal obligation for all businesses. This practical guide covers registration, filing deadlines, record-keeping, and common compliance pitfalls.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post9'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>Every business operating in Nepal must comply with tax laws. Non-compliance can result in penalties, fines, and legal disputes. This guide outlines the key tax compliance obligations for Nepali businesses and provides practical advice on meeting them.</p>
+
+                <h2>Step 1: Register for Taxes</h2>
+                <ul>
+                    <li><strong>PAN Registration:</strong> Obtain a Permanent Account Number (PAN) from the Inland Revenue Department. This is the unique tax identification number for your business.</li>
+                    <li><strong>VAT Registration:</strong> If your annual turnover exceeds NPR 5 million (or a lower threshold for certain services), you must register for VAT.</li>
+                    <li><strong>Excise Registration:</strong> If your business deals in excisable goods, register for excise duty.</li>
+                    <li><strong>Social Security Fund:</strong> Register with the Social Security Fund (SSF) to contribute for your employees.</li>
+                </ul>
+
+                <h2>Step 2: Understand Your Tax Obligations</h2>
+
+                <h3>Income Tax</h3>
+                <ul>
+                    <li><strong>Corporate Income Tax:</strong> Companies must pay corporate income tax on profits. The applicable tax rate depends on the business sector and size.</li>
+                    <li><strong>Personal Income Tax:</strong> Self-employed individuals and partners pay personal income tax on their earnings.</li>
+                    <li><strong>Tax Deducted at Source (TDS):</strong> Businesses must deduct TDS on payments such as salaries, rent, professional fees, and commissions, and remit it to the government.</li>
+                </ul>
+
+                <h3>Value Added Tax (VAT)</h3>
+                <ul>
+                    <li>VAT-registered businesses must charge VAT on taxable goods and services and remit it to the government.</li>
+                    <li>File periodic VAT returns (monthly or quarterly depending on registration).</li>
+                    <li>Maintain proper records of VAT invoices and receipts.</li>
+                </ul>
+
+                <h3>Other Taxes</h3>
+                <ul>
+                    <li><strong>Excise Duty:</strong> Applicable to businesses dealing in tobacco, alcohol, and other excisable products.</li>
+                    <li><strong>Local Taxes:</strong> Municipal or local taxes depending on your business location.</li>
+                    <li><strong>Social Security Contributions:</strong> Contributions to the Social Security Fund for employees.</li>
+                </ul>
+
+                <h2>Step 3: Maintain Proper Records</h2>
+                <p>Accurate record-keeping is essential for tax compliance. Maintain:</p>
+                <ul>
+                    <li>Accounting books and ledgers</li>
+                    <li>Invoices and receipts</li>
+                    <li>Bank statements</li>
+                    <li>Employee records and payroll documents</li>
+                    <li>Tax returns and supporting documents</li>
+                </ul>
+                <p>Records should be kept for at least 5 years as required by law.</p>
+
+                <h2>Step 4: File Returns on Time</h2>
+                <p>Filing tax returns on time is a legal obligation. Key filing deadlines include:</p>
+                <ul>
+                    <li><strong>Annual Income Tax Return:</strong> Typically due by the end of the third month after the end of the tax year (mid-September).</li>
+                    <li><strong>VAT Returns:</strong> Monthly or quarterly, depending on your registration.</li>
+                    <li><strong>TDS Returns:</strong> Monthly or quarterly, depending on the type of payment.</li>
+                    <li><strong>Annual Compliance Returns:</strong> Various compliance filings with the Office of the Company Registrar.</li>
+                </ul>
+                <p>Late filing attracts penalties and interest.</p>
+
+                <h2>Step 5: Pay Your Taxes on Time</h2>
+                <p>Pay taxes by the due date to avoid penalties and interest. Use online payment systems where available for convenience.</p>
+
+                <h2>Common Tax Compliance Pitfalls</h2>
+                <ul>
+                    <li><strong>Missing Deadlines:</strong> Late filing or payment incurs penalties.</li>
+                    <li><strong>Incorrect Tax Calculations:</strong> Errors in tax calculations can lead to disputes and penalties.</li>
+                    <li><strong>Poor Record Keeping:</strong> Inadequate records make compliance difficult and invite scrutiny.</li>
+                    <li><strong>Ignoring TDS Obligations:</strong> Failing to deduct and remit TDS is a common violation.</li>
+                    <li><strong>Not Updating Registration:</strong> Failure to update registration after changes (e.g., business address, activity) is a compliance risk.</li>
+                </ul>
+
+                <h2>Penalties for Non-Compliance</h2>
+                <ul>
+                    <li>Late filing penalties (up to 25% of the tax due)</li>
+                    <li>Interest on late payments</li>
+                    <li>Fines for incorrect filings</li>
+                    <li>Prosecution for tax evasion (criminal liability)</li>
+                </ul>
+
+                <h2>Getting Professional Help</h2>
+                <p>Tax compliance can be complex, especially for businesses with multiple tax obligations. Engaging a professional tax advisor can help:</p>
+                <ul>
+                    <li>Ensure timely and accurate filings</li>
+                    <li>Identify tax-saving opportunities</li>
+                    <li>Represent you in tax disputes</li>
+                    <li>Keep you updated on changes</li>
+                </ul>
+
+                <p><strong>Expert Tax Advisory at Karki Associates</strong></p>
+                <p>At Karki Associates, we provide comprehensive tax compliance services to businesses of all sizes. Contact us for professional tax support.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal or tax advice. You should consult a qualified professional regarding your specific tax situation.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 10 ===================== -->
+        <article class="blog-post" id="post10">
+            <div class="post-title"><a href="#" onclick="togglePost('post10'); return false;">Why Your Business Needs a Legal Audit: A Step-by-Step Guide</a></div>
+            <div class="post-meta">Legal Auditing and Compliance</div>
+            <div class="post-summary">
+                <p>A legal audit helps identify risks, ensure compliance, and protect your business from legal liabilities. This guide explains what a legal audit covers, why it matters, and how to prepare for one.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post10'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>A legal audit is a systematic review of your business's legal compliance, contracts, policies, and practices. It identifies gaps, risks, and areas for improvement, helping you avoid costly legal disputes and penalties.</p>
+
+                <h2>What Is a Legal Audit?</h2>
+                <p>A legal audit (also called a legal compliance audit) is a thorough examination of a business's legal and regulatory compliance. It covers all areas where legal obligations apply, including contracts, employment practices, tax compliance, intellectual property, and regulatory requirements.</p>
+
+                <h2>Why Your Business Needs a Legal Audit</h2>
+                <ul>
+                    <li><strong>Identify Legal Risks:</strong> Uncover potential legal liabilities before they become costly disputes.</li>
+                    <li><strong>Ensure Regulatory Compliance:</strong> Verify that your business is complying with all relevant laws and regulations.</li>
+                    <li><strong>Improve Contract Management:</strong> Review contracts to ensure they protect your interests.</li>
+                    <li><strong>Enhance Governance:</strong> Assess board practices, policies, and procedures against best practices.</li>
+                    <li><strong>Attract Investors:</strong> Investors often require evidence of legal and regulatory compliance.</li>
+                    <li><strong>Avoid Penalties:</strong> Reduce the risk of fines, penalties, and enforcement actions.</li>
+                    <li><strong>Protect Reputation:</strong> Maintain trust with stakeholders by demonstrating good governance.</li>
+                </ul>
+
+                <h2>What a Legal Audit Covers</h2>
+
+                <h3>1. Corporate Structure and Registration</h3>
+                <ul>
+                    <li>Company registration and licenses are valid and up to date</li>
+                    <li>Board composition and director appointments are compliant with the Companies Act</li>
+                    <li>Shareholder agreements and resolutions are properly documented</li>
+                    <li>Annual filings are completed on time</li>
+                </ul>
+
+                <h3>2. Contracts and Agreements</h3>
+                <ul>
+                    <li>Review of all commercial contracts for enforceability and risk allocation</li>
+                    <li>Confidentiality and non-disclosure agreements</li>
+                    <li>Employment contracts and HR policies</li>
+                    <li>Lease and property agreements</li>
+                    <li>Supplier and customer agreements</li>
+                </ul>
+
+                <h3>3. Employment and Labour Law</h3>
+                <ul>
+                    <li>Compliance with the Labour Act, 2017</li>
+                    <li>Employment contracts and HR policies</li>
+                    <li>Social Security Fund registration and contributions</li>
+                    <li>Working hours, overtime, and leave provisions</li>
+                    <li>Health and safety compliance</li>
+                </ul>
+
+                <h3>4. Tax Compliance</h3>
+                <ul>
+                    <li>PAN and VAT registration and filings</li>
+                    <li>Tax returns and payments are up to date</li>
+                    <li>TDS deducted and remitted on time</li>
+                    <li>Tax planning is compliant with applicable laws</li>
+                </ul>
+
+                <h3>5. Intellectual Property</h3>
+                <ul>
+                    <li>Review of trademarks, patents, and copyrights</li>
+                    <li>Licensing agreements and IP protection</li>
+                    <li>Ownership of IP created by employees or contractors</li>
+                </ul>
+
+                <h3>6. Data Protection and Privacy</h3>
+                <ul>
+                    <li>Compliance with the Individual Privacy Act, 2075 and Information Technology Act</li>
+                    <li>Data collection and processing practices</li>
+                    <li>Data breach response plans</li>
+                    <li>Privacy policies and consent mechanisms</li>
+                </ul>
+
+                <h3>7. Anti-Money Laundering (AML) Compliance</h3>
+                <ul>
+                    <li>AML policies and procedures in place</li>
+                    <li>Customer due diligence practices</li>
+                    <li>Suspicious transaction reporting mechanisms</li>
+                    <li>Staff training on AML obligations</li>
+                </ul>
+
+                <h2>Step-by-Step Guide to a Legal Audit</h2>
+
+                <h3>Step 1: Scoping</h3>
+                <p>Define the scope of the audit. Determine which areas will be reviewed based on your business size, sector, and identified risks.</p>
+
+                <h3>Step 2: Document Collection</h3>
+                <p>Gather all relevant documents, including contracts, policies, registrations, and financial records.</p>
+
+                <h3>Step 3: Review and Analysis</h3>
+                <p>Conduct a detailed review of all documents, policies, and practices against legal requirements and best practices.</p>
+
+                <h3>Step 4: Risk Assessment</h3>
+                <p>Identify and prioritise legal risks based on likelihood and potential impact.</p>
+
+                <h3>Step 5: Report and Recommendations</h3>
+                <p>Prepare a detailed report highlighting gaps, risks, and recommendations for corrective action.</p>
+
+                <h3>Step 6: Implementation</h3>
+                <p>Assist in implementing recommended changes and improvements.</p>
+
+                <h2>How to Prepare for a Legal Audit</h2>
+                <ul>
+                    <li>Gather all contracts, policies, and legal documents in one place.</li>
+                    <li>Review your business registrations and ensure they are current.</li>
+                    <li>Organise financial records and tax filings.</li>
+                    <li>Prepare a list of key personnel and their roles.</li>
+                    <li>Be open to recommendations and ready to implement changes.</li>
+                </ul>
+
+                <p><strong>Expert Legal Auditing at Karki Associates</strong></p>
+                <p>At Karki Associates, we conduct comprehensive legal audits tailored to your business needs. Contact us for a confidential audit and risk assessment.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified lawyer regarding your specific legal compliance needs.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 11 ===================== -->
+        <article class="blog-post" id="post11">
+            <div class="post-title"><a href="#" onclick="togglePost('post11'); return false;">Anti-Money Laundering Compliance for Nepali Businesses</a></div>
+            <div class="post-meta">Legal Auditing and Compliance</div>
+            <div class="post-summary">
+                <p>With Nepal on the FATF grey list, businesses face heightened AML obligations. This article explains AML requirements, common compliance gaps, and how to protect your business.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post11'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>Anti-Money Laundering (AML) compliance is a legal obligation for businesses operating in Nepal's designated sectors. With Nepal currently on the FATF grey list, AML compliance has become more important than ever. This article provides a comprehensive overview of AML requirements for Nepali businesses.</p>
+
+                <h2>What Is Anti-Money Laundering (AML)?</h2>
+                <p>AML refers to the laws, regulations, and procedures designed to prevent the generation of income through illegal activities and the movement of these funds through legitimate financial channels. Money laundering is a serious crime that can have severe consequences for individuals and organisations involved.</p>
+
+                <h2>Nepal's AML Legal Framework</h2>
+                <p>Nepal's AML framework is governed by:</p>
+                <ul>
+                    <li><strong>Money Laundering Prevention Act, 2008:</strong> The primary legislation defining money laundering offences and establishing AML obligations.</li>
+                    <li><strong>Money Laundering Prevention Rules, 2009:</strong> Implementing rules providing detailed guidance on AML compliance.</li>
+                    <li><strong>FATF Recommendations:</strong> International standards that Nepal has committed to implement.</li>
+                    <li><strong>Directives from Regulatory Bodies:</strong> Specific AML directives from Nepal Rastra Bank, Insurance Board, and other regulators.</li>
+                </ul>
+
+                <h2>Who Must Comply?</h2>
+                <p>AML obligations apply to businesses in designated sectors, including:</p>
+                <ul>
+                    <li>Financial institutions (banks, insurance companies, microfinance institutions)</li>
+                    <li>Real estate and land registration offices</li>
+                    <li>Casinos and gambling establishments</li>
+                    <li>Money transfer and remittance services</li>
+                    <li>Legal professionals (advocates and law firms)</li>
+                    <li>Accountants and auditing firms</li>
+                    <li>Trust and company service providers</li>
+                    <li>Dealers in precious metals and stones</li>
+                </ul>
+
+                <h2>Key AML Compliance Obligations</h2>
+
+                <h3>1. Customer Due Diligence (CDD)</h3>
+                <p>Businesses must identify and verify the identity of their clients. This includes:</p>
+                <ul>
+                    <li>Collecting identification documents (passport, citizenship certificate, PAN card)</li>
+                    <li>Verifying the identity of beneficial owners</li>
+                    <li>Understanding the purpose and nature of the business relationship</li>
+                    <li>Conducting ongoing monitoring of transactions</li>
+                </ul>
+
+                <h3>2. Enhanced Due Diligence (EDD)</h3>
+                <p>For high-risk clients or transactions, EDD measures are required. This includes:</p>
+                <ul>
+                    <li>Obtaining additional information about the client's source of funds</li>
+                    <li>Conducting enhanced verification procedures</li>
+                    <li>Seeking senior management approval for high-risk relationships</li>
+                </ul>
+
+                <h3>3. Suspicious Transaction Reporting (STR)</h3>
+                <p>Businesses must report suspicious transactions to the Financial Information Unit (FIU) of Nepal. Suspicious transactions include:</p>
+                <ul>
+                    <li>Transactions that appear unusual or inconsistent with the client's profile</li>
+                    <li>Transactions involving large, unexplained cash movements</li>
+                    <li>Transactions with parties from high-risk jurisdictions</li>
+                    <li>Transactions that may be linked to criminal activities</li>
+                </ul>
+
+                <h3>4. Record Keeping</h3>
+                <p>Maintain records of all transactions and client identification documents for at least 5 years.</p>
+
+                <h3>5. Staff Training</h3>
+                <p>Train employees on AML obligations, including how to identify suspicious activities and the importance of reporting.</p>
+
+                <h3>6. Compliance Officer</h3>
+                <p>Designate a compliance officer to oversee AML compliance and act as the point of contact with regulatory authorities.</p>
+
+                <h2>Why AML Compliance Matters</h2>
+
+                <h3>Legal Consequences</h3>
+                <p>Non-compliance can result in:</p>
+                <ul>
+                    <li>Heavy fines and penalties</li>
+                    <li>Criminal prosecution</li>
+                    <li>Revocation of business licenses</li>
+                    <li>Reputational damage</li>
+                </ul>
+
+                <h3>Nepal's FATF Grey List Status</h3>
+                <p>Nepal was placed on the FATF grey list in February 2025 due to deficiencies in its AML/CFT (Counter-Terrorist Financing) regime. To exit the grey list, Nepal must demonstrate meaningful progress in implementing AML measures. This means businesses in Nepal face heightened AML scrutiny and must ensure full compliance.</p>
+
+                <h2>Common AML Compliance Gaps</h2>
+                <ul>
+                    <li>Inadequate customer due diligence processes</li>
+                    <li>Failure to report suspicious transactions</li>
+                    <li>Insufficient record keeping</li>
+                    <li>Lack of staff training</li>
+                    <li>No designated compliance officer</li>
+                    <li>Outdated AML policies</li>
+                </ul>
+
+                <h2>Penalties for AML Violations</h2>
+                <p>The Money Laundering Prevention Act, 2008 prescribes penalties for AML violations, including:</p>
+                <ul>
+                    <li>Fines ranging from NPR 100,000 to NPR 5,000,000</li>
+                    <li>Imprisonment for up to 5 years</li>
+                    <li>Confiscation of assets</li>
+                    <li>Revocation of licenses</li>
+                </ul>
+
+                <h2>How to Strengthen Your AML Compliance</h2>
+                <ul>
+                    <li>Review and update your AML policies and procedures</li>
+                    <li>Conduct regular AML compliance audits</li>
+                    <li>Provide ongoing staff training</li>
+                    <li>Ensure timely reporting of suspicious transactions</li>
+                    <li>Engage AML compliance experts for guidance</li>
+                </ul>
+
+                <p><strong>Expert AML Compliance Support at Karki Associates</strong></p>
+                <p>We provide comprehensive AML advisory services to help businesses meet their compliance obligations and avoid penalties. Contact us for AML policy development, audits, and training.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified professional regarding your specific AML compliance obligations.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 12 ===================== -->
+        <article class="blog-post" id="post12">
+            <div class="post-title"><a href="#" onclick="togglePost('post12'); return false;">Property Transactions in Nepal: A Legal Guide for Buyers and Sellers</a></div>
+            <div class="post-meta">Personal Legal Services, Documentation and Conveyancing</div>
+            <div class="post-summary">
+                <p>Buying or selling property in Nepal involves complex legal steps. This guide walks you through title verification, registration, stamp duty, and common pitfalls to avoid.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post12'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>Property transactions are among the most significant financial decisions individuals and businesses make. In Nepal, property law is complex, involving multiple steps, authorities, and potential risks. This guide provides a comprehensive overview of the legal process for buying and selling property in Nepal.</p>
+
+                <h2>Key Legal Framework</h2>
+                <p>Property transactions in Nepal are governed by:</p>
+                <ul>
+                    <li><strong>Land Act, 2021:</strong> Primary legislation governing land ownership and use.</li>
+                    <li><strong>Land Revenue Act, 2034:</strong> Governs land valuation, registration, and taxation.</li>
+                    <li><strong>Land Registration Rules, 2032:</strong> Procedural rules for land registration.</li>
+                    <li><strong>National Land Information and Management Act, 2026:</strong> Recent legislation promoting digital land administration.</li>
+                    <li><strong>Local Government Acts:</strong> Municipal-level regulations on property use and development.</li>
+                </ul>
+
+                <h2>Step 1: Title Verification</h2>
+                <p>Before committing to any property transaction, verify the title (ownership) of the property. This involves:</p>
+                <ul>
+                    <li>Obtaining a copy of the land registration certificate (लालपुर्जा).</li>
+                    <li>Checking the land register (नापी नक्सा) for accurate description and boundaries.</li>
+                    <li>Verifying that the seller has clear and marketable title.</li>
+                    <li>Checking for encumbrances (mortgages, liens, or other claims).</li>
+                    <li>Verifying land use classification (agricultural, residential, commercial, industrial).</li>
+                </ul>
+
+                <h2>Step 2: Due Diligence</h2>
+                <p>Conduct thorough due diligence to identify potential risks:</p>
+                <ul>
+                    <li><strong>Property Boundaries:</strong> Ensure the physical boundaries match the registered description.</li>
+                    <li><strong>Land Use:</strong> Verify that the property is zoned for your intended use.</li>
+                    <li><strong>Tax Status:</strong> Confirm that all property taxes have been paid.</li>
+                    <li><strong>Unregistered Encumbrances:</strong> Check for unregistered encumbrances that may affect ownership.</li>
+                </ul>
+
+                <h2>Step 3: Agreement to Sell</h2>
+                <p>Once due diligence is complete, the buyer and seller enter into an Agreement to Sell. This agreement should include:</p>
+                <ul>
+                    <li>Detailed description of the property</li>
+                    <li>Purchase price and payment terms</li>
+                    <li>Timeline for completion</li>
+                    <li>Conditions for cancellation</li>
+                    <li>Dispute resolution mechanism</li>
+                </ul>
+
+                <h2>Step 4: Registration</h2>
+                <p>Property registration is the final legal step. The process involves:</p>
+                <ul>
+                    <li><strong>Stamp Duty:</strong> Pay stamp duty on the transaction value. Stamp duty rates vary based on property type and location (typically around 4-6%).</li>
+                    <li><strong>Registration Fee:</strong> Pay the registration fee (usually 2-3% of the transaction value).</li>
+                    <li><strong>Document Submission:</strong> Submit the sale deed and supporting documents to the Land Revenue Office or Office of Land Registration.</li>
+                    <li><strong>Title Transfer:</strong> Once registered, the title is transferred to the buyer's name.</li>
+                </ul>
+
+                <h2>Step 5: Post-Registration</h2>
+                <p>After registration, ensure the following:</p>
+                <ul>
+                    <li>Update the land registration certificate (लालपुर्जा) with the buyer's details.</li>
+                    <li>Update property tax records.</li>
+                    <li>Obtain certified copies of the registered documents for your records.</li>
+                </ul>
+
+                <h2>Key Costs in Property Transactions</h2>
+                <ul>
+                    <li><strong>Stamp Duty:</strong> 4-6% of transaction value (varies by location)</li>
+                    <li><strong>Registration Fee:</strong> 2-3% of transaction value</li>
+                    <li><strong>Local Taxes:</strong> Municipal or local taxes on property transactions</li>
+                    <li><strong>Professional Fees:</strong> Legal and conveyancing fees</li>
+                </ul>
+
+                <h2>Recent Changes in Property Laws</h2>
+                <ul>
+                    <li><strong>Removal of Land Ceiling:</strong> The land ceiling for housing and residential real estate development has been removed, facilitating larger property developments.</li>
+                    <li><strong>Land Information System:</strong> The expansion of the land information system (भू-सूचना प्रणाली) aims to improve transparency and efficiency.</li>
+                    <li><strong>Digital Registration:</strong> Efforts to digitalise land registration and tax collection.</li>
+                </ul>
+
+                <h2>Common Pitfalls to Avoid</h2>
+                <ul>
+                    <li><strong>Incomplete Title Verification:</strong> Failing to verify the title thoroughly can lead to ownership disputes.</li>
+                    <li><strong>Ignoring Zoning Laws:</strong> Buying property for a use not permitted by zoning laws can result in legal issues.</li>
+                    <li><strong>Underestimating Costs:</strong> Failing to account for stamp duty, registration fees, and other costs can cause financial strain.</li>
+                    <li><strong>Informal Agreements:</strong> Relying on oral agreements without formal documentation.</li>
+                    <li><strong>Not Engaging Professionals:</strong> Attempting to navigate property transactions without legal assistance.</li>
+                </ul>
+
+                <p><strong>Expert Property Advisory at Karki Associates</strong></p>
+                <p>At Karki Associates, we provide comprehensive property advisory services, including title verification, due diligence, drafting and reviewing sale agreements, and registration assistance. Contact us for expert guidance on your property transaction.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified lawyer regarding your specific property transaction.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 13 ===================== -->
+        <article class="blog-post" id="post13">
+            <div class="post-title"><a href="#" onclick="togglePost('post13'); return false;">Estate Planning in Nepal: Wills, Succession, and Inheritance</a></div>
+            <div class="post-meta">Personal Legal Services, Documentation and Conveyancing</div>
+            <div class="post-summary">
+                <p>Estate planning ensures your assets are distributed according to your wishes. This article explains the legal framework for wills, succession, and inheritance in Nepal.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post13'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>Estate planning involves organising the distribution of your assets after your death. In Nepal, estate matters are governed by a combination of personal laws (based on religion), the Succession Act, 2018, and the General Code (Muluki Civil Code, 2018). Understanding these laws is essential for anyone planning their estate.</p>
+
+                <h2>Key Legal Framework</h2>
+                <p>Estate planning in Nepal is governed by:</p>
+                <ul>
+                    <li><strong>Muluki Civil Code, 2018 (General Code):</strong> Contains detailed provisions on succession and inheritance.</li>
+                    <li><strong>Succession Act, 2018:</strong> Provides additional clarity on succession matters.</li>
+                    <li><strong>Personal Laws:</strong> Based on religion (Hindu, Buddhist, Muslim, Christian) for certain aspects of succession.</li>
+                </ul>
+
+                <h2>Intestate Succession vs. Testamentary Succession</h2>
+
+                <h3>Intestate Succession</h3>
+                <p>Intestate succession occurs when a person dies without leaving a valid will. In such cases, the law determines who inherits the estate. Under the Muluki Civil Code, the estate is distributed among the heirs (children, spouse, parents, and other relatives) according to specific rules. The order of succession is:</p>
+                <ul>
+                    <li><strong>First: Children and Spouse:</strong> The estate is divided among the children and the surviving spouse.</li>
+                    <li><strong>Second: Parents:</strong> If there are no children, the parents inherit.</li>
+                    <li><strong>Third: Siblings:</strong> If there are no parents, the siblings inherit.</li>
+                    <li><strong>Fourth: Other Relatives:</strong> Distant relatives may inherit in the absence of closer relatives.</li>
+                </ul>
+                <p>Note: The shares of children and spouses may differ depending on the applicable law.</p>
+
+                <h3>Testamentary Succession</h3>
+                <p>Testamentary succession occurs when a person dies leaving a valid will. A will allows you to:</p>
+                <ul>
+                    <li>Specify who inherits your assets</li>
+                    <li>Appoint guardians for minor children</li>
+                    <li>Make charitable bequests</li>
+                    <li>Appoint an executor to manage your estate</li>
+                </ul>
+
+                <h2>Requirements for a Valid Will in Nepal</h2>
+                <ul>
+                    <li><strong>Written Form:</strong> A will must be in writing.</li>
+                    <li><strong>Signed by the Testator:</strong> The person making the will must sign it.</li>
+                    <li><strong>Witnessed:</strong> The will must be witnessed by at least one competent witness.</li>
+                    <li><strong>Sound Mind:</strong> The testator must be of sound mind when making the will.</li>
+                    <li><strong>Voluntary:</strong> The will must be made voluntarily, without coercion or undue influence.</li>
+                </ul>
+                <p>Wills written entirely in the testator's handwriting (holograph wills) do not require witnesses.</p>
+
+                <h2>Advantages of Having a Will</h2>
+                <ul>
+                    <li><strong>Control:</strong> You decide who receives your assets.</li>
+                    <li><strong>Avoid Disputes:</strong> A clear will reduces the risk of family disputes.</li>
+                    <li><strong>Protect Heirs:</strong> You can appoint guardians for minor children.</li>
+                    <li><strong>Make Charitable Gifts:</strong> You can leave assets to charitable organisations.</li>
+                    <li><strong>Simplified Process:</strong> A valid will simplifies the probate process.</li>
+                </ul>
+
+                <h2>Probate Process</h2>
+                <p>Probate is the court-supervised process of administering an estate. The process involves:</p>
+                <ul>
+                    <li><strong>Filing the Will:</strong> The will is filed with the competent court.</li>
+                    <li><strong>Notice:</strong> Heirs and other interested parties are notified.</li>
+                    <li><strong>Verification:</strong> The court verifies the validity of the will.</li>
+                    <li><strong>Estate Administration:</strong> The executor administers the estate.</li>
+                    <li><strong>Distribution:</strong> Assets are distributed to the heirs as per the will or intestate succession laws.</li>
+                </ul>
+
+                <h2>Common Estate Planning Mistakes</h2>
+                <ul>
+                    <li>Dying without a will (intestate)</li>
+                    <li>Not updating a will after major life events (marriage, divorce, birth of children)</li>
+                    <li>Failing to appoint a reliable executor</li>
+                    <li>Not considering tax implications</li>
+                    <li>Leaving assets to minors without appointing a guardian</li>
+                </ul>
+
+                <p><strong>Expert Estate Planning at Karki Associates</strong></p>
+                <p>We provide comprehensive estate planning services, including drafting wills, advising on succession planning, and probate assistance. Contact us to ensure your estate is managed according to your wishes.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified lawyer regarding your specific estate planning needs.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 14 ===================== -->
+        <article class="blog-post" id="post14">
+            <div class="post-title"><a href="#" onclick="togglePost('post14'); return false;">Starting a Business in Nepal: A Legal Checklist</a></div>
+            <div class="post-meta">Corporate and Commercial Advisory</div>
+            <div class="post-summary">
+                <p>Starting a business in Nepal requires navigating legal registration, licensing, and compliance. This comprehensive checklist covers all the steps to legally establish your business.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post14'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>Starting a business in Nepal can be a rewarding venture, but it requires careful attention to legal and regulatory requirements. This comprehensive checklist guides you through the essential steps to legally establish and operate your business in Nepal.</p>
+
+                <h2>Step 1: Choose Your Business Structure</h2>
+                <p>Select the appropriate legal structure for your business:</p>
+                <ul>
+                    <li><strong>Private Limited Company:</strong> Separate legal entity, limited liability, suitable for most businesses.</li>
+                    <li><strong>Public Limited Company:</strong> Suitable for larger businesses seeking to raise capital.</li>
+                    <li><strong>Sole Proprietorship:</strong> Single owner, unlimited liability, simpler setup.</li>
+                    <li><strong>Partnership:</strong> Two or more owners, shared liability.</li>
+                    <li><strong>Branch of Foreign Company:</strong> For foreign companies establishing a presence.</li>
+                </ul>
+
+                <h2>Step 2: Register Your Business</h2>
+                <ul>
+                    <li><strong>Company Registration:</strong> Register with the Office of the Company Registrar under the Companies Act, 2006. Key documents required: Memorandum of Association (MOA), Articles of Association (AOA), and Director/Promoter details.</li>
+                    <li><strong>Obtain PAN:</strong> Apply for a Permanent Account Number (PAN) from the Inland Revenue Department.</li>
+                    <li><strong>VAT Registration:</strong> If your annual turnover exceeds NPR 5 million, register for VAT.</li>
+                </ul>
+
+                <h2>Step 3: Obtain Licenses and Permits</h2>
+                <ul>
+                    <li><strong>Business License:</strong> Obtain a business license from the local municipality or relevant authority based on your business activity.</li>
+                    <li><strong>Sector-Specific Licenses:</strong> Depending on your business activity, you may need licenses from regulatory authorities.</li>
+                </ul>
+
+                <h2>Step 4: Register for Employees' Social Security</h2>
+                <ul>
+                    <li>If you have employees, register with the Social Security Fund (SSF) to contribute to the fund.</li>
+                </ul>
+
+                <h2>Step 5: Open a Business Bank Account</h2>
+                <ul>
+                    <li>Open a separate business bank account for all business transactions.</li>
+                </ul>
+
+                <h2>Step 6: Understand Your Tax Obligations</h2>
+                <ul>
+                    <li>Ensure you understand income tax, VAT, and other applicable taxes.</li>
+                    <li>Maintain proper accounting records and file returns on time.</li>
+                </ul>
+
+                <h2>Step 7: Ensure Compliance with Labour Laws</h2>
+                <ul>
+                    <li>Draft employment contracts and HR policies compliant with the Labour Act, 2017.</li>
+                    <li>Ensure working hours, overtime, and leave provisions comply with the law.</li>
+                </ul>
+
+                <h2>Step 8: Data Protection and Privacy</h2>
+                <ul>
+                    <li>Comply with data protection obligations under the Individual Privacy Act, 2075.</li>
+                    <li>Implement privacy policies and consent mechanisms.</li>
+                </ul>
+
+                <h2>Step 9: Register Your Intellectual Property</h2>
+                <ul>
+                    <li>Protect your brand and innovations through trademark, patent, or copyright registration.</li>
+                </ul>
+
+                <h2>Step 10: Maintain Ongoing Compliance</h2>
+                <ul>
+                    <li>File annual returns and financial statements with the Office of the Company Registrar.</li>
+                    <li>Hold Annual General Meetings (AGMs).</li>
+                    <li>File tax returns on time.</li>
+                    <li>Keep records for at least 5 years.</li>
+                </ul>
+
+                <h2>Common Mistakes When Starting a Business</h2>
+                <ul>
+                    <li>Choosing the wrong business structure</li>
+                    <li>Failing to register for all applicable taxes</li>
+                    <li>Not obtaining required licenses or permits</li>
+                    <li>Ignoring employment law obligations</li>
+                    <li>Not protecting intellectual property</li>
+                    <li>Poor record keeping</li>
+                </ul>
+
+                <p><strong>Get Expert Business Setup Support at Karki Associates</strong></p>
+                <p>We provide comprehensive legal advisory for business setup in Nepal, including registration, licensing, tax registration, and ongoing compliance. Contact us for expert guidance.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified lawyer regarding your specific business setup requirements.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 15 ===================== -->
+        <article class="blog-post" id="post15">
+            <div class="post-title"><a href="#" onclick="togglePost('post15'); return false;">Foreign Investment in Nepal: Legal Framework and Compliance</a></div>
+            <div class="post-meta">Corporate and Commercial Advisory</div>
+            <div class="post-summary">
+                <p>Foreign investment is vital for Nepal's economic growth. This article explains the legal framework, approval processes, and compliance obligations for foreign investors.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post15'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>Nepal offers significant investment opportunities across various sectors—tourism, hydropower, IT, agriculture, and manufacturing. The government has taken steps to attract foreign investment by simplifying procedures and offering incentives. This article provides a comprehensive overview of the legal framework for foreign investment in Nepal.</p>
+
+                <h2>Key Legal Framework for Foreign Investment</h2>
+
+                <h3>1. Foreign Investment and Technology Transfer Act (FITTA), 2018</h3>
+                <p>FITTA is the principal legislation governing foreign investment in Nepal. Key provisions include:</p>
+                <ul>
+                    <li><strong>Approval Requirement:</strong> Most foreign investments require approval from the Investment Board Nepal (IBN) or the Department of Industry.</li>
+                    <li><strong>Sectoral Restrictions:</strong> Certain sectors are restricted or prohibited (e.g., defence, real estate).</li>
+                    <li><strong>Minimum Investment:</strong> Minimum investment requirements vary by sector.</li>
+                    <li><strong>Technology Transfer:</strong> Provisions for licensing, franchising, and other technology transfer arrangements.</li>
+                </ul>
+
+                <h3>2. Companies Act, 2006</h3>
+                <p>Foreign investors can establish companies under the Companies Act. The Act provides for private and public limited companies, with specific provisions for foreign-owned entities.</p>
+
+                <h3>3. Foreign Exchange Act, 2019</h3>
+                <p>Governs foreign exchange transactions, including repatriation of profits and capital. Approval from Nepal Rastra Bank is required for certain transactions.</p>
+
+                <h2>Approval Process for Foreign Investment</h2>
+
+                <h3>Step 1: Identify the Investment Opportunity</h3>
+                <p>Conduct market research and due diligence to identify viable investment opportunities in your sector of interest.</p>
+
+                <h3>Step 2: Determine Approval Authority</h3>
+                <ul>
+                    <li><strong>Investment Board Nepal (IBN):</strong> For investments above NPR 500 million (or specific sectors).</li>
+                    <li><strong>Department of Industry:</strong> For investments below NPR 500 million.</li>
+                </ul>
+
+                <h3>Step 3: Submit Application</h3>
+                <p>Submit an investment proposal with detailed project description, financial projections, and supporting documents.</p>
+
+                <h3>Step 4: Review and Approval</h3>
+                <p>The relevant authority reviews the proposal. Approval is generally granted within 30 to 60 days.</p>
+
+                <h3>Step 5: Company Registration</h3>
+                <p>Register the company with the Office of the Company Registrar.</p>
+
+                <h3>Step 6: Open Bank Account and Repatriate Funds</h3>
+                <p>Open a business bank account and repatriate investment funds following Nepal Rastra Bank guidelines.</p>
+
+                <h2>Incentives for Foreign Investors</h2>
+                <ul>
+                    <li><strong>Tax Holidays:</strong> Certain sectors may be eligible for tax holidays.</li>
+                    <li><strong>Reduced Tax Rates:</strong> Special tax rates may apply to specific sectors.</li>
+                    <li><strong>Customs Duty Exemptions:</strong> Exemptions on import of machinery and equipment.</li>
+                    <li><strong>Repatriation:</strong> Profits and dividends may be repatriated freely, subject to tax compliance.</li>
+                </ul>
+
+                <h2>Sectoral Restrictions</h2>
+                <p>Foreign investment is restricted or prohibited in certain sectors, including:</p>
+                <ul>
+                    <li>Defence and security</li>
+                    <li>Real estate (excluding certain commercial developments)</li>
+                    <li>Casinos and gambling</li>
+                    <li>Certain media and cultural activities</li>
+                </ul>
+
+                <h2>Compliance Obligations</h2>
+                <ul>
+                    <li>File annual compliance returns with relevant authorities.</li>
+                    <li>Maintain proper accounting records and financial statements.</li>
+                    <li>Comply with tax laws and file returns on time.</li>
+                    <li>Report any changes in shareholding or business operations.</li>
+                </ul>
+
+                <h2>Dispute Resolution</h2>
+                <p>Foreign investors have access to Nepal's courts for dispute resolution. Many investment agreements also provide for international arbitration, including under the Arbitration and Conciliation Act, 1999.</p>
+
+                <h2>Common Challenges for Foreign Investors</h2>
+                <ul>
+                    <li>Navigating complex approval processes</li>
+                    <li>Understanding sectoral restrictions and compliance obligations</li>
+                    <li>Managing currency fluctuations</li>
+                    <li>Cultural and language barriers</li>
+                    <li>Accessing reliable local legal and business advice</li>
+                </ul>
+
+                <p><strong>Expert Foreign Investment Advisory at Karki Associates</strong></p>
+                <p>We provide comprehensive advisory services for foreign investors, including navigating approval processes, legal compliance, and dispute resolution. Contact us for expert guidance on investing in Nepal.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified lawyer regarding your specific foreign investment needs.</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 16 ===================== -->
+        <article class="blog-post" id="post16">
+            <div class="post-title"><a href="#" onclick="togglePost('post16'); return false;">Legal Process Outsourcing: A Strategic Advantage for Law Firms</a></div>
+            <div class="post-meta">Legal Process Outsourcing and Support for Law Firms</div>
+            <div class="post-summary">
+                <p>Legal Process Outsourcing (LPO) helps law firms reduce costs, improve efficiency, and focus on core legal work. This article explains the benefits and key considerations for law firms.</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post16'); return false;">Read More →</a>
+            <div class="full-content">
+                <p>Legal Process Outsourcing (LPO) is the practice of law firms and legal departments delegating certain legal tasks to external service providers. LPO has gained significant traction globally as a strategy to manage costs, access specialised skills, and improve operational efficiency.</p>
+
+                <h2>What Is Legal Process Outsourcing?</h2>
+                <p>LPO involves outsourcing non-core legal tasks to third-party providers. These tasks may include legal research, document review, contract drafting, due diligence, and other routine legal work. LPO providers typically employ qualified legal professionals to deliver high-quality work at a fraction of the cost of in-house staffing.</p>
+
+                <h2>Why Law Firms Outsource</h2>
+
+                <h3>1. Cost Savings</h3>
+                <p>LPO can reduce legal costs by 30-50% compared to in-house staffing. Outsourcing avoids fixed costs like office space, benefits, and training.</p>
+
+                <h3>2. Access to Specialised Expertise</h3>
+                <p>LPO providers offer specialised skills in areas such as legal research, contract management, and intellectual property law.</p>
+
+                <h3>3. Scalability and Flexibility</h3>
+                <p>Law firms can scale their workforce up or down based on workload. This flexibility is particularly valuable for firms handling large projects or seasonal workloads.</p>
+
+                <h3>4. Focus on Core Legal Work</h3>
+                <p>By outsourcing administrative and routine tasks, lawyers can focus on higher-value work, such as court appearances, client advisory, and strategic planning.</p>
+
+                <h3>5. Faster Turnaround Times</h3>
+                <p>LPO providers often have processes and resources to deliver work faster, ensuring timely completion of projects.</p>
+
+                <h2>Common LPO Services</h2>
+                <ul>
+                    <li><strong>Legal Research:</strong> Case law analysis, statutory research, and legal memoranda.</li>
+                    <li><strong>Document Review:</strong> Review of documents for discovery, due diligence, and contract analysis.</li>
+                    <li><strong>Contract Drafting and Management:</strong> Drafting contracts, NDAs, and other legal documents; managing contract lifecycles.</li>
+                    <li><strong>Due Diligence:</strong> Review of corporate and legal documents in mergers, acquisitions, and other transactions.</li>
+                    <li><strong>Litigation Support:</strong> Preparation of pleadings, witness statements, and trial bundles.</li>
+                    <li><strong>Paralegal Services:</strong> Administrative and paralegal support tasks.</li>
+                </ul>
+
+                <h2>What to Look for in an LPO Provider</h2>
+
+                <h3>1. Qualified Professionals</h3>
+                <p>Ensure the provider employs qualified legal professionals with relevant experience.</p>
+
+                <h3>2. Confidentiality and Security</h3>
+                <p>Client confidentiality is paramount. Providers should have robust data security and confidentiality protocols.</p>
+
+                <h3>3. Quality Assurance</h3>
+                <p>Quality control mechanisms to ensure high standards and accuracy.</p>
+
+                <h3>4. Turnaround Times</h3>
+                <p>Ability to meet deadlines consistently.</p>
+
+                <h3>5. Transparent Pricing</h3>
+                <p>Clear and predictable pricing models.</p>
+
+                <h3>6. Communication</h3>
+                <p>Responsive and open communication channels.</p>
+
+                <h2>Common LPO Myths</h2>
+                <ul>
+                    <li><strong>Myth 1: LPO is only for large firms:</strong> LPO is accessible to firms of all sizes.</li>
+                    <li><strong>Myth 2: LPO compromises quality:</strong> Quality depends on the provider's standards; reputable providers maintain high standards.</li>
+                    <li><strong>Myth 3: LPO eliminates jobs:</strong> LPO allows lawyers to focus on high-value work rather than administrative tasks.</li>
+                </ul>
+
+                <h2>Practical Considerations</h2>
+                <ul>
+                    <li><strong>Start Small:</strong> Begin by outsourcing a limited scope of work to test the provider's capabilities.</li>
+                    <li><strong>Clear Communication:</strong> Define expectations, scope, and deliverables clearly.</li>
+                    <li><strong>Confidentiality:</strong> Ensure confidentiality agreements are in place.</li>
+                    <li><strong>Feedback:</strong> Provide feedback to improve quality and efficiency.</li>
+                </ul>
+
+                <p><strong>Expert LPO Services at Karki Associates</strong></p>
+                <p>Karki Associates provides comprehensive LPO services for law firms and legal departments. We offer legal research, drafting, due diligence, and litigation support, all delivered with the highest standards of confidentiality and quality. Contact us to discuss how we can support your practice.</p>
+
+                <p><em>Disclaimer: This article is for informational purposes only and does not constitute legal advice. You should consult a qualified professional regarding your specific LPO needs.</em></p>
+            </div>
+        </article>
+
     </div>
 
+    <!-- ================================================== -->
+    <!-- NEPALI CONTENT                                      -->
+    <!-- ================================================== -->
     <div id="np-content" style="display:none;">
-        <h1>कार्की एसोसिएट्सबाट नवीनतम लेखहरू</h1>
+        <h1>कानूनी अन्तरदृष्टि र ज्ञान</h1>
 
-        <div class="blog-post">
-            <div class="post-title"><a href="https://myrepublica.nagariknetwork.com/news/combating-money-laundering-in-nepal" target="_blank" rel="noopener noreferrer">नेपालमा मनी लन्ड्रिङ नियन्त्रण</a></div>
-            <div class="post-date">जुलाई २१, २०२३</div>
-            <div class="post-excerpt">नेपाल मनी लन्ड्रिङ तथा आतंककारी क्रियाकलापमा वित्तीय सहायता नियन्त्रणसम्बन्धी कानूनमा केही कमजोरीहरू सुधार गर्न नसकेको भन्दै यसलाई वित्तीय कार्य समूह (FATF) को ग्रेलिस्टमा राखिने सम्भावना रहेको छ। हितधारकहरूले नेपाल कालोसूची वा ग्रेलिस्टमा पर्न सक्ने चिन्ता व्यक्त गरेका छन्। नेपाल FATF को ग्रेलिस्टमा पर्ने निश्चित जस्तै भए पनि, सुधारका लागि एक वर्षको अतिरिक्त समय दिइएको छ। FATF ले कुनै पनि देशलाई प्रत्यक्ष निगरानीमा राख्नु अघि पर्यवेक्षण अवधि दिन्छ, र नेपालसँग अहिले त्यो समय छ। नेपालको कानूनी संरचना राम्रो छ तर कार्यान्वयन कमजोर छ। FATF व्यापक रूपमा स्वीकार गरिएको छैन, र यसको एजेन्डा थप गम्भीर समीक्षाको आवश्यकता छ किनकि यसलाई राजनीतिक संगठनको रूपमा वर्गीकृत गर्न सकिन्छ।</div>
-        </div>
+        <!-- ===================== BLOG POST 1 NEPALI ===================== -->
+        <article class="blog-post" id="post1np">
+            <div class="post-title"><a href="#" onclick="togglePost('post1np'); return false;">नेपालमा देवानी मुद्दाको मार्गदर्शन: तपाईंको अधिकार र प्रक्रिया</a></div>
+            <div class="post-meta">कानूनी वकालत र मुद्दा अभियोग</div>
+            <div class="post-summary">
+                <p>देवानी मुद्दा अदालतमा विवाद समाधानको प्रक्रिया हो। यस लेखले नेपालमा देवानी मुद्दाका चरणहरू—उजुरी दायरदेखि अन्तिम फैसलासम्म—व्याख्या गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post1np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>देवानी मुद्दा भनेको व्यक्ति, व्यवसाय, वा संस्थाहरू बीचको विवाद समाधान गर्ने कानूनी प्रक्रिया हो। नेपालमा देवानी मुद्दा देवानी कार्यविधि संहिता, २०१७ र देवानी कार्यविधि नियम, २०१८ द्वारा नियमित गरिन्छ।</p>
 
-        <div class="blog-post">
-            <div class="post-title"><a href="https://kathmandupost.com/national/2024/02/08/nepal-takes-big-step-to-avoid-money-laundering-greylist" target="_blank" rel="noopener noreferrer">ग्रेलिस्टमा पर्नबाट जोगिन नेपालको ठूलो कदम</a></div>
-            <div class="post-date">फेब्रुअरी ८, २०२४</div>
-            <div class="post-excerpt">नेपालले FATF को ग्रेलिस्टमा पर्ने जोखिम कम गर्न महत्वपूर्ण कदम चालेको छ। संसदको प्रतिनिधि सभाले मनी लन्ड्रिङ नियन्त्रण ऐन, २०२० मा संशोधन गर्ने विधेयक पारित गरेको छ। यो विधेयकले एसिया-प्रशान्त मनी लन्ड्रिङ समूहले औंल्याएका कानूनी कमजोरीहरू सम्बोधन गर्दछ। विधेयक राष्ट्रिय सभाबाट पारित भई राष्ट्रपतिबाट प्रमाणीकरण पछि मात्र कानून बन्नेछ। यसले मनी लन्ड्रिङ र आतंककारी वित्तीय सहायता नियन्त्रणका लागि २० वटा कानून संशोधन गर्ने लक्ष्य राखेको छ।</div>
-        </div>
+                <h2>देवानी विवाद भनेको के हो?</h2>
+                <p>देवानी विवाद तब उत्पन्न हुन्छ जब एक पक्षले अर्को पक्षले कानूनी दायित्व पूरा गर्न असफल भएको विश्वास गर्छ। सामान्य देवानी विवादहरू:</p>
+                <ul>
+                    <li>करारीय विवाद</li>
+                    <li>सम्पत्ति र जग्गा विवाद</li>
+                    <li>पारिवारिक कानूनी मामिला</li>
+                    <li>क्षतिपूर्ति दाबी</li>
+                    <li>रोजगारी र श्रम विवाद</li>
+                </ul>
 
-        <div class="blog-post">
-            <div class="post-title"><a href="https://myrepublica.nagariknetwork.com/news/a-tougher-law-a-bigger-test" target="_blank" rel="noopener noreferrer">कडा कानून, ठूलो परीक्षा</a></div>
-            <div class="post-date">मे ६, २०२६</div>
-            <div class="post-excerpt">सरकारले नयाँ नियमावली अन्तर्गत मनी लन्ड्रिङ अनुसन्धान विभाग (DoMLI) लाई थप अधिकार द� वित्तीय अपराध नियन्त्रण कडा बनाएको छ। सबैभन्दा महत्वपूर्ण परिवर्तन भनेको मनी लन्ड्रिङको अभियोग कुनै अन्तर्निहित अपराधसँग जोडिनुपर्ने पुरानो व्यवस्था हटाइएको छ। नयाँ कानूनले DoMLI अन्तर्गत अधिकार पुन: केन्द्रित गरेको छ, साथै तस्करी, कर छली, वित्तीय बजार दुरुपयोग, र भित्री व्यापार जस्ता अपराधहरू अनुसन्धान दायरामा ल्याएको छ।</div>
-        </div>
+                <h2>देवानी मुद्दाका चरणहरू</h2>
 
-        <div class="blog-post">
-            <div class="post-title"><a href="https://kathmandupost.com/national/2025/08/12/nepal-orders-payment-service-providers-to-freeze-terrorist-linked-assets-to-exit-fatf-grey-list" target="_blank" rel="noopener noreferrer">FATF ग्रेलिस्टबाट बाहिरिन भुक्तानी सेवा प्रदायकलाई तोक्ने आदेश</a></div>
-            <div class="post-date">अगस्ट १२, २०२५</div>
-            <div class="post-excerpt">नेपाल राष्ट्र बैंकको नयाँ निर्देशन अनुसार भुक्तानी सेवा प्रदायक (PSP) हरूले संयुक्त राष्ट्र संघ वा गृह मन्त्रालयले सूचीकृत गरेका व्यक्ति वा समूहका कोष रोक्का गर्नुपर्नेछ। FATF को ग्रेलिस्टबाट बाहिरिने रणनीतिको भागको रूपमा लिइएको यो कदम युवा तथा विद्यार्थीहरूलाई लक्षित साइबर ठगी घटना बढ्दै गएको अवस्थामा आएको हो। FATF ले फेब्रुअरी २०२५ मा आवश्यक कानूनी तथा संरचनात्मक सुधार गर्न नसकेको भन्दै नेपाललाई ग्रेलिस्टमा राखेको थियो।</div>
-        </div>
+                <h3>१. पूर्व-मुद्दा चरण</h3>
+                <p>मुद्दा दायर गर्नु अघि, पक्षहरूले वार्ता वा मध्यस्थता मार्फत समाधान गर्ने प्रयास गर्नुपर्छ। यदि समाधान हुँदैन भने, वादीले मुद्दा दायर गर्न सक्छ।</p>
 
-        <div class="blog-post">
-            <div class="post-title"><a href="https://kathmandupost.com/national/2025/08/11/government-tightens-screws-on-cooperatives-to-exit-fatf-grey-list" target="_blank" rel="noopener noreferrer">FATF ग्रेलिस्टबाट बाहिरिन सहकारी संस्थाहरूलाई कडाइ</a></div>
-            <div class="post-date">अगस्ट ११, २०२५</div>
-            <div class="post-excerpt">फेब्रुअरी २०२५ मा FATF को ग्रेलिस्टमा राखिएपछि, नेपालले सहकारी क्षेत्रमा नियामकीय कडाइ बढाएको छ। सरकारले शंकास्पद कारोबार अनिवार्य रिपोर्टिङ, ग्राहक परिशीलन बढाउने, र राष्ट्र बैंकबाट नियमित लेखापरीक्षण गर्ने जस्ता कडा अनुपालन उपायहरू ल्याउँदैछ। FATF ले नेपाललाई कमजोरी सुधार गर्न समयसीमा दिएको छ र २०२६ मा पुनरावलोकन गर्नेछ।</div>
-        </div>
+                <h3>२. उजुरी दायर</h3>
+                <p>वादीले उचित अदालतमा उजुरी (बहसपत्र) दायर गर्छ। उजुरीमा निम्न उल्लेख हुनुपर्छ:</p>
+                <ul>
+                    <li>पक्षहरूको नाम र ठेगाना</li>
+                    <li>तथ्य र कानूनी आधारको स्पष्ट विवरण</li>
+                    <li>माग गरिएको राहत</li>
+                    <li>सहायक कागजात र प्रमाण</li>
+                </ul>
 
-        <div class="blog-post">
-            <div class="post-title"><a href="https://www.tribuneindia.com/news/nation/nepal-continue-to-remain-in-fatfs-greylist" target="_blank" rel="noopener noreferrer">नेपाल FATF को ग्रेलिस्टमा नै रहने</a></div>
-            <div class="post-date">अक्टोबर २५, २०२५</div>
-            <div class="post-excerpt">फेब्रुअरी २०२५ देखि नेपालले FATF र APG सँग मिलेर आफ्नो एन्टी-मनी लन्ड्रिङ तथा आतंककारी वित्तीय सहायता नियन्त्रण प्रभावकारिता सुधार्न उच्च-स्तरीय राजनीतिक प्रतिबद्धता जनाएको छ। यी प्रयासहरूको बाबजुद, FATF को अक्टोबर २०२५ को पूर्ण सत्रले नेपाल आफ्नो कार्ययोजना कार्यान्वयनमा अपर्याप्त प्रगति भएको भन्दै ग्रेलिस्टमै रहने निर्णय गरेको छ। FATF ले मनी लन्ड्रिङ मुद्दा अभियोजन, अपराधिक सम्पत्ति जफत, र गैर-वित्तीय क्षेत्रको प्रभावकारी नियमनमा निरन्तर प्रगति देखाउन आवश्यक रहेको औंल्याएको छ।</div>
-        </div>
+                <h3>३. लिखित जवाफ र बचाउ</h3>
+                <p>प्रतिवादीले उजुरीको जवाफमा लिखित जवाफ पेश गर्नुपर्छ। जवाफमा प्रत्येक आरोपको जवाफ दिनुपर्छ।</p>
+
+                <h3>४. प्रमाण र बहस</h3>
+                <p>दुवै पक्षले सान्दर्भिक कागजात र जानकारी आदान-प्रदान गर्छन्। साक्षीहरूको परीक्षण र विशेषज्ञ बयान पेश गर्न सकिन्छ।</p>
+
+                <h3>५. फैसला र डिक्री</h3>
+                <p>अदालतले अन्तिम फैसला गर्छ र डिक्री जारी गर्छ। डिक्री कार्यान्वयन योग्य हुन्छ।</p>
+
+                <h3>६. पुनरावेदन</h3>
+                <p>कुनै पनि पक्ष उच्च अदालतमा पुनरावेदन गर्न सक्छ।</p>
+
+                <p><strong>कानूनी सहायता</strong></p>
+                <p>देवानी मुद्दामा विशेष कानूनी ज्ञान चाहिन्छ। कार्की एसोसिएट्सले सबै चरणमा विशेषज्ञ प्रतिनिधित्व प्रदान गर्दछ।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो र कानूनी सल्लाह होइन। आफ्नो विशिष्ट कानूनी मामिलाको लागि योग्य वकिलसँग परामर्श गर्नुहोस्।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 2 NEPALI ===================== -->
+        <article class="blog-post" id="post2np">
+            <div class="post-title"><a href="#" onclick="togglePost('post2np'); return false;">नेपालमा फौजदारी बचाउ: अभियोग लाग्दा के गर्ने</a></div>
+            <div class="post-meta">कानूनी वकालत र मुद्दा अभियोग</div>
+            <div class="post-summary">
+                <p>फौजदारी अभियोग लाग्दा तनावपूर्ण हुन्छ। यस लेखले नेपालको फौजदारी न्याय प्रणाली, तपाईंको अधिकार र बचाउका उपायहरू व्याख्या गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post2np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>फौजदारी अभियोग विभिन्न परिस्थितिहरूबाट उत्पन्न हुन सक्छ। नेपालको फौजदारी न्याय प्रणाली फौजदारी कार्यविधि संहिता, २०१७ र फौजदारी अपराध ऐन, २०१७ द्वारा नियमित गरिन्छ।</p>
+
+                <h2>अभियोग लाग्दाको अधिकार</h2>
+                <p>नेपालको संविधानले प्रत्येक अभियुक्तलाई आधारभूत अधिकार प्रदान गर्दछ:</p>
+                <ul>
+                    <li>निर्दोषको प्रमाणित नभएसम्म निर्दोष मानिने</li>
+                    <li>कानूनी प्रतिनिधिको अधिकार</li>
+                    <li>मौन बस्ने अधिकार</li>
+                    <li>सूचना पाउने अधिकार</li>
+                    <li>निष्पक्ष सुनुवाइको अधिकार</li>
+                    <li>धरौटको अधिकार</li>
+                </ul>
+
+                <h2>अभियोग लाग्दा गर्नुपर्ने कदम</h2>
+
+                <h3>१. तुरुन्त वकिललाई सम्पर्क गर्नुहोस्</h3>
+                <p>कानूनी प्रतिनिधि बिना प्रहरी वा अधिकारीसँग नबोल्नुहोस्।</p>
+
+                <h3>२. मौन बस्ने अधिकार प्रयोग गर्नुहोस्</h3>
+                <p>तपाईंले आफ्नो विरुद्ध प्रयोग हुनसक्ने प्रश्नको जवाफ दिनु पर्दैन।</p>
+
+                <h3>३. अभियोग बुझ्नुहोस्</h3>
+                <p>आफूमाथि लागेको अभियोगको स्पष्ट व्याख्या माग्नुहोस्।</p>
+
+                <h3>४. प्रमाण सुरक्षित राख्नुहोस्</h3>
+                <p>बचाउका लागि आवश्यक कागजात र प्रमाण राख्नुहोस्।</p>
+
+                <h3>५. धरौटको लागि आवेदन दिनुहोस्</h3>
+                <p>यदि पक्राउ परेमा, वकिलले धरौटको लागि आवेदन दिनेछन्।</p>
+
+                <h2>फौजदारी मुद्दाका चरणहरू</h2>
+
+                <h3>अनुसन्धान:</h3>
+                <p>प्रहरीले प्रमाण सङ्कलन गर्छ। तपाईंको वकिल उपस्थित रहन सक्नुहुन्छ।</p>
+
+                <h3>अभियोग दायर:</h3>
+                <p>यदि पर्याप्त प्रमाण भएमा अभियोग दायर गरिन्छ।</p>
+
+                <h3>प्रारम्भिक सुनुवाइ:</h3>
+                <p>अदालतले मुद्दा अगाडि बढाउन पर्याप्त प्रमाण छ कि छैन जाँच गर्छ।</p>
+
+                <h3>बहस:</h3>
+                <p>प्रमाण र साक्षीको परीक्षण हुन्छ।</p>
+
+                <h3>फैसला र सजाय:</h3>
+                <p>दोषी ठहरिएमा सजाय हुन्छ।</p>
+
+                <h3>पुनरावेदन:</h3>
+                <p>तपाईं उच्च अदालतमा पुनरावेदन गर्न सक्नुहुन्छ।</p>
+
+                <p><strong>व्यावसायिक सहायता</strong></p>
+                <p>फौजदारी बचाउको लागि अनुभवी वकिल आवश्यक छ। कार्की एसोसिएट्सले विशेषज्ञ बचाउ सेवा प्रदान गर्दछ।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो। आफ्नो विशिष्ट फौजदारी मामिलाको लागि योग्य वकिलसँग परामर्श गर्नुहोस्।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 3 NEPALI ===================== -->
+        <article class="blog-post" id="post3np">
+            <div class="post-title"><a href="#" onclick="togglePost('post3np'); return false;">नेपाली व्यवसायका लागि नियामक अनुपालन चेकलिस्ट</a></div>
+            <div class="post-meta">कानूनी परामर्श र सल्लाह</div>
+            <div class="post-summary">
+                <p>प्रत्येक व्यवसायले नियामक अनुपालनको पालना गर्नुपर्छ। यो चेकलिस्टले कम्पनी दर्ता, कर, श्रम, र क्षेत्रीय इजाजतपत्रका मुख्य आवश्यकताहरू समावेश गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post3np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>नेपालमा व्यवसाय सञ्चालन गर्न विभिन्न कानून र नियमहरूको पालना गर्नुपर्छ। यस लेखले नेपालमा सञ्चालित व्यवसायहरूको लागि व्यावहारिक अनुपालन चेकलिस्ट प्रदान गर्दछ।</p>
+
+                <h2>कर्पोरेट दर्ता र संरचना</h2>
+                <ul>
+                    <li>कम्पनी ऐन, २०६३ अन्तर्गत कम्पनी दर्ता</li>
+                    <li>PAN दर्ता</li>
+                    <li>VAT दर्ता (यदि कारोबार NPR ५० लाख भन्दा बढी भए)</li>
+                    <li>स्थानीय निकायबाट व्यापार इजाजतपत्र</li>
+                </ul>
+
+                <h2>कर अनुपालन</h2>
+                <ul>
+                    <li>वार्षिक आयकर विवरण दायर</li>
+                    <li>VAT विवरण दायर</li>
+                    <li>श्रोतमा कर कट्टी (TDS)</li>
+                    <li>कम्तीमा ५ वर्षसम्म अभिलेख राख्ने</li>
+                </ul>
+
+                <h2>श्रम कानून अनुपालन</h2>
+                <ul>
+                    <li>लेखित रोजगार सम्झौता</li>
+                    <li>न्यूनतम ज्याला</li>
+                    <li>सामाजिक सुरक्षा कोष दर्ता</li>
+                    <li>कार्य अवधि र ओभरटाइम</li>
+                    <li>स्वास्थ्य र सुरक्षा</li>
+                </ul>
+
+                <h2>क्षेत्रीय इजाजतपत्र</h2>
+                <p>व्यवसायको प्रकृति अनुसार विशेष इजाजतपत्र आवश्यक पर्न सक्छ।</p>
+
+                <h2>वार्षिक फाइलिङ</h2>
+                <ul>
+                    <li>वार्षिक साधारण सभा</li>
+                    <li>वित्तीय विवरण पेश</li>
+                    <li>अडिट</li>
+                </ul>
+
+                <p><strong>विशेषज्ञ मार्गदर्शन</strong></p>
+                <p>कार्की एसोसिएट्सले व्यवसायहरूलाई अनुपालन सल्लाह प्रदान गर्दछ। आफ्नो व्यवसायको अनुपालन समीक्षाको लागि हामीलाई सम्पर्क गर्नुहोस्।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 4 NEPALI ===================== -->
+        <article class="blog-post" id="post4np">
+            <div class="post-title"><a href="#" onclick="togglePost('post4np'); return false;">नेपालको करार कानून: प्रत्येक व्यवसायले जान्नुपर्ने मुख्य खण्डहरू</a></div>
+            <div class="post-meta">कानूनी परामर्श र सल्लाह</div>
+            <div class="post-summary">
+                <p>करारहरू व्यावसायिक कारोबारको आधार हुन्। यस लेखले प्रत्येक व्यवसायिक करारमा हुनुपर्ने मुख्य खण्डहरू व्याख्या गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post4np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>करारहरू कानूनी रूपमा बाध्यकारी सम्झौताहरू हुन्। नेपालमा करार कानून मुख्यतः करार ऐन, २००० द्वारा नियमित गरिन्छ।</p>
+
+                <h2>वैध करारका आधारभूत तत्वहरू</h2>
+                <ul>
+                    <li>प्रस्ताव र स्वीकृति</li>
+                    <li>प्रतिफल (मूल्य, वस्तु, वा सेवा)</li>
+                    <li>कानूनी सम्बन्धको इच्छा</li>
+                    <li>क्षमता (उमेर, मानसिक अवस्था)</li>
+                    <li>वैधानिकता</li>
+                    <li>निश्चितता</li>
+                </ul>
+
+                <h2>मुख्य करार खण्डहरू</h2>
+
+                <h3>१. पक्षहरूको खण्ड</h3>
+                <p>सबै पक्षहरूको पूरा नाम, ठेगाना, र दर्ता नम्बर स्पष्ट उल्लेख गर्नुहोस्।</p>
+
+                <h3>२. कार्यको दायरा</h3>
+                <p>प्रदान गरिने वस्तु वा सेवाको विस्तृत विवरण।</p>
+
+                <h3>३. मूल्य र भुक्तानी सर्त</h3>
+                <p>कुल मूल्य, भुक्तानी तालिका, र ढिलो भुक्तानीको परिणाम।</p>
+
+                <h3>४. वितरण र कार्य तालिका</h3>
+                <p>सामान वितरण वा सेवा पूरा गर्ने समय।</p>
+
+                <h3>५. वारेन्टी र प्रतिनिधित्व</h3>
+                <p>वस्तु वा सेवाले निश्चित मापदण्ड पूरा गर्ने आश्वासन।</p>
+
+                <h3>६. दायित्वको सीमा</h3>
+                <p>प्रत्येक पक्षले अर्कोबाट दाबी गर्न सक्ने क्षतिपूर्तिको सीमा।</p>
+
+                <h3>७. क्षतिपूर्ति</h3>
+                <p>एक पक्षले अर्कोलाई केही क्षतिहरूको क्षतिपूर्ति गर्ने व्यवस्था।</p>
+
+                <h3>८. गोपनीयता</h3>
+                <p>संवेदनशील जानकारीको संरक्षण।</p>
+
+                <h3>९. समाप्ति र नवीकरण</h3>
+                <p>करार समाप्त गर्ने सर्त र सूचना अवधि।</p>
+
+                <h3>१०. विवाद समाधान</h3>
+                <p>विवाद समाधान गर्ने विधि (वार्ता, मध्यस्थता, अदालत)।</p>
+
+                <h3>११. शासकीय कानून</h3>
+                <p>कुन क्षेत्राधिकारको कानून लागू हुने।</p>
+
+                <h3>१२. अप्रत्याशित घटना</h3>
+                <p>असाधारण घटनाले करार पालना गर्न नसकेमा छुट।</p>
+
+                <p><strong>व्यावसायिक सहायता</strong></p>
+                <p>कार्की एसोसिएट्सले करारको मस्यौदा, समीक्षा, र वार्तामा सहायता गर्दछ।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 5 NEPALI ===================== -->
+        <article class="blog-post" id="post5np">
+            <div class="post-title"><a href="#" onclick="togglePost('post5np'); return false;">नेपाली कम्पनीहरूको लागि कर्पोरेट शासनका उत्कृष्ट अभ्यासहरू</a></div>
+            <div class="post-meta">व्यवस्थापन परामर्श</div>
+            <div class="post-summary">
+                <p>बलियो कर्पोरेट शासनले विश्वास निर्माण गर्छ र दीर्घकालीन स्थायित्व सुनिश्चित गर्छ। यस लेखले नेपालमा कम्पनीहरूको लागि उत्कृष्ट शासन अभ्यासहरू प्रस्तुत गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post5np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>कर्पोरेट शासन भनेको कम्पनीहरूको निर्देशन र नियन्त्रणको प्रणाली हो। प्रभावकारी शासनले पारदर्शिता, उत्तरदायित्व, र निष्पक्षता सुनिश्चित गर्दछ।</p>
+
+                <h2>नेपालको कर्पोरेट शासन ढाँचा</h2>
+                <p>नेपालमा कर्पोरेट शासन कम्पनी ऐन, २०६३, प्रतिभूति ऐन, २०६३, र SEBON नियमहरूद्वारा नियमित गरिन्छ।</p>
+
+                <h2>राम्रो कर्पोरेट शासनका सिद्धान्तहरू</h2>
+
+                <h3>१. संचालक समितिको संरचना र स्वतन्त्रता</h3>
+                <p>संचालक समितिमा कार्यकारी र गैर-कार्यकारी संचालकहरूको सन्तुलन हुनुपर्छ। स्वतन्त्र संचालकहरूले वस्तुपरक दृष्टिकोण ल्याउँछन्।</p>
+
+                <h3>२. समितिहरूको गठन</h3>
+                <p>अडिट, पारिश्रमिक, र शासन समितिहरूको गठन।</p>
+
+                <h3>३. पारदर्शिता र खुलासा</h3>
+                <p>कम्पनीले वित्तीय प्रदर्शन र जोखिमको सही र समयमै खुलासा गर्नुपर्छ।</p>
+
+                <h3>४. शेयरधनी अधिकार</h3>
+                <p>शेयरधनीहरूको मतदान, जानकारी, र सभामा सहभागिताको अधिकार।</p>
+
+                <h3>५. नैतिक आचरण</h3>
+                <p>आचारसंहिता, भ्रष्टाचार विरोधी नीति, र सूचनादाता संयन्त्र।</p>
+
+                <h3>६. जोखिम व्यवस्थापन</h3>
+                <p>जोखिम पहिचान, मूल्याङ्कन, र न्यूनीकरणको प्रणाली।</p>
+
+                <h2>कम्पनी ऐन (संशोधन), २०८२ का मुख्य परिवर्तनहरू</h2>
+                <ul>
+                    <li>स्वेट इक्विटीको व्यवस्था</li>
+                    <li>कर्मचारी शेयर योजना</li>
+                    <li>संचालक समिति संरचनाको खुलासा</li>
+                </ul>
+
+                <p><strong>विशेषज्ञ सल्लाह</strong></p>
+                <p>कार्की एसोसिएट्सले कम्पनीहरूलाई कर्पोरेट शासन सल्लाह प्रदान गर्दछ।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 6 NEPALI ===================== -->
+        <article class="blog-post" id="post6np">
+            <div class="post-title"><a href="#" onclick="togglePost('post6np'); return false;">नेपालका साना तथा मझौला उद्यमीहरूको लागि जोखिम व्यवस्थापन रणनीतिहरू</a></div>
+            <div class="post-meta">व्यवस्थापन परामर्श</div>
+            <div class="post-summary">
+                <p>SMEहरूले अद्वितीय कानूनी र परिचालन जोखिमहरूको सामना गर्छन्। यस लेखले जोखिम पहिचान र न्यूनीकरणका व्यावहारिक रणनीतिहरू प्रस्तुत गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post6np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>साना तथा मझौला उद्यम (SME) नेपालको अर्थतन्त्रको आधार हुन्। तर, सीमित स्रोत र क्षमताका कारण उनीहरूले विशेष जोखिमको सामना गर्छन्। प्रभावकारी जोखिम व्यवस्थापन अत्यावश्यक छ।</p>
+
+                <h2>व्यावसायिक जोखिमका प्रकारहरू</h2>
+                <ul>
+                    <li>कानूनी जोखिम</li>
+                    <li>वित्तीय जोखिम</li>
+                    <li>परिचालन जोखिम</li>
+                    <li>रणनीतिक जोखिम</li>
+                    <li>अनुपालन जोखिम</li>
+                    <li>प्रतिष्ठा जोखिम</li>
+                </ul>
+
+                <h2>जोखिम व्यवस्थापनका चरणहरू</h2>
+
+                <h3>१. जोखिम पहिचान</h3>
+                <p>आफ्नो व्यवसायको सम्पूर्ण जोखिम मूल्याङ्कन गर्नुहोस्।</p>
+
+                <h3>२. जोखिम मूल्याङ्कन</h3>
+                <p>प्रत्येक जोखिमको सम्भावना र प्रभावको मूल्याङ्कन गर्नुहोस्।</p>
+
+                <h3>३. जोखिम न्यूनीकरण रणनीति</h3>
+
+                <h4>कानूनी जोखिम</h4>
+                <ul>
+                    <li>कानूनी सल्लाहकारको संलग्नता</li>
+                    <li>लेखित करारहरू</li>
+                    <li>उचित इजाजतपत्र</li>
+                </ul>
+
+                <h4>वित्तीय जोखिम</h4>
+                <ul>
+                    <li>उचित लेखाप्रणाली</li>
+                    <li>आपत्कालीन कोष</li>
+                    <li>आम्दानीको विविधीकरण</li>
+                </ul>
+
+                <h4>परिचालन जोखिम</h4>
+                <ul>
+                    <li>मानक सञ्चालन प्रक्रिया</li>
+                    <li>कर्मचारीको क्रस-प्रशिक्षण</li>
+                    <li>बहु आपूर्तिकर्तासँग सम्बन्ध</li>
+                </ul>
+
+                <h3>४. अनुगमन र समीक्षा</h3>
+                <p>नियमित रूपमा जोखिमको समीक्षा गर्नुहोस्।</p>
+
+                <p><strong>विशेषज्ञ सहायता</strong></p>
+                <p>कार्की एसोसिएट्सले SMEहरूलाई जोखिम व्यवस्थापन सल्लाह प्रदान गर्दछ।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 7 NEPALI ===================== -->
+        <article class="blog-post" id="post7np">
+            <div class="post-title"><a href="#" onclick="togglePost('post7np'); return false;">नेपालको विकसित कानूनी परिदृश्य: २०८२–२०८३ का मुख्य विधायी परिवर्तनहरू</a></div>
+            <div class="post-meta">कानूनी अनुसन्धान र विकास</div>
+            <div class="post-summary">
+                <p>सन् २०२५–२०२६ मा नेपालमा धेरै महत्वपूर्ण विधायी परिवर्तनहरू भएका छन्। यस लेखले मुख्य संशोधनहरू र तिनको व्यावहारिक प्रभावको सारांश प्रस्तुत गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post7np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>सन् २०२५–२०२६ को अवधिमा नेपालमा महत्वपूर्ण विधायी गतिविधिहरू भएका छन्। यस लेखले मुख्य कानूनी विकासहरू र तिनको व्यावहारिक प्रभावको अवलोकन प्रदान गर्दछ।</p>
+
+                <h2>१. आर्थिक वर्ष २०८२/८३ को बजेट र कर सुधार</h2>
+                <ul>
+                    <li>आयकर दर घटाइयो</li>
+                    <li>अधिकतम कर दर ३९% बाट २९% मा झारियो</li>
+                    <li>सुपर-रिच कर १०%</li>
+                    <li>IT क्षेत्रका लागि कर प्रोत्साहन</li>
+                    <li>बिजुलीमा VAT ५% बाट १३%</li>
+                </ul>
+
+                <h2>२. कम्पनी (संशोधन) ऐन, २०८२</h2>
+                <ul>
+                    <li>स्वेट इक्विटी</li>
+                    <li>कर्मचारी शेयर योजना</li>
+                    <li>महिला संचालक अनिवार्य</li>
+                </ul>
+
+                <h2>३. भन्सार ऐन, २०८२</h2>
+                <p>नयाँ भन्सार ऐनले भन्सार प्रक्रियालाई आधुनिकीकरण गर्दछ।</p>
+
+                <h2>४. सार्वजनिक खरीद (संशोधन) ऐन, २०८२</h2>
+                <ul>
+                    <li>ठेकेदारको फौजदारी दायित्व</li>
+                    <li>ई-खरीद विस्तार</li>
+                </ul>
+
+                <h2>५. मिडिया काउन्सिल विधेयक</h2>
+                <p>मिडिया नियमनको लागि काउन्सिल गठन।</p>
+
+                <h2>६. ई-वाणिज्य ऐन, २०८२</h2>
+                <ul>
+                    <li>ई-वाणिज्य प्लेटफर्म दर्ता अनिवार्य</li>
+                    <li>उपभोक्ता संरक्षण</li>
+                    <li>डाटा गोपनीयता</li>
+                </ul>
+
+                <h2>७. सूचना प्रविधि तथा साइबर सुरक्षा ऐन, २०८२</h2>
+                <ul>
+                    <li>साइबर सुरक्षा मापदण्ड</li>
+                    <li>डाटा चुहावट सूचना</li>
+                    <li>साइबर अपराधको सजाय</li>
+                </ul>
+
+                <h2>८. जग्गा कानून संशोधन</h2>
+                <ul>
+                    <li>जग्गा अधिकतम हटाइयो</li>
+                    <li>जग्गा राजस्व ऐन संशोधन</li>
+                </ul>
+
+                <p><strong>कार्की एसोसिएट्समा जानकारी राख्नुहोस्</strong></p>
+                <p>हामी कानूनी विकासहरूको निगरानी गर्दछौं।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 8 NEPALI ===================== -->
+        <article class="blog-post" id="post8np">
+            <div class="post-title"><a href="#" onclick="togglePost('post8np'); return false;">नेपालको नयाँ कर व्यवस्था: आर्थिक वर्ष २०८२/८३ को बजेटको प्रभाव</a></div>
+            <div class="post-meta">कर परामर्श र सल्लाह</div>
+            <div class="post-summary">
+                <p>आर्थिक वर्ष २०८२/८३ को बजेटले आयकर, VAT, र अन्य करमा ठूला परिवर्तनहरू ल्याएको छ। यस लेखले मुख्य परिवर्तनहरू र तिनको व्यावहारिक प्रभावको व्याख्या गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post8np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>आर्थिक वर्ष २०८२/८३ को बजेटले नेपालको कर प्रणालीमा व्यापक परिवर्तनहरू ल्याएको छ। यी सुधारहरूले कर प्रणालीलाई सरल बनाउन, आर्थिक वृद्धि प्रोत्साहित गर्न, र लगानी आकर्षित गर्ने लक्ष्य राख्छन्।</p>
+
+                <h2>मुख्य कर सुधारहरू</h2>
+
+                <h3>१. व्यक्तिगत आयकर पुनर्संरचना</h3>
+                <ul>
+                    <li>कर दायरा घटाइयो (६ बाट ५)</li>
+                    <li>अधिकतम कर दर ३९% बाट २९%</li>
+                    <li>सुपर-रिच कर १०% (वार्षिक आय NPR १० करोड भन्दा बढी)</li>
+                </ul>
+
+                <h3>२. कर्पोरेट कर</h3>
+                <ul>
+                    <li>IT क्षेत्रका लागि कर प्रोत्साहन</li>
+                    <li>स्टार्टअपहरूका लागि कर छुट</li>
+                </ul>
+
+                <h3>३. मूल्य अभिवृद्धि कर (VAT)</h3>
+                <ul>
+                    <li>बिजुलीमा VAT ५% बाट १३%</li>
+                    <li>VAT दर्ता सीमाको समीक्षा</li>
+                </ul>
+
+                <h3>४. भन्सार र उत्पादन शुल्क</h3>
+                <ul>
+                    <li>नयाँ भन्सार ऐन, २०८२</li>
+                    <li>उत्पादन शुल्क समायोजन</li>
+                </ul>
+
+                <h2>व्यक्तिहरूका लागि प्रभाव</h2>
+                <ul>
+                    <li>अधिकांश व्यक्तिको कर भार घट्नेछ</li>
+                    <li>सुपर-रिचले नयाँ कर तिर्नुपर्ने</li>
+                </ul>
+
+                <h2>व्यवसायका लागि प्रभाव</h2>
+                <ul>
+                    <li>IT क्षेत्रका लागि नयाँ अवसर</li>
+                    <li>बिजुलीको लागत वृद्धि</li>
+                </ul>
+
+                <p><strong>कर सल्लाह सेवा</strong></p>
+                <p>कार्की एसोसिएट्सले व्यक्ति र व्यवसायहरूलाई कर योजना र अनुपालन सेवा प्रदान गर्दछ।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 9 NEPALI ===================== -->
+        <article class="blog-post" id="post9np">
+            <div class="post-title"><a href="#" onclick="togglePost('post9np'); return false;">नेपाली व्यवसायहरूको लागि कर अनुपालन मार्गदर्शन</a></div>
+            <div class="post-meta">कर परामर्श र सल्लाह</div>
+            <div class="post-summary">
+                <p>प्रत्येक व्यवसायले कर अनुपालन गर्नुपर्छ। यस मार्गदर्शनले दर्ता, फाइलिङ, र अभिलेख राख्ने बारे व्यावहारिक सल्लाह दिन्छ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post9np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>नेपालमा सञ्चालित प्रत्येक व्यवसायले कर कानूनको पालना गर्नुपर्छ। यो मार्गदर्शनले नेपाली व्यवसायहरूको लागि मुख्य कर अनुपालन दायित्वहरू र व्यावहारिक सल्लाह प्रदान गर्दछ।</p>
+
+                <h2>चरण १: कर दर्ता</h2>
+                <ul>
+                    <li>PAN दर्ता</li>
+                    <li>VAT दर्ता (यदि कारोबार NPR ५० लाख भन्दा बढी भए)</li>
+                    <li>उत्पादन शुल्क दर्ता</li>
+                    <li>सामाजिक सुरक्षा कोष दर्ता</li>
+                </ul>
+
+                <h2>चरण २: कर दायित्व बुझ्नुहोस्</h2>
+
+                <h3>आयकर</h3>
+                <ul>
+                    <li>कर्पोरेट आयकर</li>
+                    <li>व्यक्तिगत आयकर</li>
+                    <li>श्रोतमा कर कट्टी (TDS)</li>
+                </ul>
+
+                <h3>मूल्य अभिवृद्धि कर (VAT)</h3>
+                <ul>
+                    <li>VAT असुल्ने र सरकारलाई बुझाउने</li>
+                    <li>VAT विवरण दायर गर्ने</li>
+                    <li>VAT इनभ्वाइस र रसिदको अभिलेख राख्ने</li>
+                </ul>
+
+                <h2>चरण ३: अभिलेख राख्नुहोस्</h2>
+                <ul>
+                    <li>लेखा पुस्तिका</li>
+                    <li>इनभ्वाइस र रसिद</li>
+                    <li>बैंक विवरण</li>
+                    <li>कर्मचारी अभिलेख</li>
+                </ul>
+
+                <h2>चरण ४: समयमै विवरण दायर गर्नुहोस्</h2>
+                <ul>
+                    <li>वार्षिक आयकर विवरण</li>
+                    <li>VAT विवरण</li>
+                    <li>TDS विवरण</li>
+                </ul>
+
+                <h2>सामान्य कर अनुपालन कमजोरीहरू</h2>
+                <ul>
+                    <li>समय सीमा नाघ्नु</li>
+                    <li>गलत कर गणना</li>
+                    <li>कमजोर अभिलेख</li>
+                    <li>TDS कर्तन नगर्नु</li>
+                    <li>दर्ता अद्यावधिक नगर्नु</li>
+                </ul>
+
+                <p><strong>व्यावसायिक कर सहायता</strong></p>
+                <p>कार्की एसोसिएट्सले कर अनुपालन सेवा प्रदान गर्दछ।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 10 NEPALI ===================== -->
+        <article class="blog-post" id="post10np">
+            <div class="post-title"><a href="#" onclick="togglePost('post10np'); return false;">तपाईंको व्यवसायलाई कानूनी लेखापरीक्षण किन चाहिन्छ: चरण-दर-चरण मार्गदर्शन</a></div>
+            <div class="post-meta">कानूनी लेखापरीक्षण र अनुपालन</div>
+            <div class="post-summary">
+                <p>कानूनी लेखापरीक्षणले जोखिम पहिचान, अनुपालन सुनिश्चित, र कानूनी दायित्वबाट जोगाउँछ। यस मार्गदर्शनले कानूनी लेखापरीक्षणको दायरा र तयारी बारे व्याख्या गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post10np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>कानूनी लेखापरीक्षण (कानूनी अनुपालन लेखापरीक्षण) व्यवसायको कानूनी र नियामक अनुपालनको गहन परीक्षण हो। यसले खाडल, जोखिम, र सुधारका क्षेत्रहरू पहिचान गर्दछ।</p>
+
+                <h2>कानूनी लेखापरीक्षण के हो?</h2>
+                <p>यो व्यवसायको सबै कानूनी दायित्वहरूको व्यवस्थित समीक्षा हो—करार, रोजगार अभ्यास, कर अनुपालन, बौद्धिक सम्पत्ति, र नियामक आवश्यकताहरू।</p>
+
+                <h2>किन कानूनी लेखापरीक्षण चाहिन्छ?</h2>
+                <ul>
+                    <li>कानूनी जोखिम पहिचान</li>
+                    <li>अनुपालन सुनिश्चित</li>
+                    <li>करार व्यवस्थापन सुधार</li>
+                    <li>शासन सुदृढीकरण</li>
+                    <li>लगानीकर्ता आकर्षण</li>
+                    <li>जरिवाना र दण्डबाट बच्न</li>
+                </ul>
+
+                <h2>कानूनी लेखापरीक्षणको दायरा</h2>
+
+                <h3>१. कर्पोरेट संरचना र दर्ता</h3>
+                <ul>
+                    <li>कम्पनी दर्ता र इजाजतपत्र</li>
+                    <li>संचालक नियुक्ति</li>
+                    <li>शेयरधनी सम्झौता</li>
+                </ul>
+
+                <h3>२. करार र सम्झौता</h3>
+                <ul>
+                    <li>व्यावसायिक करारहरू</li>
+                    <li>रोजगार करार</li>
+                    <li>जग्गा करार</li>
+                </ul>
+
+                <h3>३. रोजगार र श्रम कानून</h3>
+                <ul>
+                    <li>श्रम ऐन, २०१७ अनुपालन</li>
+                    <li>सामाजिक सुरक्षा कोष</li>
+                    <li>स्वास्थ्य र सुरक्षा</li>
+                </ul>
+
+                <h3>४. कर अनुपालन</h3>
+                <ul>
+                    <li>PAN र VAT दर्ता</li>
+                    <li>कर विवरण दायर</li>
+                    <li>TDS कर्तन</li>
+                </ul>
+
+                <h2>चरण-दर-चरण कानूनी लेखापरीक्षण प्रक्रिया</h2>
+
+                <h3>चरण १: दायरा निर्धारण</h3>
+                <p>लेखापरीक्षणको दायरा परिभाषित गर्नुहोस्।</p>
+
+                <h3>चरण २: कागजात सङ्कलन</h3>
+                <p>सबै सान्दर्भिक कागजात सङ्कलन गर्नुहोस्।</p>
+
+                <h3>चरण ३: समीक्षा र विश्लेषण</h3>
+                <p>सबै कागजातहरूको विस्तृत समीक्षा।</p>
+
+                <h3>चरण ४: जोखिम मूल्याङ्कन</h3>
+                <p>जोखिम पहिचान र प्राथमिकीकरण।</p>
+
+                <h3>चरण ५: प्रतिवेदन र सिफारिस</h3>
+                <p>खाडल र सिफारिस सहितको प्रतिवेदन।</p>
+
+                <h3>चरण ६: कार्यान्वयन</h3>
+                <p>सिफारिसहरू कार्यान्वयन गर्न सहायता।</p>
+
+                <p><strong>विशेषज्ञ कानूनी लेखापरीक्षण</strong></p>
+                <p>कार्की एसोसिएट्सले व्यापक कानूनी लेखापरीक्षण सेवा प्रदान गर्दछ।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 11 NEPALI ===================== -->
+        <article class="blog-post" id="post11np">
+            <div class="post-title"><a href="#" onclick="togglePost('post11np'); return false;">नेपाली व्यवसायहरूको लागि सम्पत्ति विरुद्धको कारोबार रोकथाम अनुपालन</a></div>
+            <div class="post-meta">कानूनी लेखापरीक्षण र अनुपालन</div>
+            <div class="post-summary">
+                <p>नेपाल FATF ग्रेलिस्टमा रहेको हुँदा, व्यवसायहरूले AML दायित्वहरू पूरा गर्नुपर्छ। यस लेखले AML आवश्यकताहरू, सामान्य कमजोरीहरू, र बचाउका उपायहरू व्याख्या गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post11np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>सम्पत्ति विरुद्धको कारोबार रोकथाम (AML) अनुपालन नेपालको निर्दिष्ट क्षेत्रमा सञ्चालित व्यवसायहरूको कानूनी दायित्व हो। नेपाल हाल FATF ग्रेलिस्टमा रहेको हुँदा AML अनुपालन अझ महत्वपूर्ण भएको छ।</p>
+
+                <h2>AML के हो?</h2>
+                <p>AML भनेको अवैध गतिविधिहरूबाट आर्जित आयको सृजना र यी कोषहरूको वैधानिक वित्तीय च्यानल मार्फत स्थानान्तरण रोक्नका लागि बनाइएका कानून, नियम, र प्रक्रियाहरू हुन्।</p>
+
+                <h2>नेपालको AML कानूनी ढाँचा</h2>
+                <ul>
+                    <li>सम्पत्ति विरुद्धको कारोबार रोकथाम ऐन, २०६४</li>
+                    <li>सम्पत्ति विरुद्धको कारोबार रोकथाम नियम, २०६५</li>
+                    <li>FATF सिफारिसहरू</li>
+                    <li>नियामक निकायका निर्देशनहरू</li>
+                </ul>
+
+                <h2>कसले अनुपालन गर्नुपर्छ?</h2>
+                <ul>
+                    <li>वित्तीय संस्थाहरू</li>
+                    <li>जग्गा कारोबारी</li>
+                    <li>क्यासिनो</li>
+                    <li>रुपैयाँ पठाउने सेवा</li>
+                    <li>कानूनी पेशेवरहरू</li>
+                    <li>लेखापरीक्षकहरू</li>
+                </ul>
+
+                <h2>मुख्य AML अनुपालन दायित्वहरू</h2>
+
+                <h3>१. ग्राहक परिशीलन</h3>
+                <ul>
+                    <li>ग्राहकको पहिचान प्रमाणित गर्ने</li>
+                    <li>लाभग्राही स्वामीको पहिचान</li>
+                    <li>कारोबारको प्रकृति बुझ्ने</li>
+                </ul>
+
+                <h3>२. शंकास्पद कारोबार रिपोर्टिङ</h3>
+                <p>शंकास्पद कारोबार वित्तीय सूचना इकाई (FIU) मा रिपोर्ट गर्नुपर्छ।</p>
+
+                <h3>३. अभिलेख राख्ने</h3>
+                <p>सबै कारोबारको अभिलेख कम्तीमा ५ वर्षसम्म राख्नुपर्छ।</p>
+
+                <h3>४. कर्मचारी प्रशिक्षण</h3>
+                <p>कर्मचारीहरूलाई AML दायित्वको बारेमा प्रशिक्षण दिनुपर्छ।</p>
+
+                <h2>AML उल्लङ्घनको सजाय</h2>
+                <ul>
+                    <li>जरिवाना NPR १,००,००० देखि NPR ५०,००,०००</li>
+                    <li>५ वर्षसम्म कैद</li>
+                    <li>सम्पत्ति जफत</li>
+                </ul>
+
+                <p><strong>AML अनुपालन सहायता</strong></p>
+                <p>कार्की एसोसिएट्सले AML नीति विकास, लेखापरीक्षण, र प्रशिक्षण सेवा प्रदान गर्दछ।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 12 NEPALI ===================== -->
+        <article class="blog-post" id="post12np">
+            <div class="post-title"><a href="#" onclick="togglePost('post12np'); return false;">नेपालमा सम्पत्ति कारोबार: किन्ने र बेच्नेको लागि कानूनी मार्गदर्शन</a></div>
+            <div class="post-meta">व्यक्तिगत कानूनी सेवा, कागजात र लिखत दर्ता</div>
+            <div class="post-summary">
+                <p>नेपालमा सम्पत्ति किन्न वा बेच्न जटिल कानूनी चरणहरू समावेश छन्। यस मार्गदर्शनले शीर्षक सत्यापन, दर्ता, स्टाम्प शुल्क, र बच्नुपर्ने सामान्य गल्तीहरू व्याख्या गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post12np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>सम्पत्ति कारोबार व्यक्ति र व्यवसायहरूको सबैभन्दा महत्वपूर्ण वित्तीय निर्णयहरू मध्ये एक हो। नेपालमा सम्पत्ति कानून जटिल छ, धेरै चरणहरू, अधिकारीहरू, र सम्भावित जोखिमहरू समावेश छन्।</p>
+
+                <h2>मुख्य कानूनी ढाँचा</h2>
+                <ul>
+                    <li>जग्गा ऐन, २०२१</li>
+                    <li>जग्गा राजस्व ऐन, २०३४</li>
+                    <li>जग्गा दर्ता नियम, २०३२</li>
+                    <li>राष्ट्रिय भू-सूचना तथा व्यवस्थापन ऐन, २०२६</li>
+                </ul>
+
+                <h2>चरण १: शीर्षक सत्यापन</h2>
+                <p>सम्पत्तिको स्वामित्व (लालपुर्जा) प्रमाणित गर्नुहोस्।</p>
+
+                <h2>चरण २: यथोचित परिशीलन</h2>
+                <ul>
+                    <li>सिमाना जाँच</li>
+                    <li>जग्गा उपयोग वर्गीकरण</li>
+                    <li>कर स्थिति</li>
+                </ul>
+
+                <h2>चरण ३: बिक्री सम्झौता</h2>
+                <p>विस्तृत बिक्री सम्झौता गर्नुहोस्।</p>
+
+                <h2>चरण ४: दर्ता</h2>
+                <ul>
+                    <li>स्टाम्प शुल्क तिर्नुहोस् (४-६%)</li>
+                    <li>दर्ता शुल्क तिर्नुहोस् (२-३%)</li>
+                    <li>बिक्रीपत्र पेश गर्नुहोस्</li>
+                    <li>शीर्षक हस्तान्तरण</li>
+                </ul>
+
+                <h2>बच्नुपर्ने सामान्य गल्तीहरू</h2>
+                <ul>
+                    <li>अपूर्ण शीर्षक सत्यापन</li>
+                    <li>जोनिङ कानून बेवास्ता</li>
+                    <li>लागत कम आँकलन</li>
+                    <li>अनौपचारिक सम्झौता</li>
+                    <li>व्यावसायिक सहायता नलिनु</li>
+                </ul>
+
+                <p><strong>सम्पत्ति कानूनी सल्लाह</strong></p>
+                <p>कार्की एसोसिएट्सले सम्पत्ति कारोबारमा कानूनी सहायता प्रदान गर्दछ।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 13 NEPALI ===================== -->
+        <article class="blog-post" id="post13np">
+            <div class="post-title"><a href="#" onclick="togglePost('post13np'); return false;">नेपालमा सम्पत्ति योजना: वसीयत, उत्तराधिकार, र वंशानुक्रम</a></div>
+            <div class="post-meta">व्यक्तिगत कानूनी सेवा, कागजात र लिखत दर्ता</div>
+            <div class="post-summary">
+                <p>सम्पत्ति योजनाले तपाईंको सम्पत्ति तपाईंको इच्छा अनुसार वितरण सुनिश्चित गर्दछ। यस लेखले नेपालमा वसीयत, उत्तराधिकार, र वंशानुक्रमको कानूनी ढाँचा व्याख्या गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post13np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>सम्पत्ति योजनामा तपाईंको मृत्यु पछि तपाईंको सम्पत्तिको वितरणको व्यवस्था गर्नु समावेश छ। नेपालमा सम्पत्ति मामिला मुलुकी नागरिक संहिता, २०१८ (सामान्य संहिता) र उत्तराधिकार ऐन, २०१८ द्वारा नियमित गरिन्छ।</p>
+
+                <h2>मुख्य कानूनी ढाँचा</h2>
+                <ul>
+                    <li>मुलुकी नागरिक संहिता, २०१८</li>
+                    <li>उत्तराधिकार ऐन, २०१८</li>
+                    <li>व्यक्तिगत कानून (धर्म-आधारित)</li>
+                </ul>
+
+                <h2>अन्यथा उत्तराधिकार बनाम वसीयती उत्तराधिकार</h2>
+
+                <h3>अन्यथा उत्तराधिकार</h3>
+                <p>कुनै व्यक्ति वैध वसीयत नछोडी मृत्यु भएमा, कानूनले सम्पत्ति वितरण गर्छ।</p>
+
+                <h3>वसीयती उत्तराधिकार</h3>
+                <p>वसीयत छोडेमा, तपाईंले आफ्नो सम्पत्ति कसले पाउने भनी निर्धारण गर्न सक्नुहुन्छ।</p>
+
+                <h2>वैध वसीयतका आवश्यकताहरू</h2>
+                <ul>
+                    <li>लेखित हुनुपर्छ</li>
+                    <li>वसीयतकर्ताद्वारा हस्ताक्षरित</li>
+                    <li>कम्तीमा एक साक्षी</li>
+                    <li>स्वस्थ मानसिकता</li>
+                    <li>स्वैच्छिक</li>
+                </ul>
+
+                <h2>वसीयतका फाइदाहरू</h2>
+                <ul>
+                    <li>नियन्त्रण</li>
+                    <li>विवादबाट बच्न</li>
+                    <li>नाबालग बालबालिकाको संरक्षक</li>
+                    <li>परोपकारी दान</li>
+                </ul>
+
+                <p><strong>सम्पत्ति योजना सहायता</strong></p>
+                <p>कार्की एसोसिएट्सले वसीयत लेखन, उत्तराधिकार योजना, र प्रोबेट सहायता प्रदान गर्दछ।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 14 NEPALI ===================== -->
+        <article class="blog-post" id="post14np">
+            <div class="post-title"><a href="#" onclick="togglePost('post14np'); return false;">नेपालमा व्यवसाय सुरु गर्दै: कानूनी चेकलिस्ट</a></div>
+            <div class="post-meta">कर्पोरेट र व्यावसायिक सल्लाह</div>
+            <div class="post-summary">
+                <p>नेपालमा व्यवसाय सुरु गर्न कानूनी दर्ता, इजाजतपत्र, र अनुपालन आवश्यक छ। यो व्यापक चेकलिस्टले कानूनी रूपमा व्यवसाय स्थापना गर्ने चरणहरू समावेश गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post14np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>नेपालमा व्यवसाय सुरु गर्नु फलदायी अनुभव हुन सक्छ, तर कानूनी र नियामक आवश्यकताहरूमा ध्यान दिनुपर्छ। यो चेकलिस्टले तपाईंलाई नेपालमा व्यवसाय स्थापना र सञ्चालन गर्ने आवश्यक चरणहरू मार्गदर्शन गर्दछ।</p>
+
+                <h2>चरण १: व्यवसाय संरचना चयन</h2>
+                <ul>
+                    <li>प्राइभेट लिमिटेड कम्पनी</li>
+                    <li>सार्वजनिक लिमिटेड कम्पनी</li>
+                    <li>एकल स्वामित्व</li>
+                    <li>साझेदारी</li>
+                    <li>विदेशी कम्पनीको शाखा</li>
+                </ul>
+
+                <h2>चरण २: व्यवसाय दर्ता</h2>
+                <ul>
+                    <li>कम्पनी दर्ता</li>
+                    <li>PAN प्राप्त गर्ने</li>
+                    <li>VAT दर्ता</li>
+                </ul>
+
+                <h2>चरण ३: इजाजतपत्र र अनुमति</h2>
+                <ul>
+                    <li>व्यापार इजाजतपत्र</li>
+                    <li>क्षेत्रीय इजाजतपत्र</li>
+                </ul>
+
+                <h2>चरण ४: सामाजिक सुरक्षा दर्ता</h2>
+                <p>कर्मचारी भएमा सामाजिक सुरक्षा कोषमा दर्ता।</p>
+
+                <h2>चरण ५: बैंक खाता खोल्ने</h2>
+
+                <h2>चरण ६: कर दायित्व बुझ्ने</h2>
+
+                <h2>चरण ७: श्रम कानून पालना</h2>
+
+                <h2>चरण ८: डाटा संरक्षण</h2>
+
+                <h2>चरण ९: बौद्धिक सम्पत्ति दर्ता</h2>
+
+                <h2>चरण १०: निरन्तर अनुपालन</h2>
+
+                <p><strong>व्यवसाय स्थापना सहायता</strong></p>
+                <p>कार्की एसोसिएट्सले व्यवसाय स्थापनाको लागि कानूनी सल्लाह प्रदान गर्दछ।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 15 NEPALI ===================== -->
+        <article class="blog-post" id="post15np">
+            <div class="post-title"><a href="#" onclick="togglePost('post15np'); return false;">नेपालमा विदेशी लगानी: कानूनी ढाँचा र अनुपालन</a></div>
+            <div class="post-meta">कर्पोरेट र व्यावसायिक सल्लाह</div>
+            <div class="post-summary">
+                <p>नेपालको आर्थिक वृद्धिका लागि विदेशी लगानी महत्वपूर्ण छ। यस लेखले विदेशी लगानीको कानूनी ढाँचा, अनुमोदन प्रक्रिया, र अनुपालन दायित्वहरू व्याख्या गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post15np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>नेपालले पर्यटन, जलविद्युत, IT, कृषि, र उत्पादन जस्ता विभिन्न क्षेत्रहरूमा महत्वपूर्ण लगानी अवसरहरू प्रदान गर्दछ। सरकारले विदेशी लगानी आकर्षित गर्न प्रक्रिया सरल बनाएको छ।</p>
+
+                <h2>विदेशी लगानीको मुख्य कानूनी ढाँचा</h2>
+
+                <h3>१. विदेशी लगानी तथा प्रविधि हस्तान्तरण ऐन (FITTA), २०१८</h3>
+                <ul>
+                    <li>लगानी स्वीकृति आवश्यक</li>
+                    <li>क्षेत्रीय प्रतिबन्धहरू</li>
+                    <li>न्यूनतम लगानी</li>
+                    <li>प्रविधि हस्तान्तरण</li>
+                </ul>
+
+                <h3>२. कम्पनी ऐन, २०६३</h3>
+                <p>विदेशी लगानीकर्ताहरूले कम्पनी ऐन अन्तर्गत कम्पनी स्थापना गर्न सक्छन्।</p>
+
+                <h3>३. विनिमय नियन्त्रण ऐन, २०१९</h3>
+                <p>नाफा र पुँजी फिर्ता सहित विदेशी मुद्रा कारोबार नियमित गर्दछ।</p>
+
+                <h2>विदेशी लगानी स्वीकृति प्रक्रिया</h2>
+
+                <h3>चरण १: लगानी अवसर पहिचान</h3>
+
+                <h3>चरण २: स्वीकृति निकाय निर्धारण</h3>
+                <ul>
+                    <li>लगानी बोर्ड नेपाल: NPR ५० करोड भन्दा बढी</li>
+                    <li>उद्योग विभाग: NPR ५० करोड भन्दा कम</li>
+                </ul>
+
+                <h3>चरण ३: आवेदन पेश</h3>
+
+                <h3>चरण ४: समीक्षा र स्वीकृति</h3>
+                <p>सामान्यतया ३०-६० दिन भित्र स्वीकृति।</p>
+
+                <h3>चरण ५: कम्पनी दर्ता</h3>
+
+                <h3>चरण ६: बैंक खाता र पुँजी फिर्ता</h3>
+
+                <h2>विदेशी लगानीका प्रोत्साहनहरू</h2>
+                <ul>
+                    <li>कर सुविधा</li>
+                    <li>भन्सार छुट</li>
+                    <li>नाफा फिर्ता</li>
+                </ul>
+
+                <p><strong>विदेशी लगानी सल्लाह</strong></p>
+                <p>कार्की एसोसिएट्सले विदेशी लगानीको लागि कानूनी सल्लाह प्रदान गर्दछ।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
+        <!-- ===================== BLOG POST 16 NEPALI ===================== -->
+        <article class="blog-post" id="post16np">
+            <div class="post-title"><a href="#" onclick="togglePost('post16np'); return false;">कानूनी प्रक्रिया आउटसोर्सिङ: कानून फर्महरूको लागि रणनीतिक लाभ</a></div>
+            <div class="post-meta">कानूनी प्रक्रिया आउटसोर्सिङ र कानून फर्महरूको लागि सहायता</div>
+            <div class="post-summary">
+                <p>कानूनी प्रक्रिया आउटसोर्सिङले कानून फर्महरूलाई लागत घटाउन, दक्षता सुधार गर्न, र मुख्य काममा ध्यान केन्द्रित गर्न मद्दत गर्दछ। यस लेखले फाइदाहरू र मुख्य विचारहरू व्याख्या गर्दछ।</p>
+            </div>
+            <a href="#" class="read-more-link" onclick="togglePost('post16np'); return false;">पूरा पढ्नुहोस् →</a>
+            <div class="full-content">
+                <p>कानूनी प्रक्रिया आउटसोर्सिङ (LPO) भनेको कानून फर्महरू र कानूनी विभागहरूले निश्चित कानूनी कार्यहरू बाह्य सेवा प्रदायकहरूलाई सुम्पने अभ्यास हो। LPO ले लागत व्यवस्थापन, विशेष कौशल पहुँच, र परिचालन दक्षता सुधार गर्न मद्दत गर्दछ।</p>
+
+                <h2>LPO के हो?</h2>
+                <p>LPO मा गैर-मुख्य कानूनी कार्यहरू तेस्रो-पक्ष प्रदायकहरूलाई आउटसोर्स गर्नु समावेश छ। यी कार्यहरूमा कानूनी अनुसन्धान, कागजात समीक्षा, करार मस्यौदा, यथोचित परिशीलन, र अन्य नियमित कानूनी कार्यहरू समावेश हुन सक्छन्।</p>
+
+                <h2>किन कानून फर्महरूले आउटसोर्स गर्छन्</h2>
+
+                <h3>१. लागत बचत</h3>
+                <p>LPO ले आन्तरिक स्टाफिङको तुलनामा ३०-५०% लागत घटाउन सक्छ।</p>
+
+                <h3>२. विशेषज्ञता पहुँच</h3>
+                <p>LPO प्रदायकहरूले कानूनी अनुसन्धान, करार व्यवस्थापन, र बौद्धिक सम्पत्ति कानून जस्ता क्षेत्रहरूमा विशेष कौशल प्रदान गर्छन्।</p>
+
+                <h3>३. लचिलोपन</h3>
+                <p>कानून फर्महरूले आफ्नो कार्यभार अनुसार कर्मचारी संख्या बढाउन वा घटाउन सक्छन्।</p>
+
+                <h3>४. मुख्य काममा ध्यान</h3>
+                <p>प्रशासनिक र नियमित कार्यहरू आउटसोर्स गरेर, वकिलहरूले उच्च-मूल्यको काममा ध्यान केन्द्रित गर्न सक्छन्।</p>
+
+                <h2>सामान्य LPO सेवाहरू</h2>
+                <ul>
+                    <li>कानूनी अनुसन्धान</li>
+                    <li>कागजात समीक्षा</li>
+                    <li>करार मस्यौदा र व्यवस्थापन</li>
+                    <li>यथोचित परिशीलन</li>
+                    <li>मुद्दा सहायता</li>
+                </ul>
+
+                <h2>LPO प्रदायकमा के हेर्ने</h2>
+                <ul>
+                    <li>योग्य पेशेवरहरू</li>
+                    <li>गोपनीयता र सुरक्षा</li>
+                    <li>गुणस्तर आश्वासन</li>
+                    <li>समयमा काम सक्ने क्षमता</li>
+                    <li>पारदर्शी मूल्य निर्धारण</li>
+                </ul>
+
+                <p><strong>विशेषज्ञ LPO सेवाहरू</strong></p>
+                <p>कार्की एसोसिएट्सले कानून फर्महरूको लागि LPO सेवाहरू प्रदान गर्दछ। हामी कसरी तपाईंको अभ्यासलाई समर्थन गर्न सक्छौं भनी छलफल गर्न हामीलाई सम्पर्क गर्नुहोस्।</p>
+
+                <p><em>अस्वीकरण: यो लेख सूचनात्मक उद्देश्यका लागि मात्र हो।</em></p>
+            </div>
+        </article>
+
     </div>
+    <!-- END NEPALI CONTENT -->
+
 </main>
 
 <footer>
@@ -475,25 +2901,11 @@
     </div>
 </div>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Karki Associates Professional Services Blog",
-  "description": "Legal insights on Nepal's anti-money laundering laws, FATF greylist, and corporate legal updates from Karki Associates – audit, consulting, tax, and legal advisory.",
-  "url": "https://karkiassociates.com.np/blog.html",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Karki Associates Private Limited"
-  }
-}
-</script>
 <script>
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
     const navTranslations = {
         en: { home: "Home", about: "About", advocate: "Advocate", services: "Services", blog: "Blog", contact: "Contact" },
         ne: { home: "गृह", about: "बारेमा", advocate: "अधिवक्ता", services: "सेवाहरू", blog: "ब्लग", contact: "सम्पर्क" }
-        // 'opinion' key removed
     };
     const footerTranslations = {
         en: { terms: "Terms of Use", privacy: "Privacy Policy", cookie: "Cookie Policy" },
@@ -590,6 +3002,21 @@
         if (!consent && banner) setTimeout(() => banner.classList.add('show'), 500);
         if (acceptBtn) acceptBtn.addEventListener('click', () => { localStorage.setItem('cookieConsent', 'accepted'); banner.classList.remove('show'); });
     })();
+
+    // Toggle function for blog posts
+    function togglePost(postId) {
+        var fullContent = document.getElementById(postId).querySelector('.full-content');
+        if (fullContent.classList.contains('show')) {
+            fullContent.classList.remove('show');
+            fullContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            fullContent.classList.add('show');
+            setTimeout(function() {
+                fullContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+        return false;
+    }
 </script>
 </body>
 </html>
